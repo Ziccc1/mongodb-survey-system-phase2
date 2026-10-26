@@ -1,0 +1,107 @@
+{
+  "database": "project2_test_w02b_1792814781875_ce1cfaf5",
+  "owned": {
+    "dbPath": "D:\\大三\\数据库\\pj1_2\\.local\\mongodb-phase2-rs0",
+    "processId": 32420,
+    "marker": "D:\\大三\\数据库\\pj1_2\\.local\\mongodb-phase2-rs0\\project2-instance.json",
+    "projectRoot": "D:\\大三\\数据库\\pj1_2",
+    "replicaSet": "rs0",
+    "port": 27019,
+    "executable": "D:\\Programmer\\bin\\mongod.exe"
+  },
+  "checks": [
+    "R01 ten operations strict storage/decode and first/replay status",
+    "R02 scopes, fixed request hash/Decimal normalization and invalid input before callback",
+    "R03/B14 owner attach commits full nonempty issues and replays without current-resource reads",
+    "R05 runtime corruption decoder rejects unsupported/missing/mismatched fields and converts safe BSON integers",
+    "rollback database fingerprint identical: resultSize",
+    "rollback database fingerprint identical: documentSize",
+    "rollback database fingerprint identical: afterBusiness",
+    "rollback database fingerprint identical: afterReceipt",
+    "R06/R09 result size and both precommit fault points roll back CAS/binding/receipt",
+    "R07 same-key race commits once; different-key same-revision CAS is one success/one EDIT_CONFLICT",
+    "R10 committed response loss replays; labelled hooks bounded and unknown commit confirmation",
+    "S04 internal owner acquisition rejects the same formal version without partial writes",
+    "B11/B13/B15/B17 complete draft/publication, bindingHash, config retention and immutable history",
+    "R08 nonreceipt unique conflict propagates and publication insert never overwrites",
+    "B12/B16 wrong owner, no transaction and forged unsupported sources rejected without writes",
+    "BSON Long content counts normalize without changing the Content hash",
+    "mapping rejection: missing",
+    "mapping rejection: extra",
+    "mapping rejection: duplicate",
+    "mapping rejection: wrong owner",
+    "mapping rejection: missing version",
+    "mapping rejection: version belongs another question",
+    "mapping rejection: content hash mismatch",
+    "mapping rejection: stored content tampered",
+    "mapping rejection: wrong draft version",
+    "B12 corrupted/missing/extra/version/hash/owner mappings and legacy unmapped snapshots fail closed"
+  ],
+  "syntheticFixtures": true,
+  "historicalReplay": {
+    "first": {
+      "revision": 1,
+      "draftDefinitionRevision": 2,
+      "validationIssues": [
+        {
+          "code": "TARGET_MISSING",
+          "field": "/questions/0/jumpRules/0/targetQuestionId",
+          "questionId": "e45a0ecb-2ada-4b02-ad00-ae45de4e158d",
+          "message": "第1题：跳转目标尚未选择或已删除，可保存草稿"
+        }
+      ],
+      "instanceId": "e45a0ecb-2ada-4b02-ad00-ae45de4e158d",
+      "questionVersionId": "6adc2ec796150385c7fb8bfc",
+      "replayed": false
+    },
+    "replayed": {
+      "revision": 1,
+      "draftDefinitionRevision": 2,
+      "validationIssues": [
+        {
+          "code": "TARGET_MISSING",
+          "field": "/questions/0/jumpRules/0/targetQuestionId",
+          "questionId": "e45a0ecb-2ada-4b02-ad00-ae45de4e158d",
+          "message": "第1题：跳转目标尚未选择或已删除，可保存草稿"
+        }
+      ],
+      "instanceId": "e45a0ecb-2ada-4b02-ad00-ae45de4e158d",
+      "questionVersionId": "6adc2ec796150385c7fb8bfc",
+      "replayed": true
+    },
+    "currentRevision": 2,
+    "draftBindings": 0
+  },
+  "concurrency": {
+    "sameKey": {
+      "callbacksEntered": 2,
+      "businessEffects": 1,
+      "bindings": 1,
+      "receipts": 1,
+      "revision": 1
+    },
+    "differentKeys": {
+      "success": 1,
+      "editConflict": 1,
+      "revision": 1
+    }
+  },
+  "errorHooks": {
+    "synthetic": true,
+    "realNetworkFailure": false,
+    "transientAttempts": 2,
+    "boundedAttempts": 3,
+    "unknownConfirmedByReceipt": true,
+    "unknownUnconfirmed": "OPERATION_OUTCOME_UNKNOWN",
+    "commitAttempts": 3,
+    "businessCallsForCommitRetry": 1
+  },
+  "applicationUnchanged": true,
+  "finalCounts": {
+    "surveys": 20,
+    "question_versions": 3,
+    "survey_question_bindings": 13,
+    "operation_receipts": 27
+  },
+  "status": "passed"
+}

@@ -1,0 +1,616 @@
+{
+  "state": "synthetic-contract-examples-only-no-api-or-database-tests",
+  "review": "P2-003",
+  "receipts": [
+    {
+      "endpoint": "P2-L01",
+      "operation": "createQuestion",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/questions",
+      "request": {
+        "content": {
+          "type": "number",
+          "title": "年龄",
+          "validation": {
+            "min": "0",
+            "max": "120",
+            "integerOnly": true
+          }
+        }
+      },
+      "requestHash": "f745609e62eb28808144ef9ee788ad39d5cae54661a282d7e0f9a508be440e04",
+      "requestKey": "review-P2-L01",
+      "resultVersion": 1,
+      "firstHttpStatus": 201,
+      "result": {
+        "kind": "resourceReceipt",
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": null,
+          "revision": 0
+        }
+      },
+      "firstResponse": {
+        "status": 201,
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": null,
+          "revision": 0,
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": null,
+          "revision": 0,
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    },
+    {
+      "endpoint": "P2-L04",
+      "operation": "saveVersion",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/questions/710000000000000000000001/versions",
+      "request": {
+        "expectedRevision": 1,
+        "expectedDraftRevision": 1
+      },
+      "requestHash": "e5553735ddbaf19010b06f7c7e4e18f57a98d17ce7832f9a87bbbc8f529b51c5",
+      "requestKey": "review-P2-L04",
+      "resultVersion": 1,
+      "firstHttpStatus": 201,
+      "result": {
+        "kind": "resourceReceipt",
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": "720000000000000000000001",
+          "revision": 2
+        }
+      },
+      "firstResponse": {
+        "status": 201,
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": "720000000000000000000001",
+          "revision": 2,
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": "720000000000000000000001",
+          "revision": 2,
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    },
+    {
+      "endpoint": "P2-L07",
+      "operation": "restoreVersion",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/questions/710000000000000000000001/restorations",
+      "request": {
+        "expectedRevision": 2,
+        "sourceVersionId": "720000000000000000000001"
+      },
+      "requestHash": "8fbad06746eeca8d65720bed044726fd6af74c3de85fef379c27fd217c9c0520",
+      "requestKey": "review-P2-L07",
+      "resultVersion": 1,
+      "firstHttpStatus": 201,
+      "result": {
+        "kind": "resourceReceipt",
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": "720000000000000000000002",
+          "revision": 3
+        }
+      },
+      "firstResponse": {
+        "status": 201,
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": "720000000000000000000002",
+          "revision": 3,
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": "720000000000000000000002",
+          "revision": 3,
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    },
+    {
+      "endpoint": "P2-L08",
+      "operation": "forkQuestion",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/question-versions/720000000000000000000001/forks",
+      "request": {
+        "content": {
+          "type": "number",
+          "title": "年龄",
+          "validation": {
+            "min": "0",
+            "max": "120",
+            "integerOnly": true
+          }
+        }
+      },
+      "requestHash": "fae38e8b15d97b0278066c2887348567006e791e1ae1d3cd214b3fe964cd8db3",
+      "requestKey": "review-P2-L08",
+      "resultVersion": 1,
+      "firstHttpStatus": 201,
+      "result": {
+        "kind": "resourceReceipt",
+        "data": {
+          "resourceId": "710000000000000000000002",
+          "versionId": "720000000000000000000003",
+          "revision": 1
+        }
+      },
+      "firstResponse": {
+        "status": 201,
+        "data": {
+          "resourceId": "710000000000000000000002",
+          "versionId": "720000000000000000000003",
+          "revision": 1,
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "resourceId": "710000000000000000000002",
+          "versionId": "720000000000000000000003",
+          "revision": 1,
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    },
+    {
+      "endpoint": "P2-B01",
+      "operation": "createBank",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/question-banks",
+      "request": {
+        "name": "基本信息"
+      },
+      "requestHash": "204ad67d6f98987ef521b4de601637107a374f3873ca434f7260fb8e0317e3b5",
+      "requestKey": "review-P2-B01",
+      "resultVersion": 1,
+      "firstHttpStatus": 201,
+      "result": {
+        "kind": "resourceReceipt",
+        "data": {
+          "resourceId": "740000000000000000000001",
+          "versionId": null,
+          "revision": 0
+        }
+      },
+      "firstResponse": {
+        "status": 201,
+        "data": {
+          "resourceId": "740000000000000000000001",
+          "versionId": null,
+          "revision": 0,
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "resourceId": "740000000000000000000001",
+          "versionId": null,
+          "revision": 0,
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    },
+    {
+      "endpoint": "P2-I01",
+      "operation": "attachQuestion",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/surveys/730000000000000000000001/question-references",
+      "request": {
+        "expectedRevision": 0,
+        "questionVersionId": "720000000000000000000001",
+        "position": 0,
+        "required": true,
+        "jumpRules": [
+          {
+            "id": "branch001",
+            "condition": {
+              "op": "gte",
+              "number": "18"
+            },
+            "targetQuestionId": "future_age_target"
+          }
+        ]
+      },
+      "requestHash": "7bd7cc114ff02c026336be065ca258c9a5421f3883d5ea46f93b4fb24e4eac78",
+      "requestKey": "review-P2-I01",
+      "resultVersion": 1,
+      "firstHttpStatus": 200,
+      "result": {
+        "kind": "instanceSave",
+        "data": {
+          "revision": 1,
+          "draftDefinitionRevision": 2,
+          "instanceId": "auto_age_001",
+          "questionVersionId": "720000000000000000000001",
+          "validationIssues": [
+            {
+              "code": "TARGET_MISSING",
+              "field": "/questions/0/jumpRules/0/targetQuestionId",
+              "questionId": "auto_age_001",
+              "message": "第1题：跳转目标尚未选择或已删除，可保存草稿"
+            }
+          ]
+        }
+      },
+      "firstResponse": {
+        "status": 200,
+        "data": {
+          "revision": 1,
+          "draftDefinitionRevision": 2,
+          "instanceId": "auto_age_001",
+          "questionVersionId": "720000000000000000000001",
+          "validationIssues": [
+            {
+              "code": "TARGET_MISSING",
+              "field": "/questions/0/jumpRules/0/targetQuestionId",
+              "questionId": "auto_age_001",
+              "message": "第1题：跳转目标尚未选择或已删除，可保存草稿"
+            }
+          ],
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "revision": 1,
+          "draftDefinitionRevision": 2,
+          "instanceId": "auto_age_001",
+          "questionVersionId": "720000000000000000000001",
+          "validationIssues": [
+            {
+              "code": "TARGET_MISSING",
+              "field": "/questions/0/jumpRules/0/targetQuestionId",
+              "questionId": "auto_age_001",
+              "message": "第1题：跳转目标尚未选择或已删除，可保存草稿"
+            }
+          ],
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    },
+    {
+      "endpoint": "P2-I02",
+      "operation": "replaceQuestion",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/surveys/730000000000000000000001/questions/age/replacement",
+      "request": {
+        "expectedRevision": 1,
+        "questionVersionId": "720000000000000000000002"
+      },
+      "requestHash": "af075b138acc14b4cc79cc3283cafc63a9e51f5ed6ebbb6aaf89e10210257b5b",
+      "requestKey": "review-P2-I02",
+      "resultVersion": 1,
+      "firstHttpStatus": 200,
+      "result": {
+        "kind": "instanceSave",
+        "data": {
+          "revision": 2,
+          "draftDefinitionRevision": 3,
+          "instanceId": "age",
+          "questionVersionId": "720000000000000000000002",
+          "validationIssues": []
+        }
+      },
+      "firstResponse": {
+        "status": 200,
+        "data": {
+          "revision": 2,
+          "draftDefinitionRevision": 3,
+          "instanceId": "age",
+          "questionVersionId": "720000000000000000000002",
+          "validationIssues": [],
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "revision": 2,
+          "draftDefinitionRevision": 3,
+          "instanceId": "age",
+          "questionVersionId": "720000000000000000000002",
+          "validationIssues": [],
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    },
+    {
+      "endpoint": "P2-M01",
+      "operation": "createTemplate",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/templates",
+      "request": {
+        "surveyId": "730000000000000000000001",
+        "publishedVersion": 1,
+        "expectedSurveyRevision": 2
+      },
+      "requestHash": "521aee33f97f85b3456b563f56f052fb696879aeb2208bb70a1901e5b2ec8b16",
+      "requestKey": "review-P2-M01",
+      "resultVersion": 1,
+      "firstHttpStatus": 201,
+      "result": {
+        "kind": "resourceReceipt",
+        "data": {
+          "resourceId": "750000000000000000000001",
+          "versionId": null,
+          "revision": 0
+        }
+      },
+      "firstResponse": {
+        "status": 201,
+        "data": {
+          "resourceId": "750000000000000000000001",
+          "versionId": null,
+          "revision": 0,
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "resourceId": "750000000000000000000001",
+          "versionId": null,
+          "revision": 0,
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    },
+    {
+      "endpoint": "P2-M04",
+      "operation": "adoptTemplate",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/templates/750000000000000000000001/adoptions",
+      "request": {
+        "expectedTemplateRevision": 0
+      },
+      "requestHash": "0c4be6bd044fc87f1b53eb9c25f2f0c3b8691e54346305a07d62b13ca431fa22",
+      "requestKey": "review-P2-M04",
+      "resultVersion": 1,
+      "firstHttpStatus": 201,
+      "result": {
+        "kind": "templateAdoption",
+        "data": {
+          "surveyId": "730000000000000000000004",
+          "revision": 0
+        }
+      },
+      "firstResponse": {
+        "status": 201,
+        "data": {
+          "surveyId": "730000000000000000000004",
+          "revision": 0,
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "surveyId": "730000000000000000000004",
+          "revision": 0,
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    },
+    {
+      "endpoint": "P2-I04",
+      "operation": "saveInlineQuestion",
+      "actorId": "700000000000000000000001",
+      "path": "/api/v1/surveys/730000000000000000000001/questions/age/formalization",
+      "request": {
+        "expectedRevision": 1
+      },
+      "requestHash": "c305ecb4e4f1dc55bbe609b002a95c2789555fd83d1d881c616ca786c76baeaa",
+      "requestKey": "review-P2-I04",
+      "resultVersion": 1,
+      "firstHttpStatus": 200,
+      "result": {
+        "kind": "instanceSave",
+        "data": {
+          "revision": 2,
+          "draftDefinitionRevision": 3,
+          "instanceId": "age",
+          "questionVersionId": "720000000000000000000001",
+          "validationIssues": []
+        }
+      },
+      "firstResponse": {
+        "status": 200,
+        "data": {
+          "revision": 2,
+          "draftDefinitionRevision": 3,
+          "instanceId": "age",
+          "questionVersionId": "720000000000000000000001",
+          "validationIssues": [],
+          "replayed": false
+        }
+      },
+      "expectedReplay": {
+        "status": 200,
+        "data": {
+          "revision": 2,
+          "draftDefinitionRevision": 3,
+          "instanceId": "age",
+          "questionVersionId": "720000000000000000000001",
+          "validationIssues": [],
+          "replayed": true
+        }
+      },
+      "laterResourceState": {
+        "surveyRevision": 9,
+        "draftDefinitionRevision": 8,
+        "instanceExists": false,
+        "sourceGrantState": "revoked",
+        "templateStatus": "unlisted"
+      },
+      "resourceLookupsToReconstructReplay": 0,
+      "expectedAdditionalBusinessWritesOnReplay": 0
+    }
+  ],
+  "templateConcurrency": {
+    "initial": {
+      "status": "listed",
+      "revision": 0,
+      "accessFence": 0,
+      "updatedAt": "2026-10-22T08:00:00.000Z",
+      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "operations": [
+      {
+        "actor": "B",
+        "key": "adopt-B",
+        "expectedTemplateRevision": 0
+      },
+      {
+        "actor": "C",
+        "key": "adopt-C",
+        "expectedTemplateRevision": 0
+      }
+    ],
+    "interleaving": [
+      "B and C read revision 0",
+      "B increments template accessFence and commits draft B plus receipt B",
+      "C transaction receives retryable write conflict and restarts with same request/key",
+      "C rereads revision 0 and valid status/grants, increments accessFence and commits draft C plus receipt C",
+      "B or C replays successful key from receipt only"
+    ],
+    "expectedFinal": {
+      "status": "listed",
+      "revision": 0,
+      "accessFence": 2,
+      "updatedAt": "2026-10-22T08:00:00.000Z",
+      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "newSurveyCount": 2,
+      "successfulReplaysAddSurveys": 0,
+      "successfulReplaysIncrementFence": 0
+    },
+    "stateChangeInterleaving": {
+      "afterRealUnlisting": {
+        "status": "unlisted",
+        "revision": 1,
+        "accessFence": 1
+      },
+      "afterUnlistThenRelist": {
+        "status": "listed",
+        "revision": 2,
+        "accessFence": 2
+      },
+      "oldRequest": {
+        "expectedTemplateRevision": 0
+      },
+      "expected": "reject new operation by real state or revision check; no new survey"
+    },
+    "retryExhausted": {
+      "httpStatus": 503,
+      "code": "OPERATION_RETRY_LATER",
+      "sameKeyRequired": true,
+      "notCode": "EDIT_CONFLICT"
+    }
+  }
+}

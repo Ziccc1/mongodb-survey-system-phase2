@@ -1,0 +1,3699 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:51.770Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:51.770Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/surveys/6adb7d335a92be296255f161/questions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "hasUnpublishedChanges": true
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:51.833Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/questions/s/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "s",
+        "questionVersionId": "6adb7d335a92be296255f163",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 2,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:51.916Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/questions/m/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 3,
+        "draftDefinitionRevision": 4,
+        "validationIssues": [],
+        "instanceId": "m",
+        "questionVersionId": "6adb7d335a92be296255f168",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 4,
+        "revision": 3,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:51.991Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/questions/t/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 5,
+        "validationIssues": [],
+        "instanceId": "t",
+        "questionVersionId": "6adb7d345a92be296255f16d",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 5,
+        "revision": 4,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:52.071Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/questions/n/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 5,
+        "draftDefinitionRevision": 6,
+        "validationIssues": [],
+        "instanceId": "n",
+        "questionVersionId": "6adb7d345a92be296255f172",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 5,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:52.140Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 5,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:52.140Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 6,
+        "publishedAt": "2026-10-23T15:28:52.201Z",
+        "firstPublishedAt": "2026-10-23T15:28:52.201Z",
+        "shareUrl": "http://localhost:5200/survey/rFzYaj0ng5TDseA_rUalXQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/statistics",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "selectedVersion": 1,
+        "latestPublishedVersion": 1,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "selectedVersionResponseCount": 0,
+        "generatedAt": "2026-10-23T15:28:52.280Z",
+        "questionSummaries": [
+          {
+            "questionId": "s",
+            "type": "single",
+            "title": "单选",
+            "answeredCount": 0,
+            "optionCounts": [
+              {
+                "optionId": "yes",
+                "label": "是",
+                "count": 0
+              },
+              {
+                "optionId": "no",
+                "label": "否",
+                "count": 0
+              },
+              {
+                "optionId": "zero",
+                "label": "零次",
+                "count": 0
+              }
+            ]
+          },
+          {
+            "questionId": "m",
+            "type": "multiple",
+            "title": "多选",
+            "answeredCount": 0,
+            "optionCounts": [
+              {
+                "optionId": "a",
+                "label": "A",
+                "count": 0
+              },
+              {
+                "optionId": "b",
+                "label": "B",
+                "count": 0
+              },
+              {
+                "optionId": "c",
+                "label": "C",
+                "count": 0
+              }
+            ]
+          },
+          {
+            "questionId": "t",
+            "type": "text",
+            "title": "文字",
+            "answeredCount": 0
+          },
+          {
+            "questionId": "n",
+            "type": "number",
+            "title": "数字",
+            "answeredCount": 0,
+            "average": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 6,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-23T15:28:52.201Z",
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:52.201Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d345a92be296255f17b",
+        "submittedAt": "2026-10-23T15:28:52.383Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d345a92be296255f17c",
+        "submittedAt": "2026-10-23T15:28:52.435Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d345a92be296255f17d",
+        "submittedAt": "2026-10-23T15:28:52.479Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/statistics",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "selectedVersion": 1,
+        "latestPublishedVersion": 1,
+        "cumulativeResponseCount": 3,
+        "currentVersionResponseCount": 3,
+        "selectedVersionResponseCount": 3,
+        "generatedAt": "2026-10-23T15:28:52.528Z",
+        "questionSummaries": [
+          {
+            "questionId": "s",
+            "type": "single",
+            "title": "单选",
+            "answeredCount": 3,
+            "optionCounts": [
+              {
+                "optionId": "yes",
+                "label": "是",
+                "count": 2
+              },
+              {
+                "optionId": "no",
+                "label": "否",
+                "count": 1
+              },
+              {
+                "optionId": "zero",
+                "label": "零次",
+                "count": 0
+              }
+            ]
+          },
+          {
+            "questionId": "m",
+            "type": "multiple",
+            "title": "多选",
+            "answeredCount": 3,
+            "optionCounts": [
+              {
+                "optionId": "a",
+                "label": "A",
+                "count": 2
+              },
+              {
+                "optionId": "b",
+                "label": "B",
+                "count": 2
+              },
+              {
+                "optionId": "c",
+                "label": "C",
+                "count": 0
+              }
+            ]
+          },
+          {
+            "questionId": "t",
+            "type": "text",
+            "title": "文字",
+            "answeredCount": 2
+          },
+          {
+            "questionId": "n",
+            "type": "number",
+            "title": "数字",
+            "answeredCount": 2,
+            "average": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/responses/6adb7d345a92be296255f17b",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "responseId": "6adb7d345a92be296255f17b",
+        "publishedVersion": 1,
+        "anonymous": true,
+        "submittedAt": "2026-10-23T15:28:52.383Z",
+        "definition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "answers": [
+          {
+            "questionId": "s",
+            "type": "single",
+            "optionId": "yes"
+          },
+          {
+            "questionId": "m",
+            "type": "multiple",
+            "optionIds": [
+              "a",
+              "b"
+            ]
+          },
+          {
+            "questionId": "t",
+            "type": "text",
+            "text": "第一条"
+          },
+          {
+            "questionId": "n",
+            "type": "number",
+            "number": "0"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/questions/t/answers?version=1&limit=1",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "selectedVersion": 1,
+        "latestPublishedVersion": 1,
+        "cumulativeResponseCount": 3,
+        "currentVersionResponseCount": 3,
+        "selectedVersionResponseCount": 3,
+        "generatedAt": "2026-10-23T15:28:52.651Z",
+        "question": {
+          "id": "t",
+          "type": "text",
+          "title": "文字"
+        },
+        "items": [
+          {
+            "responseId": "6adb7d345a92be296255f17c",
+            "anonymous": true,
+            "submittedAt": "2026-10-23T15:28:52.435Z",
+            "answer": {
+              "questionId": "t",
+              "type": "text",
+              "text": "第二条"
+            }
+          }
+        ],
+        "nextCursor": "eyJzY29wZSI6eyJlbmRwb2ludCI6ImFuc3dlcnMiLCJvd25lciI6IjZhZGI3ZDMyNWE5MmJlMjk2MjU1ZjE1ZSIsInN1cnZleUlkIjoiNmFkYjdkMzM1YTkyYmUyOTYyNTVmMTYxIiwidmVyc2lvbiI6MSwicXVlc3Rpb25JZCI6InQifSwiYWZ0ZXIiOnsidGltZSI6IjIwMjYtMTAtMjNUMTU6Mjg6NTIuNDM1WiIsImlkIjoiNmFkYjdkMzQ1YTkyYmUyOTYyNTVmMTdjIn19.4EdcO-EugrHCcWx_iCgHmvveULsEMoQsm3zAMC28WLo"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/questions/t/answers?version=1&limit=1&cursor=eyJzY29wZSI6eyJlbmRwb2ludCI6ImFuc3dlcnMiLCJvd25lciI6IjZhZGI3ZDMyNWE5MmJlMjk2MjU1ZjE1ZSIsInN1cnZleUlkIjoiNmFkYjdkMzM1YTkyYmUyOTYyNTVmMTYxIiwidmVyc2lvbiI6MSwicXVlc3Rpb25JZCI6InQifSwiYWZ0ZXIiOnsidGltZSI6IjIwMjYtMTAtMjNUMTU6Mjg6NTIuNDM1WiIsImlkIjoiNmFkYjdkMzQ1YTkyYmUyOTYyNTVmMTdjIn19.4EdcO-EugrHCcWx_iCgHmvveULsEMoQsm3zAMC28WLo",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "selectedVersion": 1,
+        "latestPublishedVersion": 1,
+        "cumulativeResponseCount": 3,
+        "currentVersionResponseCount": 3,
+        "selectedVersionResponseCount": 3,
+        "generatedAt": "2026-10-23T15:28:52.699Z",
+        "question": {
+          "id": "t",
+          "type": "text",
+          "title": "文字"
+        },
+        "items": [
+          {
+            "responseId": "6adb7d345a92be296255f17b",
+            "anonymous": true,
+            "submittedAt": "2026-10-23T15:28:52.383Z",
+            "answer": {
+              "questionId": "t",
+              "type": "text",
+              "text": "第一条"
+            }
+          }
+        ],
+        "nextCursor": null
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/questions/n/answers?version=1&cursor=eyJzY29wZSI6eyJlbmRwb2ludCI6ImFuc3dlcnMiLCJvd25lciI6IjZhZGI3ZDMyNWE5MmJlMjk2MjU1ZjE1ZSIsInN1cnZleUlkIjoiNmFkYjdkMzM1YTkyYmUyOTYyNTVmMTYxIiwidmVyc2lvbiI6MSwicXVlc3Rpb25JZCI6InQifSwiYWZ0ZXIiOnsidGltZSI6IjIwMjYtMTAtMjNUMTU6Mjg6NTIuNDM1WiIsImlkIjoiNmFkYjdkMzQ1YTkyYmUyOTYyNTVmMTdjIn19.4EdcO-EugrHCcWx_iCgHmvveULsEMoQsm3zAMC28WLo",
+    "who": 0,
+    "status": 400,
+    "response": {
+      "error": {
+        "code": "INVALID_CURSOR",
+        "message": "分页游标与查询范围不匹配",
+        "details": [],
+        "traceId": "9688ada9-356a-487d-bdfa-a2355e5e4378"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/questions/t/answers?cursor=eyJzY29wZSI6eyJlbmRwb2ludCI6ImFuc3dlcnMiLCJvd25lciI6IjZhZGI3ZDMyNWE5MmJlMjk2MjU1ZjE1ZSIsInN1cnZleUlkIjoiNmFkYjdkMzM1YTkyYmUyOTYyNTVmMTYxIiwidmVyc2lvbiI6MSwicXVlc3Rpb25JZCI6InQifSwiYWZ0ZXIiOnsidGltZSI6IjIwMjYtMTAtMjNUMTU6Mjg6NTIuNDM1WiIsImlkIjoiNmFkYjdkMzQ1YTkyYmUyOTYyNTVmMTdjIn19.4EdcO-EugrHCcWx_iCgHmvveULsEMoQsm3zAMC28WLo",
+    "who": 0,
+    "status": 400,
+    "response": {
+      "error": {
+        "code": "INVALID_CURSOR",
+        "message": "后续页必须显式指定版本",
+        "details": [],
+        "traceId": "86efe819-85f9-42e2-ba89-bd7db175c29b"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "03b0cf16-961e-4fd7-aad7-1db4055ae8fc"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/versions/1",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "1142ab21-dedb-4530-87b8-0d08350edfef"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/statistics",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "daec6b24-e42e-488e-81bc-2ae6cabb803e"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/responses",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "0acaf70a-7164-4457-833b-68c342220ddc"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/responses/6adb7d345a92be296255f17b",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "200d3104-ad08-4619-8a84-0afe300b28ee"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 6,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 3,
+        "currentVersionResponseCount": 3,
+        "firstPublishedAt": "2026-10-23T15:28:52.201Z",
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:52.201Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/pause",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "status": "paused",
+        "revision": 7,
+        "currentPublishedVersion": 1
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "paused",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 7,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 3,
+        "currentVersionResponseCount": 3,
+        "firstPublishedAt": "2026-10-23T15:28:52.201Z",
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:52.870Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "publishedVersion": 2,
+        "status": "published",
+        "revision": 8,
+        "publishedAt": "2026-10-23T15:28:52.976Z",
+        "firstPublishedAt": "2026-10-23T15:28:52.201Z",
+        "shareUrl": "http://localhost:5200/survey/rFzYaj0ng5TDseA_rUalXQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/statistics",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "selectedVersion": 2,
+        "latestPublishedVersion": 2,
+        "cumulativeResponseCount": 3,
+        "currentVersionResponseCount": 0,
+        "selectedVersionResponseCount": 0,
+        "generatedAt": "2026-10-23T15:28:53.046Z",
+        "questionSummaries": [
+          {
+            "questionId": "s",
+            "type": "single",
+            "title": "单选",
+            "answeredCount": 0,
+            "optionCounts": [
+              {
+                "optionId": "yes",
+                "label": "是",
+                "count": 0
+              },
+              {
+                "optionId": "no",
+                "label": "否",
+                "count": 0
+              },
+              {
+                "optionId": "zero",
+                "label": "零次",
+                "count": 0
+              }
+            ]
+          },
+          {
+            "questionId": "m",
+            "type": "multiple",
+            "title": "多选",
+            "answeredCount": 0,
+            "optionCounts": [
+              {
+                "optionId": "a",
+                "label": "A",
+                "count": 0
+              },
+              {
+                "optionId": "b",
+                "label": "B",
+                "count": 0
+              },
+              {
+                "optionId": "c",
+                "label": "C",
+                "count": 0
+              }
+            ]
+          },
+          {
+            "questionId": "t",
+            "type": "text",
+            "title": "文字",
+            "answeredCount": 0
+          },
+          {
+            "questionId": "n",
+            "type": "number",
+            "title": "数字",
+            "answeredCount": 0,
+            "average": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161/statistics?version=1",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "selectedVersion": 1,
+        "latestPublishedVersion": 2,
+        "cumulativeResponseCount": 3,
+        "currentVersionResponseCount": 0,
+        "selectedVersionResponseCount": 3,
+        "generatedAt": "2026-10-23T15:28:53.102Z",
+        "questionSummaries": [
+          {
+            "questionId": "s",
+            "type": "single",
+            "title": "单选",
+            "answeredCount": 3,
+            "optionCounts": [
+              {
+                "optionId": "yes",
+                "label": "是",
+                "count": 2
+              },
+              {
+                "optionId": "no",
+                "label": "否",
+                "count": 1
+              },
+              {
+                "optionId": "zero",
+                "label": "零次",
+                "count": 0
+              }
+            ]
+          },
+          {
+            "questionId": "m",
+            "type": "multiple",
+            "title": "多选",
+            "answeredCount": 3,
+            "optionCounts": [
+              {
+                "optionId": "a",
+                "label": "A",
+                "count": 2
+              },
+              {
+                "optionId": "b",
+                "label": "B",
+                "count": 2
+              },
+              {
+                "optionId": "c",
+                "label": "C",
+                "count": 0
+              }
+            ]
+          },
+          {
+            "questionId": "t",
+            "type": "text",
+            "title": "文字",
+            "answeredCount": 2
+          },
+          {
+            "questionId": "n",
+            "type": "number",
+            "title": "数字",
+            "answeredCount": 2,
+            "average": "5"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d355a92be296255f183",
+        "submittedAt": "2026-10-23T15:28:53.184Z",
+        "publishedVersion": 2,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d355a92be296255f183",
+        "submittedAt": "2026-10-23T15:28:53.184Z",
+        "publishedVersion": 2,
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "IDEMPOTENCY_CONFLICT",
+        "message": "该提交key已用于不同内容",
+        "details": [],
+        "traceId": "419c645a-45bf-4c13-ad14-24d35e6fc12c"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d355a92be296255f185",
+        "submittedAt": "2026-10-23T15:28:53.379Z",
+        "publishedVersion": 2,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 500,
+    "response": {
+      "error": {
+        "code": "INTERNAL_ERROR",
+        "message": "服务暂时出错，请稍后重试",
+        "details": [],
+        "traceId": "a6ab354d-6444-4bd7-bc36-1885625af3e1"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 8,
+        "currentPublishedVersion": 2,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 5,
+        "currentVersionResponseCount": 2,
+        "firstPublishedAt": "2026-10-23T15:28:52.201Z",
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:52.976Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/pause",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "status": "paused",
+        "revision": 9,
+        "currentPublishedVersion": 2
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "SURVEY_PAUSED",
+        "message": "问卷已暂停",
+        "details": [],
+        "traceId": "3253832b-c342-4cd2-93be-ff216fdfee1c"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "paused",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 9,
+        "currentPublishedVersion": 2,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 5,
+        "currentVersionResponseCount": 2,
+        "firstPublishedAt": "2026-10-23T15:28:52.201Z",
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:53.569Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/close",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d335a92be296255f161",
+        "status": "closed",
+        "revision": 10,
+        "currentPublishedVersion": 2
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d355a92be296255f183",
+        "submittedAt": "2026-10-23T15:28:53.184Z",
+        "publishedVersion": 2,
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/rFzYaj0ng5TDseA_rUalXQ/responses",
+    "who": 1,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "SURVEY_CLOSED",
+        "message": "问卷已关闭",
+        "details": [],
+        "traceId": "6a2dfe36-a8b2-4dd0-b8f4-cd5b32af3ddf"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d335a92be296255f161",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d335a92be296255f161",
+        "publicId": "rFzYaj0ng5TDseA_rUalXQ",
+        "status": "closed",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "单选",
+              "required": true,
+              "options": [
+                {
+                  "id": "yes",
+                  "label": "是"
+                },
+                {
+                  "id": "no",
+                  "label": "否"
+                },
+                {
+                  "id": "zero",
+                  "label": "零次"
+                }
+              ],
+              "jumpRules": []
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "多选",
+              "required": false,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "A"
+                },
+                {
+                  "id": "b",
+                  "label": "B"
+                },
+                {
+                  "id": "c",
+                  "label": "C"
+                }
+              ],
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "文字",
+              "required": false,
+              "validation": {},
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "数字",
+              "required": false,
+              "validation": {
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 10,
+        "currentPublishedVersion": 2,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 5,
+        "currentVersionResponseCount": 2,
+        "firstPublishedAt": "2026-10-23T15:28:52.201Z",
+        "createdAt": "2026-10-23T15:28:51.770Z",
+        "updatedAt": "2026-10-23T15:28:53.638Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d335a92be296255f161/pause",
+    "who": 0,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "SURVEY_STATE_CONFLICT",
+        "message": "当前状态不允许此操作",
+        "details": [],
+        "traceId": "4b868f4d-7f40-4592-8dd1-a61b7522bb6c"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adb7d355a92be296255f187",
+        "publicId": "TR8YnzdkIeF4fC6lCebIhA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:53.775Z",
+        "updatedAt": "2026-10-23T15:28:53.775Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d355a92be296255f187",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d355a92be296255f187",
+        "publicId": "TR8YnzdkIeF4fC6lCebIhA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:53.775Z",
+        "updatedAt": "2026-10-23T15:28:53.775Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/surveys/6adb7d355a92be296255f187/questions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "hasUnpublishedChanges": true
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d355a92be296255f187",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d355a92be296255f187",
+        "publicId": "TR8YnzdkIeF4fC6lCebIhA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "分支",
+              "required": true,
+              "options": [
+                {
+                  "id": "go",
+                  "label": "跳转"
+                },
+                {
+                  "id": "stay",
+                  "label": "继续"
+                }
+              ],
+              "jumpRules": [
+                {
+                  "id": "jump",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "go"
+                  },
+                  "targetQuestionId": "n"
+                }
+              ]
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "恰好两选",
+              "required": true,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {
+                "minChoices": 2,
+                "maxChoices": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "两个字符",
+              "required": true,
+              "validation": {
+                "minLength": 2,
+                "maxLength": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "精确数字",
+              "required": true,
+              "validation": {
+                "min": "-120",
+                "max": "120",
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:53.775Z",
+        "updatedAt": "2026-10-23T15:28:53.808Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d355a92be296255f187/questions/s/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "s",
+        "questionVersionId": "6adb7d355a92be296255f189",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d355a92be296255f187",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d355a92be296255f187",
+        "publicId": "TR8YnzdkIeF4fC6lCebIhA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "分支",
+              "required": true,
+              "options": [
+                {
+                  "id": "go",
+                  "label": "跳转"
+                },
+                {
+                  "id": "stay",
+                  "label": "继续"
+                }
+              ],
+              "jumpRules": [
+                {
+                  "id": "jump",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "go"
+                  },
+                  "targetQuestionId": "n"
+                }
+              ]
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "恰好两选",
+              "required": true,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {
+                "minChoices": 2,
+                "maxChoices": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "两个字符",
+              "required": true,
+              "validation": {
+                "minLength": 2,
+                "maxLength": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "精确数字",
+              "required": true,
+              "validation": {
+                "min": "-120",
+                "max": "120",
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 2,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:53.775Z",
+        "updatedAt": "2026-10-23T15:28:53.875Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d355a92be296255f187/questions/m/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 3,
+        "draftDefinitionRevision": 4,
+        "validationIssues": [],
+        "instanceId": "m",
+        "questionVersionId": "6adb7d355a92be296255f18e",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d355a92be296255f187",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d355a92be296255f187",
+        "publicId": "TR8YnzdkIeF4fC6lCebIhA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "分支",
+              "required": true,
+              "options": [
+                {
+                  "id": "go",
+                  "label": "跳转"
+                },
+                {
+                  "id": "stay",
+                  "label": "继续"
+                }
+              ],
+              "jumpRules": [
+                {
+                  "id": "jump",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "go"
+                  },
+                  "targetQuestionId": "n"
+                }
+              ]
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "恰好两选",
+              "required": true,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {
+                "minChoices": 2,
+                "maxChoices": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "两个字符",
+              "required": true,
+              "validation": {
+                "minLength": 2,
+                "maxLength": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "精确数字",
+              "required": true,
+              "validation": {
+                "min": "-120",
+                "max": "120",
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 4,
+        "revision": 3,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:53.775Z",
+        "updatedAt": "2026-10-23T15:28:53.936Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d355a92be296255f187/questions/t/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 5,
+        "validationIssues": [],
+        "instanceId": "t",
+        "questionVersionId": "6adb7d355a92be296255f193",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d355a92be296255f187",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d355a92be296255f187",
+        "publicId": "TR8YnzdkIeF4fC6lCebIhA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "分支",
+              "required": true,
+              "options": [
+                {
+                  "id": "go",
+                  "label": "跳转"
+                },
+                {
+                  "id": "stay",
+                  "label": "继续"
+                }
+              ],
+              "jumpRules": [
+                {
+                  "id": "jump",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "go"
+                  },
+                  "targetQuestionId": "n"
+                }
+              ]
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "恰好两选",
+              "required": true,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {
+                "minChoices": 2,
+                "maxChoices": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "两个字符",
+              "required": true,
+              "validation": {
+                "minLength": 2,
+                "maxLength": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "精确数字",
+              "required": true,
+              "validation": {
+                "min": "-120",
+                "max": "120",
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 5,
+        "revision": 4,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:53.775Z",
+        "updatedAt": "2026-10-23T15:28:54.002Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d355a92be296255f187/questions/n/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 5,
+        "draftDefinitionRevision": 6,
+        "validationIssues": [],
+        "instanceId": "n",
+        "questionVersionId": "6adb7d365a92be296255f198",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d355a92be296255f187",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d355a92be296255f187",
+        "publicId": "TR8YnzdkIeF4fC6lCebIhA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "分支",
+              "required": true,
+              "options": [
+                {
+                  "id": "go",
+                  "label": "跳转"
+                },
+                {
+                  "id": "stay",
+                  "label": "继续"
+                }
+              ],
+              "jumpRules": [
+                {
+                  "id": "jump",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "go"
+                  },
+                  "targetQuestionId": "n"
+                }
+              ]
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "恰好两选",
+              "required": true,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {
+                "minChoices": 2,
+                "maxChoices": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "两个字符",
+              "required": true,
+              "validation": {
+                "minLength": 2,
+                "maxLength": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "精确数字",
+              "required": true,
+              "validation": {
+                "min": "-120",
+                "max": "120",
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 5,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:53.775Z",
+        "updatedAt": "2026-10-23T15:28:54.076Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d355a92be296255f187",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d355a92be296255f187",
+        "publicId": "TR8YnzdkIeF4fC6lCebIhA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "s",
+              "type": "single",
+              "title": "分支",
+              "required": true,
+              "options": [
+                {
+                  "id": "go",
+                  "label": "跳转"
+                },
+                {
+                  "id": "stay",
+                  "label": "继续"
+                }
+              ],
+              "jumpRules": [
+                {
+                  "id": "jump",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "go"
+                  },
+                  "targetQuestionId": "n"
+                }
+              ]
+            },
+            {
+              "id": "m",
+              "type": "multiple",
+              "title": "恰好两选",
+              "required": true,
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {
+                "minChoices": 2,
+                "maxChoices": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "t",
+              "type": "text",
+              "title": "两个字符",
+              "required": true,
+              "validation": {
+                "minLength": 2,
+                "maxLength": 2
+              },
+              "jumpRules": []
+            },
+            {
+              "id": "n",
+              "type": "number",
+              "title": "精确数字",
+              "required": true,
+              "validation": {
+                "min": "-120",
+                "max": "120",
+                "integerOnly": false
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 5,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:53.775Z",
+        "updatedAt": "2026-10-23T15:28:54.076Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d355a92be296255f187/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d355a92be296255f187",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 6,
+        "publishedAt": "2026-10-23T15:28:54.129Z",
+        "firstPublishedAt": "2026-10-23T15:28:54.129Z",
+        "shareUrl": "http://localhost:5200/survey/TR8YnzdkIeF4fC6lCebIhA",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/TR8YnzdkIeF4fC6lCebIhA/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d365a92be296255f1a1",
+        "submittedAt": "2026-10-23T15:28:54.200Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/TR8YnzdkIeF4fC6lCebIhA/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d365a92be296255f1a2",
+        "submittedAt": "2026-10-23T15:28:54.246Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/TR8YnzdkIeF4fC6lCebIhA/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d365a92be296255f1a3",
+        "submittedAt": "2026-10-23T15:28:54.303Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/TR8YnzdkIeF4fC6lCebIhA/responses",
+    "who": 1,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "ANSWER_VALIDATION_FAILED",
+        "message": "请选择2—2项",
+        "details": [
+          {
+            "questionId": "m",
+            "field": "/answers/m",
+            "reason": "CHOICE_COUNT"
+          }
+        ],
+        "traceId": "277b15cd-16c6-43cc-ab4c-dbd714336052"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/TR8YnzdkIeF4fC6lCebIhA/responses",
+    "who": 1,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "ANSWER_VALIDATION_FAILED",
+        "message": "请输入2—2个字符",
+        "details": [
+          {
+            "questionId": "t",
+            "field": "/answers/t",
+            "reason": "TEXT_LENGTH"
+          }
+        ],
+        "traceId": "0efb0785-3d18-4244-aa4c-bc7a89d2c908"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/TR8YnzdkIeF4fC6lCebIhA/responses",
+    "who": 1,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "ANSWER_VALIDATION_FAILED",
+        "message": "不能大于120",
+        "details": [
+          {
+            "questionId": "n",
+            "field": "/answers/n",
+            "reason": "NUMBER_RANGE"
+          }
+        ],
+        "traceId": "5d588b03-c0a1-4a7a-aa34-c847f69e4b91"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/TR8YnzdkIeF4fC6lCebIhA/responses",
+    "who": 1,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "ANSWER_VALIDATION_FAILED",
+        "message": "请输入有效数字，且不要超过支持的精度和范围",
+        "details": [
+          {
+            "questionId": "n",
+            "field": "/answers/n",
+            "reason": "NUMBER_INVALID"
+          }
+        ],
+        "traceId": "9383e4f5-e1a7-40f1-81f3-0841377f594a"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adb7d365a92be296255f1a4",
+        "publicId": "uZ2l_mDTPNpzWWdksz7s7Q",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:54.702Z",
+        "updatedAt": "2026-10-23T15:28:54.702Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d365a92be296255f1a4",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d365a92be296255f1a4",
+        "publicId": "uZ2l_mDTPNpzWWdksz7s7Q",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:54.702Z",
+        "updatedAt": "2026-10-23T15:28:54.702Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/surveys/6adb7d365a92be296255f1a4/questions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "hasUnpublishedChanges": true
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d365a92be296255f1a4",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d365a92be296255f1a4",
+        "publicId": "uZ2l_mDTPNpzWWdksz7s7Q",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "n",
+              "type": "number",
+              "title": "整数",
+              "required": true,
+              "validation": {
+                "integerOnly": true
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:54.702Z",
+        "updatedAt": "2026-10-23T15:28:54.726Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d365a92be296255f1a4/questions/n/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "n",
+        "questionVersionId": "6adb7d365a92be296255f1a6",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d365a92be296255f1a4",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d365a92be296255f1a4",
+        "publicId": "uZ2l_mDTPNpzWWdksz7s7Q",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "n",
+              "type": "number",
+              "title": "整数",
+              "required": true,
+              "validation": {
+                "integerOnly": true
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 2,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:54.702Z",
+        "updatedAt": "2026-10-23T15:28:54.772Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d365a92be296255f1a4",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d365a92be296255f1a4",
+        "publicId": "uZ2l_mDTPNpzWWdksz7s7Q",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "n",
+              "type": "number",
+              "title": "整数",
+              "required": true,
+              "validation": {
+                "integerOnly": true
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 2,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:54.702Z",
+        "updatedAt": "2026-10-23T15:28:54.772Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d365a92be296255f1a4/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d365a92be296255f1a4",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 3,
+        "publishedAt": "2026-10-23T15:28:54.830Z",
+        "firstPublishedAt": "2026-10-23T15:28:54.830Z",
+        "shareUrl": "http://localhost:5200/survey/uZ2l_mDTPNpzWWdksz7s7Q",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/uZ2l_mDTPNpzWWdksz7s7Q/responses",
+    "who": 1,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "ANSWER_VALIDATION_FAILED",
+        "message": "请输入整数",
+        "details": [
+          {
+            "questionId": "n",
+            "field": "/answers/n",
+            "reason": "INTEGER_REQUIRED"
+          }
+        ],
+        "traceId": "78ddd628-5408-4888-a478-2870e2b01b5e"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/uZ2l_mDTPNpzWWdksz7s7Q/responses",
+    "who": 1,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "ANONYMOUS_NOT_ALLOWED",
+        "message": "这份问卷不允许匿名提交",
+        "details": [],
+        "traceId": "a9ebfb21-8eba-4b2d-a1b2-1f40a781e895"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/uZ2l_mDTPNpzWWdksz7s7Q/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d365a92be296255f1ac",
+        "submittedAt": "2026-10-23T15:28:54.922Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/uZ2l_mDTPNpzWWdksz7s7Q/responses",
+    "who": 1,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "ALREADY_SUBMITTED",
+        "message": "当前账号已经提交过这份问卷",
+        "details": [],
+        "traceId": "042537f5-2dc3-4004-a51e-ac0e929b0a79"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d365a92be296255f1a4",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d365a92be296255f1a4",
+        "publicId": "uZ2l_mDTPNpzWWdksz7s7Q",
+        "status": "published",
+        "draftDefinition": {
+          "title": "十三集合原功能回归",
+          "description": "",
+          "questions": [
+            {
+              "id": "n",
+              "type": "number",
+              "title": "整数",
+              "required": true,
+              "validation": {
+                "integerOnly": true
+              },
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 3,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 1,
+        "currentVersionResponseCount": 1,
+        "firstPublishedAt": "2026-10-23T15:28:54.830Z",
+        "createdAt": "2026-10-23T15:28:54.702Z",
+        "updatedAt": "2026-10-23T15:28:54.830Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "PATCH",
+    "path": "/surveys/6adb7d365a92be296255f1a4",
+    "who": 0,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "POLICY_LOCKED",
+        "message": "首次发布后匿名和重复填写策略不可修改",
+        "details": [],
+        "traceId": "fe784821-0bf3-44c1-b03d-3da4e48d8d0c"
+      }
+    }
+  },
+  {
+    "method": "PATCH",
+    "path": "/surveys/6adb7d365a92be296255f1a4",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 3,
+        "hasUnpublishedChanges": false,
+        "validationIssues": []
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/uZ2l_mDTPNpzWWdksz7s7Q/responses",
+    "who": 2,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "SURVEY_EXPIRED",
+        "message": "已到收集截止时间",
+        "details": [],
+        "traceId": "abc132c6-651e-4a60-a79f-325fb1ecb5f6"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys?limit=1",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "items": [
+          {
+            "id": "6adb7d365a92be296255f1a4",
+            "publicId": "uZ2l_mDTPNpzWWdksz7s7Q",
+            "title": "十三集合原功能回归",
+            "status": "published",
+            "revision": 4,
+            "currentPublishedVersion": 1,
+            "cumulativeResponseCount": 1,
+            "currentVersionResponseCount": 1,
+            "createdAt": "2026-10-23T15:28:54.702Z",
+            "updatedAt": "2026-10-23T15:28:55.006Z"
+          }
+        ],
+        "nextCursor": "eyJlbmRwb2ludCI6Ii9zdXJ2ZXlzIiwib3duZXIiOiI2YWRiN2QzMjVhOTJiZTI5NjI1NWYxNWUiLCJpZCI6IjZhZGI3ZDM2NWE5MmJlMjk2MjU1ZjFhNCIsImNyZWF0ZWRBdCI6IjIwMjYtMTAtMjNUMTU6Mjg6NTQuNzAyWiJ9.D_aZUElmXim1zMG165WUQXa0jb1e9n6amn-VQiiqe_U"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys?limit=1&cursor=eyJlbmRwb2ludCI6Ii9zdXJ2ZXlzIiwib3duZXIiOiI2YWRiN2QzMjVhOTJiZTI5NjI1NWYxNWUiLCJpZCI6IjZhZGI3ZDM2NWE5MmJlMjk2MjU1ZjFhNCIsImNyZWF0ZWRBdCI6IjIwMjYtMTAtMjNUMTU6Mjg6NTQuNzAyWiJ9.D_aZUElmXim1zMG165WUQXa0jb1e9n6amn-VQiiqe_U",
+    "who": 1,
+    "status": 400,
+    "response": {
+      "error": {
+        "code": "INVALID_CURSOR",
+        "message": "分页游标无效，请重新加载列表",
+        "details": [],
+        "traceId": "7a7817c0-e275-48e5-83ee-0c5d3c38e905"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys?limit=1&cursor=eyJlbmRwb2ludCI6Ii9zdXJ2ZXlzIiwib3duZXIiOiI2YWRiN2QzMjVhOTJiZTI5NjI1NWYxNWUiLCJpZCI6IjZhZGI3ZDM2NWE5MmJlMjk2MjU1ZjFhNCIsImNyZWF0ZWRBdCI6IjIwMjYtMTAtMjNUMTU6Mjg6NTQuNzAyWiJ9.D_aZUElmXim1zMG165WUQXa0jb1e9n6amn-VQiiqe_U",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "items": [
+          {
+            "id": "6adb7d355a92be296255f187",
+            "publicId": "TR8YnzdkIeF4fC6lCebIhA",
+            "title": "十三集合原功能回归",
+            "status": "published",
+            "revision": 6,
+            "currentPublishedVersion": 1,
+            "cumulativeResponseCount": 3,
+            "currentVersionResponseCount": 3,
+            "createdAt": "2026-10-23T15:28:53.775Z",
+            "updatedAt": "2026-10-23T15:28:54.129Z"
+          }
+        ],
+        "nextCursor": "eyJlbmRwb2ludCI6Ii9zdXJ2ZXlzIiwib3duZXIiOiI2YWRiN2QzMjVhOTJiZTI5NjI1NWYxNWUiLCJpZCI6IjZhZGI3ZDM1NWE5MmJlMjk2MjU1ZjE4NyIsImNyZWF0ZWRBdCI6IjIwMjYtMTAtMjNUMTU6Mjg6NTMuNzc1WiJ9.-90T2SzBcJESFLuYRsPWqmr3VVkrF0Aef0zbWMMC53s"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 400,
+    "response": {
+      "error": {
+        "code": "INVALID_REQUEST",
+        "message": "请求参数不符合接口契约",
+        "details": [],
+        "traceId": "5d6d36b4-ef05-43c5-84b2-ba91c4822807"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 415,
+    "response": {
+      "error": {
+        "code": "UNSUPPORTED_MEDIA_TYPE",
+        "message": "请使用JSON请求",
+        "details": [],
+        "traceId": "25d057f3-aaf7-4cb7-a57e-5616bb860ea5"
+      }
+    }
+  }
+]

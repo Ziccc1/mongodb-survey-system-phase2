@@ -1,0 +1,124 @@
+Browser tab: 4, Title: "问卷工作台", URL: "http://localhost:5200/surveys/6adcd02bba826d37d9e2d259/statistics".
+1 AXWebArea 问卷工作台, URL: localhost:5200/surveys/6adcd02bba826d37d9e2d259/statistics
+	2 container app
+		3 link Description: 跳到主要内容, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/statistics#main
+		4 container
+			5 link Description: 问卷工作台, Value: localhost:5200/dashboard
+			6 container 主导航
+				7 link Description: 首页, Value: localhost:5200/dashboard
+				8 link Description: 我的问卷, Value: localhost:5200/surveys
+				9 link Description: 题目, Value: localhost:5200/questions
+				10 link Description: 题库, Value: localhost:5200/question-banks
+				11 link Description: 模板广场, Value: localhost:5200/templates
+				12 text p2_manual_1024_b
+				13 button 退出登录
+		14 container
+			15 link Description: ← 返回问卷, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259
+			16 heading 分版本统计, Value: 1
+				17 text 分版本统计
+			18 text 按所选发布版本统计有效答卷和选择次数，不跨版本合并。 报告版本 选择要查看的发布快照 发布版本
+			19 pop up button (collapsed, settable) 发布版本, Value: v2 · P2-MAN-20261024-02 活动模板源, ID: version-select, Secondary Actions: Expand
+				20 menu
+					21 (disabled) v2 · P2-MAN-20261024-02 活动模板源
+					22 (disabled) v1 · P2-MAN-20261024-02 活动模板源
+			23 text 累计答卷 1 份 当前发布版本 0 份 所选 v2 0 份
+			24 link Description: 查看该版答卷, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/responses?version=2
+			25 link Description: 查看该版定义, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/versions?version=2
+			26 text 单选题
+			27 heading P2-MAN-20261024-02 是否参加下一期活动？, Value: 2
+				28 text P2-MAN-20261024-02 是否参加下一期活动？
+			29 text 有效回答 
+			30 text 0
+			31 text  份
+			32 text 占比 = 该选项选择次数 ÷ 本题有效回答份数；不计跳过或留空的答卷。
+			33 text 暂无有效回答，收到答卷后显示图表。
+			34 heading 选项明细, Value: 3
+				35 text 选项明细
+			36 table P2-MAN-20261024-02 是否参加下一期活动？的选项次数和回答占比
+				37 text P2-MAN-20261024-02 是否参加下一期活动？的选项次数和回答占比
+				38 row
+					39 cell
+						40 text 选项
+					41 cell
+						42 text 选择次数
+					43 cell
+						44 text 占比
+				45 row
+					46 cell
+						47 text 参加
+					48 cell
+						49 text 0
+					50 cell
+						51 text 0%
+				52 row
+					53 cell
+						54 text 不参加
+					55 cell
+						56 text 0
+					57 cell
+						58 text 0%
+			59 link Description: 单题统计, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/questions/86de87d2-2bc8-40af-87ce-b06272a3c6f2/statistics?version=2
+			60 text 数字题
+			61 heading P2-MAN-20261024-02 每周可参加几次活动？, Value: 2
+				62 text P2-MAN-20261024-02 每周可参加几次活动？
+			63 text 有效回答 
+			64 text 0
+			65 text  份
+			66 checkbox (settable, integer) Description: 显示平均值, Value: 1
+			67 container
+				68 text 平均值： 暂无有效数字答案
+			69 text 手机号、电话类题目默认隐藏均值；开关仅影响本次查看。均值最多显示两位小数，原始回答保持不变。
+			70 link Description: 查看回答内容, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/questions/8373eb96-d56c-4ddc-8e90-df93a512d310/answers?version=2
+			71 link Description: 单题统计, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/questions/8373eb96-d56c-4ddc-8e90-df93a512d310/statistics?version=2
+			72 text 多选题
+			73 heading 偏好的活动形式？, Value: 2
+				74 text 偏好的活动形式？
+			75 text 有效回答 
+			76 text 0
+			77 text  份
+			78 text 占比 = 该选项选择次数 ÷ 本题有效回答份数；不计跳过或留空的答卷。
+			79 text 暂无有效回答，收到答卷后显示图表。
+			80 heading 选项明细, Value: 3
+				81 text 选项明细
+			82 table 偏好的活动形式？的选项次数和回答占比
+				83 text 偏好的活动形式？的选项次数和回答占比
+				84 row
+					85 cell
+						86 text 选项
+					87 cell
+						88 text 选择次数
+					89 cell
+						90 text 占比
+				91 row
+					92 cell
+						93 text 线下讲座
+					94 cell
+						95 text 0
+					96 cell
+						97 text 0%
+				98 row
+					99 cell
+						100 text 线上直播
+					101 cell
+						102 text 0
+					103 cell
+						104 text 0%
+				105 row
+					106 cell
+						107 text 小组讨论
+					108 cell
+						109 text 0
+					110 cell
+						111 text 0%
+			112 link Description: 单题统计, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/questions/cc96775f-3fb2-4237-aca8-87be271fa1a1/statistics?version=2
+			113 text 文本题
+			114 heading 活动安排建议, Value: 2
+				115 text 活动安排建议
+			116 text 有效回答 
+			117 text 0
+			118 text  份
+			119 link Description: 查看回答内容, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/questions/6198d159-9056-4194-84f1-8fa49517b860/answers?version=2
+			120 link Description: 单题统计, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/questions/6198d159-9056-4194-84f1-8fa49517b860/statistics?version=2
+		121 text 数据库课程项目 · 问卷工作台
+
+The focused UI element is 16 heading 分版本统计, Value: 1

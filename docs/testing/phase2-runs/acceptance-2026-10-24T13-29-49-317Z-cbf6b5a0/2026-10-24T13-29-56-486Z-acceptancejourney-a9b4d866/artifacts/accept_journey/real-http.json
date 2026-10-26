@@ -1,0 +1,530 @@
+[
+  {
+    "method": "POST",
+    "path": "/question-banks",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb2e871efde9829284571",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/question-banks/6adcb2e871efde9829284571/members/6adcb2e871efde982928456d",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb2e871efde9829284571",
+        "revision": 1,
+        "state": "memberPresent"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/IOida_RoLXhLPol01MlLPw/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adcb2e871efde9829284581",
+        "submittedAt": "2026-10-24T13:30:16.448Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/uNWiLNJCgqxzdQ9u4Natag/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adcb2e871efde9829284582",
+        "submittedAt": "2026-10-24T13:30:16.468Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adcb2e871efde982928456d/versions/6adcb2e871efde982928456f",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "questionId": "6adcb2e871efde982928456d",
+        "versionId": "6adcb2e871efde982928456f",
+        "generatedAt": "2026-10-24T13:30:16.492Z",
+        "surveyCount": 2,
+        "eligibleResponseCount": 2,
+        "answeredCount": 2,
+        "skippedCount": 0,
+        "unansweredCount": 0,
+        "average": "20",
+        "min": "10",
+        "max": "30",
+        "bins": []
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb2e871efde982928456d/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb2e871efde982928456d",
+        "revision": 3,
+        "latestVersionId": "6adcb2e871efde982928456f",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "旅程数字v2",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "100"
+            }
+          },
+          "baseVersionId": "6adcb2e871efde982928456f",
+          "revision": 2
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb2e871efde9829284575/question-updates",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "items": [
+          {
+            "instanceId": "dfffa60b-3825-42b7-a479-67d07a5e04fc",
+            "currentVersionId": "6adcb2e871efde982928456f",
+            "latestAccessibleVersionId": "6adcb2e871efde9829284583",
+            "latestAccessibleVersion": 2
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb2e871efde9829284575/pause",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adcb2e871efde9829284575",
+        "status": "paused",
+        "revision": 3,
+        "currentPublishedVersion": 1
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb2e871efde9829284575/questions/dfffa60b-3825-42b7-a479-67d07a5e04fc/replacement",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "dfffa60b-3825-42b7-a479-67d07a5e04fc",
+        "questionVersionId": "6adcb2e871efde9829284583",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/IOida_RoLXhLPol01MlLPw/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adcb2e871efde982928458a",
+        "submittedAt": "2026-10-24T13:30:16.635Z",
+        "publishedVersion": 2,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adcb2e871efde982928456d/versions/6adcb2e871efde982928456f",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "questionId": "6adcb2e871efde982928456d",
+        "versionId": "6adcb2e871efde982928456f",
+        "generatedAt": "2026-10-24T13:30:16.663Z",
+        "surveyCount": 2,
+        "eligibleResponseCount": 2,
+        "answeredCount": 2,
+        "skippedCount": 0,
+        "unansweredCount": 0,
+        "average": "20",
+        "min": "10",
+        "max": "30",
+        "bins": []
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adcb2e871efde982928456d/versions/6adcb2e871efde9829284583",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "questionId": "6adcb2e871efde982928456d",
+        "versionId": "6adcb2e871efde9829284583",
+        "generatedAt": "2026-10-24T13:30:16.682Z",
+        "surveyCount": 1,
+        "eligibleResponseCount": 1,
+        "answeredCount": 1,
+        "skippedCount": 0,
+        "unansweredCount": 0,
+        "average": "90",
+        "min": "90",
+        "max": "90",
+        "bins": []
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb2e871efde9829284575/statistics?version=1",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adcb2e871efde9829284575",
+        "selectedVersion": 1,
+        "latestPublishedVersion": 2,
+        "cumulativeResponseCount": 2,
+        "currentVersionResponseCount": 1,
+        "selectedVersionResponseCount": 1,
+        "generatedAt": "2026-10-24T13:30:16.690Z",
+        "questionSummaries": [
+          {
+            "questionId": "dfffa60b-3825-42b7-a479-67d07a5e04fc",
+            "type": "number",
+            "title": "旅程数字v1",
+            "answeredCount": 1,
+            "average": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb2e871efde982928458c/adoptions",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb2e871efde982928458e",
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/kwiEHw35adkk2LUnH3gIkw/responses",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adcb2e871efde9829284594",
+        "submittedAt": "2026-10-24T13:30:16.797Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb2e871efde982928456d/versions",
+    "who": 2,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "0e3439a5-1353-4715-964a-fa7731fbf966"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adcb2e871efde982928456d/versions/6adcb2e871efde9829284583",
+    "who": 2,
+    "status": 200,
+    "response": {
+      "data": {
+        "questionId": "6adcb2e871efde982928456d",
+        "versionId": "6adcb2e871efde9829284583",
+        "generatedAt": "2026-10-24T13:30:16.815Z",
+        "surveyCount": 1,
+        "eligibleResponseCount": 1,
+        "answeredCount": 1,
+        "skippedCount": 0,
+        "unansweredCount": 0,
+        "average": "50",
+        "min": "50",
+        "max": "50",
+        "bins": []
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb2e871efde982928458e/statistics",
+    "who": 0,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "abc640b3-8e21-4b5e-bc77-1308731cb969"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb2e871efde982928456d/usage",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "items": [
+          {
+            "surveyNumber": "ahjjvYFXaTTFO_s6rByq7Z3t",
+            "versions": [
+              {
+                "versionId": "6adcb2e871efde982928456f",
+                "version": 1,
+                "isDraft": true,
+                "isCurrent": true,
+                "hasHistorical": false
+              }
+            ],
+            "isDraft": true,
+            "isCurrent": true,
+            "onlyHistorical": false,
+            "username": "p2008_accept_journey_1_39865e"
+          },
+          {
+            "surveyNumber": "iE8KfHE7Oo5uO2S40vKpcMm2",
+            "versions": [
+              {
+                "versionId": "6adcb2e871efde9829284583",
+                "version": 2,
+                "isDraft": true,
+                "isCurrent": true,
+                "hasHistorical": false
+              },
+              {
+                "versionId": "6adcb2e871efde982928456f",
+                "version": 1,
+                "isDraft": false,
+                "isCurrent": false,
+                "hasHistorical": true
+              }
+            ],
+            "isDraft": true,
+            "isCurrent": true,
+            "onlyHistorical": false,
+            "username": "p2008_accept_journey_1_39865e"
+          },
+          {
+            "surveyNumber": "jWgFPqVtY2ptY6Ma0cWs9kFL",
+            "versions": [
+              {
+                "versionId": "6adcb2e871efde9829284583",
+                "version": 2,
+                "isDraft": true,
+                "isCurrent": true,
+                "hasHistorical": false
+              }
+            ],
+            "isDraft": true,
+            "isCurrent": true,
+            "onlyHistorical": false,
+            "username": "p2008_accept_journey_2_53d6f8"
+          }
+        ],
+        "nextCursor": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb2e871efde982928456d/shares/6adcb2e871efde9829284574/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb2e871efde9829284574",
+        "recipientUsername": "p2008_accept_journey_1_39865e",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 6
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb2e871efde982928458c/adoptions",
+    "who": 3,
+    "status": 403,
+    "response": {
+      "error": {
+        "code": "PUBLIC_DISTRIBUTION_REQUIRED",
+        "message": "此模板尚缺当前有效的具体版本公开分发授权",
+        "details": [],
+        "traceId": "f6d3b3b1-4de9-4d9b-880e-93171a2505da"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb2e871efde9829284595/question-references",
+    "who": 1,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "SOURCE_ACCESS_REVOKED",
+        "message": "当前共享已撤销，已保存实例仍可使用原版本",
+        "details": [],
+        "traceId": "90f10d05-f619-4dec-97a8-ed069533f3e5"
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb2e871efde982928456d/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb2e871efde982928456d",
+        "revision": 8,
+        "latestVersionId": "6adcb2e871efde9829284583",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "待保存草稿",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "100"
+            }
+          },
+          "baseVersionId": "6adcb2e871efde9829284583",
+          "revision": 4
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb2e871efde982928456d/restorations",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb2e871efde982928456d",
+        "versionId": "6adcb2e871efde9829284596",
+        "revision": 9,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb2e871efde982928456d/versions/6adcb2e871efde9829284596",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb2e871efde9829284596",
+        "questionId": "6adcb2e871efde982928456d",
+        "version": 3,
+        "content": {
+          "type": "number",
+          "title": "旅程数字v1",
+          "validation": {
+            "integerOnly": true,
+            "min": "0",
+            "max": "100"
+          }
+        },
+        "parentVersionId": "6adcb2e871efde982928456f",
+        "restoredFromVersionId": "6adcb2e871efde982928456f",
+        "operation": "restore",
+        "createdAt": "2026-10-24T13:30:16.949Z"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adcb2e871efde982928456d/versions/6adcb2e871efde9829284596",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "统计题目不存在或不可访问",
+        "details": [],
+        "traceId": "ebb71126-36b2-4484-940d-db81f6c51664"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adcb2e871efde982928456d/versions/6adcb2e871efde9829284583",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "questionId": "6adcb2e871efde982928456d",
+        "versionId": "6adcb2e871efde9829284583",
+        "generatedAt": "2026-10-24T13:30:16.992Z",
+        "surveyCount": 1,
+        "eligibleResponseCount": 1,
+        "answeredCount": 1,
+        "skippedCount": 0,
+        "unansweredCount": 0,
+        "average": "90",
+        "min": "90",
+        "max": "90",
+        "bins": []
+      }
+    }
+  }
+]

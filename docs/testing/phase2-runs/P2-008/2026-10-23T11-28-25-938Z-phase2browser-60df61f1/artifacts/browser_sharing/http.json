@@ -1,0 +1,198 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/auth/me",
+    "who": 0,
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/auth/me",
+    "who": 1,
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb44fde19e43bd6236db6e",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb44fde19e43bd6236db6e",
+        "publicId": "ak4LzvNyqzBPEDa8FhRv9g",
+        "status": "published",
+        "draftDefinition": {
+          "title": "接收者私有问卷",
+          "description": "",
+          "questions": [
+            {
+              "id": "8643a927-0659-4765-8e54-fc31da44798a",
+              "type": "number",
+              "title": "共享年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": true,
+                "min": "0",
+                "max": "120"
+              }
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-23T11:29:02.127Z",
+        "createdAt": "2026-10-23T11:29:01.826Z",
+        "updatedAt": "2026-10-23T11:29:02.127Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb44fde19e43bd6236db6e/statistics?version=1",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb44fde19e43bd6236db6e",
+        "selectedVersion": 1,
+        "latestPublishedVersion": 3,
+        "cumulativeResponseCount": 2,
+        "currentVersionResponseCount": 1,
+        "selectedVersionResponseCount": 1,
+        "generatedAt": "2026-10-23T11:29:03.702Z",
+        "questionSummaries": [
+          {
+            "questionId": "8643a927-0659-4765-8e54-fc31da44798a",
+            "type": "number",
+            "title": "共享年龄",
+            "answeredCount": 1,
+            "average": "10"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb44fde19e43bd6236db6e/statistics?version=3",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb44fde19e43bd6236db6e",
+        "selectedVersion": 3,
+        "latestPublishedVersion": 3,
+        "cumulativeResponseCount": 2,
+        "currentVersionResponseCount": 1,
+        "selectedVersionResponseCount": 1,
+        "generatedAt": "2026-10-23T11:29:03.719Z",
+        "questionSummaries": [
+          {
+            "questionId": "8643a927-0659-4765-8e54-fc31da44798a",
+            "type": "number",
+            "title": "共享年龄（新版）",
+            "answeredCount": 1,
+            "average": "20"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adb44ffe19e43bd6236db7f",
+        "publicId": "-IpDHJirhnWpTadgM5UIeQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "撤销后新引用负例",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T11:29:03.795Z",
+        "updatedAt": "2026-10-23T11:29:03.795Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb44ffe19e43bd6236db7f/question-references",
+    "who": 1,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "SOURCE_ACCESS_REVOKED",
+        "message": "当前没有新增使用权，已保存实例仍可使用原版本",
+        "details": [],
+        "traceId": "d77699ed-3446-429e-8c51-f387a2d053a2"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adb44fde19e43bd6236db6b/forks",
+    "who": 1,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "SOURCE_ACCESS_REVOKED",
+        "message": "当前没有新增使用权，已保存实例仍可使用原版本",
+        "details": [],
+        "traceId": "bb6ce16b-a9fe-4b14-9c15-89a3e142aa53"
+      }
+    }
+  }
+]

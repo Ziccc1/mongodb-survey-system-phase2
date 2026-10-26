@@ -1,0 +1,37 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_cross_statistics_1792768821693_684952df
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_cross_statistics_1792768821693_684952df
+# Subtest: W05 real four-type cross statistics, retained permissions, exact snapshot pages and zero-write reads
+not ok 1 - W05 real four-type cross statistics, retained permissions, exact snapshot pages and zero-write reads
+  ---
+  duration_ms: 15336.164
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\cross-statistics.test.ts:1:414'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"error":{"code":"INVALID_REQUEST","message":"请求参数不符合接口契约","details":[],"traceId":"1eae6814-4052-4e95-8aac-03b69f239be9"}}
+    
+    400 !== 201
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 201
+  actual: 400
+  operator: 'strictEqual'
+  stack: |-
+    submit (D:\大三\数据库\pj1_2\tests\phase2\cross-fixture.ts:17:189)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async crossFixture (D:\大三\数据库\pj1_2\tests\phase2\cross-fixture.ts:19:52)
+    async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\cross-statistics.test.ts:13:20)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16177.2294

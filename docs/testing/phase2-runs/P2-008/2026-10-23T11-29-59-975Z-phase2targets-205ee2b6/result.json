@@ -1,0 +1,16 @@
+{
+  "name": "phase2targets",
+  "start": "2026-10-23T11:29:59.978Z",
+  "finished": "2026-10-23T11:30:00.783Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/phase2/runtime-targets.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

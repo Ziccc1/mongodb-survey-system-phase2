@@ -1,0 +1,32 @@
+[
+  {
+    "case": "revoked-share",
+    "status": 200,
+    "path": "/api/v1/auth/me"
+  },
+  {
+    "case": "revoked-share",
+    "status": 404,
+    "path": "/api/v1/questions/6adca8f990a79cf9ce8be1f1/versions"
+  },
+  {
+    "case": "revoked-share",
+    "status": 200,
+    "path": "/api/v1/surveys"
+  },
+  {
+    "case": "revoked-share",
+    "status": 200,
+    "path": "/api/v1/question-statistics/6adca8f990a79cf9ce8be1f1/versions/6adca8f990a79cf9ce8be1f3"
+  },
+  {
+    "case": "revoked-share",
+    "status": 200,
+    "path": "/api/v1/question-statistics/6adca8f990a79cf9ce8be1f1/versions/6adca8f990a79cf9ce8be1f3/answers"
+  },
+  {
+    "case": "revoked-share",
+    "status": 200,
+    "path": "/api/v1/question-statistics/6adca8f990a79cf9ce8be1f1/versions/6adca8f990a79cf9ce8be1f3/distribution"
+  }
+]

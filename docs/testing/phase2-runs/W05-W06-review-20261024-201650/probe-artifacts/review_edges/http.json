@@ -1,0 +1,515 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adca37970e43e5397467a2f",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adca37970e43e5397467a2f/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adca37970e43e5397467a2f",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "single",
+            "title": "Private fixture",
+            "options": [
+              {
+                "id": "a",
+                "label": "A"
+              },
+              {
+                "id": "b",
+                "label": "B"
+              }
+            ]
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adca37970e43e5397467a2f/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adca37970e43e5397467a2f",
+        "versionId": "6adca37970e43e5397467a31",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adca37970e43e5397467a2f/versions/6adca37970e43e5397467a31",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "统计题目不存在或不可访问",
+        "details": [],
+        "traceId": "ea423c1f-d6d9-410e-9c8f-212f740e6e50"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adca37970e43e5397467a2f/versions/6adca37970e43e5397467a31/answers",
+    "who": 1,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "UNSUPPORTED_QUESTION_TYPE",
+        "message": "所选题型不支持此统计",
+        "details": [],
+        "traceId": "3c781339-7d60-4456-9c0d-2b8a1a967bca"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adca37970e43e5397467a2f/versions/6adca37970e43e5397467a31/distribution",
+    "who": 1,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "UNSUPPORTED_QUESTION_TYPE",
+        "message": "所选题型不支持此统计",
+        "details": [],
+        "traceId": "3251a87d-9199-4690-a4df-1744728b67c8"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adca37970e43e5397467a33/versions/6adca37970e43e5397467a34/answers",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "正式版本不存在",
+        "details": [],
+        "traceId": "29379964-cc09-41e7-bc28-0b7e13f4dae9"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adca37970e43e5397467a35",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adca37970e43e5397467a35/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adca37970e43e5397467a35",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "Retained numeric fixture",
+            "validation": {
+              "integerOnly": true
+            }
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adca37970e43e5397467a35/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adca37970e43e5397467a35",
+        "versionId": "6adca37970e43e5397467a37",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adca37970e43e5397467a35/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adca37970e43e5397467a35",
+        "revision": 1,
+        "latestVersionId": "6adca37970e43e5397467a37",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "Retained numeric fixture",
+            "validation": {
+              "integerOnly": true
+            }
+          },
+          "baseVersionId": "6adca37970e43e5397467a37",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adca37970e43e5397467a35/shares",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adca37970e43e5397467a39",
+        "recipientUsername": "p2008_review_edges_1_fd87bb",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 2
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adca37970e43e5397467a3a",
+        "publicId": "ROqHkJpLqfZjxvT_tDgS5w",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "Retained numeric owner survey",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T12:24:25.422Z",
+        "updatedAt": "2026-10-24T12:24:25.422Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adca37970e43e5397467a3a/question-references",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "9b1274d1-998c-4638-a606-a1cc9f62e6c3",
+        "questionVersionId": "6adca37970e43e5397467a37",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adca37970e43e5397467a3a",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adca37970e43e5397467a3a",
+        "publicId": "ROqHkJpLqfZjxvT_tDgS5w",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "Retained numeric owner survey",
+          "description": "",
+          "questions": [
+            {
+              "id": "9b1274d1-998c-4638-a606-a1cc9f62e6c3",
+              "type": "number",
+              "title": "Retained numeric fixture",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": true
+              }
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T12:24:25.422Z",
+        "updatedAt": "2026-10-24T12:24:25.438Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adca37970e43e5397467a3a/publish",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adca37970e43e5397467a3a",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T12:24:25.454Z",
+        "firstPublishedAt": "2026-10-24T12:24:25.454Z",
+        "shareUrl": "http://localhost:3225/survey/ROqHkJpLqfZjxvT_tDgS5w",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adca37970e43e5397467a3a",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adca37970e43e5397467a3a",
+        "publicId": "ROqHkJpLqfZjxvT_tDgS5w",
+        "status": "published",
+        "draftDefinition": {
+          "title": "Retained numeric owner survey",
+          "description": "",
+          "questions": [
+            {
+              "id": "9b1274d1-998c-4638-a606-a1cc9f62e6c3",
+              "type": "number",
+              "title": "Retained numeric fixture",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": true
+              }
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T12:24:25.454Z",
+        "createdAt": "2026-10-24T12:24:25.422Z",
+        "updatedAt": "2026-10-24T12:24:25.454Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/ROqHkJpLqfZjxvT_tDgS5w/responses",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adca37970e43e5397467a40",
+        "submittedAt": "2026-10-24T12:24:25.480Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adca37970e43e5397467a35/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adca37970e43e5397467a35",
+        "revision": 2,
+        "latestVersionId": "6adca37970e43e5397467a37",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "Retained numeric fixture",
+            "validation": {
+              "integerOnly": true
+            }
+          },
+          "baseVersionId": "6adca37970e43e5397467a37",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adca37970e43e5397467a35/shares/6adca37970e43e5397467a39/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adca37970e43e5397467a39",
+        "recipientUsername": "p2008_review_edges_1_fd87bb",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 3
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-statistics/6adca37970e43e5397467a35/versions/6adca37970e43e5397467a37?boundaries=0,10",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "questionId": "6adca37970e43e5397467a35",
+        "versionId": "6adca37970e43e5397467a37",
+        "generatedAt": "2026-10-24T12:24:25.516Z",
+        "surveyCount": 1,
+        "eligibleResponseCount": 1,
+        "answeredCount": 1,
+        "skippedCount": 0,
+        "unansweredCount": 0,
+        "average": "5",
+        "min": "5",
+        "max": "5",
+        "bins": [
+          {
+            "lower": null,
+            "upper": "0",
+            "upperInclusive": false,
+            "count": 0
+          },
+          {
+            "lower": "0",
+            "upper": "10",
+            "upperInclusive": true,
+            "count": 1
+          },
+          {
+            "lower": "10",
+            "upper": null,
+            "upperInclusive": false,
+            "count": 0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adca37970e43e5397467a35/versions",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "4bcf206b-e570-4c94-813f-82a9dce868d1"
+      }
+    }
+  }
+]

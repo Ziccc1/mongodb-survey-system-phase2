@@ -1,0 +1,7 @@
+PASS empty new probe directory accepted without creating an ownership marker
+PASS unknown nonempty probe rejected without relabeling
+PASS wrong-project marker rejected and bytes preserved
+PASS wrong-port marker rejected and bytes preserved
+PASS wrong-replica marker rejected and bytes preserved
+PASS extra-field marker rejected and bytes preserved
+Six ownership guards passed using synthetic file fixtures only; actual database directory unchanged.

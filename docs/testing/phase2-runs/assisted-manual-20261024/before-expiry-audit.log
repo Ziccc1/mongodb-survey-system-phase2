@@ -1,0 +1,3859 @@
+Warning: Could not access fileat C:\Users\37905\AppData\Local\mongodb\mongosh\6add5d555898d3a845bce0a7_log: EPERM: operation not permitted, open 'C:\Users\37905\AppData\Local\mongodb\mongosh\6add5d555898d3a845bce0a7_log'
+
+===== Connection: phase2 application only =====
+{
+  database: 'project2_app_v2',
+  port: 27019,
+  replicaSet: 'rs0',
+  checkedAt: ISODate('2026-10-25T01:37:25.889Z')
+}
+
+===== Collections =====
+[
+  'question_items',
+  'responses',
+  'operation_receipts',
+  'question_bank_members',
+  'question_grants',
+  'template_grants',
+  'survey_question_bindings',
+  'question_versions',
+  'users',
+  'survey_versions',
+  'question_banks',
+  'surveys',
+  'survey_templates'
+]
+
+===== Users: no password hashes =====
+[
+  {
+    _id: ObjectId('6adc361e9de7b2483a21d008'),
+    username: 'admin',
+    createdAt: ISODate('2026-10-24T04:37:50.641Z')
+  },
+  {
+    _id: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+    username: 'p2_manual_1024_a',
+    createdAt: ISODate('2026-10-24T13:59:45.135Z')
+  },
+  {
+    _id: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    username: 'p2_manual_1024_b',
+    createdAt: ISODate('2026-10-24T14:00:04.325Z')
+  },
+  {
+    _id: ObjectId('6adcb9edba826d37d9e2d1e6'),
+    username: 'p2_manual_1024_c',
+    createdAt: ISODate('2026-10-24T14:00:13.966Z')
+  },
+  {
+    _id: ObjectId('6adcb9f8ba826d37d9e2d1e7'),
+    username: 'p2_manual_1024_d',
+    createdAt: ISODate('2026-10-24T14:00:24.584Z')
+  }
+]
+
+===== Actual surveys: copy IDs, do not assume planned titles/counts =====
+[
+  {
+    _id: ObjectId('6adcc529ba826d37d9e2d205'),
+    usageNumber: 'ZSTr6459agLRwDXWanp0z66E',
+    title: 'P2-MAN-20261024-02 四型与跳转',
+    status: 'published',
+    allowAnonymous: true,
+    allowRepeat: true,
+    expiresAt: null,
+    currentPublishedVersion: 1,
+    currentVersionSubmissionCount: 4,
+    submissionCount: 4,
+    owner: 'p2_manual_1024_a',
+    questionCount: 5
+  },
+  {
+    _id: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    usageNumber: 'z0wWfZpIGSa6KSeaq_APOBqu',
+    title: 'P2-MAN-20261024-02 收集状态',
+    status: 'published',
+    allowAnonymous: true,
+    allowRepeat: true,
+    expiresAt: ISODate('2026-10-25T01:38:00.000Z'),
+    currentPublishedVersion: 3,
+    currentVersionSubmissionCount: 0,
+    submissionCount: 3,
+    owner: 'p2_manual_1024_a',
+    questionCount: 1
+  },
+  {
+    _id: ObjectId('6adcc4e5ba826d37d9e2d201'),
+    usageNumber: 'TEMxGuchxycts39YNUKcwBz8',
+    title: '11',
+    status: 'draft',
+    allowAnonymous: true,
+    allowRepeat: true,
+    expiresAt: null,
+    currentPublishedVersion: null,
+    currentVersionSubmissionCount: 0,
+    submissionCount: 0,
+    owner: 'p2_manual_1024_b',
+    questionCount: 1
+  },
+  {
+    _id: ObjectId('6adcc924ba826d37d9e2d24f'),
+    usageNumber: 'P9E3rg4gBG4rqyKynmon5q-V',
+    title: 'P2-MAN-20261024-02 引用规则草稿',
+    status: 'draft',
+    allowAnonymous: false,
+    allowRepeat: false,
+    expiresAt: null,
+    currentPublishedVersion: null,
+    currentVersionSubmissionCount: 0,
+    submissionCount: 0,
+    owner: 'p2_manual_1024_b',
+    questionCount: 2
+  },
+  {
+    _id: ObjectId('6adcd02bba826d37d9e2d259'),
+    usageNumber: 'y1339sKrwwRx94oI8u9DIqnj',
+    title: 'P2-MAN-20261024-02 活动模板源',
+    status: 'published',
+    allowAnonymous: true,
+    allowRepeat: false,
+    expiresAt: null,
+    currentPublishedVersion: 2,
+    currentVersionSubmissionCount: 0,
+    submissionCount: 1,
+    owner: 'p2_manual_1024_b',
+    questionCount: 4
+  },
+  {
+    _id: ObjectId('6adcd31fba826d37d9e2d275'),
+    usageNumber: 'jBNpICd2X_kSZiMvULDkQLav',
+    title: 'P2-MAN-20261024-02 活动模板源',
+    status: 'draft',
+    allowAnonymous: false,
+    allowRepeat: false,
+    expiresAt: null,
+    submissionCount: 0,
+    currentVersionSubmissionCount: 0,
+    currentPublishedVersion: null,
+    owner: 'p2_manual_1024_b',
+    questionCount: 4
+  },
+  {
+    _id: ObjectId('6adcc770ba826d37d9e2d236'),
+    usageNumber: '8J6D1VVu8_Kv1k7J8m25b_CP',
+    title: 'P2-MAN-20261024-02 满意度乙场',
+    status: 'published',
+    allowAnonymous: true,
+    allowRepeat: true,
+    expiresAt: null,
+    currentPublishedVersion: 2,
+    currentVersionSubmissionCount: 1,
+    submissionCount: 3,
+    owner: 'p2_manual_1024_b',
+    questionCount: 2
+  },
+  {
+    _id: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    usageNumber: 'RBszFSEPXPbO5cehVGw68fCK',
+    title: 'P2-MAN-20261024-02 满意度甲场',
+    status: 'published',
+    allowAnonymous: true,
+    allowRepeat: true,
+    expiresAt: null,
+    currentPublishedVersion: 1,
+    currentVersionSubmissionCount: 1,
+    submissionCount: 1,
+    owner: 'p2_manual_1024_b',
+    questionCount: 2
+  },
+  {
+    _id: ObjectId('6adcd50dba826d37d9e2d27f'),
+    usageNumber: 'K5hSzwzJheUiUOGzXzp4sYjF',
+    title: 'P2-MAN-20261024-02 模板使用C',
+    status: 'published',
+    allowAnonymous: false,
+    allowRepeat: false,
+    expiresAt: null,
+    submissionCount: 3,
+    currentVersionSubmissionCount: 3,
+    currentPublishedVersion: 1,
+    owner: 'p2_manual_1024_c',
+    questionCount: 4
+  },
+  {
+    _id: ObjectId('6adcd577ba826d37d9e2d28f'),
+    usageNumber: '6p4XHeVqgUDBasIpW2SKcWcZ',
+    title: 'P2-MAN-20261024-02 模板使用D',
+    status: 'published',
+    allowAnonymous: false,
+    allowRepeat: false,
+    expiresAt: null,
+    submissionCount: 2,
+    currentVersionSubmissionCount: 1,
+    currentPublishedVersion: 2,
+    owner: 'p2_manual_1024_d',
+    questionCount: 4
+  }
+]
+
+===== Actual question identities: draft/latest title may differ from old formal versions =====
+[
+  {
+    _id: ObjectId('6adcc3abba826d37d9e2d1e8'),
+    latestVersionId: ObjectId('6adcc3b9ba826d37d9e2d1ea'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: 'P2-MAN-20261024-02 本次活动满意度 ',
+    latestTitle: 'P2-MAN-20261024-02 本次活动满意度 ',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    latestVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    latestTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    latestVersionId: ObjectId('6adcc8c6ba826d37d9e2d24d'),
+    nextVersion: 4,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: 'P2-MAN-20261024-02 每周可参加几次活动？（草稿）',
+    latestTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    latestVersion: 3
+  },
+  {
+    _id: ObjectId('6adcc62aba826d37d9e2d206'),
+    latestVersionId: ObjectId('6adcc62aba826d37d9e2d207'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: '是否参加过校园活动？',
+    latestTitle: '是否参加过校园活动？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc62cba826d37d9e2d20b'),
+    latestVersionId: ObjectId('6adcc62cba826d37d9e2d20c'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: '你喜欢哪些活动？',
+    latestTitle: '你喜欢哪些活动？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc62eba826d37d9e2d210'),
+    latestVersionId: ObjectId('6adcc62eba826d37d9e2d211'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: '文本题对校园活动有什么建议？',
+    latestTitle: '文本题对校园活动有什么建议？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc62fba826d37d9e2d215'),
+    latestVersionId: ObjectId('6adcc62fba826d37d9e2d216'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: ' 你的年龄是多少？',
+    latestTitle: ' 你的年龄是多少？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc630ba826d37d9e2d21a'),
+    latestVersionId: ObjectId('6adcc630ba826d37d9e2d21b'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: ' 给校园活动打几分？',
+    latestTitle: ' 给校园活动打几分？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcd8a0ba826d37d9e2d2b3'),
+    latestVersionId: ObjectId('6adcd8a0ba826d37d9e2d2b4'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: '本次服务评分',
+    latestTitle: '本次服务评分',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc730ba826d37d9e2d22d'),
+    latestVersionId: ObjectId('6adcc730ba826d37d9e2d22e'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_b',
+    draftTitle: '甲场补充意见',
+    latestTitle: '甲场补充意见',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc79aba826d37d9e2d23a'),
+    latestVersionId: ObjectId('6adcc79aba826d37d9e2d23b'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_b',
+    draftTitle: '乙场参与方式',
+    latestTitle: '乙场参与方式',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcd0adba826d37d9e2d260'),
+    latestVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_b',
+    draftTitle: '偏好的活动形式？',
+    latestTitle: '偏好的活动形式？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcd0afba826d37d9e2d265'),
+    latestVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_b',
+    draftTitle: '活动安排建议',
+    latestTitle: '活动安排建议',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcd7dfba826d37d9e2d2a6'),
+    latestVersionId: ObjectId('6adcd7dfba826d37d9e2d2a7'),
+    nextVersion: 2,
+    origin: {
+      kind: 'fork',
+      sourceQuestionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+      sourceVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+      evidenceKey: null
+    },
+    owner: 'p2_manual_1024_d',
+    draftTitle: 'P2-MAN-20261024-02 我每周可安排的活动次数',
+    latestTitle: 'P2-MAN-20261024-02 我每周可安排的活动次数',
+    latestVersion: 1
+  }
+]
+
+===== Selected drafts: questions are the current editable definition, not old publications =====
+[
+  {
+    _id: ObjectId('6adcc529ba826d37d9e2d205'),
+    title: 'P2-MAN-20261024-02 四型与跳转',
+    ownerId: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+    status: 'published',
+    revision: 7,
+    definitionVersion: 7,
+    currentPublishedVersion: 1,
+    questions: [
+      {
+        id: '79b0746d-5e81-4191-9b07-e71d9bfc7491',
+        type: 'single',
+        title: '是否参加过校园活动？',
+        required: true,
+        jumpRules: [
+          {
+            id: '6d5f6706-e386-42da-b09d-53e52e1e8c10',
+            condition: {
+              op: 'eq',
+              optionId: '295a2202-8837-4f16-aaca-c9dd047315f8'
+            },
+            targetQuestionId: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15'
+          }
+        ],
+        options: [
+          {
+            id: 'fc3ab27a-9324-4b70-bfbb-f2049d7521f5',
+            label: '参加过'
+          },
+          {
+            id: '295a2202-8837-4f16-aaca-c9dd047315f8',
+            label: '未参加过'
+          }
+        ]
+      },
+      {
+        id: '366e5afd-5d2a-41a5-a0ea-aceb77c364e9',
+        type: 'multiple',
+        title: '你喜欢哪些活动？',
+        required: true,
+        jumpRules: [
+          {
+            id: '193ee61e-81db-48fd-8263-e317c339127a',
+            condition: {
+              op: 'containsAll',
+              optionIds: [
+                '84e7e2f9-26a5-4697-8e28-e3d75c5691eb',
+                'f4c5a824-5b24-4060-be02-415635e92921'
+              ]
+            },
+            targetQuestionId: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15'
+          },
+          {
+            id: 'd50e6aed-23b1-427d-8fc1-b85212347fef',
+            condition: {
+              op: 'containsAny',
+              optionIds: [
+                'f4c5a824-5b24-4060-be02-415635e92921'
+              ]
+            },
+            targetQuestionId: '5b7718e4-cd09-4abd-a15c-107ff83e27cb'
+          }
+        ],
+        options: [
+          {
+            id: '84e7e2f9-26a5-4697-8e28-e3d75c5691eb',
+            label: '讲座'
+          },
+          {
+            id: 'f4c5a824-5b24-4060-be02-415635e92921',
+            label: '体育'
+          },
+          {
+            id: '4521a78c-7fab-4de6-b5f4-2ab33fc29a3d',
+            label: '读书'
+          }
+        ],
+        validation: {
+          minChoices: 1,
+          maxChoices: 2
+        }
+      },
+      {
+        id: 'c1dc162e-dae4-4d6e-b085-4fc1de8fc244',
+        type: 'text',
+        title: '文本题对校园活动有什么建议？',
+        required: false,
+        jumpRules: [],
+        validation: {
+          minLength: 2,
+          maxLength: 10
+        }
+      },
+      {
+        id: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15',
+        type: 'number',
+        title: ' 你的年龄是多少？',
+        required: true,
+        jumpRules: [],
+        validation: {
+          integerOnly: true,
+          min: Decimal128('0'),
+          max: Decimal128('120')
+        }
+      },
+      {
+        id: '5b7718e4-cd09-4abd-a15c-107ff83e27cb',
+        type: 'number',
+        title: ' 给校园活动打几分？',
+        required: false,
+        jumpRules: [],
+        validation: {
+          integerOnly: false,
+          min: Decimal128('0'),
+          max: Decimal128('10')
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    title: 'P2-MAN-20261024-02 满意度甲场',
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    status: 'published',
+    revision: 4,
+    definitionVersion: 4,
+    currentPublishedVersion: 1,
+    questions: [
+      {
+        id: '718b285e-f890-4918-8af0-4bd354c2fb16',
+        type: 'number',
+        title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+        required: true,
+        jumpRules: [],
+        validation: {
+          integerOnly: true,
+          min: Decimal128('0'),
+          max: Decimal128('7')
+        }
+      },
+      {
+        id: '30f54214-8770-4110-a99e-e6e9aec25682',
+        type: 'text',
+        title: '甲场补充意见',
+        required: false,
+        jumpRules: [],
+        validation: {
+          maxLength: 20
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId('6adcc770ba826d37d9e2d236'),
+    title: 'P2-MAN-20261024-02 满意度乙场',
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    status: 'published',
+    revision: 7,
+    definitionVersion: 5,
+    currentPublishedVersion: 2,
+    questions: [
+      {
+        id: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+        type: 'number',
+        title: 'P2-MAN-20261024-02 每周可参加几次活动？（调整题干）',
+        required: false,
+        jumpRules: [],
+        validation: {
+          integerOnly: true,
+          min: Decimal128('0'),
+          max: Decimal128('7')
+        }
+      },
+      {
+        id: 'c6e5e1be-dd72-43e4-99ca-d8abf1827c4b',
+        type: 'single',
+        title: '乙场参与方式',
+        required: true,
+        jumpRules: [],
+        options: [
+          {
+            id: '9a08ee3b-5d48-4bba-82cd-9f247b4f1023',
+            label: '线上'
+          },
+          {
+            id: '5428a41f-990b-4399-9a9f-7e7ec79329db',
+            label: '线下'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    _id: ObjectId('6adcc924ba826d37d9e2d24f'),
+    title: 'P2-MAN-20261024-02 引用规则草稿',
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    status: 'draft',
+    revision: 2,
+    definitionVersion: 3,
+    currentPublishedVersion: null,
+    questions: [
+      {
+        id: '5884d527-6e47-4667-9872-18e17e8c1aa8',
+        type: 'number',
+        title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+        required: true,
+        jumpRules: [],
+        validation: {
+          integerOnly: true,
+          min: Decimal128('0'),
+          max: Decimal128('7')
+        }
+      },
+      {
+        id: '32e8468e-9ad6-4ba3-a04a-85af6f2594f6',
+        type: 'number',
+        title: 'P2-MAN-20261024-02 每周可参加几次活动？（调整题干）',
+        required: false,
+        jumpRules: [],
+        validation: {
+          integerOnly: true,
+          min: Decimal128('0'),
+          max: Decimal128('7')
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId('6adcd02bba826d37d9e2d259'),
+    title: 'P2-MAN-20261024-02 活动模板源',
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    status: 'published',
+    revision: 9,
+    definitionVersion: 7,
+    currentPublishedVersion: 2,
+    questions: [
+      {
+        id: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+        type: 'single',
+        title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+        required: true,
+        jumpRules: [
+          {
+            id: 'be725f28-6616-4973-b14a-55d72afbc8ce',
+            condition: {
+              op: 'eq',
+              optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+            },
+            targetQuestionId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1'
+          }
+        ],
+        options: [
+          {
+            id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+            label: '参加'
+          },
+          {
+            id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+            label: '不参加'
+          }
+        ]
+      },
+      {
+        id: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+        type: 'number',
+        title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+        required: false,
+        jumpRules: [],
+        validation: {
+          integerOnly: true,
+          min: Decimal128('0'),
+          max: Decimal128('7')
+        }
+      },
+      {
+        id: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+        type: 'multiple',
+        title: '偏好的活动形式？',
+        required: true,
+        jumpRules: [],
+        options: [
+          {
+            id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+            label: '线下讲座'
+          },
+          {
+            id: '1e310dd5-f45b-4040-b69f-539031915019',
+            label: '线上直播'
+          },
+          {
+            id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+            label: '小组讨论'
+          }
+        ],
+        validation: {
+          minChoices: 1,
+          maxChoices: 2
+        }
+      },
+      {
+        id: '6198d159-9056-4194-84f1-8fa49517b860',
+        type: 'text',
+        title: '活动安排建议',
+        required: false,
+        jumpRules: [],
+        validation: {
+          maxLength: 20
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId('6adcd50dba826d37d9e2d27f'),
+    title: 'P2-MAN-20261024-02 模板使用C',
+    ownerId: ObjectId('6adcb9edba826d37d9e2d1e6'),
+    status: 'published',
+    revision: 2,
+    definitionVersion: 2,
+    currentPublishedVersion: 1,
+    questions: [
+      {
+        id: '85902903-392e-4e27-a119-37d7be7fa8bb',
+        type: 'single',
+        title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+        required: true,
+        jumpRules: [
+          {
+            id: '4e6b0f2b-8efc-4153-9915-6a444402f17b',
+            condition: {
+              op: 'eq',
+              optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+            },
+            targetQuestionId: '0f4418d9-c72c-4a39-8cb1-db580a415ce9'
+          }
+        ],
+        options: [
+          {
+            id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+            label: '参加'
+          },
+          {
+            id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+            label: '不参加'
+          }
+        ]
+      },
+      {
+        id: '38806088-a85a-43fb-b404-e8dc1a5a429b',
+        type: 'number',
+        title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+        required: true,
+        jumpRules: [],
+        validation: {
+          integerOnly: true,
+          min: Decimal128('0'),
+          max: Decimal128('7')
+        }
+      },
+      {
+        id: '0f4418d9-c72c-4a39-8cb1-db580a415ce9',
+        type: 'multiple',
+        title: '偏好的活动形式？',
+        required: true,
+        jumpRules: [],
+        options: [
+          {
+            id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+            label: '线下讲座'
+          },
+          {
+            id: '1e310dd5-f45b-4040-b69f-539031915019',
+            label: '线上直播'
+          },
+          {
+            id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+            label: '小组讨论'
+          }
+        ],
+        validation: {
+          minChoices: 1,
+          maxChoices: 2
+        }
+      },
+      {
+        id: '566dbdf0-a925-488a-b5b6-654de18754e8',
+        type: 'text',
+        title: '活动安排建议',
+        required: true,
+        jumpRules: [],
+        validation: {
+          maxLength: 20
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId('6adcd577ba826d37d9e2d28f'),
+    title: 'P2-MAN-20261024-02 模板使用D',
+    ownerId: ObjectId('6adcb9f8ba826d37d9e2d1e7'),
+    status: 'published',
+    revision: 4,
+    definitionVersion: 2,
+    currentPublishedVersion: 2,
+    questions: [
+      {
+        id: '0179114b-4574-4fa9-ae24-c7bbc276722c',
+        type: 'single',
+        title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+        required: true,
+        jumpRules: [
+          {
+            id: 'fdac071f-a3a4-42ce-bd3b-afa161ce1f35',
+            condition: {
+              op: 'eq',
+              optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+            },
+            targetQuestionId: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376'
+          }
+        ],
+        options: [
+          {
+            id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+            label: '参加'
+          },
+          {
+            id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+            label: '不参加'
+          }
+        ]
+      },
+      {
+        id: 'b8d6ee1a-91c4-42e7-9baa-7de0c649c32b',
+        type: 'number',
+        title: 'P2-MAN-20261024-02 我每周可安排的活动次数',
+        required: true,
+        jumpRules: [],
+        validation: {
+          integerOnly: true,
+          min: Decimal128('0'),
+          max: Decimal128('7')
+        }
+      },
+      {
+        id: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376',
+        type: 'multiple',
+        title: '偏好的活动形式？',
+        required: true,
+        jumpRules: [],
+        options: [
+          {
+            id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+            label: '线下讲座'
+          },
+          {
+            id: '1e310dd5-f45b-4040-b69f-539031915019',
+            label: '线上直播'
+          },
+          {
+            id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+            label: '小组讨论'
+          }
+        ],
+        validation: {
+          minChoices: 1,
+          maxChoices: 2
+        }
+      },
+      {
+        id: '7ab44d34-c281-44b7-a5cb-25477a8b4059',
+        type: 'text',
+        title: '活动安排建议',
+        required: false,
+        jumpRules: [],
+        validation: {
+          maxLength: 20
+        }
+      }
+    ]
+  },
+  {
+    _id: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    title: 'P2-MAN-20261024-02 收集状态',
+    ownerId: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+    status: 'published',
+    revision: 9,
+    definitionVersion: 4,
+    currentPublishedVersion: 3,
+    questions: [
+      {
+        id: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+        type: 'number',
+        title: '本次服务评分',
+        required: true,
+        jumpRules: [],
+        validation: {
+          integerOnly: true,
+          min: Decimal128('0'),
+          max: Decimal128('10')
+        }
+      }
+    ]
+  }
+]
+
+===== Immutable publication snapshots: compare each version and binding/definition hashes =====
+[
+  {
+    _id: ObjectId('6adcc639ba826d37d9e2d21f'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    version: 1,
+    sourceDefinitionVersion: 7,
+    definition: {
+      title: 'P2-MAN-20261024-02 四型与跳转',
+      description: '四题型和规则优先级人工测试',
+      questions: [
+        {
+          id: '79b0746d-5e81-4191-9b07-e71d9bfc7491',
+          type: 'single',
+          title: '是否参加过校园活动？',
+          required: true,
+          jumpRules: [
+            {
+              id: '6d5f6706-e386-42da-b09d-53e52e1e8c10',
+              condition: {
+                op: 'eq',
+                optionId: '295a2202-8837-4f16-aaca-c9dd047315f8'
+              },
+              targetQuestionId: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15'
+            }
+          ],
+          options: [
+            {
+              id: 'fc3ab27a-9324-4b70-bfbb-f2049d7521f5',
+              label: '参加过'
+            },
+            {
+              id: '295a2202-8837-4f16-aaca-c9dd047315f8',
+              label: '未参加过'
+            }
+          ]
+        },
+        {
+          id: '366e5afd-5d2a-41a5-a0ea-aceb77c364e9',
+          type: 'multiple',
+          title: '你喜欢哪些活动？',
+          required: true,
+          jumpRules: [
+            {
+              id: '193ee61e-81db-48fd-8263-e317c339127a',
+              condition: {
+                op: 'containsAll',
+                optionIds: [
+                  '84e7e2f9-26a5-4697-8e28-e3d75c5691eb',
+                  'f4c5a824-5b24-4060-be02-415635e92921'
+                ]
+              },
+              targetQuestionId: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15'
+            },
+            {
+              id: 'd50e6aed-23b1-427d-8fc1-b85212347fef',
+              condition: {
+                op: 'containsAny',
+                optionIds: [
+                  'f4c5a824-5b24-4060-be02-415635e92921'
+                ]
+              },
+              targetQuestionId: '5b7718e4-cd09-4abd-a15c-107ff83e27cb'
+            }
+          ],
+          options: [
+            {
+              id: '84e7e2f9-26a5-4697-8e28-e3d75c5691eb',
+              label: '讲座'
+            },
+            {
+              id: 'f4c5a824-5b24-4060-be02-415635e92921',
+              label: '体育'
+            },
+            {
+              id: '4521a78c-7fab-4de6-b5f4-2ab33fc29a3d',
+              label: '读书'
+            }
+          ],
+          validation: {
+            minChoices: 1,
+            maxChoices: 2
+          }
+        },
+        {
+          id: 'c1dc162e-dae4-4d6e-b085-4fc1de8fc244',
+          type: 'text',
+          title: '文本题对校园活动有什么建议？',
+          required: false,
+          jumpRules: [],
+          validation: {
+            minLength: 2,
+            maxLength: 10
+          }
+        },
+        {
+          id: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15',
+          type: 'number',
+          title: ' 你的年龄是多少？',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('120')
+          }
+        },
+        {
+          id: '5b7718e4-cd09-4abd-a15c-107ff83e27cb',
+          type: 'number',
+          title: ' 给校园活动打几分？',
+          required: false,
+          jumpRules: [],
+          validation: {
+            integerOnly: false,
+            min: Decimal128('0'),
+            max: Decimal128('10')
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: true,
+      allowRepeat: true
+    },
+    definitionHash: 'dbf43502b1e008580daf37a627bfb3031ca216c5eaabd0be957df627e6151796',
+    bindingHash: '68fce36cc530377b57c6409896a4618e2f66d31f43f5ee2c21b385f283b6c54d',
+    publishedAt: ISODate('2026-10-24T14:52:41.318Z')
+  },
+  {
+    _id: ObjectId('6adcc732ba826d37d9e2d232'),
+    surveyId: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    version: 1,
+    sourceDefinitionVersion: 4,
+    definition: {
+      title: 'P2-MAN-20261024-02 满意度甲场',
+      description: 'P2-MAN-20261024-02 满意度甲场',
+      questions: [
+        {
+          id: '718b285e-f890-4918-8af0-4bd354c2fb16',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: '30f54214-8770-4110-a99e-e6e9aec25682',
+          type: 'text',
+          title: '甲场补充意见',
+          required: false,
+          jumpRules: [],
+          validation: {
+            maxLength: 20
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: true,
+      allowRepeat: true
+    },
+    definitionHash: '1cf8692f321d525560457b25b7b05ee72d027c346033c3be3487b8116908a0a6',
+    bindingHash: 'dfaa3a89367398bec35ffadbf0ffe5fb500ffbbf0693141c60f45bd6075c7e2e',
+    publishedAt: ISODate('2026-10-24T14:56:50.516Z')
+  },
+  {
+    _id: ObjectId('6adcc79bba826d37d9e2d23f'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    version: 1,
+    sourceDefinitionVersion: 4,
+    definition: {
+      title: 'P2-MAN-20261024-02 满意度乙场',
+      description: ' P2-MAN-20261024-02 满意度乙场',
+      questions: [
+        {
+          id: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+          required: false,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: 'c6e5e1be-dd72-43e4-99ca-d8abf1827c4b',
+          type: 'single',
+          title: '乙场参与方式',
+          required: true,
+          jumpRules: [],
+          options: [
+            {
+              id: '9a08ee3b-5d48-4bba-82cd-9f247b4f1023',
+              label: '线上'
+            },
+            {
+              id: '5428a41f-990b-4399-9a9f-7e7ec79329db',
+              label: '线下'
+            }
+          ]
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: true,
+      allowRepeat: true
+    },
+    definitionHash: '80f2b60a69e942dc210b0663e0b742114705ebda7276ad96282b3a2963e5b49a',
+    bindingHash: 'f84e09f8da74f53a9e3553d6e8346a4734b8824eeca7fa8a30c93b082aadfd7c',
+    publishedAt: ISODate('2026-10-24T14:58:35.969Z')
+  },
+  {
+    _id: ObjectId('6adcc85fba826d37d9e2d249'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    version: 2,
+    sourceDefinitionVersion: 5,
+    definition: {
+      title: 'P2-MAN-20261024-02 满意度乙场',
+      description: ' P2-MAN-20261024-02 满意度乙场',
+      questions: [
+        {
+          id: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 每周可参加几次活动？（调整题干）',
+          required: false,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: 'c6e5e1be-dd72-43e4-99ca-d8abf1827c4b',
+          type: 'single',
+          title: '乙场参与方式',
+          required: true,
+          jumpRules: [],
+          options: [
+            {
+              id: '9a08ee3b-5d48-4bba-82cd-9f247b4f1023',
+              label: '线上'
+            },
+            {
+              id: '5428a41f-990b-4399-9a9f-7e7ec79329db',
+              label: '线下'
+            }
+          ]
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: true,
+      allowRepeat: true
+    },
+    definitionHash: 'f9f108f1772e7018038db3a09b57cdf0322329b6f822e6f0bc57d7cfcd20f9d8',
+    bindingHash: '781b8d707dc9d7965490022af36fb1c322059ea961cf6ef5ae09ea3ca624abb0',
+    publishedAt: ISODate('2026-10-24T15:01:51.209Z')
+  },
+  {
+    _id: ObjectId('6adcd0c1ba826d37d9e2d26a'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    version: 1,
+    sourceDefinitionVersion: 6,
+    definition: {
+      title: 'P2-MAN-20261024-02 活动模板源',
+      description: 'P2-MAN-20261024-02 活动模板源',
+      questions: [
+        {
+          id: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+          type: 'single',
+          title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+          required: true,
+          jumpRules: [
+            {
+              id: 'be725f28-6616-4973-b14a-55d72afbc8ce',
+              condition: {
+                op: 'eq',
+                optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+              },
+              targetQuestionId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1'
+            }
+          ],
+          options: [
+            {
+              id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+              label: '参加'
+            },
+            {
+              id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+              label: '不参加'
+            }
+          ]
+        },
+        {
+          id: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+          type: 'multiple',
+          title: '偏好的活动形式？',
+          required: true,
+          jumpRules: [],
+          options: [
+            {
+              id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+              label: '线下讲座'
+            },
+            {
+              id: '1e310dd5-f45b-4040-b69f-539031915019',
+              label: '线上直播'
+            },
+            {
+              id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+              label: '小组讨论'
+            }
+          ],
+          validation: {
+            minChoices: 1,
+            maxChoices: 2
+          }
+        },
+        {
+          id: '6198d159-9056-4194-84f1-8fa49517b860',
+          type: 'text',
+          title: '活动安排建议',
+          required: false,
+          jumpRules: [],
+          validation: {
+            maxLength: 20
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: true,
+      allowRepeat: false
+    },
+    definitionHash: '4b12be7dca326d39d17a90090faf697958d778dbc0beb858759b795c173666d1',
+    bindingHash: '2cd6aa2751fe1263b3974526bcd129fa2d95240025565593ac15c450caed4c00',
+    publishedAt: ISODate('2026-10-24T15:37:37.056Z')
+  },
+  {
+    _id: ObjectId('6adcd630ba826d37d9e2d2a0'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    version: 2,
+    sourceDefinitionVersion: 7,
+    definition: {
+      title: 'P2-MAN-20261024-02 活动模板源',
+      description: 'P2-MAN-20261024-02 活动模板源',
+      questions: [
+        {
+          id: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+          type: 'single',
+          title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+          required: true,
+          jumpRules: [
+            {
+              id: 'be725f28-6616-4973-b14a-55d72afbc8ce',
+              condition: {
+                op: 'eq',
+                optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+              },
+              targetQuestionId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1'
+            }
+          ],
+          options: [
+            {
+              id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+              label: '参加'
+            },
+            {
+              id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+              label: '不参加'
+            }
+          ]
+        },
+        {
+          id: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+          required: false,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+          type: 'multiple',
+          title: '偏好的活动形式？',
+          required: true,
+          jumpRules: [],
+          options: [
+            {
+              id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+              label: '线下讲座'
+            },
+            {
+              id: '1e310dd5-f45b-4040-b69f-539031915019',
+              label: '线上直播'
+            },
+            {
+              id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+              label: '小组讨论'
+            }
+          ],
+          validation: {
+            minChoices: 1,
+            maxChoices: 2
+          }
+        },
+        {
+          id: '6198d159-9056-4194-84f1-8fa49517b860',
+          type: 'text',
+          title: '活动安排建议',
+          required: false,
+          jumpRules: [],
+          validation: {
+            maxLength: 20
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: true,
+      allowRepeat: false
+    },
+    definitionHash: '8c0cf319a7edf93874fe011bf8431f94694b573553e6512f824404640eeb7a87',
+    bindingHash: '2cd6aa2751fe1263b3974526bcd129fa2d95240025565593ac15c450caed4c00',
+    publishedAt: ISODate('2026-10-24T16:00:48.601Z')
+  },
+  {
+    _id: ObjectId('6adcd51dba826d37d9e2d289'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    version: 1,
+    sourceDefinitionVersion: 2,
+    definition: {
+      title: 'P2-MAN-20261024-02 模板使用C',
+      description: 'P2-MAN-20261024-02 活动模板源',
+      questions: [
+        {
+          id: '85902903-392e-4e27-a119-37d7be7fa8bb',
+          type: 'single',
+          title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+          required: true,
+          jumpRules: [
+            {
+              id: '4e6b0f2b-8efc-4153-9915-6a444402f17b',
+              condition: {
+                op: 'eq',
+                optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+              },
+              targetQuestionId: '0f4418d9-c72c-4a39-8cb1-db580a415ce9'
+            }
+          ],
+          options: [
+            {
+              id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+              label: '参加'
+            },
+            {
+              id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+              label: '不参加'
+            }
+          ]
+        },
+        {
+          id: '38806088-a85a-43fb-b404-e8dc1a5a429b',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: '0f4418d9-c72c-4a39-8cb1-db580a415ce9',
+          type: 'multiple',
+          title: '偏好的活动形式？',
+          required: true,
+          jumpRules: [],
+          options: [
+            {
+              id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+              label: '线下讲座'
+            },
+            {
+              id: '1e310dd5-f45b-4040-b69f-539031915019',
+              label: '线上直播'
+            },
+            {
+              id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+              label: '小组讨论'
+            }
+          ],
+          validation: {
+            minChoices: 1,
+            maxChoices: 2
+          }
+        },
+        {
+          id: '566dbdf0-a925-488a-b5b6-654de18754e8',
+          type: 'text',
+          title: '活动安排建议',
+          required: true,
+          jumpRules: [],
+          validation: {
+            maxLength: 20
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: false,
+      allowRepeat: false
+    },
+    definitionHash: '772a665baa981cce339d58413ed237f60f8e9b8342ec5f87a1a8b550adf8dff1',
+    bindingHash: '23e235462dd4afdc6b300e76e4c7799e09b0b8905f2ce9d9f9aba5b447e410b3',
+    publishedAt: ISODate('2026-10-24T15:56:13.532Z')
+  },
+  {
+    _id: ObjectId('6adcd57fba826d37d9e2d299'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    version: 1,
+    sourceDefinitionVersion: 1,
+    definition: {
+      title: 'P2-MAN-20261024-02 模板使用D',
+      description: 'P2-MAN-20261024-02 活动模板源',
+      questions: [
+        {
+          id: '0179114b-4574-4fa9-ae24-c7bbc276722c',
+          type: 'single',
+          title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+          required: true,
+          jumpRules: [
+            {
+              id: 'fdac071f-a3a4-42ce-bd3b-afa161ce1f35',
+              condition: {
+                op: 'eq',
+                optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+              },
+              targetQuestionId: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376'
+            }
+          ],
+          options: [
+            {
+              id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+              label: '参加'
+            },
+            {
+              id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+              label: '不参加'
+            }
+          ]
+        },
+        {
+          id: 'b8d6ee1a-91c4-42e7-9baa-7de0c649c32b',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376',
+          type: 'multiple',
+          title: '偏好的活动形式？',
+          required: true,
+          jumpRules: [],
+          options: [
+            {
+              id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+              label: '线下讲座'
+            },
+            {
+              id: '1e310dd5-f45b-4040-b69f-539031915019',
+              label: '线上直播'
+            },
+            {
+              id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+              label: '小组讨论'
+            }
+          ],
+          validation: {
+            minChoices: 1,
+            maxChoices: 2
+          }
+        },
+        {
+          id: '7ab44d34-c281-44b7-a5cb-25477a8b4059',
+          type: 'text',
+          title: '活动安排建议',
+          required: false,
+          jumpRules: [],
+          validation: {
+            maxLength: 20
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: false,
+      allowRepeat: false
+    },
+    definitionHash: '440634d702285d0af2c41ee5de553d29a38481ff7aa8245f7a9cd4e837b5c3f6',
+    bindingHash: '7b73bcc30c36e5a151d4d8d2ae03f7b8b96f6b6d6f3e96494e7b0b5c1be67193',
+    publishedAt: ISODate('2026-10-24T15:57:51.735Z')
+  },
+  {
+    _id: ObjectId('6adcd7f7ba826d37d9e2d2ac'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    version: 2,
+    sourceDefinitionVersion: 2,
+    definition: {
+      title: 'P2-MAN-20261024-02 模板使用D',
+      description: 'P2-MAN-20261024-02 活动模板源',
+      questions: [
+        {
+          id: '0179114b-4574-4fa9-ae24-c7bbc276722c',
+          type: 'single',
+          title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+          required: true,
+          jumpRules: [
+            {
+              id: 'fdac071f-a3a4-42ce-bd3b-afa161ce1f35',
+              condition: {
+                op: 'eq',
+                optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+              },
+              targetQuestionId: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376'
+            }
+          ],
+          options: [
+            {
+              id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+              label: '参加'
+            },
+            {
+              id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+              label: '不参加'
+            }
+          ]
+        },
+        {
+          id: 'b8d6ee1a-91c4-42e7-9baa-7de0c649c32b',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 我每周可安排的活动次数',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376',
+          type: 'multiple',
+          title: '偏好的活动形式？',
+          required: true,
+          jumpRules: [],
+          options: [
+            {
+              id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+              label: '线下讲座'
+            },
+            {
+              id: '1e310dd5-f45b-4040-b69f-539031915019',
+              label: '线上直播'
+            },
+            {
+              id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+              label: '小组讨论'
+            }
+          ],
+          validation: {
+            minChoices: 1,
+            maxChoices: 2
+          }
+        },
+        {
+          id: '7ab44d34-c281-44b7-a5cb-25477a8b4059',
+          type: 'text',
+          title: '活动安排建议',
+          required: false,
+          jumpRules: [],
+          validation: {
+            maxLength: 20
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: false,
+      allowRepeat: false
+    },
+    definitionHash: '3a5bd3b9562e8ea1dccccef2b8fc095a91b3e372fabc89334f45b47bb190d58c',
+    bindingHash: '9764b5ff4661bee7c8871129dd0ecda0c32e599cc6f90b2252d5db9baffdb841',
+    publishedAt: ISODate('2026-10-24T16:08:23.554Z')
+  },
+  {
+    _id: ObjectId('6adcd8a7ba826d37d9e2d2b8'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    version: 1,
+    sourceDefinitionVersion: 3,
+    definition: {
+      title: 'P2-MAN-20261024-02 收集状态',
+      description: '',
+      questions: [
+        {
+          id: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+          type: 'number',
+          title: '本次服务评分',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('10')
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: true,
+      allowRepeat: true
+    },
+    definitionHash: '906a1fda460d833378f908c6de58f941177918bb1a99672e565bb0621b97d19c',
+    bindingHash: '0f1d44fe067744f5412a66efc9aec0110747afaba4db3348d249d36868dc0762',
+    publishedAt: ISODate('2026-10-24T16:11:19.895Z')
+  },
+  {
+    _id: ObjectId('6adcd9fdba826d37d9e2d2bc'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    version: 2,
+    sourceDefinitionVersion: 4,
+    definition: {
+      title: 'P2-MAN-20261024-02 收集状态',
+      description: '收集状态第二轮',
+      questions: [
+        {
+          id: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+          type: 'number',
+          title: '本次服务评分',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('10')
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: true,
+      allowRepeat: true
+    },
+    definitionHash: '3912d7ae6d135d0c616e51c2586cb9391833e90a2b40b65dd9f708834948fcb0',
+    bindingHash: '0f1d44fe067744f5412a66efc9aec0110747afaba4db3348d249d36868dc0762',
+    publishedAt: ISODate('2026-10-24T16:17:01.535Z')
+  },
+  {
+    _id: ObjectId('6add5d2dba826d37d9e2d2bf'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    version: 3,
+    sourceDefinitionVersion: 4,
+    definition: {
+      title: 'P2-MAN-20261024-02 收集状态',
+      description: '收集状态第二轮',
+      questions: [
+        {
+          id: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+          type: 'number',
+          title: '本次服务评分',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('10')
+          }
+        }
+      ]
+    },
+    policySnapshot: {
+      allowAnonymous: true,
+      allowRepeat: true
+    },
+    definitionHash: '3912d7ae6d135d0c616e51c2586cb9391833e90a2b40b65dd9f708834948fcb0',
+    bindingHash: '0f1d44fe067744f5412a66efc9aec0110747afaba4db3348d249d36868dc0762',
+    publishedAt: ISODate('2026-10-25T01:36:45.281Z')
+  }
+]
+
+===== Stored counter vs actual response count: matches should both be true =====
+[
+  {
+    _id: ObjectId('6adcc529ba826d37d9e2d205'),
+    title: 'P2-MAN-20261024-02 四型与跳转',
+    currentPublishedVersion: 1,
+    actualTotal: 4,
+    actualCurrent: 4,
+    storedTotal: 4,
+    totalMatches: true,
+    storedCurrent: 4,
+    currentMatches: true
+  },
+  {
+    _id: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    title: 'P2-MAN-20261024-02 满意度甲场',
+    currentPublishedVersion: 1,
+    actualTotal: 1,
+    actualCurrent: 1,
+    storedTotal: 1,
+    totalMatches: true,
+    storedCurrent: 1,
+    currentMatches: true
+  },
+  {
+    _id: ObjectId('6adcc770ba826d37d9e2d236'),
+    title: 'P2-MAN-20261024-02 满意度乙场',
+    currentPublishedVersion: 2,
+    actualTotal: 3,
+    actualCurrent: 1,
+    storedTotal: 3,
+    totalMatches: true,
+    storedCurrent: 1,
+    currentMatches: true
+  },
+  {
+    _id: ObjectId('6adcc924ba826d37d9e2d24f'),
+    title: 'P2-MAN-20261024-02 引用规则草稿',
+    currentPublishedVersion: null,
+    actualTotal: 0,
+    actualCurrent: 0,
+    storedTotal: 0,
+    totalMatches: true,
+    storedCurrent: 0,
+    currentMatches: true
+  },
+  {
+    _id: ObjectId('6adcd02bba826d37d9e2d259'),
+    title: 'P2-MAN-20261024-02 活动模板源',
+    currentPublishedVersion: 2,
+    actualTotal: 1,
+    actualCurrent: 0,
+    storedTotal: 1,
+    totalMatches: true,
+    storedCurrent: 0,
+    currentMatches: true
+  },
+  {
+    _id: ObjectId('6adcd50dba826d37d9e2d27f'),
+    title: 'P2-MAN-20261024-02 模板使用C',
+    currentPublishedVersion: 1,
+    actualTotal: 3,
+    actualCurrent: 3,
+    storedTotal: 3,
+    totalMatches: true,
+    storedCurrent: 3,
+    currentMatches: true
+  },
+  {
+    _id: ObjectId('6adcd577ba826d37d9e2d28f'),
+    title: 'P2-MAN-20261024-02 模板使用D',
+    currentPublishedVersion: 2,
+    actualTotal: 2,
+    actualCurrent: 1,
+    storedTotal: 2,
+    totalMatches: true,
+    storedCurrent: 1,
+    currentMatches: true
+  },
+  {
+    _id: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    title: 'P2-MAN-20261024-02 收集状态',
+    currentPublishedVersion: 3,
+    actualTotal: 3,
+    actualCurrent: 0,
+    storedTotal: 3,
+    totalMatches: true,
+    storedCurrent: 0,
+    currentMatches: true
+  }
+]
+
+===== Actual answers by publication; respondent identity and request hashes omitted =====
+[
+  {
+    _id: ObjectId('6adcc655ba826d37d9e2d225'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    surveyDefinitionVersion: 1,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '79b0746d-5e81-4191-9b07-e71d9bfc7491',
+        type: 'single',
+        optionId: 'fc3ab27a-9324-4b70-bfbb-f2049d7521f5'
+      },
+      {
+        questionId: '366e5afd-5d2a-41a5-a0ea-aceb77c364e9',
+        type: 'multiple',
+        optionIds: [
+          '84e7e2f9-26a5-4697-8e28-e3d75c5691eb',
+          'f4c5a824-5b24-4060-be02-415635e92921'
+        ]
+      },
+      {
+        questionId: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15',
+        type: 'number',
+        number: Decimal128('0')
+      },
+      {
+        questionId: '5b7718e4-cd09-4abd-a15c-107ff83e27cb',
+        type: 'number',
+        number: Decimal128('0')
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T14:53:09.069Z')
+  },
+  {
+    _id: ObjectId('6adcc665ba826d37d9e2d226'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    surveyDefinitionVersion: 1,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '79b0746d-5e81-4191-9b07-e71d9bfc7491',
+        type: 'single',
+        optionId: '295a2202-8837-4f16-aaca-c9dd047315f8'
+      },
+      {
+        questionId: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15',
+        type: 'number',
+        number: Decimal128('20')
+      },
+      {
+        questionId: '5b7718e4-cd09-4abd-a15c-107ff83e27cb',
+        type: 'number',
+        number: Decimal128('0')
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T14:53:25.605Z')
+  },
+  {
+    _id: ObjectId('6adcc675ba826d37d9e2d227'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    surveyDefinitionVersion: 1,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '79b0746d-5e81-4191-9b07-e71d9bfc7491',
+        type: 'single',
+        optionId: 'fc3ab27a-9324-4b70-bfbb-f2049d7521f5'
+      },
+      {
+        questionId: '366e5afd-5d2a-41a5-a0ea-aceb77c364e9',
+        type: 'multiple',
+        optionIds: [
+          'f4c5a824-5b24-4060-be02-415635e92921'
+        ]
+      },
+      {
+        questionId: '5b7718e4-cd09-4abd-a15c-107ff83e27cb',
+        type: 'number',
+        number: Decimal128('2.5')
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T14:53:41.242Z')
+  },
+  {
+    _id: ObjectId('6adcc694ba826d37d9e2d228'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    surveyDefinitionVersion: 1,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '79b0746d-5e81-4191-9b07-e71d9bfc7491',
+        type: 'single',
+        optionId: 'fc3ab27a-9324-4b70-bfbb-f2049d7521f5'
+      },
+      {
+        questionId: '366e5afd-5d2a-41a5-a0ea-aceb77c364e9',
+        type: 'multiple',
+        optionIds: [
+          '4521a78c-7fab-4de6-b5f4-2ab33fc29a3d'
+        ]
+      },
+      {
+        questionId: 'c1dc162e-dae4-4d6e-b085-4fc1de8fc244',
+        type: 'text',
+        text: '11'
+      },
+      {
+        questionId: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15',
+        type: 'number',
+        number: Decimal128('40')
+      },
+      {
+        questionId: '5b7718e4-cd09-4abd-a15c-107ff83e27cb',
+        type: 'number',
+        number: Decimal128('4.5')
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T14:54:12.395Z')
+  },
+  {
+    _id: ObjectId('6adcc75fba826d37d9e2d235'),
+    surveyId: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    surveyDefinitionVersion: 1,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '718b285e-f890-4918-8af0-4bd354c2fb16',
+        type: 'number',
+        number: Decimal128('2')
+      },
+      {
+        questionId: '30f54214-8770-4110-a99e-e6e9aec25682',
+        type: 'text',
+        text: '11'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T14:57:35.747Z')
+  },
+  {
+    _id: ObjectId('6adcc7b1ba826d37d9e2d242'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    surveyDefinitionVersion: 1,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+        type: 'number',
+        number: Decimal128('4')
+      },
+      {
+        questionId: 'c6e5e1be-dd72-43e4-99ca-d8abf1827c4b',
+        type: 'single',
+        optionId: '9a08ee3b-5d48-4bba-82cd-9f247b4f1023'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T14:58:57.437Z')
+  },
+  {
+    _id: ObjectId('6adcc7bdba826d37d9e2d243'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    surveyDefinitionVersion: 1,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: 'c6e5e1be-dd72-43e4-99ca-d8abf1827c4b',
+        type: 'single',
+        optionId: '5428a41f-990b-4399-9a9f-7e7ec79329db'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T14:59:09.462Z')
+  },
+  {
+    _id: ObjectId('6adcc892ba826d37d9e2d24c'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    surveyDefinitionVersion: 2,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+        type: 'number',
+        number: Decimal128('5')
+      },
+      {
+        questionId: 'c6e5e1be-dd72-43e4-99ca-d8abf1827c4b',
+        type: 'single',
+        optionId: '5428a41f-990b-4399-9a9f-7e7ec79329db'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T15:02:42.754Z')
+  },
+  {
+    _id: ObjectId('6adcd0d9ba826d37d9e2d26f'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    surveyDefinitionVersion: 1,
+    anonymous: false,
+    repeatAllowed: false,
+    answers: [
+      {
+        questionId: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+        type: 'single',
+        optionId: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28'
+      },
+      {
+        questionId: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+        type: 'number',
+        number: Decimal128('7')
+      },
+      {
+        questionId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+        type: 'multiple',
+        optionIds: [
+          'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+          'ed633cf9-c58d-451a-9e3b-82a4ff022ab1'
+        ]
+      },
+      {
+        questionId: '6198d159-9056-4194-84f1-8fa49517b860',
+        type: 'text',
+        text: '源问卷答卷'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T15:38:01.090Z')
+  },
+  {
+    _id: ObjectId('6adcd53dba826d37d9e2d28e'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    surveyDefinitionVersion: 1,
+    anonymous: false,
+    repeatAllowed: false,
+    answers: [
+      {
+        questionId: '85902903-392e-4e27-a119-37d7be7fa8bb',
+        type: 'single',
+        optionId: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28'
+      },
+      {
+        questionId: '38806088-a85a-43fb-b404-e8dc1a5a429b',
+        type: 'number',
+        number: Decimal128('2')
+      },
+      {
+        questionId: '0f4418d9-c72c-4a39-8cb1-db580a415ce9',
+        type: 'multiple',
+        optionIds: [
+          'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+          '1e310dd5-f45b-4040-b69f-539031915019'
+        ]
+      },
+      {
+        questionId: '566dbdf0-a925-488a-b5b6-654de18754e8',
+        type: 'text',
+        text: '希望周末'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T15:56:45.908Z')
+  },
+  {
+    _id: ObjectId('6adcd598ba826d37d9e2d29e'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    surveyDefinitionVersion: 1,
+    anonymous: false,
+    repeatAllowed: false,
+    answers: [
+      {
+        questionId: '85902903-392e-4e27-a119-37d7be7fa8bb',
+        type: 'single',
+        optionId: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28'
+      },
+      {
+        questionId: '38806088-a85a-43fb-b404-e8dc1a5a429b',
+        type: 'number',
+        number: Decimal128('5')
+      },
+      {
+        questionId: '0f4418d9-c72c-4a39-8cb1-db580a415ce9',
+        type: 'multiple',
+        optionIds: [
+          '1e310dd5-f45b-4040-b69f-539031915019'
+        ]
+      },
+      {
+        questionId: '566dbdf0-a925-488a-b5b6-654de18754e8',
+        type: 'text',
+        text: '线上参与'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T15:58:16.804Z')
+  },
+  {
+    _id: ObjectId('6adcd72dba826d37d9e2d2a5'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    surveyDefinitionVersion: 1,
+    anonymous: false,
+    repeatAllowed: false,
+    answers: [
+      {
+        questionId: '85902903-392e-4e27-a119-37d7be7fa8bb',
+        type: 'single',
+        optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+      },
+      {
+        questionId: '0f4418d9-c72c-4a39-8cb1-db580a415ce9',
+        type: 'multiple',
+        optionIds: [
+          'ed633cf9-c58d-451a-9e3b-82a4ff022ab1'
+        ]
+      },
+      {
+        questionId: '566dbdf0-a925-488a-b5b6-654de18754e8',
+        type: 'text',
+        text: '不参加线下'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T16:05:01.518Z')
+  },
+  {
+    _id: ObjectId('6adcd5e4ba826d37d9e2d29f'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    surveyDefinitionVersion: 1,
+    anonymous: false,
+    repeatAllowed: false,
+    answers: [
+      {
+        questionId: '0179114b-4574-4fa9-ae24-c7bbc276722c',
+        type: 'single',
+        optionId: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28'
+      },
+      {
+        questionId: 'b8d6ee1a-91c4-42e7-9baa-7de0c649c32b',
+        type: 'number',
+        number: Decimal128('4')
+      },
+      {
+        questionId: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376',
+        type: 'multiple',
+        optionIds: [
+          'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a'
+        ]
+      },
+      {
+        questionId: '7ab44d34-c281-44b7-a5cb-25477a8b4059',
+        type: 'text',
+        text: '派生前'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T15:59:32.855Z')
+  },
+  {
+    _id: ObjectId('6adcd826ba826d37d9e2d2b1'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    surveyDefinitionVersion: 2,
+    anonymous: false,
+    repeatAllowed: false,
+    answers: [
+      {
+        questionId: '0179114b-4574-4fa9-ae24-c7bbc276722c',
+        type: 'single',
+        optionId: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28'
+      },
+      {
+        questionId: 'b8d6ee1a-91c4-42e7-9baa-7de0c649c32b',
+        type: 'number',
+        number: Decimal128('6')
+      },
+      {
+        questionId: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376',
+        type: 'multiple',
+        optionIds: [
+          'ed633cf9-c58d-451a-9e3b-82a4ff022ab1'
+        ]
+      },
+      {
+        questionId: '7ab44d34-c281-44b7-a5cb-25477a8b4059',
+        type: 'text',
+        text: '派生后'
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T16:09:10.079Z')
+  },
+  {
+    _id: ObjectId('6adcd8e4ba826d37d9e2d2ba'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    surveyDefinitionVersion: 1,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+        type: 'number',
+        number: Decimal128('8')
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T16:12:20.558Z')
+  },
+  {
+    _id: ObjectId('6adcd926ba826d37d9e2d2bb'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    surveyDefinitionVersion: 1,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+        type: 'number',
+        number: Decimal128('2')
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T16:13:26.200Z')
+  },
+  {
+    _id: ObjectId('6adcda49ba826d37d9e2d2be'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    surveyDefinitionVersion: 2,
+    anonymous: true,
+    repeatAllowed: true,
+    answers: [
+      {
+        questionId: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+        type: 'number',
+        number: Decimal128('4')
+      }
+    ],
+    submittedAt: ISODate('2026-10-24T16:18:17.321Z')
+  }
+]
+
+===== Instance -> formal question/version mappings, with exact publication scope =====
+[
+  {
+    _id: ObjectId('6adcc62cba826d37d9e2d20d'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: '366e5afd-5d2a-41a5-a0ea-aceb77c364e9',
+    questionId: ObjectId('6adcc62cba826d37d9e2d20b'),
+    questionVersionId: ObjectId('6adcc62cba826d37d9e2d20c'),
+    contentHash: '9383f0ae3d71cb672c16b72c6c876ca4c61b5b4a90beb8a89033cacb90d18c55',
+    acquisitionId: ObjectId('6adcc62cba826d37d9e2d20e'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '你喜欢哪些活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc62fba826d37d9e2d217'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15',
+    questionId: ObjectId('6adcc62fba826d37d9e2d215'),
+    questionVersionId: ObjectId('6adcc62fba826d37d9e2d216'),
+    contentHash: '34c787bc3f9a28784f7401312b75d293ac2f6206a87fdb33c25efbfe0d8046ca',
+    acquisitionId: ObjectId('6adcc62fba826d37d9e2d218'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: ' 你的年龄是多少？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc630ba826d37d9e2d21c'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: '5b7718e4-cd09-4abd-a15c-107ff83e27cb',
+    questionId: ObjectId('6adcc630ba826d37d9e2d21a'),
+    questionVersionId: ObjectId('6adcc630ba826d37d9e2d21b'),
+    contentHash: 'f90cba3b17b4d367baa0359eee85ebbaeaaf307a68e934fb2be9a5da8f308dda',
+    acquisitionId: ObjectId('6adcc630ba826d37d9e2d21d'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: ' 给校园活动打几分？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc62aba826d37d9e2d208'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: '79b0746d-5e81-4191-9b07-e71d9bfc7491',
+    questionId: ObjectId('6adcc62aba826d37d9e2d206'),
+    questionVersionId: ObjectId('6adcc62aba826d37d9e2d207'),
+    contentHash: 'aee8797996f1e1bf618eb590e3b7b03d0f0791e3ad07f7682341d2761591e49b',
+    acquisitionId: ObjectId('6adcc62aba826d37d9e2d209'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '是否参加过校园活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc62eba826d37d9e2d212'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: 'c1dc162e-dae4-4d6e-b085-4fc1de8fc244',
+    questionId: ObjectId('6adcc62eba826d37d9e2d210'),
+    questionVersionId: ObjectId('6adcc62eba826d37d9e2d211'),
+    contentHash: '9d7199580946ad4afaa3b25b4c57519c754017ebb87b745b14ceab49ff92bbee',
+    acquisitionId: ObjectId('6adcc62eba826d37d9e2d213'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '文本题对校园活动有什么建议？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc639ba826d37d9e2d220'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: '366e5afd-5d2a-41a5-a0ea-aceb77c364e9',
+    questionId: ObjectId('6adcc62cba826d37d9e2d20b'),
+    questionVersionId: ObjectId('6adcc62cba826d37d9e2d20c'),
+    contentHash: '9383f0ae3d71cb672c16b72c6c876ca4c61b5b4a90beb8a89033cacb90d18c55',
+    acquisitionId: ObjectId('6adcc62cba826d37d9e2d20e'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: 'dbf43502b1e008580daf37a627bfb3031ca216c5eaabd0be957df627e6151796',
+    formalVersion: 1,
+    formalTitle: '你喜欢哪些活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc639ba826d37d9e2d221'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: '4f0ef02a-7ff8-4a35-9b2b-790d5bd66b15',
+    questionId: ObjectId('6adcc62fba826d37d9e2d215'),
+    questionVersionId: ObjectId('6adcc62fba826d37d9e2d216'),
+    contentHash: '34c787bc3f9a28784f7401312b75d293ac2f6206a87fdb33c25efbfe0d8046ca',
+    acquisitionId: ObjectId('6adcc62fba826d37d9e2d218'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: 'dbf43502b1e008580daf37a627bfb3031ca216c5eaabd0be957df627e6151796',
+    formalVersion: 1,
+    formalTitle: ' 你的年龄是多少？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc639ba826d37d9e2d222'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: '5b7718e4-cd09-4abd-a15c-107ff83e27cb',
+    questionId: ObjectId('6adcc630ba826d37d9e2d21a'),
+    questionVersionId: ObjectId('6adcc630ba826d37d9e2d21b'),
+    contentHash: 'f90cba3b17b4d367baa0359eee85ebbaeaaf307a68e934fb2be9a5da8f308dda',
+    acquisitionId: ObjectId('6adcc630ba826d37d9e2d21d'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: 'dbf43502b1e008580daf37a627bfb3031ca216c5eaabd0be957df627e6151796',
+    formalVersion: 1,
+    formalTitle: ' 给校园活动打几分？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc639ba826d37d9e2d223'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: '79b0746d-5e81-4191-9b07-e71d9bfc7491',
+    questionId: ObjectId('6adcc62aba826d37d9e2d206'),
+    questionVersionId: ObjectId('6adcc62aba826d37d9e2d207'),
+    contentHash: 'aee8797996f1e1bf618eb590e3b7b03d0f0791e3ad07f7682341d2761591e49b',
+    acquisitionId: ObjectId('6adcc62aba826d37d9e2d209'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: 'dbf43502b1e008580daf37a627bfb3031ca216c5eaabd0be957df627e6151796',
+    formalVersion: 1,
+    formalTitle: '是否参加过校园活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc639ba826d37d9e2d224'),
+    surveyId: ObjectId('6adcc529ba826d37d9e2d205'),
+    instanceId: 'c1dc162e-dae4-4d6e-b085-4fc1de8fc244',
+    questionId: ObjectId('6adcc62eba826d37d9e2d210'),
+    questionVersionId: ObjectId('6adcc62eba826d37d9e2d211'),
+    contentHash: '9d7199580946ad4afaa3b25b4c57519c754017ebb87b745b14ceab49ff92bbee',
+    acquisitionId: ObjectId('6adcc62eba826d37d9e2d213'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: 'dbf43502b1e008580daf37a627bfb3031ca216c5eaabd0be957df627e6151796',
+    formalVersion: 1,
+    formalTitle: '文本题对校园活动有什么建议？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc730ba826d37d9e2d22f'),
+    surveyId: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    instanceId: '30f54214-8770-4110-a99e-e6e9aec25682',
+    questionId: ObjectId('6adcc730ba826d37d9e2d22d'),
+    questionVersionId: ObjectId('6adcc730ba826d37d9e2d22e'),
+    contentHash: '73c9ab94e12fbdd77c7b58847ef9d3fa994a08b49dd1677fbf16c0cc9d2831af',
+    acquisitionId: ObjectId('6adcc730ba826d37d9e2d230'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '甲场补充意见',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc6faba826d37d9e2d22a'),
+    surveyId: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    instanceId: '718b285e-f890-4918-8af0-4bd354c2fb16',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcc6faba826d37d9e2d22b'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc732ba826d37d9e2d233'),
+    surveyId: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    instanceId: '30f54214-8770-4110-a99e-e6e9aec25682',
+    questionId: ObjectId('6adcc730ba826d37d9e2d22d'),
+    questionVersionId: ObjectId('6adcc730ba826d37d9e2d22e'),
+    contentHash: '73c9ab94e12fbdd77c7b58847ef9d3fa994a08b49dd1677fbf16c0cc9d2831af',
+    acquisitionId: ObjectId('6adcc730ba826d37d9e2d230'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '1cf8692f321d525560457b25b7b05ee72d027c346033c3be3487b8116908a0a6',
+    formalVersion: 1,
+    formalTitle: '甲场补充意见',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc732ba826d37d9e2d234'),
+    surveyId: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    instanceId: '718b285e-f890-4918-8af0-4bd354c2fb16',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcc6faba826d37d9e2d22b'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '1cf8692f321d525560457b25b7b05ee72d027c346033c3be3487b8116908a0a6',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc77aba826d37d9e2d237'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    instanceId: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc815ba826d37d9e2d244'),
+    contentHash: 'b90ab09f61f8ec132150dd7f26779da2c28834b93085a694d3a053da5bfb5bba',
+    acquisitionId: ObjectId('6adcc858ba826d37d9e2d247'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 2,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？（调整题干）',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc79aba826d37d9e2d23c'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    instanceId: 'c6e5e1be-dd72-43e4-99ca-d8abf1827c4b',
+    questionId: ObjectId('6adcc79aba826d37d9e2d23a'),
+    questionVersionId: ObjectId('6adcc79aba826d37d9e2d23b'),
+    contentHash: 'be5e7d7d0e0736c380666e9f94338d855277134fee785364580859718828dd01',
+    acquisitionId: ObjectId('6adcc79aba826d37d9e2d23d'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '乙场参与方式',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc79bba826d37d9e2d240'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    instanceId: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcc77aba826d37d9e2d238'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '80f2b60a69e942dc210b0663e0b742114705ebda7276ad96282b3a2963e5b49a',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc79bba826d37d9e2d241'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    instanceId: 'c6e5e1be-dd72-43e4-99ca-d8abf1827c4b',
+    questionId: ObjectId('6adcc79aba826d37d9e2d23a'),
+    questionVersionId: ObjectId('6adcc79aba826d37d9e2d23b'),
+    contentHash: 'be5e7d7d0e0736c380666e9f94338d855277134fee785364580859718828dd01',
+    acquisitionId: ObjectId('6adcc79aba826d37d9e2d23d'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '80f2b60a69e942dc210b0663e0b742114705ebda7276ad96282b3a2963e5b49a',
+    formalVersion: 1,
+    formalTitle: '乙场参与方式',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc85fba826d37d9e2d24a'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    instanceId: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc815ba826d37d9e2d244'),
+    contentHash: 'b90ab09f61f8ec132150dd7f26779da2c28834b93085a694d3a053da5bfb5bba',
+    acquisitionId: ObjectId('6adcc858ba826d37d9e2d247'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: 'f9f108f1772e7018038db3a09b57cdf0322329b6f822e6f0bc57d7cfcd20f9d8',
+    formalVersion: 2,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？（调整题干）',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc85fba826d37d9e2d24b'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    instanceId: 'c6e5e1be-dd72-43e4-99ca-d8abf1827c4b',
+    questionId: ObjectId('6adcc79aba826d37d9e2d23a'),
+    questionVersionId: ObjectId('6adcc79aba826d37d9e2d23b'),
+    contentHash: 'be5e7d7d0e0736c380666e9f94338d855277134fee785364580859718828dd01',
+    acquisitionId: ObjectId('6adcc79aba826d37d9e2d23d'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: 'f9f108f1772e7018038db3a09b57cdf0322329b6f822e6f0bc57d7cfcd20f9d8',
+    formalVersion: 1,
+    formalTitle: '乙场参与方式',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc93cba826d37d9e2d253'),
+    surveyId: ObjectId('6adcc924ba826d37d9e2d24f'),
+    instanceId: '32e8468e-9ad6-4ba3-a04a-85af6f2594f6',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc815ba826d37d9e2d244'),
+    contentHash: 'b90ab09f61f8ec132150dd7f26779da2c28834b93085a694d3a053da5bfb5bba',
+    acquisitionId: ObjectId('6adcc93cba826d37d9e2d254'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 2,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？（调整题干）',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcc930ba826d37d9e2d250'),
+    surveyId: ObjectId('6adcc924ba826d37d9e2d24f'),
+    instanceId: '5884d527-6e47-4667-9872-18e17e8c1aa8',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcc930ba826d37d9e2d251'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd0afba826d37d9e2d267'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: '6198d159-9056-4194-84f1-8fa49517b860',
+    questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+    questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+    acquisitionId: ObjectId('6adcd0afba826d37d9e2d268'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '活动安排建议',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd065ba826d37d9e2d25d'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcd065ba826d37d9e2d25e'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 2
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd042ba826d37d9e2d25a'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+    questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+    acquisitionId: ObjectId('6adcd042ba826d37d9e2d25b'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adccfe1ba826d37d9e2d258'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd0adba826d37d9e2d262'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+    questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+    questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+    acquisitionId: ObjectId('6adcd0adba826d37d9e2d263'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '偏好的活动形式？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd0c1ba826d37d9e2d26b'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: '6198d159-9056-4194-84f1-8fa49517b860',
+    questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+    questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+    acquisitionId: ObjectId('6adcd0afba826d37d9e2d268'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '4b12be7dca326d39d17a90090faf697958d778dbc0beb858759b795c173666d1',
+    formalVersion: 1,
+    formalTitle: '活动安排建议',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd0c1ba826d37d9e2d26c'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcd065ba826d37d9e2d25e'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 2
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '4b12be7dca326d39d17a90090faf697958d778dbc0beb858759b795c173666d1',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd0c1ba826d37d9e2d26d'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+    questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+    acquisitionId: ObjectId('6adcd042ba826d37d9e2d25b'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adccfe1ba826d37d9e2d258'),
+      grantRevision: 0
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '4b12be7dca326d39d17a90090faf697958d778dbc0beb858759b795c173666d1',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd0c1ba826d37d9e2d26e'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+    questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+    questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+    acquisitionId: ObjectId('6adcd0adba826d37d9e2d263'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '4b12be7dca326d39d17a90090faf697958d778dbc0beb858759b795c173666d1',
+    formalVersion: 1,
+    formalTitle: '偏好的活动形式？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd630ba826d37d9e2d2a1'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: '6198d159-9056-4194-84f1-8fa49517b860',
+    questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+    questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+    acquisitionId: ObjectId('6adcd0afba826d37d9e2d268'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: '8c0cf319a7edf93874fe011bf8431f94694b573553e6512f824404640eeb7a87',
+    formalVersion: 1,
+    formalTitle: '活动安排建议',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd630ba826d37d9e2d2a2'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcd065ba826d37d9e2d25e'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 2
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: '8c0cf319a7edf93874fe011bf8431f94694b573553e6512f824404640eeb7a87',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd630ba826d37d9e2d2a3'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+    questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+    acquisitionId: ObjectId('6adcd042ba826d37d9e2d25b'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adccfe1ba826d37d9e2d258'),
+      grantRevision: 0
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: '8c0cf319a7edf93874fe011bf8431f94694b573553e6512f824404640eeb7a87',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd630ba826d37d9e2d2a4'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    instanceId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+    questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+    questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+    acquisitionId: ObjectId('6adcd0adba826d37d9e2d263'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: '8c0cf319a7edf93874fe011bf8431f94694b573553e6512f824404640eeb7a87',
+    formalVersion: 1,
+    formalTitle: '偏好的活动形式？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd50dba826d37d9e2d286'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    instanceId: '0f4418d9-c72c-4a39-8cb1-db580a415ce9',
+    questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+    questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+    acquisitionId: ObjectId('6adcd50dba826d37d9e2d287'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '偏好的活动形式？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd50dba826d37d9e2d282'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    instanceId: '38806088-a85a-43fb-b404-e8dc1a5a429b',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcd50dba826d37d9e2d283'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd50dba826d37d9e2d280'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    instanceId: '566dbdf0-a925-488a-b5b6-654de18754e8',
+    questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+    questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+    acquisitionId: ObjectId('6adcd50dba826d37d9e2d281'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '活动安排建议',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd50dba826d37d9e2d284'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    instanceId: '85902903-392e-4e27-a119-37d7be7fa8bb',
+    questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+    acquisitionId: ObjectId('6adcd50dba826d37d9e2d285'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd51dba826d37d9e2d28a'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    instanceId: '0f4418d9-c72c-4a39-8cb1-db580a415ce9',
+    questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+    questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+    acquisitionId: ObjectId('6adcd50dba826d37d9e2d287'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '772a665baa981cce339d58413ed237f60f8e9b8342ec5f87a1a8b550adf8dff1',
+    formalVersion: 1,
+    formalTitle: '偏好的活动形式？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd51dba826d37d9e2d28b'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    instanceId: '38806088-a85a-43fb-b404-e8dc1a5a429b',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcd50dba826d37d9e2d283'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '772a665baa981cce339d58413ed237f60f8e9b8342ec5f87a1a8b550adf8dff1',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd51dba826d37d9e2d28c'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    instanceId: '566dbdf0-a925-488a-b5b6-654de18754e8',
+    questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+    questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+    acquisitionId: ObjectId('6adcd50dba826d37d9e2d281'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '772a665baa981cce339d58413ed237f60f8e9b8342ec5f87a1a8b550adf8dff1',
+    formalVersion: 1,
+    formalTitle: '活动安排建议',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd51dba826d37d9e2d28d'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    instanceId: '85902903-392e-4e27-a119-37d7be7fa8bb',
+    questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+    acquisitionId: ObjectId('6adcd50dba826d37d9e2d285'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '772a665baa981cce339d58413ed237f60f8e9b8342ec5f87a1a8b550adf8dff1',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd577ba826d37d9e2d294'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: '0179114b-4574-4fa9-ae24-c7bbc276722c',
+    questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d295'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd577ba826d37d9e2d290'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: '7ab44d34-c281-44b7-a5cb-25477a8b4059',
+    questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+    questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d291'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '活动安排建议',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd577ba826d37d9e2d292'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: 'b8d6ee1a-91c4-42e7-9baa-7de0c649c32b',
+    questionId: ObjectId('6adcd7dfba826d37d9e2d2a6'),
+    questionVersionId: ObjectId('6adcd7dfba826d37d9e2d2a7'),
+    contentHash: 'ba626f5ef66899081624a54a2a4a96ea84248b7b9f8f0ee14889fb0e606d3883',
+    acquisitionId: ObjectId('6adcd7ecba826d37d9e2d2aa'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 我每周可安排的活动次数',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd577ba826d37d9e2d296'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376',
+    questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+    questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d297'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '偏好的活动形式？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd57fba826d37d9e2d29a'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: '0179114b-4574-4fa9-ae24-c7bbc276722c',
+    questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d295'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '440634d702285d0af2c41ee5de553d29a38481ff7aa8245f7a9cd4e837b5c3f6',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd57fba826d37d9e2d29b'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: '7ab44d34-c281-44b7-a5cb-25477a8b4059',
+    questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+    questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d291'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '440634d702285d0af2c41ee5de553d29a38481ff7aa8245f7a9cd4e837b5c3f6',
+    formalVersion: 1,
+    formalTitle: '活动安排建议',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd57fba826d37d9e2d29c'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: 'b8d6ee1a-91c4-42e7-9baa-7de0c649c32b',
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d293'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '440634d702285d0af2c41ee5de553d29a38481ff7aa8245f7a9cd4e837b5c3f6',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd57fba826d37d9e2d29d'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376',
+    questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+    questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d297'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '440634d702285d0af2c41ee5de553d29a38481ff7aa8245f7a9cd4e837b5c3f6',
+    formalVersion: 1,
+    formalTitle: '偏好的活动形式？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd7f7ba826d37d9e2d2ad'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: '0179114b-4574-4fa9-ae24-c7bbc276722c',
+    questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d295'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: '3a5bd3b9562e8ea1dccccef2b8fc095a91b3e372fabc89334f45b47bb190d58c',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd7f7ba826d37d9e2d2ae'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: '7ab44d34-c281-44b7-a5cb-25477a8b4059',
+    questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+    questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d291'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: '3a5bd3b9562e8ea1dccccef2b8fc095a91b3e372fabc89334f45b47bb190d58c',
+    formalVersion: 1,
+    formalTitle: '活动安排建议',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd7f7ba826d37d9e2d2af'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: 'b8d6ee1a-91c4-42e7-9baa-7de0c649c32b',
+    questionId: ObjectId('6adcd7dfba826d37d9e2d2a6'),
+    questionVersionId: ObjectId('6adcd7dfba826d37d9e2d2a7'),
+    contentHash: 'ba626f5ef66899081624a54a2a4a96ea84248b7b9f8f0ee14889fb0e606d3883',
+    acquisitionId: ObjectId('6adcd7ecba826d37d9e2d2aa'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: '3a5bd3b9562e8ea1dccccef2b8fc095a91b3e372fabc89334f45b47bb190d58c',
+    formalVersion: 1,
+    formalTitle: 'P2-MAN-20261024-02 我每周可安排的活动次数',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd7f7ba826d37d9e2d2b0'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    instanceId: 'd3d69c18-f79a-4a9b-a2f4-7aa210a6e376',
+    questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+    questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+    acquisitionId: ObjectId('6adcd577ba826d37d9e2d297'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: '3a5bd3b9562e8ea1dccccef2b8fc095a91b3e372fabc89334f45b47bb190d58c',
+    formalVersion: 1,
+    formalTitle: '偏好的活动形式？',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd8a0ba826d37d9e2d2b5'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    instanceId: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+    questionId: ObjectId('6adcd8a0ba826d37d9e2d2b3'),
+    questionVersionId: ObjectId('6adcd8a0ba826d37d9e2d2b4'),
+    contentHash: '8fe0abfb25e7eac751a32e8ccd92a8ff5c4ba9e35c11d5e112d7c09fc06a1331',
+    acquisitionId: ObjectId('6adcd8a0ba826d37d9e2d2b6'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'draft',
+    publicationVersion: 0,
+    snapshotHash: null,
+    formalVersion: 1,
+    formalTitle: '本次服务评分',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd8a7ba826d37d9e2d2b9'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    instanceId: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+    questionId: ObjectId('6adcd8a0ba826d37d9e2d2b3'),
+    questionVersionId: ObjectId('6adcd8a0ba826d37d9e2d2b4'),
+    contentHash: '8fe0abfb25e7eac751a32e8ccd92a8ff5c4ba9e35c11d5e112d7c09fc06a1331',
+    acquisitionId: ObjectId('6adcd8a0ba826d37d9e2d2b6'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 1,
+    snapshotHash: '906a1fda460d833378f908c6de58f941177918bb1a99672e565bb0621b97d19c',
+    formalVersion: 1,
+    formalTitle: '本次服务评分',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6adcd9fdba826d37d9e2d2bd'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    instanceId: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+    questionId: ObjectId('6adcd8a0ba826d37d9e2d2b3'),
+    questionVersionId: ObjectId('6adcd8a0ba826d37d9e2d2b4'),
+    contentHash: '8fe0abfb25e7eac751a32e8ccd92a8ff5c4ba9e35c11d5e112d7c09fc06a1331',
+    acquisitionId: ObjectId('6adcd8a0ba826d37d9e2d2b6'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 2,
+    snapshotHash: '3912d7ae6d135d0c616e51c2586cb9391833e90a2b40b65dd9f708834948fcb0',
+    formalVersion: 1,
+    formalTitle: '本次服务评分',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  },
+  {
+    _id: ObjectId('6add5d2dba826d37d9e2d2c0'),
+    surveyId: ObjectId('6adcd88aba826d37d9e2d2b2'),
+    instanceId: '207b1215-01f2-466f-bd2a-aa5dd49047b9',
+    questionId: ObjectId('6adcd8a0ba826d37d9e2d2b3'),
+    questionVersionId: ObjectId('6adcd8a0ba826d37d9e2d2b4'),
+    contentHash: '8fe0abfb25e7eac751a32e8ccd92a8ff5c4ba9e35c11d5e112d7c09fc06a1331',
+    acquisitionId: ObjectId('6adcd8a0ba826d37d9e2d2b6'),
+    authorization: {
+      kind: 'owner'
+    },
+    scope: 'publication',
+    publicationVersion: 3,
+    snapshotHash: '3912d7ae6d135d0c616e51c2586cb9391833e90a2b40b65dd9f708834948fcb0',
+    formalVersion: 1,
+    formalTitle: '本次服务评分',
+    formalVersionFound: true,
+    questionMatches: true,
+    hashMatches: true
+  }
+]
+
+===== S04 duplicates within one definition: expected [] for native manual samples =====
+[]
+
+===== Broken response -> publication/instance references: expected [] =====
+[]
+
+===== Selected question: current pending draft and origin =====
+{
+  _id: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+  schemaVersion: 1,
+  ownerId: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+  revision: 14,
+  accessFence: 26,
+  latestVersionId: ObjectId('6adcc8c6ba826d37d9e2d24d'),
+  nextVersion: 4,
+  draft: {
+    content: {
+      type: 'number',
+      title: 'P2-MAN-20261024-02 每周可参加几次活动？（草稿）',
+      validation: {
+        integerOnly: true,
+        min: Decimal128('0'),
+        max: Decimal128('7')
+      }
+    },
+    baseVersionId: ObjectId('6adcc815ba826d37d9e2d244'),
+    revision: 5
+  },
+  origin: null,
+  createdAt: ISODate('2026-10-24T14:42:59.440Z'),
+  updatedAt: ISODate('2026-10-24T16:10:09.001Z')
+}
+
+===== Formal history: restore creates a new number; old versions remain =====
+[
+  {
+    _id: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    version: 1,
+    content: {
+      type: 'number',
+      title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+      validation: {
+        integerOnly: true,
+        min: Decimal128('0'),
+        max: Decimal128('7')
+      }
+    },
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    distributionSource: {
+      kind: 'original',
+      sourceQuestionId: null,
+      sourceVersionId: null
+    },
+    parentVersionId: null,
+    restoredFromVersionId: null,
+    operation: 'save',
+    createdAt: ISODate('2026-10-24T14:43:11.723Z')
+  },
+  {
+    _id: ObjectId('6adcc815ba826d37d9e2d244'),
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    version: 2,
+    content: {
+      type: 'number',
+      title: 'P2-MAN-20261024-02 每周可参加几次活动？（调整题干）',
+      validation: {
+        integerOnly: true,
+        min: Decimal128('0'),
+        max: Decimal128('7')
+      }
+    },
+    contentHash: 'b90ab09f61f8ec132150dd7f26779da2c28834b93085a694d3a053da5bfb5bba',
+    distributionSource: {
+      kind: 'original',
+      sourceQuestionId: null,
+      sourceVersionId: null
+    },
+    parentVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    restoredFromVersionId: null,
+    operation: 'save',
+    createdAt: ISODate('2026-10-24T15:00:37.287Z')
+  },
+  {
+    _id: ObjectId('6adcc8c6ba826d37d9e2d24d'),
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    version: 3,
+    content: {
+      type: 'number',
+      title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+      validation: {
+        integerOnly: true,
+        min: Decimal128('0'),
+        max: Decimal128('7')
+      }
+    },
+    contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+    distributionSource: {
+      kind: 'original',
+      sourceQuestionId: null,
+      sourceVersionId: null
+    },
+    parentVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    restoredFromVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    operation: 'restore',
+    createdAt: ISODate('2026-10-24T15:03:34.649Z')
+  }
+]
+
+===== Private share state: revoked rows are retained =====
+[
+  {
+    _id: ObjectId('6adcc426ba826d37d9e2d1f4'),
+    updatedAt: ISODate('2026-10-24T16:03:32.746Z'),
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+    state: 'revoked',
+    revision: 3,
+    revokedAt: ISODate('2026-10-24T16:03:32.746Z'),
+    recipientUsername: 'p2_manual_1024_b'
+  }
+]
+
+===== All acquired references: revocation must not remove existing draft/publication bindings =====
+[
+  {
+    _id: ObjectId('6adcc4f3ba826d37d9e2d202'),
+    surveyId: ObjectId('6adcc4e5ba826d37d9e2d201'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '2ea3f039-f999-43e3-8531-2d7bd92f8de8',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T14:47:15.181Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0
+  },
+  {
+    _id: ObjectId('6adcc6faba826d37d9e2d22a'),
+    surveyId: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '718b285e-f890-4918-8af0-4bd354c2fb16',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T14:55:54.825Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0
+  },
+  {
+    _id: ObjectId('6adcc732ba826d37d9e2d234'),
+    surveyId: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '718b285e-f890-4918-8af0-4bd354c2fb16',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T14:55:54.825Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'publication',
+    publicationVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc77aba826d37d9e2d237'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+    questionVersionId: ObjectId('6adcc815ba826d37d9e2d244'),
+    acquiredAt: ISODate('2026-10-24T15:01:44.353Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0
+  },
+  {
+    _id: ObjectId('6adcc79bba826d37d9e2d240'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T14:58:02.649Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'publication',
+    publicationVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc85fba826d37d9e2d24a'),
+    surveyId: ObjectId('6adcc770ba826d37d9e2d236'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '99699d37-c0fc-41e7-8071-92cf2efa1ccd',
+    questionVersionId: ObjectId('6adcc815ba826d37d9e2d244'),
+    acquiredAt: ISODate('2026-10-24T15:01:44.353Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'publication',
+    publicationVersion: 2
+  },
+  {
+    _id: ObjectId('6adcc930ba826d37d9e2d250'),
+    surveyId: ObjectId('6adcc924ba826d37d9e2d24f'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '5884d527-6e47-4667-9872-18e17e8c1aa8',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T15:05:20.870Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0
+  },
+  {
+    _id: ObjectId('6adcc93cba826d37d9e2d253'),
+    surveyId: ObjectId('6adcc924ba826d37d9e2d24f'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '32e8468e-9ad6-4ba3-a04a-85af6f2594f6',
+    questionVersionId: ObjectId('6adcc815ba826d37d9e2d244'),
+    acquiredAt: ISODate('2026-10-24T15:05:32.194Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 0
+    },
+    scope: 'draft',
+    publicationVersion: 0
+  },
+  {
+    _id: ObjectId('6adcd065ba826d37d9e2d25d'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T15:36:05.659Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 2
+    },
+    scope: 'draft',
+    publicationVersion: 0
+  },
+  {
+    _id: ObjectId('6adcd0c1ba826d37d9e2d26c'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T15:36:05.659Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 2
+    },
+    scope: 'publication',
+    publicationVersion: 1
+  },
+  {
+    _id: ObjectId('6adcd630ba826d37d9e2d2a2'),
+    surveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T15:36:05.659Z'),
+    authorization: {
+      kind: 'share',
+      grantId: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      grantRevision: 2
+    },
+    scope: 'publication',
+    publicationVersion: 2
+  },
+  {
+    _id: ObjectId('6adcd31fba826d37d9e2d278'),
+    surveyId: ObjectId('6adcd31fba826d37d9e2d275'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    instanceId: '89104efd-2517-4c84-8289-cbb5242c4199',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T15:47:43.887Z'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'draft',
+    publicationVersion: 0
+  },
+  {
+    _id: ObjectId('6adcd50dba826d37d9e2d282'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    ownerId: ObjectId('6adcb9edba826d37d9e2d1e6'),
+    instanceId: '38806088-a85a-43fb-b404-e8dc1a5a429b',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T15:55:57.495Z'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'draft',
+    publicationVersion: 0
+  },
+  {
+    _id: ObjectId('6adcd51dba826d37d9e2d28b'),
+    surveyId: ObjectId('6adcd50dba826d37d9e2d27f'),
+    ownerId: ObjectId('6adcb9edba826d37d9e2d1e6'),
+    instanceId: '38806088-a85a-43fb-b404-e8dc1a5a429b',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T15:55:57.495Z'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1
+  },
+  {
+    _id: ObjectId('6adcd57fba826d37d9e2d29c'),
+    surveyId: ObjectId('6adcd577ba826d37d9e2d28f'),
+    ownerId: ObjectId('6adcb9f8ba826d37d9e2d1e7'),
+    instanceId: 'b8d6ee1a-91c4-42e7-9baa-7de0c649c32b',
+    questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    acquiredAt: ISODate('2026-10-24T15:57:43.479Z'),
+    authorization: {
+      kind: 'template',
+      templateId: ObjectId('6adcd317ba826d37d9e2d273'),
+      templateHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    },
+    scope: 'publication',
+    publicationVersion: 1
+  }
+]
+
+===== Bank membership: directory deletion does not delete the question =====
+[
+  {
+    _id: ObjectId('6adcc476ba826d37d9e2d1f7'),
+    bankId: ObjectId('6adcc46fba826d37d9e2d1f5'),
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    ownerId: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+    bankName: 'P2-MAN-20261024-02 通用题库',
+    bankDeletedAt: null
+  },
+  {
+    _id: ObjectId('6adcc4a6ba826d37d9e2d1fd'),
+    bankId: ObjectId('6adcc48eba826d37d9e2d1fa'),
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    ownerId: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+    bankName: 'P2-MAN-20261024-02 临时题库-改名',
+    bankDeletedAt: ISODate('2026-10-24T14:46:01.871Z')
+  },
+  {
+    _id: ObjectId('6adcc4c2ba826d37d9e2d200'),
+    bankId: ObjectId('6adcc4beba826d37d9e2d1fe'),
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    ownerId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    bankName: 'P2-MAN-20261024-02 共享整理库',
+    bankDeletedAt: null
+  }
+]
+
+===== Independent numeric oracle: chosen owner only, grouped by exact formal version =====
+{
+  ownerUsername: 'p2_manual_1024_b',
+  surveyIds: [
+    ObjectId('6adcc6e9ba826d37d9e2d229'),
+    ObjectId('6adcc770ba826d37d9e2d236'),
+    ObjectId('6adcc924ba826d37d9e2d24f'),
+    ObjectId('6adcd02bba826d37d9e2d259')
+  ],
+  note: 'Effective numeric answers only; skipped/unanswered are not zero. This does not recompute jump-path counts.'
+}
+[
+  {
+    _id: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+    answeredCount: 3,
+    average: Decimal128('4.333333333333333333333333333333333'),
+    min: Decimal128('2'),
+    max: Decimal128('7'),
+    values: [
+      Decimal128('2'),
+      Decimal128('4'),
+      Decimal128('7')
+    ],
+    surveyIds: [
+      ObjectId('6adcd02bba826d37d9e2d259'),
+      ObjectId('6adcc6e9ba826d37d9e2d229'),
+      ObjectId('6adcc770ba826d37d9e2d236')
+    ],
+    formalVersion: 1,
+    title: 'P2-MAN-20261024-02 每周可参加几次活动？'
+  },
+  {
+    _id: ObjectId('6adcc815ba826d37d9e2d244'),
+    answeredCount: 1,
+    average: Decimal128('5'),
+    min: Decimal128('5'),
+    max: Decimal128('5'),
+    values: [
+      Decimal128('5')
+    ],
+    surveyIds: [
+      ObjectId('6adcc770ba826d37d9e2d236')
+    ],
+    formalVersion: 2,
+    title: 'P2-MAN-20261024-02 每周可参加几次活动？（调整题干）'
+  }
+]
+
+Read-only inspection finished. No PASS claim: compare the output with your actual actions.
+true

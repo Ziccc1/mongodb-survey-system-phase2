@@ -2,17 +2,17 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { MongoClient, ObjectId } from 'mongodb';
+import {ObjectId} from 'mongodb';
+import {MongoClient,testMongoOptions} from './database-client.js';
 import { buildApp } from '../apps/api/src/app.js';
-import { loadConfig } from '../apps/api/src/config.js';
+import {isolatedTestConfig,evidenceDirectory} from './runtime-environment.js';
 import { initialize } from '../apps/api/src/database/initialize.js';
 import { schemas } from '../apps/api/src/database/schema.js';
 
 test('accounts, persistent drafts, isolation and four-collection initialization', async t => {
-  const base = loadConfig(), dbName = `project1_test_api_${Date.now()}`;
-  const uri = new URL(base.uri); uri.pathname = `/${dbName}`;
-  const config = { ...base, dbName, uri: uri.toString() };
-  const client = new MongoClient(config.uri); await client.connect();
+  const config = isolatedTestConfig('api'), dbName = config.dbName;
+const artifactDirectory=evidenceDirectory('integration');
+  const client = new MongoClient(config.uri,testMongoOptions()); await client.connect();
   const db = client.db(dbName); await initialize(db); await initialize(db);
   let app = await buildApp(config, { logger: false });
   const headers = { origin: config.origin, 'x-csrf-guard': '1' };
@@ -122,8 +122,8 @@ test('accounts, persistent drafts, isolation and four-collection initialization'
       await assert.rejects(initialize(unknown), /migration/);
       assert.equal((await unknown.collection('users').findOne({}))?.keep, 'old-data'); assert.equal((await unknown.listCollections().toArray()).length, 1);
     });
-    await mkdir('.local/evidence', { recursive: true });
-    await writeFile('.local/evidence/integration.json', JSON.stringify({ date: new Date().toISOString(), status: 'passed', database: dbName, subtests: 13, retainedTestData: true, noBusinessDatabaseUsed: true }, null, 2));
+    await mkdir(`${artifactDirectory}`, { recursive: true });
+    await writeFile(`${artifactDirectory}/integration.json`, JSON.stringify({ date: new Date().toISOString(), status: 'passed', database: dbName, subtests: 13, retainedTestData: true, noBusinessDatabaseUsed: true }, null, 2));
     console.log(`Retained test database: ${dbName}`);
   } finally { await app.close(); await client.close(); }
 });

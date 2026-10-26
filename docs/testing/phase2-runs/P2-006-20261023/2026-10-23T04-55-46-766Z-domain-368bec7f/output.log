@@ -1,0 +1,56 @@
+TAP version 13
+# Subtest: four types round trip; Vue proxy, IDs, options, config isolation and hashes
+ok 1 - four types round trip; Vue proxy, IDs, options, config isolation and hashes
+  ---
+  duration_ms: 62.4845
+  type: 'test'
+  ...
+# Subtest: strict shapes, semantic limits and soft draft validation reuse old path
+ok 2 - strict shapes, semantic limits and soft draft validation reuse old path
+  ---
+  duration_ms: 11.9213
+  type: 'test'
+  ...
+# Subtest: Decimal exact boundaries and BSON special objects stay intact
+not ok 3 - Decimal exact boundaries and BSON special objects stay intact
+  ---
+  duration_ms: 8.2408
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\domain-foundation.test.ts:1:3904'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + '1E-6176'
+    - '1e-6176'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: '1e-6176'
+  actual: '1E-6176'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\domain-foundation.test.ts:48:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: receipt operation/status/unknown keys and actual BSON size; template node limit
+ok 4 - receipt operation/status/unknown keys and actual BSON size; template node limit
+  ---
+  duration_ms: 48.7525
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 3
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8555.0687

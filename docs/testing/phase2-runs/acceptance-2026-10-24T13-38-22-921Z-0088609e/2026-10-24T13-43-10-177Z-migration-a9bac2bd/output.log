@@ -1,0 +1,17 @@
+TAP version 13
+# {"manifest":{"format":1,"task":"P2-008","runId":"1792849390747_c294168b","source":"project2_test_p2008_source_1792849390747_c294168b","restore":"project2_restore_1792849390747_c294168b","applicationTest":"project2_test_p2008_migrated_1792849390747_c294168b","instanceHash":"78c85bd7b51009309de95e9e041fb079586682dd8ee7a36dbe60d61035e17c51"},"checks":"backup/restore/fixed plan/zero-write dry-run/interrupted commit/lost journal/repeat apply/byte invariants/source drift and bad source passed","directory":"D:\\\\大三\\\\数据库\\\\pj1_2\\\\docs\\\\testing\\\\phase2-runs\\\\acceptance-2026-10-24T13-38-22-921Z-0088609e\\\\2026-10-24T13-43-10-177Z-migration-a9bac2bd\\\\artifacts\\\\migration"}
+# Subtest: W02-C nonempty BSON backup / actual restore / fixed plan / interrupted apply and DB-fact recovery
+ok 1 - W02-C nonempty BSON backup / actual restore / fixed plan / interrupted apply and DB-fact recovery
+  ---
+  duration_ms: 13161.329
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13697.916

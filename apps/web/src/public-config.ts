@@ -1,4 +1,5 @@
-declare global { interface Window { __SURVEY_CONFIG__?: { publicAppUrl: string } } }
+declare global { interface Window { __SURVEY_CONFIG__?: { publicAppUrl: string; libraryEnabled?:boolean } } }
+export const libraryEnabled=()=>window.__SURVEY_CONFIG__?.libraryEnabled===true;
 export function shareUrl(publicId: string): string {
   const base = window.__SURVEY_CONFIG__?.publicAppUrl;
   if (!base) return '';

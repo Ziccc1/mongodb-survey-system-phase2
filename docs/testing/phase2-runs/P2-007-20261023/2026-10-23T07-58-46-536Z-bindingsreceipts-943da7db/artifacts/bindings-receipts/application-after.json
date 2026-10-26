@@ -1,0 +1,1815 @@
+{
+  "responses": {
+    "options": {
+      "validator": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "additionalProperties": false,
+          "required": [
+            "_id",
+            "schemaVersion",
+            "surveyId",
+            "surveyDefinitionVersion",
+            "respondentId",
+            "anonymous",
+            "repeatAllowed",
+            "payloadHashVersion",
+            "requestId",
+            "payloadHash",
+            "answers",
+            "submittedAt"
+          ],
+          "properties": {
+            "_id": {
+              "bsonType": "objectId"
+            },
+            "schemaVersion": {
+              "enum": [
+                2
+              ]
+            },
+            "surveyId": {
+              "bsonType": "objectId"
+            },
+            "surveyDefinitionVersion": {
+              "bsonType": [
+                "int",
+                "long"
+              ],
+              "minimum": 1
+            },
+            "respondentId": {
+              "bsonType": "objectId"
+            },
+            "anonymous": {
+              "bsonType": "bool"
+            },
+            "repeatAllowed": {
+              "bsonType": "bool"
+            },
+            "payloadHashVersion": {
+              "enum": [
+                2
+              ]
+            },
+            "requestId": {
+              "bsonType": "string",
+              "minLength": 1
+            },
+            "payloadHash": {
+              "bsonType": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "answers": {
+              "bsonType": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "bsonType": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "questionId",
+                      "type",
+                      "optionId"
+                    ],
+                    "properties": {
+                      "questionId": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "type": {
+                        "enum": [
+                          "single"
+                        ]
+                      },
+                      "optionId": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  {
+                    "bsonType": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "questionId",
+                      "type",
+                      "optionIds"
+                    ],
+                    "properties": {
+                      "questionId": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "type": {
+                        "enum": [
+                          "multiple"
+                        ]
+                      },
+                      "optionIds": {
+                        "bsonType": "array",
+                        "items": {
+                          "bsonType": "string",
+                          "minLength": 1
+                        },
+                        "uniqueItems": true,
+                        "minItems": 1
+                      }
+                    }
+                  },
+                  {
+                    "bsonType": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "questionId",
+                      "type",
+                      "text"
+                    ],
+                    "properties": {
+                      "questionId": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "type": {
+                        "enum": [
+                          "text"
+                        ]
+                      },
+                      "text": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  {
+                    "bsonType": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "questionId",
+                      "type",
+                      "number"
+                    ],
+                    "properties": {
+                      "questionId": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "type": {
+                        "enum": [
+                          "number"
+                        ]
+                      },
+                      "number": {
+                        "bsonType": "decimal"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "submittedAt": {
+              "bsonType": "date"
+            }
+          }
+        }
+      },
+      "validationLevel": "strict",
+      "validationAction": "error"
+    },
+    "indexes": [
+      {
+        "v": 2,
+        "key": {
+          "_id": 1
+        },
+        "name": "_id_"
+      },
+      {
+        "v": 2,
+        "key": {
+          "surveyId": 1,
+          "submittedAt": -1,
+          "_id": -1
+        },
+        "name": "ix_survey_responses"
+      },
+      {
+        "v": 2,
+        "key": {
+          "surveyId": 1,
+          "respondentId": 1
+        },
+        "name": "uq_one_response_per_user",
+        "unique": true,
+        "partialFilterExpression": {
+          "repeatAllowed": false
+        }
+      },
+      {
+        "v": 2,
+        "key": {
+          "surveyId": 1,
+          "respondentId": 1,
+          "requestId": 1
+        },
+        "name": "uq_submission_request",
+        "unique": true
+      },
+      {
+        "v": 2,
+        "key": {
+          "surveyId": 1,
+          "surveyDefinitionVersion": 1,
+          "submittedAt": -1,
+          "_id": -1
+        },
+        "name": "ix_version_responses"
+      }
+    ],
+    "count": 0,
+    "dataHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "survey_versions": {
+    "options": {
+      "validator": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "additionalProperties": false,
+          "required": [
+            "_id",
+            "schemaVersion",
+            "surveyId",
+            "version",
+            "sourceDefinitionVersion",
+            "definition",
+            "policySnapshot",
+            "definitionHash",
+            "publishedAt",
+            "publishedBy",
+            "publicationRequestId",
+            "publicationRequestHash",
+            "origin"
+          ],
+          "properties": {
+            "_id": {
+              "bsonType": "objectId"
+            },
+            "schemaVersion": {
+              "enum": [
+                1
+              ]
+            },
+            "surveyId": {
+              "bsonType": "objectId"
+            },
+            "version": {
+              "bsonType": [
+                "int",
+                "long"
+              ],
+              "minimum": 1
+            },
+            "sourceDefinitionVersion": {
+              "bsonType": [
+                "int",
+                "long"
+              ],
+              "minimum": 1
+            },
+            "definition": {
+              "bsonType": "object",
+              "additionalProperties": false,
+              "required": [
+                "title",
+                "description",
+                "questions"
+              ],
+              "properties": {
+                "title": {
+                  "bsonType": "string",
+                  "minLength": 1
+                },
+                "description": {
+                  "bsonType": "string"
+                },
+                "questions": {
+                  "bsonType": "array",
+                  "minItems": 1,
+                  "items": {
+                    "oneOf": [
+                      {
+                        "bsonType": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "id",
+                          "title",
+                          "required",
+                          "jumpRules",
+                          "type",
+                          "options"
+                        ],
+                        "properties": {
+                          "id": {
+                            "bsonType": "string",
+                            "minLength": 1
+                          },
+                          "title": {
+                            "bsonType": "string",
+                            "minLength": 1
+                          },
+                          "required": {
+                            "bsonType": "bool"
+                          },
+                          "jumpRules": {
+                            "bsonType": "array",
+                            "items": {
+                              "bsonType": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "id",
+                                "condition",
+                                "targetQuestionId"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                },
+                                "condition": {
+                                  "oneOf": [
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "optionId"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "eq"
+                                          ]
+                                        },
+                                        "optionId": {
+                                          "bsonType": "string",
+                                          "minLength": 1
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "optionIds"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "containsAny",
+                                            "containsAll"
+                                          ]
+                                        },
+                                        "optionIds": {
+                                          "bsonType": "array",
+                                          "items": {
+                                            "bsonType": "string",
+                                            "minLength": 1
+                                          },
+                                          "uniqueItems": true,
+                                          "minItems": 1
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "number"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "eq",
+                                            "lt",
+                                            "lte",
+                                            "gt",
+                                            "gte"
+                                          ]
+                                        },
+                                        "number": {
+                                          "bsonType": "decimal"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "targetQuestionId": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          },
+                          "type": {
+                            "enum": [
+                              "single"
+                            ]
+                          },
+                          "options": {
+                            "bsonType": "array",
+                            "minItems": 2,
+                            "items": {
+                              "bsonType": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "id",
+                                "label"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                },
+                                "label": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "bsonType": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "id",
+                          "title",
+                          "required",
+                          "jumpRules",
+                          "type",
+                          "options",
+                          "validation"
+                        ],
+                        "properties": {
+                          "id": {
+                            "bsonType": "string",
+                            "minLength": 1
+                          },
+                          "title": {
+                            "bsonType": "string",
+                            "minLength": 1
+                          },
+                          "required": {
+                            "bsonType": "bool"
+                          },
+                          "jumpRules": {
+                            "bsonType": "array",
+                            "items": {
+                              "bsonType": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "id",
+                                "condition",
+                                "targetQuestionId"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                },
+                                "condition": {
+                                  "oneOf": [
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "optionId"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "eq"
+                                          ]
+                                        },
+                                        "optionId": {
+                                          "bsonType": "string",
+                                          "minLength": 1
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "optionIds"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "containsAny",
+                                            "containsAll"
+                                          ]
+                                        },
+                                        "optionIds": {
+                                          "bsonType": "array",
+                                          "items": {
+                                            "bsonType": "string",
+                                            "minLength": 1
+                                          },
+                                          "uniqueItems": true,
+                                          "minItems": 1
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "number"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "eq",
+                                            "lt",
+                                            "lte",
+                                            "gt",
+                                            "gte"
+                                          ]
+                                        },
+                                        "number": {
+                                          "bsonType": "decimal"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "targetQuestionId": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          },
+                          "type": {
+                            "enum": [
+                              "multiple"
+                            ]
+                          },
+                          "options": {
+                            "bsonType": "array",
+                            "minItems": 2,
+                            "items": {
+                              "bsonType": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "id",
+                                "label"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                },
+                                "label": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          },
+                          "validation": {
+                            "bsonType": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "minChoices": {
+                                "bsonType": [
+                                  "int",
+                                  "long"
+                                ],
+                                "minimum": 0
+                              },
+                              "maxChoices": {
+                                "bsonType": [
+                                  "int",
+                                  "long"
+                                ],
+                                "minimum": 0
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "bsonType": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "id",
+                          "title",
+                          "required",
+                          "jumpRules",
+                          "type",
+                          "validation"
+                        ],
+                        "properties": {
+                          "id": {
+                            "bsonType": "string",
+                            "minLength": 1
+                          },
+                          "title": {
+                            "bsonType": "string",
+                            "minLength": 1
+                          },
+                          "required": {
+                            "bsonType": "bool"
+                          },
+                          "jumpRules": {
+                            "bsonType": "array",
+                            "items": {
+                              "bsonType": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "id",
+                                "condition",
+                                "targetQuestionId"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                },
+                                "condition": {
+                                  "oneOf": [
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "optionId"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "eq"
+                                          ]
+                                        },
+                                        "optionId": {
+                                          "bsonType": "string",
+                                          "minLength": 1
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "optionIds"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "containsAny",
+                                            "containsAll"
+                                          ]
+                                        },
+                                        "optionIds": {
+                                          "bsonType": "array",
+                                          "items": {
+                                            "bsonType": "string",
+                                            "minLength": 1
+                                          },
+                                          "uniqueItems": true,
+                                          "minItems": 1
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "number"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "eq",
+                                            "lt",
+                                            "lte",
+                                            "gt",
+                                            "gte"
+                                          ]
+                                        },
+                                        "number": {
+                                          "bsonType": "decimal"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "targetQuestionId": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          },
+                          "type": {
+                            "enum": [
+                              "text"
+                            ]
+                          },
+                          "validation": {
+                            "bsonType": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "minLength": {
+                                "bsonType": [
+                                  "int",
+                                  "long"
+                                ],
+                                "minimum": 0
+                              },
+                              "maxLength": {
+                                "bsonType": [
+                                  "int",
+                                  "long"
+                                ],
+                                "minimum": 0
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "bsonType": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "id",
+                          "title",
+                          "required",
+                          "jumpRules",
+                          "type",
+                          "validation"
+                        ],
+                        "properties": {
+                          "id": {
+                            "bsonType": "string",
+                            "minLength": 1
+                          },
+                          "title": {
+                            "bsonType": "string",
+                            "minLength": 1
+                          },
+                          "required": {
+                            "bsonType": "bool"
+                          },
+                          "jumpRules": {
+                            "bsonType": "array",
+                            "items": {
+                              "bsonType": "object",
+                              "additionalProperties": false,
+                              "required": [
+                                "id",
+                                "condition",
+                                "targetQuestionId"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                },
+                                "condition": {
+                                  "oneOf": [
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "optionId"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "eq"
+                                          ]
+                                        },
+                                        "optionId": {
+                                          "bsonType": "string",
+                                          "minLength": 1
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "optionIds"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "containsAny",
+                                            "containsAll"
+                                          ]
+                                        },
+                                        "optionIds": {
+                                          "bsonType": "array",
+                                          "items": {
+                                            "bsonType": "string",
+                                            "minLength": 1
+                                          },
+                                          "uniqueItems": true,
+                                          "minItems": 1
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "bsonType": "object",
+                                      "additionalProperties": false,
+                                      "required": [
+                                        "op",
+                                        "number"
+                                      ],
+                                      "properties": {
+                                        "op": {
+                                          "enum": [
+                                            "eq",
+                                            "lt",
+                                            "lte",
+                                            "gt",
+                                            "gte"
+                                          ]
+                                        },
+                                        "number": {
+                                          "bsonType": "decimal"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                "targetQuestionId": {
+                                  "bsonType": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          },
+                          "type": {
+                            "enum": [
+                              "number"
+                            ]
+                          },
+                          "validation": {
+                            "bsonType": "object",
+                            "additionalProperties": false,
+                            "required": [
+                              "integerOnly"
+                            ],
+                            "properties": {
+                              "min": {
+                                "bsonType": "decimal"
+                              },
+                              "max": {
+                                "bsonType": "decimal"
+                              },
+                              "integerOnly": {
+                                "bsonType": "bool"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "policySnapshot": {
+              "bsonType": "object",
+              "additionalProperties": false,
+              "required": [
+                "allowAnonymous",
+                "allowRepeat"
+              ],
+              "properties": {
+                "allowAnonymous": {
+                  "bsonType": "bool"
+                },
+                "allowRepeat": {
+                  "bsonType": "bool"
+                }
+              }
+            },
+            "definitionHash": {
+              "bsonType": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "publishedAt": {
+              "bsonType": "date"
+            },
+            "publishedBy": {
+              "bsonType": "objectId"
+            },
+            "publicationRequestId": {
+              "bsonType": "string",
+              "minLength": 1
+            },
+            "publicationRequestHash": {
+              "bsonType": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "origin": {
+              "bsonType": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "publication"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "validationLevel": "strict",
+      "validationAction": "error"
+    },
+    "indexes": [
+      {
+        "v": 2,
+        "key": {
+          "_id": 1
+        },
+        "name": "_id_"
+      },
+      {
+        "v": 2,
+        "key": {
+          "surveyId": 1,
+          "version": 1
+        },
+        "name": "uq_survey_version",
+        "unique": true
+      },
+      {
+        "v": 2,
+        "key": {
+          "surveyId": 1,
+          "publicationRequestId": 1
+        },
+        "name": "uq_publication_request",
+        "unique": true,
+        "partialFilterExpression": {
+          "publicationRequestId": {
+            "$type": "string"
+          }
+        }
+      }
+    ],
+    "count": 0,
+    "dataHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "surveys": {
+    "options": {
+      "validator": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "additionalProperties": false,
+          "required": [
+            "_id",
+            "schemaVersion",
+            "ownerId",
+            "publicId",
+            "title",
+            "description",
+            "status",
+            "allowAnonymous",
+            "allowRepeat",
+            "expiresAt",
+            "definitionVersion",
+            "revision",
+            "structureLocked",
+            "submissionCount",
+            "currentPublishedVersion",
+            "currentVersionSubmissionCount",
+            "questions",
+            "copiedFromId",
+            "firstPublishedAt",
+            "createdAt",
+            "updatedAt"
+          ],
+          "properties": {
+            "_id": {
+              "bsonType": "objectId"
+            },
+            "schemaVersion": {
+              "enum": [
+                2
+              ]
+            },
+            "ownerId": {
+              "bsonType": "objectId"
+            },
+            "publicId": {
+              "bsonType": "string",
+              "minLength": 1
+            },
+            "title": {
+              "bsonType": "string",
+              "minLength": 1
+            },
+            "description": {
+              "bsonType": "string"
+            },
+            "status": {
+              "enum": [
+                "draft",
+                "published",
+                "paused",
+                "closed"
+              ]
+            },
+            "allowAnonymous": {
+              "bsonType": "bool"
+            },
+            "allowRepeat": {
+              "bsonType": "bool"
+            },
+            "expiresAt": {
+              "bsonType": [
+                "date",
+                "null"
+              ]
+            },
+            "definitionVersion": {
+              "bsonType": [
+                "int",
+                "long"
+              ],
+              "minimum": 1
+            },
+            "revision": {
+              "bsonType": [
+                "int",
+                "long"
+              ],
+              "minimum": 0
+            },
+            "structureLocked": {
+              "bsonType": "bool"
+            },
+            "submissionCount": {
+              "bsonType": [
+                "int",
+                "long"
+              ],
+              "minimum": 0
+            },
+            "currentPublishedVersion": {
+              "bsonType": [
+                "int",
+                "long",
+                "null"
+              ],
+              "minimum": 1
+            },
+            "currentVersionSubmissionCount": {
+              "bsonType": [
+                "int",
+                "long"
+              ],
+              "minimum": 0
+            },
+            "questions": {
+              "bsonType": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "bsonType": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "title",
+                      "required",
+                      "jumpRules",
+                      "type",
+                      "options"
+                    ],
+                    "properties": {
+                      "id": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "title": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "required": {
+                        "bsonType": "bool"
+                      },
+                      "jumpRules": {
+                        "bsonType": "array",
+                        "items": {
+                          "bsonType": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "id",
+                            "condition",
+                            "targetQuestionId"
+                          ],
+                          "properties": {
+                            "id": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            },
+                            "condition": {
+                              "oneOf": [
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "optionId"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "eq"
+                                      ]
+                                    },
+                                    "optionId": {
+                                      "bsonType": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                },
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "optionIds"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "containsAny",
+                                        "containsAll"
+                                      ]
+                                    },
+                                    "optionIds": {
+                                      "bsonType": "array",
+                                      "items": {
+                                        "bsonType": "string",
+                                        "minLength": 1
+                                      },
+                                      "uniqueItems": true,
+                                      "minItems": 1
+                                    }
+                                  }
+                                },
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "number"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "eq",
+                                        "lt",
+                                        "lte",
+                                        "gt",
+                                        "gte"
+                                      ]
+                                    },
+                                    "number": {
+                                      "bsonType": "decimal"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "targetQuestionId": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      },
+                      "type": {
+                        "enum": [
+                          "single"
+                        ]
+                      },
+                      "options": {
+                        "bsonType": "array",
+                        "minItems": 2,
+                        "items": {
+                          "bsonType": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "id",
+                            "label"
+                          ],
+                          "properties": {
+                            "id": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            },
+                            "label": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "bsonType": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "title",
+                      "required",
+                      "jumpRules",
+                      "type",
+                      "options",
+                      "validation"
+                    ],
+                    "properties": {
+                      "id": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "title": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "required": {
+                        "bsonType": "bool"
+                      },
+                      "jumpRules": {
+                        "bsonType": "array",
+                        "items": {
+                          "bsonType": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "id",
+                            "condition",
+                            "targetQuestionId"
+                          ],
+                          "properties": {
+                            "id": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            },
+                            "condition": {
+                              "oneOf": [
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "optionId"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "eq"
+                                      ]
+                                    },
+                                    "optionId": {
+                                      "bsonType": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                },
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "optionIds"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "containsAny",
+                                        "containsAll"
+                                      ]
+                                    },
+                                    "optionIds": {
+                                      "bsonType": "array",
+                                      "items": {
+                                        "bsonType": "string",
+                                        "minLength": 1
+                                      },
+                                      "uniqueItems": true,
+                                      "minItems": 1
+                                    }
+                                  }
+                                },
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "number"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "eq",
+                                        "lt",
+                                        "lte",
+                                        "gt",
+                                        "gte"
+                                      ]
+                                    },
+                                    "number": {
+                                      "bsonType": "decimal"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "targetQuestionId": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      },
+                      "type": {
+                        "enum": [
+                          "multiple"
+                        ]
+                      },
+                      "options": {
+                        "bsonType": "array",
+                        "minItems": 2,
+                        "items": {
+                          "bsonType": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "id",
+                            "label"
+                          ],
+                          "properties": {
+                            "id": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            },
+                            "label": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      },
+                      "validation": {
+                        "bsonType": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "minChoices": {
+                            "bsonType": [
+                              "int",
+                              "long"
+                            ],
+                            "minimum": 0
+                          },
+                          "maxChoices": {
+                            "bsonType": [
+                              "int",
+                              "long"
+                            ],
+                            "minimum": 0
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "bsonType": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "title",
+                      "required",
+                      "jumpRules",
+                      "type",
+                      "validation"
+                    ],
+                    "properties": {
+                      "id": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "title": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "required": {
+                        "bsonType": "bool"
+                      },
+                      "jumpRules": {
+                        "bsonType": "array",
+                        "items": {
+                          "bsonType": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "id",
+                            "condition",
+                            "targetQuestionId"
+                          ],
+                          "properties": {
+                            "id": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            },
+                            "condition": {
+                              "oneOf": [
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "optionId"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "eq"
+                                      ]
+                                    },
+                                    "optionId": {
+                                      "bsonType": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                },
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "optionIds"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "containsAny",
+                                        "containsAll"
+                                      ]
+                                    },
+                                    "optionIds": {
+                                      "bsonType": "array",
+                                      "items": {
+                                        "bsonType": "string",
+                                        "minLength": 1
+                                      },
+                                      "uniqueItems": true,
+                                      "minItems": 1
+                                    }
+                                  }
+                                },
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "number"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "eq",
+                                        "lt",
+                                        "lte",
+                                        "gt",
+                                        "gte"
+                                      ]
+                                    },
+                                    "number": {
+                                      "bsonType": "decimal"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "targetQuestionId": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      },
+                      "type": {
+                        "enum": [
+                          "text"
+                        ]
+                      },
+                      "validation": {
+                        "bsonType": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "minLength": {
+                            "bsonType": [
+                              "int",
+                              "long"
+                            ],
+                            "minimum": 0
+                          },
+                          "maxLength": {
+                            "bsonType": [
+                              "int",
+                              "long"
+                            ],
+                            "minimum": 0
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "bsonType": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "title",
+                      "required",
+                      "jumpRules",
+                      "type",
+                      "validation"
+                    ],
+                    "properties": {
+                      "id": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "title": {
+                        "bsonType": "string",
+                        "minLength": 1
+                      },
+                      "required": {
+                        "bsonType": "bool"
+                      },
+                      "jumpRules": {
+                        "bsonType": "array",
+                        "items": {
+                          "bsonType": "object",
+                          "additionalProperties": false,
+                          "required": [
+                            "id",
+                            "condition",
+                            "targetQuestionId"
+                          ],
+                          "properties": {
+                            "id": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            },
+                            "condition": {
+                              "oneOf": [
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "optionId"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "eq"
+                                      ]
+                                    },
+                                    "optionId": {
+                                      "bsonType": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                },
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "optionIds"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "containsAny",
+                                        "containsAll"
+                                      ]
+                                    },
+                                    "optionIds": {
+                                      "bsonType": "array",
+                                      "items": {
+                                        "bsonType": "string",
+                                        "minLength": 1
+                                      },
+                                      "uniqueItems": true,
+                                      "minItems": 1
+                                    }
+                                  }
+                                },
+                                {
+                                  "bsonType": "object",
+                                  "additionalProperties": false,
+                                  "required": [
+                                    "op",
+                                    "number"
+                                  ],
+                                  "properties": {
+                                    "op": {
+                                      "enum": [
+                                        "eq",
+                                        "lt",
+                                        "lte",
+                                        "gt",
+                                        "gte"
+                                      ]
+                                    },
+                                    "number": {
+                                      "bsonType": "decimal"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            "targetQuestionId": {
+                              "bsonType": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      },
+                      "type": {
+                        "enum": [
+                          "number"
+                        ]
+                      },
+                      "validation": {
+                        "bsonType": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "integerOnly"
+                        ],
+                        "properties": {
+                          "min": {
+                            "bsonType": "decimal"
+                          },
+                          "max": {
+                            "bsonType": "decimal"
+                          },
+                          "integerOnly": {
+                            "bsonType": "bool"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "copiedFromId": {
+              "bsonType": [
+                "objectId",
+                "null"
+              ]
+            },
+            "firstPublishedAt": {
+              "bsonType": [
+                "date",
+                "null"
+              ]
+            },
+            "createdAt": {
+              "bsonType": "date"
+            },
+            "updatedAt": {
+              "bsonType": "date"
+            }
+          }
+        }
+      },
+      "validationLevel": "strict",
+      "validationAction": "error"
+    },
+    "indexes": [
+      {
+        "v": 2,
+        "key": {
+          "_id": 1
+        },
+        "name": "_id_"
+      },
+      {
+        "v": 2,
+        "key": {
+          "publicId": 1
+        },
+        "name": "uq_survey_public_id",
+        "unique": true
+      },
+      {
+        "v": 2,
+        "key": {
+          "ownerId": 1,
+          "createdAt": -1,
+          "_id": -1
+        },
+        "name": "ix_owner_list"
+      }
+    ],
+    "count": 0,
+    "dataHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "users": {
+    "options": {
+      "validator": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "additionalProperties": false,
+          "required": [
+            "_id",
+            "schemaVersion",
+            "username",
+            "usernameKey",
+            "passwordHash",
+            "createdAt",
+            "updatedAt"
+          ],
+          "properties": {
+            "_id": {
+              "bsonType": "objectId"
+            },
+            "schemaVersion": {
+              "enum": [
+                1
+              ]
+            },
+            "username": {
+              "bsonType": "string",
+              "minLength": 1
+            },
+            "usernameKey": {
+              "bsonType": "string",
+              "minLength": 1
+            },
+            "passwordHash": {
+              "bsonType": "string",
+              "minLength": 1
+            },
+            "createdAt": {
+              "bsonType": "date"
+            },
+            "updatedAt": {
+              "bsonType": "date"
+            }
+          }
+        }
+      },
+      "validationLevel": "strict",
+      "validationAction": "error"
+    },
+    "indexes": [
+      {
+        "v": 2,
+        "key": {
+          "_id": 1
+        },
+        "name": "_id_"
+      },
+      {
+        "v": 2,
+        "key": {
+          "usernameKey": 1
+        },
+        "name": "uq_username_key",
+        "unique": true
+      }
+    ],
+    "count": 0,
+    "dataHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  }
+}

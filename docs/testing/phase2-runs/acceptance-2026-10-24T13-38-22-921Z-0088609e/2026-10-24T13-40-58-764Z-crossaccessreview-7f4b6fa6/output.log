@@ -1,0 +1,43 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_access_review_1792849259493_c98d8627
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_access_review_1792849259493_c98d8627
+# Subtest: R1 real HTTP access gate precedes type/boundary/version/history errors; retained publication stays authorized
+    # Subtest: four types × three endpoints: private/nonexistent resources all404, no snapshot/detail read
+    ok 1 - four types × three endpoints: private/nonexistent resources all404, no snapshot/detail read
+      ---
+      duration_ms: 171.7976
+      type: 'test'
+      ...
+    # Subtest: unrelated broken own publication and corrupt private version cannot precede denial
+    ok 2 - unrelated broken own publication and corrupt private version cannot precede denial
+      ---
+      duration_ms: 176.6734
+      type: 'test'
+      ...
+    # Subtest: authorized callers still receive supported business errors; no answers leak to source author
+    ok 3 - authorized callers still receive supported business errors; no answers leak to source author
+      ---
+      duration_ms: 191.8042
+      type: 'test'
+      ...
+    # Subtest: revocation keeps fixed publication summary/answers/distribution and rejects unreadable future versions
+    ok 4 - revocation keeps fixed publication summary/answers/distribution and rejects unreadable future versions
+      ---
+      duration_ms: 196.5185
+      type: 'test'
+      ...
+    1..4
+ok 1 - R1 real HTTP access gate precedes type/boundary/version/history errors; retained publication stays authorized
+  ---
+  duration_ms: 16180.7525
+  type: 'test'
+  ...
+1..1
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16888.5052

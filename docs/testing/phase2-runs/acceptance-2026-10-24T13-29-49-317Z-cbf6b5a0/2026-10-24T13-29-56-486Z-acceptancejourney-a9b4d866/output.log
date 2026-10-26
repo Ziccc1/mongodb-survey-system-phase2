@@ -1,0 +1,74 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_accept_journey_1792848597423_37347af8
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_accept_journey_1792848597423_37347af8
+# Subtest: acceptance: four actors traverse versions, sharing, replacement, templates, revocation and isolated statistics
+    # Subtest: formal question enters a bank and two shared surveys; answers retain exact source
+    ok 1 - formal question enters a bank and two shared surveys; answers retain exact source
+      ---
+      duration_ms: 250.4365
+      type: 'test'
+      ...
+    # Subtest: new version only prompts; explicit paused replacement separates old/new statistics
+    ok 2 - new version only prompts; explicit paused replacement separates old/new statistics
+      ---
+      duration_ms: 201.4141
+      type: 'test'
+      ...
+    # Subtest: template fixes v2; new adopter has narrow rights and independent answers
+    ok 3 - template fixes v2; new adopter has narrow rights and independent answers
+      ---
+      duration_ms: 152.4728
+      type: 'test'
+      ...
+    # Subtest: both revocations block new rights while old publications, data and original receipts survive
+    not ok 4 - both revocations block new rights while old publications, data and original receipts survive
+      ---
+      duration_ms: 68.5924
+      type: 'test'
+      location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\acceptance-journey.test.ts:1:5634'
+      failureType: 'testCodeFailure'
+      error: |-
+        {"error":{"code":"NOT_FOUND","message":"资源不存在或不可访问","details":[],"traceId":"77ac7f4d-a5c1-4588-b845-81ea3778bee5"}}
+        
+        404 !== 200
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 200
+      actual: 404
+      operator: 'strictEqual'
+      stack: |-
+        Object.getSurvey (D:\大三\数据库\pj1_2\tests\phase2\harness.ts:25:111)
+        process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        async answer (D:\大三\数据库\pj1_2\tests\phase2\acceptance-journey.test.ts:18:83)
+        async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\acceptance-journey.test.ts:50:4)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\acceptance-journey.test.ts:46:3)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+      ...
+    # Subtest: restoration creates v3 without rewriting pending draft, history or retained access
+    ok 5 - restoration creates v3 without rewriting pending draft, history or retained access
+      ---
+      duration_ms: 75.6164
+      type: 'test'
+      ...
+    1..5
+not ok 1 - acceptance: four actors traverse versions, sharing, replacement, templates, revocation and isolated statistics
+  ---
+  duration_ms: 19578.2474
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\acceptance-journey.test.ts:1:418'
+  failureType: 'subtestsFailed'
+  error: '1 subtest failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 6
+# suites 0
+# pass 4
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20481.1941

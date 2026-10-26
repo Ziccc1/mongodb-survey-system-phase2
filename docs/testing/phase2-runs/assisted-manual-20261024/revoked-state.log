@@ -1,0 +1,237 @@
+Warning: Could not access fileat C:\Users\37905\AppData\Local\mongodb\mongosh\6adcd6f1ab4ee7aa04800be1_log: EPERM: operation not permitted, open 'C:\Users\37905\AppData\Local\mongodb\mongosh\6adcd6f1ab4ee7aa04800be1_log'
+{
+  at: ISODate('2026-10-24T16:04:01.681Z'),
+  private: [
+    {
+      _id: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T14:43:50.329Z'),
+      updatedAt: ISODate('2026-10-24T16:03:32.746Z'),
+      questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+      recipientId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'revoked',
+      revision: 3,
+      revokedAt: ISODate('2026-10-24T16:03:32.746Z')
+    },
+    {
+      _id: ObjectId('6adccfe1ba826d37d9e2d258'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:33:53.093Z'),
+      updatedAt: ISODate('2026-10-24T16:02:57.691Z'),
+      questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+      recipientId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'revoked',
+      revision: 1,
+      revokedAt: ISODate('2026-10-24T16:02:57.691Z')
+    }
+  ],
+  distribution: [
+    {
+      _id: ObjectId('6adcd1ffba826d37d9e2d270'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:42:55.490Z'),
+      updatedAt: ISODate('2026-10-24T16:03:08.844Z'),
+      questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+      questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+      publisherId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'revoked',
+      revision: 1,
+      revokedAt: ISODate('2026-10-24T16:03:08.844Z')
+    },
+    {
+      _id: ObjectId('6adcd20aba826d37d9e2d271'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:43:06.268Z'),
+      updatedAt: ISODate('2026-10-24T15:43:06.268Z'),
+      questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+      questionVersionId: ObjectId('6adcc8c6ba826d37d9e2d24d'),
+      publisherId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'active',
+      revision: 0,
+      revokedAt: null
+    },
+    {
+      _id: ObjectId('6adcd300ba826d37d9e2d272'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:47:12.706Z'),
+      updatedAt: ISODate('2026-10-24T16:03:46.405Z'),
+      questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+      questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+      publisherId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'revoked',
+      revision: 1,
+      revokedAt: ISODate('2026-10-24T16:03:46.405Z')
+    }
+  ],
+  template: [
+    {
+      _id: ObjectId('6adcd317ba826d37d9e2d273'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:47:35.026Z'),
+      updatedAt: ISODate('2026-10-24T16:01:52.466Z'),
+      publisherId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      sourceSurveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+      sourcePublishedVersion: 1,
+      status: 'listed',
+      revision: 2,
+      accessFence: 5,
+      title: 'P2-MAN-20261024-02 活动模板源',
+      description: 'P2-MAN-20261024-02 活动模板源',
+      questions: [
+        {
+          id: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+          type: 'single',
+          title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+          required: true,
+          jumpRules: [
+            {
+              id: 'be725f28-6616-4973-b14a-55d72afbc8ce',
+              condition: {
+                op: 'eq',
+                optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+              },
+              targetQuestionId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1'
+            }
+          ],
+          options: [
+            {
+              id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+              label: '参加'
+            },
+            {
+              id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+              label: '不参加'
+            }
+          ]
+        },
+        {
+          id: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+          type: 'multiple',
+          title: '偏好的活动形式？',
+          required: true,
+          jumpRules: [],
+          options: [
+            {
+              id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+              label: '线下讲座'
+            },
+            {
+              id: '1e310dd5-f45b-4040-b69f-539031915019',
+              label: '线上直播'
+            },
+            {
+              id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+              label: '小组讨论'
+            }
+          ],
+          validation: {
+            minChoices: 1,
+            maxChoices: 2
+          }
+        },
+        {
+          id: '6198d159-9056-4194-84f1-8fa49517b860',
+          type: 'text',
+          title: '活动安排建议',
+          required: false,
+          jumpRules: [],
+          validation: {
+            maxLength: 20
+          }
+        }
+      ],
+      bindings: [
+        {
+          instanceId: '6198d159-9056-4194-84f1-8fa49517b860',
+          questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+          questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+          contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+          distributionProof: {
+            lineageHash: '1894651556597efd34a406c1a90294a46994db005b587b1385caa8add3b5f4c3',
+            obligations: [
+              {
+                questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+                questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+                authorId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+                grantId: null,
+                grantRevision: null
+              }
+            ]
+          }
+        },
+        {
+          instanceId: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+          questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+          questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+          contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+          distributionProof: {
+            lineageHash: '19e2706eb32d9b559414be2be428d901a1a0dbf048b9abf17395d67392a4d7e5',
+            obligations: [
+              {
+                questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+                questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+                authorId: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+                grantId: ObjectId('6adcd300ba826d37d9e2d272'),
+                grantRevision: 0
+              }
+            ]
+          }
+        },
+        {
+          instanceId: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+          questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+          questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+          contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+          distributionProof: {
+            lineageHash: '7165b049ad192c235b21b23ce6f5092b24455b83fe4eb8a7c22b88787a997771',
+            obligations: [
+              {
+                questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+                questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+                authorId: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+                grantId: ObjectId('6adcd1ffba826d37d9e2d270'),
+                grantRevision: 0
+              }
+            ]
+          }
+        },
+        {
+          instanceId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+          questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+          questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+          contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+          distributionProof: {
+            lineageHash: '75f10e19f62eb76df2601a7ee75acd85f7d9d513a91c39086c90c97c304e0b27',
+            obligations: [
+              {
+                questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+                questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+                authorId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+                grantId: null,
+                grantRevision: null
+              }
+            ]
+          }
+        }
+      ],
+      contentHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    }
+  ]
+}

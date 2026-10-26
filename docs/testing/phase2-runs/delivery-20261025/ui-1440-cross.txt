@@ -1,0 +1,44 @@
+Browser tab: 4, Title: "问卷工作台", URL: "http://localhost:5200/question-statistics/6adcc3f3ba826d37d9e2d1f0?versionId=6adcc3ffba826d37d9e2d1f2".
+1 AXWebArea 问卷工作台, URL: localhost:5200/question-statistics/6adcc3f3ba826d37d9e2d1f0?versionId=6adcc3ffba826d37d9e2d1f2
+	2 container app
+		3 link Description: 跳到主要内容, Value: localhost:5200/question-statistics/6adcc3f3ba826d37d9e2d1f0?versionId=6adcc3ffba826d37d9e2d1f2#main
+		4 container
+			5 link Description: 问卷工作台, Value: localhost:5200/dashboard
+			6 container 主导航
+				7 link Description: 首页, Value: localhost:5200/dashboard
+				8 link Description: 我的问卷, Value: localhost:5200/surveys
+				9 link Description: 题目, Value: localhost:5200/questions
+				10 link Description: 题库, Value: localhost:5200/question-banks
+				11 link Description: 模板广场, Value: localhost:5200/templates
+				12 text p2_manual_1024_b
+				13 button 退出登录
+		14 container
+			15 link Description: ← 返回题目, Value: localhost:5200/questions
+			16 heading 跨问卷题目统计, Value: 1
+				17 text 跨问卷题目统计
+			18 text 只统计本人问卷中同一道题的同一正式版本，按真实回答份数计数；跳过、未回答均不补零。原分问卷统计保持独立。
+			19 container
+				20 text 固定正式版本
+				21 pop up button (disabled, collapsed, settable) 固定正式版本, Value: 已保存引用的固定版本, ID: cross-version, Secondary Actions: Expand
+					22 menu
+						23 (disabled) 已保存引用的固定版本
+				24 text 本人问卷范围
+				25 pop up button (disabled, collapsed, settable) 本人问卷范围, Value: 全部本人问卷, ID: cross-scope, Secondary Actions: Expand
+					26 menu
+						27 (disabled) 全部本人问卷
+						28 (disabled) 指定本人问卷
+				29 text 数值区间边界（逗号分隔，可留空）
+				30 text field (disabled) 数值区间边界（逗号分隔，可留空）, ID: cross-boundaries
+				31 text 欠界、左闭右开、最后区间闭右端及超界均单独计数。
+				32 button (disabled) 查询本人范围
+			33 text 正在核对历史定义并统计… 问卷 3 份 符合范围答卷 4 份 有效回答 3 份 跳过 / 到达未答 0 / 1 汇总生成于 2026/10/25 10:22:12。
+			34 heading 数值汇总, Value: 2
+				35 text 数值汇总
+			36 container
+				37 text 均值  4.333333333333333333333333333333333  · 最小 2 · 最大 7
+			38 heading 精确值频数, Value: 3
+				39 text 精确值频数
+			40 text 暂无数值回答。
+		41 text 数据库课程项目 · 问卷工作台
+
+The focused UI element is 16 heading 跨问卷题目统计, Value: 1

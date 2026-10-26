@@ -1,0 +1,518 @@
+Warning: Could not access fileat C:\Users\37905\AppData\Local\mongodb\mongosh\6adcd4bfb37573d24d307d3a_log: EPERM: operation not permitted, open 'C:\Users\37905\AppData\Local\mongodb\mongosh\6adcd4bfb37573d24d307d3a_log'
+
+===== Connection: phase2 application only =====
+{
+  database: 'project2_app_v2',
+  port: 27019,
+  replicaSet: 'rs0',
+  checkedAt: ISODate('2026-10-24T15:54:39.370Z')
+}
+
+===== Collections =====
+[
+  'question_items',
+  'responses',
+  'operation_receipts',
+  'question_bank_members',
+  'question_grants',
+  'template_grants',
+  'survey_question_bindings',
+  'question_versions',
+  'users',
+  'survey_versions',
+  'question_banks',
+  'surveys',
+  'survey_templates'
+]
+
+===== Users: no password hashes =====
+[
+  {
+    _id: ObjectId('6adc361e9de7b2483a21d008'),
+    username: 'admin',
+    createdAt: ISODate('2026-10-24T04:37:50.641Z')
+  },
+  {
+    _id: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+    username: 'p2_manual_1024_a',
+    createdAt: ISODate('2026-10-24T13:59:45.135Z')
+  },
+  {
+    _id: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+    username: 'p2_manual_1024_b',
+    createdAt: ISODate('2026-10-24T14:00:04.325Z')
+  },
+  {
+    _id: ObjectId('6adcb9edba826d37d9e2d1e6'),
+    username: 'p2_manual_1024_c',
+    createdAt: ISODate('2026-10-24T14:00:13.966Z')
+  },
+  {
+    _id: ObjectId('6adcb9f8ba826d37d9e2d1e7'),
+    username: 'p2_manual_1024_d',
+    createdAt: ISODate('2026-10-24T14:00:24.584Z')
+  }
+]
+
+===== Actual surveys: copy IDs, do not assume planned titles/counts =====
+[
+  {
+    _id: ObjectId('6adcc529ba826d37d9e2d205'),
+    usageNumber: 'ZSTr6459agLRwDXWanp0z66E',
+    title: 'P2-MAN-20261024-02 四型与跳转',
+    status: 'published',
+    allowAnonymous: true,
+    allowRepeat: true,
+    expiresAt: null,
+    currentPublishedVersion: 1,
+    currentVersionSubmissionCount: 4,
+    submissionCount: 4,
+    owner: 'p2_manual_1024_a',
+    questionCount: 5
+  },
+  {
+    _id: ObjectId('6adcc4e5ba826d37d9e2d201'),
+    usageNumber: 'TEMxGuchxycts39YNUKcwBz8',
+    title: '11',
+    status: 'draft',
+    allowAnonymous: true,
+    allowRepeat: true,
+    expiresAt: null,
+    currentPublishedVersion: null,
+    currentVersionSubmissionCount: 0,
+    submissionCount: 0,
+    owner: 'p2_manual_1024_b',
+    questionCount: 1
+  },
+  {
+    _id: ObjectId('6adcc924ba826d37d9e2d24f'),
+    usageNumber: 'P9E3rg4gBG4rqyKynmon5q-V',
+    title: 'P2-MAN-20261024-02 引用规则草稿',
+    status: 'draft',
+    allowAnonymous: false,
+    allowRepeat: false,
+    expiresAt: null,
+    currentPublishedVersion: null,
+    currentVersionSubmissionCount: 0,
+    submissionCount: 0,
+    owner: 'p2_manual_1024_b',
+    questionCount: 2
+  },
+  {
+    _id: ObjectId('6adcd02bba826d37d9e2d259'),
+    usageNumber: 'y1339sKrwwRx94oI8u9DIqnj',
+    title: 'P2-MAN-20261024-02 活动模板源',
+    status: 'published',
+    allowAnonymous: true,
+    allowRepeat: false,
+    expiresAt: null,
+    currentPublishedVersion: 1,
+    currentVersionSubmissionCount: 1,
+    submissionCount: 1,
+    owner: 'p2_manual_1024_b',
+    questionCount: 4
+  },
+  {
+    _id: ObjectId('6adcd31fba826d37d9e2d275'),
+    usageNumber: 'jBNpICd2X_kSZiMvULDkQLav',
+    title: 'P2-MAN-20261024-02 活动模板源',
+    status: 'draft',
+    allowAnonymous: false,
+    allowRepeat: false,
+    expiresAt: null,
+    submissionCount: 0,
+    currentVersionSubmissionCount: 0,
+    currentPublishedVersion: null,
+    owner: 'p2_manual_1024_b',
+    questionCount: 4
+  },
+  {
+    _id: ObjectId('6adcc770ba826d37d9e2d236'),
+    usageNumber: '8J6D1VVu8_Kv1k7J8m25b_CP',
+    title: 'P2-MAN-20261024-02 满意度乙场',
+    status: 'published',
+    allowAnonymous: true,
+    allowRepeat: true,
+    expiresAt: null,
+    currentPublishedVersion: 2,
+    currentVersionSubmissionCount: 1,
+    submissionCount: 3,
+    owner: 'p2_manual_1024_b',
+    questionCount: 2
+  },
+  {
+    _id: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    usageNumber: 'RBszFSEPXPbO5cehVGw68fCK',
+    title: 'P2-MAN-20261024-02 满意度甲场',
+    status: 'published',
+    allowAnonymous: true,
+    allowRepeat: true,
+    expiresAt: null,
+    currentPublishedVersion: 1,
+    currentVersionSubmissionCount: 1,
+    submissionCount: 1,
+    owner: 'p2_manual_1024_b',
+    questionCount: 2
+  }
+]
+
+===== Actual question identities: draft/latest title may differ from old formal versions =====
+[
+  {
+    _id: ObjectId('6adcc3abba826d37d9e2d1e8'),
+    latestVersionId: ObjectId('6adcc3b9ba826d37d9e2d1ea'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: 'P2-MAN-20261024-02 本次活动满意度 ',
+    latestTitle: 'P2-MAN-20261024-02 本次活动满意度 ',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    latestVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    latestTitle: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    latestVersionId: ObjectId('6adcc8c6ba826d37d9e2d24d'),
+    nextVersion: 4,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: 'P2-MAN-20261024-02 每周可参加几次活动？（草稿）',
+    latestTitle: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    latestVersion: 3
+  },
+  {
+    _id: ObjectId('6adcc62aba826d37d9e2d206'),
+    latestVersionId: ObjectId('6adcc62aba826d37d9e2d207'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: '是否参加过校园活动？',
+    latestTitle: '是否参加过校园活动？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc62cba826d37d9e2d20b'),
+    latestVersionId: ObjectId('6adcc62cba826d37d9e2d20c'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: '你喜欢哪些活动？',
+    latestTitle: '你喜欢哪些活动？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc62eba826d37d9e2d210'),
+    latestVersionId: ObjectId('6adcc62eba826d37d9e2d211'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: '文本题对校园活动有什么建议？',
+    latestTitle: '文本题对校园活动有什么建议？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc62fba826d37d9e2d215'),
+    latestVersionId: ObjectId('6adcc62fba826d37d9e2d216'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: ' 你的年龄是多少？',
+    latestTitle: ' 你的年龄是多少？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc630ba826d37d9e2d21a'),
+    latestVersionId: ObjectId('6adcc630ba826d37d9e2d21b'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_a',
+    draftTitle: ' 给校园活动打几分？',
+    latestTitle: ' 给校园活动打几分？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc730ba826d37d9e2d22d'),
+    latestVersionId: ObjectId('6adcc730ba826d37d9e2d22e'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_b',
+    draftTitle: '甲场补充意见',
+    latestTitle: '甲场补充意见',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcc79aba826d37d9e2d23a'),
+    latestVersionId: ObjectId('6adcc79aba826d37d9e2d23b'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_b',
+    draftTitle: '乙场参与方式',
+    latestTitle: '乙场参与方式',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcd0adba826d37d9e2d260'),
+    latestVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_b',
+    draftTitle: '偏好的活动形式？',
+    latestTitle: '偏好的活动形式？',
+    latestVersion: 1
+  },
+  {
+    _id: ObjectId('6adcd0afba826d37d9e2d265'),
+    latestVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+    nextVersion: 2,
+    origin: null,
+    owner: 'p2_manual_1024_b',
+    draftTitle: '活动安排建议',
+    latestTitle: '活动安排建议',
+    latestVersion: 1
+  }
+]
+
+Inventory only. Copy your actual survey/question IDs, set P2_MANUAL_AUDIT, then load again.
+{
+  templates: [
+    {
+      _id: ObjectId('6adcd317ba826d37d9e2d273'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:47:35.026Z'),
+      updatedAt: ISODate('2026-10-24T15:47:35.026Z'),
+      publisherId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      sourceSurveyId: ObjectId('6adcd02bba826d37d9e2d259'),
+      sourcePublishedVersion: 1,
+      status: 'listed',
+      revision: 0,
+      accessFence: 1,
+      title: 'P2-MAN-20261024-02 活动模板源',
+      description: 'P2-MAN-20261024-02 活动模板源',
+      questions: [
+        {
+          id: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+          type: 'single',
+          title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+          required: true,
+          jumpRules: [
+            {
+              id: 'be725f28-6616-4973-b14a-55d72afbc8ce',
+              condition: {
+                op: 'eq',
+                optionId: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce'
+              },
+              targetQuestionId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1'
+            }
+          ],
+          options: [
+            {
+              id: '0e8ef930-bbe0-4eb5-a90f-dbad89c95c28',
+              label: '参加'
+            },
+            {
+              id: 'daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce',
+              label: '不参加'
+            }
+          ]
+        },
+        {
+          id: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+          type: 'number',
+          title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+          required: true,
+          jumpRules: [],
+          validation: {
+            integerOnly: true,
+            min: Decimal128('0'),
+            max: Decimal128('7')
+          }
+        },
+        {
+          id: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+          type: 'multiple',
+          title: '偏好的活动形式？',
+          required: true,
+          jumpRules: [],
+          options: [
+            {
+              id: 'fa1a7c96-2984-4d5f-8b09-0d903e5ca20a',
+              label: '线下讲座'
+            },
+            {
+              id: '1e310dd5-f45b-4040-b69f-539031915019',
+              label: '线上直播'
+            },
+            {
+              id: 'ed633cf9-c58d-451a-9e3b-82a4ff022ab1',
+              label: '小组讨论'
+            }
+          ],
+          validation: {
+            minChoices: 1,
+            maxChoices: 2
+          }
+        },
+        {
+          id: '6198d159-9056-4194-84f1-8fa49517b860',
+          type: 'text',
+          title: '活动安排建议',
+          required: false,
+          jumpRules: [],
+          validation: {
+            maxLength: 20
+          }
+        }
+      ],
+      bindings: [
+        {
+          instanceId: '6198d159-9056-4194-84f1-8fa49517b860',
+          questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+          questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+          contentHash: '5d3ff4788de3ab3a2ec0bf9ebb7b798d684fcc9a7b0c9fd8bb1d38a488f99489',
+          distributionProof: {
+            lineageHash: '1894651556597efd34a406c1a90294a46994db005b587b1385caa8add3b5f4c3',
+            obligations: [
+              {
+                questionId: ObjectId('6adcd0afba826d37d9e2d265'),
+                questionVersionId: ObjectId('6adcd0afba826d37d9e2d266'),
+                authorId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+                grantId: null,
+                grantRevision: null
+              }
+            ]
+          }
+        },
+        {
+          instanceId: '8373eb96-d56c-4ddc-8e90-df93a512d310',
+          questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+          questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+          contentHash: '4f63bbe8595a020e61f44efbf4710ccf267829e26769678a02b6625ea434560b',
+          distributionProof: {
+            lineageHash: '19e2706eb32d9b559414be2be428d901a1a0dbf048b9abf17395d67392a4d7e5',
+            obligations: [
+              {
+                questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+                questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+                authorId: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+                grantId: ObjectId('6adcd300ba826d37d9e2d272'),
+                grantRevision: 0
+              }
+            ]
+          }
+        },
+        {
+          instanceId: '86de87d2-2bc8-40af-87ce-b06272a3c6f2',
+          questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+          questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+          contentHash: 'bd391177d555dbb80a4c94ff20bddfd9ab0df75c41fcaaefa4f26347e0e8d501',
+          distributionProof: {
+            lineageHash: '7165b049ad192c235b21b23ce6f5092b24455b83fe4eb8a7c22b88787a997771',
+            obligations: [
+              {
+                questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+                questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+                authorId: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+                grantId: ObjectId('6adcd1ffba826d37d9e2d270'),
+                grantRevision: 0
+              }
+            ]
+          }
+        },
+        {
+          instanceId: 'cc96775f-3fb2-4237-aca8-87be271fa1a1',
+          questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+          questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+          contentHash: '99f0a77e701b46a239cbd068e0a645a037de7008f7ebd83a0e19f8bf2bda352d',
+          distributionProof: {
+            lineageHash: '75f10e19f62eb76df2601a7ee75acd85f7d9d513a91c39086c90c97c304e0b27',
+            obligations: [
+              {
+                questionId: ObjectId('6adcd0adba826d37d9e2d260'),
+                questionVersionId: ObjectId('6adcd0adba826d37d9e2d261'),
+                authorId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+                grantId: null,
+                grantRevision: null
+              }
+            ]
+          }
+        }
+      ],
+      contentHash: 'e6fe4c1b8a8d1fbc6d7b72acd8b62435b0225fb168ee393f4ef627668b31c1e2'
+    }
+  ],
+  publicGrants: [
+    {
+      _id: ObjectId('6adcd1ffba826d37d9e2d270'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:42:55.490Z'),
+      updatedAt: ISODate('2026-10-24T15:42:55.490Z'),
+      questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+      questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+      publisherId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'active',
+      revision: 0,
+      revokedAt: null
+    },
+    {
+      _id: ObjectId('6adcd20aba826d37d9e2d271'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:43:06.268Z'),
+      updatedAt: ISODate('2026-10-24T15:43:06.268Z'),
+      questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+      questionVersionId: ObjectId('6adcc8c6ba826d37d9e2d24d'),
+      publisherId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'active',
+      revision: 0,
+      revokedAt: null
+    },
+    {
+      _id: ObjectId('6adcd300ba826d37d9e2d272'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:47:12.706Z'),
+      updatedAt: ISODate('2026-10-24T15:47:12.706Z'),
+      questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+      questionVersionId: ObjectId('6adcc3ffba826d37d9e2d1f2'),
+      publisherId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'active',
+      revision: 0,
+      revokedAt: null
+    }
+  ],
+  privateGrants: [
+    {
+      _id: ObjectId('6adcc426ba826d37d9e2d1f4'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T14:43:50.329Z'),
+      updatedAt: ISODate('2026-10-24T15:34:10.574Z'),
+      questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+      recipientId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'active',
+      revision: 2,
+      revokedAt: null
+    },
+    {
+      _id: ObjectId('6adccfe1ba826d37d9e2d258'),
+      schemaVersion: 1,
+      createdAt: ISODate('2026-10-24T15:33:53.093Z'),
+      updatedAt: ISODate('2026-10-24T15:33:53.093Z'),
+      questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+      recipientId: ObjectId('6adcb9e4ba826d37d9e2d1e5'),
+      grantedBy: ObjectId('6adcb9d1ba826d37d9e2d1e4'),
+      state: 'active',
+      revision: 0,
+      revokedAt: null
+    }
+  ]
+}

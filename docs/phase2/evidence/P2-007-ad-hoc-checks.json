@@ -1,0 +1,15 @@
+{
+  "task": "P2-007",
+  "kind": "read-only bindingHash sample cross-check",
+  "firstAttempt": {
+    "tool": "PowerShell wrapping node --eval",
+    "error": "SyntaxError: Invalid or unexpected token",
+    "cause": "PowerShell expanded the EJSON $oid property in an inline JavaScript argument; no database code ran",
+    "notATestRunnerResult": true
+  },
+  "correctedAttempt": {
+    "tool": "Python standard library JSON/hashlib",
+    "arrayTupleHash": "b2169d9f61a59bc9e5998e6a94b5ecd0ef32d6a64a109a7af640a53a254d9d7b",
+    "matchesExistingDesignSample": true
+  }
+}

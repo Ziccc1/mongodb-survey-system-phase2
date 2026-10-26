@@ -1,0 +1,16 @@
+{
+  "name": "usagecapacity",
+  "start": "2026-10-23T11:41:45.814Z",
+  "finished": "2026-10-23T11:42:00.078Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/phase2/usage-capacity.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

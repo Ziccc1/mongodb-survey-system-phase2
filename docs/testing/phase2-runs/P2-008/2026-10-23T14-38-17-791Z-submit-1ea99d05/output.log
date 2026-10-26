@@ -1,0 +1,10 @@
+P2 synthetic target localhost:27019 / project2_test_submit_1792766298388_7962d738
+Independent retained database: project2_test_submit_1792766298388_7962d738
+PASS concurrent repeat-forbidden submissions: one answer, one count, other denied
+PASS discarded receipt/network retry semantics and same-key content conflict; no extra counter
+PASS paused/old-version/closed new requests denied; successful old request always replays
+PASS controlled real transaction failure rolls back inserted response and both counters
+PASS cutoff uses server time and no answer is saved
+PASS phone exact Decimal128 13800138000, fraction/letters rejected, mandatory empty rejected, optional empty accepted, ordinary decimals kept
+PASS filling definition output whitelist
+SUBMISSION MODULE PASSED

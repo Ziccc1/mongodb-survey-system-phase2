@@ -1,0 +1,51 @@
+{
+  "differentKeys": [
+    {
+      "status": 201,
+      "body": {
+        "data": {
+          "resourceId": "6adb7d0b18693c4d41a24f51",
+          "versionId": "6adb7d0c18693c4d41a24f5b",
+          "revision": 13,
+          "replayed": false
+        }
+      }
+    },
+    {
+      "status": 409,
+      "body": {
+        "error": {
+          "code": "EDIT_CONFLICT",
+          "message": "内容已变化，本地编辑已保留，请重新读取并比较",
+          "details": [],
+          "traceId": "2b6bd603-25b4-4c2a-8807-432f93b208e1"
+        }
+      }
+    }
+  ],
+  "sameKey": [
+    {
+      "status": 200,
+      "body": {
+        "data": {
+          "resourceId": "6adb7d0b18693c4d41a24f51",
+          "versionId": "6adb7d0c18693c4d41a24f5d",
+          "revision": 14,
+          "replayed": true
+        }
+      }
+    },
+    {
+      "status": 201,
+      "body": {
+        "data": {
+          "resourceId": "6adb7d0b18693c4d41a24f51",
+          "versionId": "6adb7d0c18693c4d41a24f5d",
+          "revision": 14,
+          "replayed": false
+        }
+      }
+    }
+  ],
+  "rollbackFingerprint": "6be93abcca5ef00555ee27d6b31994bcc2f4b19a6297fb069515d275116a0ee3"
+}

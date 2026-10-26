@@ -1,0 +1,112 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_templates_1792814392123_f8ea6e89
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_templates_1792814392123_f8ea6e89
+# Subtest: W06 exact grants, fixed publications, adoption, retained rights, historical receipts and HTTP guards
+    # Subtest: private share is insufficient; grant is exact version and exact publisher; original self is implicit
+    ok 1 - private share is insufficient; grant is exact version and exact publisher; original self is implicit
+      ---
+      duration_ms: 409.0407
+      type: 'test'
+      ...
+    # Subtest: new independent instances/defaults; same key concurrent one effect and management revision unchanged
+    ok 2 - new independent instances/defaults; same key concurrent one effect and management revision unchanged
+      ---
+      duration_ms: 162.7583
+      type: 'test'
+      ...
+    # Subtest: config preserves identity; narrow right cannot expose history or attach/copy/general fork
+    not ok 3 - config preserves identity; narrow right cannot expose history or attach/copy/general fork
+      ---
+      duration_ms: 44.0264
+      type: 'test'
+      location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\templates.test.ts:1:3976'
+      failureType: 'testCodeFailure'
+      error: '{"error":{"code":"INVALID_REQUEST","message":"请求参数不符合接口契约","details":[],"traceId":"4e1c0992-b070-4220-8341-53f2ade8d22e"}}'
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\templates.test.ts:34:79)
+        process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\templates.test.ts:29:3)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+      ...
+    # Subtest: revoke/unlist stop future use; retained draft publishes, answers and forks; regrant same ID restores eligibility
+    not ok 4 - revoke/unlist stop future use; retained draft publishes, answers and forks; regrant same ID restores eligibility
+      ---
+      duration_ms: 114.0379
+      type: 'test'
+      location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\templates.test.ts:1:5218'
+      failureType: 'testCodeFailure'
+      error: |-
+        {"error":{"code":"INVALID_REQUEST","message":"请求参数不符合接口契约","details":[],"traceId":"4e4a11a2-a33b-4293-a8fc-af65ea91a627"}}
+        
+        400 !== 200
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 200
+      actual: 400
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\templates.test.ts:41:148)
+        process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\templates.test.ts:36:3)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+      ...
+    # Subtest: both remaining full receipts replay with zero resource reads after state/content changes; mismatched body conflicts
+    not ok 5 - both remaining full receipts replay with zero resource reads after state/content changes; mismatched body conflicts
+      ---
+      duration_ms: 4.2479
+      type: 'test'
+      location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\templates.test.ts:1:7946'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+        
+        409 !== 200
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 200
+      actual: 409
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\templates.test.ts:50:11)
+        process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\templates.test.ts:49:3)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+      ...
+    # Subtest: strict HTTP/query/405/auth/CSRF and transactional rollback on intermediate faults
+    ok 6 - strict HTTP/query/405/auth/CSRF and transactional rollback on intermediate faults
+      ---
+      duration_ms: 194.7186
+      type: 'test'
+      ...
+    1..6
+not ok 1 - W06 exact grants, fixed publications, adoption, retained rights, historical receipts and HTTP guards
+  ---
+  duration_ms: 17056.1108
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\templates.test.ts:1:248'
+  failureType: 'subtestsFailed'
+  error: '3 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 7
+# suites 0
+# pass 3
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 29953.5703

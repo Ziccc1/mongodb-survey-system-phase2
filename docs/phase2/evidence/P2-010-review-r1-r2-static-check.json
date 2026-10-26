@@ -1,0 +1,33 @@
+{
+  "task": "W05/W06 R1/R2 fix",
+  "status": "passed",
+  "at": "2026-10-24T12:59:02.592157+00:00",
+  "historicalFilesChecked": 1142,
+  "historicalChanged": [],
+  "AIOriginalPrefixUnchanged": true,
+  "environmentsAndLockUnchanged": true,
+  "applicationsMetadataIndexesCountsBsonUnchanged": true,
+  "originalUserCountRetained": 1,
+  "machineEndpointsUnchanged": 36,
+  "accessGateBeforeVersionQuery": true,
+  "numericEvidenceFromAuthorizedExactSummary": true,
+  "codeSha256": {
+    "apps/api/src/core/cross-statistics.ts": "31c5399f95abbf2f4ae7f7d539e9bdf1f46df92816b8bb62f82361a840a81997",
+    "apps/web/src/pages/CrossStatisticsPage.vue": "ae339168de75e6a48ee817eacfc111bf2770058cfd5b8eaa33863a0909181a94",
+    "tests/phase2/cross-statistics.test.ts": "119cca664de185850de7a9f69b0874f9bbb6fac554cedb514ee20c770d3b173d",
+    "tests/phase2/cross-access-review.test.ts": "78e5fc9f631022304f1c66cac07d8962c1fea5b79020757b9b767c24568f2a27",
+    "tests/phase2/cross-retained-browser.ts": "f3b07578ee10dd7dd4e2cf88fbb73f4c63a9103fbc5af1b79a539bbf7c7d863c",
+    "scripts/run-check.mjs": "d90bb42964b06cd2384a3cc4fd997114d2c05a4005a2356c186219ed2d40f07f"
+  },
+  "newRegressionCommands": [
+    "crossaccessreview",
+    "crossretainedbrowser",
+    "crossstatistics",
+    "crossboundaries",
+    "crossbrowser",
+    "templates",
+    "domain",
+    "typecheck",
+    "build"
+  ]
+}

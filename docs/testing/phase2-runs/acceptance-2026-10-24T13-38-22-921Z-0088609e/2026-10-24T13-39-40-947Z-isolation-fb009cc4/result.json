@@ -1,0 +1,16 @@
+{
+  "name": "isolation",
+  "start": "2026-10-24T13:39:40.950Z",
+  "finished": "2026-10-24T13:39:41.703Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/runtime-isolation.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

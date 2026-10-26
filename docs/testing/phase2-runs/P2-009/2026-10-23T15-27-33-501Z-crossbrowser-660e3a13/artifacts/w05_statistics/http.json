@@ -1,0 +1,3327 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b610",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adb7d094abd83384e48b610/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b610",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "single",
+            "title": "路线",
+            "options": [
+              {
+                "id": "go",
+                "label": "回答年龄"
+              },
+              {
+                "id": "skip",
+                "label": "跳过年龄"
+              }
+            ]
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adb7d094abd83384e48b610/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b610",
+        "versionId": "6adb7d094abd83384e48b612",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b614",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adb7d094abd83384e48b614/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b614",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄",
+            "validation": {
+              "integerOnly": false
+            }
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adb7d094abd83384e48b614/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b614",
+        "versionId": "6adb7d094abd83384e48b616",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b618",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adb7d094abd83384e48b618/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b618",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "single",
+            "title": "单选统计",
+            "options": [
+              {
+                "id": "a",
+                "label": "甲"
+              },
+              {
+                "id": "b",
+                "label": "乙"
+              },
+              {
+                "id": "c",
+                "label": "丙"
+              }
+            ]
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adb7d094abd83384e48b618/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b618",
+        "versionId": "6adb7d094abd83384e48b61a",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b61c",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adb7d094abd83384e48b61c/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b61c",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "multiple",
+            "title": "多选统计",
+            "options": [
+              {
+                "id": "a",
+                "label": "甲"
+              },
+              {
+                "id": "b",
+                "label": "乙"
+              },
+              {
+                "id": "c",
+                "label": "丙"
+              }
+            ],
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adb7d094abd83384e48b61c/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b61c",
+        "versionId": "6adb7d094abd83384e48b61e",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b620",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adb7d094abd83384e48b620/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b620",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "文本统计",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adb7d094abd83384e48b620/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb7d094abd83384e48b620",
+        "versionId": "6adb7d094abd83384e48b622",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.411Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.411Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b624/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+        "questionVersionId": "6adb7d094abd83384e48b612",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.463Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b624/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "525bcda0-67d1-4012-8453-2b9278dfe066",
+        "questionVersionId": "6adb7d094abd83384e48b616",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 2,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.516Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b624/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 3,
+        "draftDefinitionRevision": 4,
+        "validationIssues": [],
+        "instanceId": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+        "questionVersionId": "6adb7d094abd83384e48b61a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 4,
+        "revision": 3,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.559Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b624/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 5,
+        "validationIssues": [],
+        "instanceId": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+        "questionVersionId": "6adb7d094abd83384e48b61e",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 5,
+        "revision": 4,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.611Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b624/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 5,
+        "draftDefinitionRevision": 6,
+        "validationIssues": [],
+        "instanceId": "1f7d8fc6-9465-4d5a-8658-17cd962fcd7f",
+        "questionVersionId": "6adb7d094abd83384e48b622",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "1f7d8fc6-9465-4d5a-8658-17cd962fcd7f",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 5,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.672Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/surveys/6adb7d094abd83384e48b624/questions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 6,
+        "draftDefinitionRevision": 7,
+        "validationIssues": [],
+        "hasUnpublishedChanges": true
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "b9834ef2-dc67-4bfe-ad86-1a090be6e698"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "1f7d8fc6-9465-4d5a-8658-17cd962fcd7f",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 6,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.737Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b624/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d094abd83384e48b624",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 7,
+        "publishedAt": "2026-10-23T15:28:09.794Z",
+        "firstPublishedAt": "2026-10-23T15:28:09.794Z",
+        "shareUrl": "http://localhost:3219/survey/klj1UlTj7A4u0PXY1CKyyw",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:09.841Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:09.841Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b63a/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "b780ba60-be40-468a-906d-6ae153293fda",
+        "questionVersionId": "6adb7d094abd83384e48b612",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": [
+            {
+              "id": "b780ba60-be40-468a-906d-6ae153293fda",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:09.883Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b63a/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "9db12ecf-7a9b-4685-8eb8-0a4eb4c70900",
+        "questionVersionId": "6adb7d094abd83384e48b616",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": [
+            {
+              "id": "b780ba60-be40-468a-906d-6ae153293fda",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "9db12ecf-7a9b-4685-8eb8-0a4eb4c70900",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 2,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:09.928Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b63a/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 3,
+        "draftDefinitionRevision": 4,
+        "validationIssues": [],
+        "instanceId": "c4229097-7744-41e6-975f-667f12baad2c",
+        "questionVersionId": "6adb7d094abd83384e48b61a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": [
+            {
+              "id": "b780ba60-be40-468a-906d-6ae153293fda",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "9db12ecf-7a9b-4685-8eb8-0a4eb4c70900",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "c4229097-7744-41e6-975f-667f12baad2c",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 4,
+        "revision": 3,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:09.978Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b63a/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 5,
+        "validationIssues": [],
+        "instanceId": "306c8b68-1f5e-4fa1-bf56-a450d343dbd0",
+        "questionVersionId": "6adb7d094abd83384e48b61e",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": [
+            {
+              "id": "b780ba60-be40-468a-906d-6ae153293fda",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "9db12ecf-7a9b-4685-8eb8-0a4eb4c70900",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "c4229097-7744-41e6-975f-667f12baad2c",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "306c8b68-1f5e-4fa1-bf56-a450d343dbd0",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 5,
+        "revision": 4,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:10.035Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b63a/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 5,
+        "draftDefinitionRevision": 6,
+        "validationIssues": [],
+        "instanceId": "e53462a0-2123-40cf-a50d-0870cd23a0d4",
+        "questionVersionId": "6adb7d094abd83384e48b622",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": [
+            {
+              "id": "b780ba60-be40-468a-906d-6ae153293fda",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "9db12ecf-7a9b-4685-8eb8-0a4eb4c70900",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "c4229097-7744-41e6-975f-667f12baad2c",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "306c8b68-1f5e-4fa1-bf56-a450d343dbd0",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "e53462a0-2123-40cf-a50d-0870cd23a0d4",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 5,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:10.107Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/surveys/6adb7d094abd83384e48b63a/questions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 6,
+        "draftDefinitionRevision": 7,
+        "validationIssues": [],
+        "hasUnpublishedChanges": true
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": [
+            {
+              "id": "b780ba60-be40-468a-906d-6ae153293fda",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "c4229097-7744-41e6-975f-667f12baad2c"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "9db12ecf-7a9b-4685-8eb8-0a4eb4c70900",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "c4229097-7744-41e6-975f-667f12baad2c",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "306c8b68-1f5e-4fa1-bf56-a450d343dbd0",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "e53462a0-2123-40cf-a50d-0870cd23a0d4",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 6,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:10.160Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b63a/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d094abd83384e48b63a",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 7,
+        "publishedAt": "2026-10-23T15:28:10.224Z",
+        "firstPublishedAt": "2026-10-23T15:28:10.224Z",
+        "shareUrl": "http://localhost:3219/survey/-V-p85Eyp6N6xqftQYVj-g",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "published",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "b9834ef2-dc67-4bfe-ad86-1a090be6e698"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "1f7d8fc6-9465-4d5a-8658-17cd962fcd7f",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 7,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-23T15:28:09.794Z",
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.794Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/klj1UlTj7A4u0PXY1CKyyw/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d0a4abd83384e48b650",
+        "submittedAt": "2026-10-23T15:28:10.362Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "published",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "b9834ef2-dc67-4bfe-ad86-1a090be6e698"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "1f7d8fc6-9465-4d5a-8658-17cd962fcd7f",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 7,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 1,
+        "currentVersionResponseCount": 1,
+        "firstPublishedAt": "2026-10-23T15:28:09.794Z",
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.794Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/klj1UlTj7A4u0PXY1CKyyw/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d0a4abd83384e48b651",
+        "submittedAt": "2026-10-23T15:28:10.468Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "published",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "b9834ef2-dc67-4bfe-ad86-1a090be6e698"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "1f7d8fc6-9465-4d5a-8658-17cd962fcd7f",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 7,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 2,
+        "currentVersionResponseCount": 2,
+        "firstPublishedAt": "2026-10-23T15:28:09.794Z",
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:09.794Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b624/pause",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d094abd83384e48b624",
+        "status": "paused",
+        "revision": 8,
+        "currentPublishedVersion": 1
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "paused",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "b9834ef2-dc67-4bfe-ad86-1a090be6e698"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "1f7d8fc6-9465-4d5a-8658-17cd962fcd7f",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 8,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 2,
+        "currentVersionResponseCount": 2,
+        "firstPublishedAt": "2026-10-23T15:28:09.794Z",
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:10.542Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/surveys/6adb7d094abd83384e48b624/questions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 8,
+        "draftDefinitionRevision": 7,
+        "validationIssues": [],
+        "hasUnpublishedChanges": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "paused",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "b9834ef2-dc67-4bfe-ad86-1a090be6e698"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "1f7d8fc6-9465-4d5a-8658-17cd962fcd7f",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 8,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 2,
+        "currentVersionResponseCount": 2,
+        "firstPublishedAt": "2026-10-23T15:28:09.794Z",
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:10.542Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb7d094abd83384e48b624/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adb7d094abd83384e48b624",
+        "publishedVersion": 2,
+        "status": "published",
+        "revision": 9,
+        "publishedAt": "2026-10-23T15:28:10.775Z",
+        "firstPublishedAt": "2026-10-23T15:28:09.794Z",
+        "shareUrl": "http://localhost:3219/survey/klj1UlTj7A4u0PXY1CKyyw",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b624",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b624",
+        "publicId": "klj1UlTj7A4u0PXY1CKyyw",
+        "status": "published",
+        "draftDefinition": {
+          "title": "本人A",
+          "description": "",
+          "questions": [
+            {
+              "id": "92adf2bb-9dd4-41c2-be00-3e8afc278db5",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "b9834ef2-dc67-4bfe-ad86-1a090be6e698"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "525bcda0-67d1-4012-8453-2b9278dfe066",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "b9834ef2-dc67-4bfe-ad86-1a090be6e698",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "1e2dc6c5-7681-444d-9ee6-2747355327df",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "1f7d8fc6-9465-4d5a-8658-17cd962fcd7f",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 9,
+        "currentPublishedVersion": 2,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 2,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-23T15:28:09.794Z",
+        "createdAt": "2026-10-23T15:28:09.411Z",
+        "updatedAt": "2026-10-23T15:28:10.775Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/klj1UlTj7A4u0PXY1CKyyw/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d0a4abd83384e48b658",
+        "submittedAt": "2026-10-23T15:28:10.899Z",
+        "publishedVersion": 2,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "published",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": [
+            {
+              "id": "b780ba60-be40-468a-906d-6ae153293fda",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "c4229097-7744-41e6-975f-667f12baad2c"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "9db12ecf-7a9b-4685-8eb8-0a4eb4c70900",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "c4229097-7744-41e6-975f-667f12baad2c",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "306c8b68-1f5e-4fa1-bf56-a450d343dbd0",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "e53462a0-2123-40cf-a50d-0870cd23a0d4",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 7,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-23T15:28:10.224Z",
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:10.224Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d0a4abd83384e48b659",
+        "submittedAt": "2026-10-23T15:28:10.996Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "published",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": [
+            {
+              "id": "b780ba60-be40-468a-906d-6ae153293fda",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "c4229097-7744-41e6-975f-667f12baad2c"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "9db12ecf-7a9b-4685-8eb8-0a4eb4c70900",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "c4229097-7744-41e6-975f-667f12baad2c",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "306c8b68-1f5e-4fa1-bf56-a450d343dbd0",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "e53462a0-2123-40cf-a50d-0870cd23a0d4",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 7,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 1,
+        "currentVersionResponseCount": 1,
+        "firstPublishedAt": "2026-10-23T15:28:10.224Z",
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:10.224Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d0b4abd83384e48b65a",
+        "submittedAt": "2026-10-23T15:28:11.096Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb7d094abd83384e48b63a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb7d094abd83384e48b63a",
+        "publicId": "-V-p85Eyp6N6xqftQYVj-g",
+        "status": "published",
+        "draftDefinition": {
+          "title": "本人B",
+          "description": "",
+          "questions": [
+            {
+              "id": "b780ba60-be40-468a-906d-6ae153293fda",
+              "type": "single",
+              "title": "路线",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "skip_age",
+                  "condition": {
+                    "op": "eq",
+                    "optionId": "skip"
+                  },
+                  "targetQuestionId": "c4229097-7744-41e6-975f-667f12baad2c"
+                }
+              ],
+              "options": [
+                {
+                  "id": "go",
+                  "label": "回答年龄"
+                },
+                {
+                  "id": "skip",
+                  "label": "跳过年龄"
+                }
+              ]
+            },
+            {
+              "id": "9db12ecf-7a9b-4685-8eb8-0a4eb4c70900",
+              "type": "number",
+              "title": "年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": false
+              }
+            },
+            {
+              "id": "c4229097-7744-41e6-975f-667f12baad2c",
+              "type": "single",
+              "title": "单选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ]
+            },
+            {
+              "id": "306c8b68-1f5e-4fa1-bf56-a450d343dbd0",
+              "type": "multiple",
+              "title": "多选统计",
+              "required": false,
+              "jumpRules": [],
+              "options": [
+                {
+                  "id": "a",
+                  "label": "甲"
+                },
+                {
+                  "id": "b",
+                  "label": "乙"
+                },
+                {
+                  "id": "c",
+                  "label": "丙"
+                }
+              ],
+              "validation": {}
+            },
+            {
+              "id": "e53462a0-2123-40cf-a50d-0870cd23a0d4",
+              "type": "text",
+              "title": "文本统计",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 7,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 2,
+        "currentVersionResponseCount": 2,
+        "firstPublishedAt": "2026-10-23T15:28:10.224Z",
+        "createdAt": "2026-10-23T15:28:09.841Z",
+        "updatedAt": "2026-10-23T15:28:10.224Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b65b",
+        "submittedAt": "2026-10-23T15:28:16.358Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b65c",
+        "submittedAt": "2026-10-23T15:28:16.414Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b65d",
+        "submittedAt": "2026-10-23T15:28:16.458Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b65e",
+        "submittedAt": "2026-10-23T15:28:16.503Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b65f",
+        "submittedAt": "2026-10-23T15:28:16.548Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b660",
+        "submittedAt": "2026-10-23T15:28:16.595Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b661",
+        "submittedAt": "2026-10-23T15:28:16.641Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b662",
+        "submittedAt": "2026-10-23T15:28:16.682Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b663",
+        "submittedAt": "2026-10-23T15:28:16.721Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b664",
+        "submittedAt": "2026-10-23T15:28:16.770Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b665",
+        "submittedAt": "2026-10-23T15:28:16.812Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b666",
+        "submittedAt": "2026-10-23T15:28:16.851Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b667",
+        "submittedAt": "2026-10-23T15:28:16.903Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b668",
+        "submittedAt": "2026-10-23T15:28:16.949Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d104abd83384e48b669",
+        "submittedAt": "2026-10-23T15:28:16.982Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d114abd83384e48b66a",
+        "submittedAt": "2026-10-23T15:28:17.029Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d114abd83384e48b66b",
+        "submittedAt": "2026-10-23T15:28:17.067Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d114abd83384e48b66c",
+        "submittedAt": "2026-10-23T15:28:17.107Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d114abd83384e48b66d",
+        "submittedAt": "2026-10-23T15:28:17.153Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d114abd83384e48b66e",
+        "submittedAt": "2026-10-23T15:28:17.191Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/-V-p85Eyp6N6xqftQYVj-g/responses",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adb7d114abd83384e48b66f",
+        "submittedAt": "2026-10-23T15:28:17.236Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  }
+]

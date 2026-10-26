@@ -1,14 +1,13 @@
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
-import {MongoClient} from 'mongodb';
+import {MongoClient,testMongoOptions} from '../database-client.js';
 import type {FaultHooks} from '../../apps/api/src/core/common.js';
 import {buildApp} from '../../apps/api/src/app.js';
-import {loadConfig} from '../../apps/api/src/config.js';
+import {isolatedTestConfig} from '../runtime-environment.js';
 import {initialize} from '../../apps/api/src/database/initialize.js';
 import type {Question,Editor} from '@survey/shared';
 export async function harness(name:string,faults:FaultHooks={},origin?:string){
-  const base=loadConfig(),dbName=`project1_test_${name}_${Date.now()}`,uri=new URL(base.uri);uri.pathname='/'+dbName;
-  const config={...base,...(origin?{origin,publicAppUrl:origin}:{}),dbName,uri:uri.toString()},client=new MongoClient(config.uri);await client.connect();const db=client.db(dbName);await initialize(db);
+  const config=isolatedTestConfig(name,origin),dbName=config.dbName,client=new MongoClient(config.uri,testMongoOptions());await client.connect();const db=client.db(dbName);await initialize(db);
   const app=await buildApp(config,{logger:false,faults});const cookies:string[]=[];
   const headers={origin:config.origin,'x-csrf-guard':'1'};
   async function request(method:'GET'|'POST'|'PUT'|'PATCH'|'DELETE',path:string,body?:unknown,who=0,extra:Record<string,string>={}){return app.inject({method,url:'/api/v1'+path,headers:{...headers,...(cookies[who]?{cookie:cookies[who]}:{}),...extra},...(body===undefined?{}:{payload:body as object})});}

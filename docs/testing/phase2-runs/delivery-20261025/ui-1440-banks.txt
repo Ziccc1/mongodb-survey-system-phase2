@@ -1,0 +1,30 @@
+Browser tab: 4, Title: "问卷工作台", URL: "http://localhost:5200/question-banks".
+1 AXWebArea 问卷工作台, URL: localhost:5200/question-banks
+	2 container app
+		3 link Description: 跳到主要内容, Value: localhost:5200/question-banks#main
+		4 container
+			5 link Description: 问卷工作台, Value: localhost:5200/dashboard
+			6 container 主导航
+				7 link Description: 首页, Value: localhost:5200/dashboard
+				8 link Description: 我的问卷, Value: localhost:5200/surveys
+				9 link Description: 题目, Value: localhost:5200/questions
+				10 link Description: 题库, Value: localhost:5200/question-banks
+				11 link Description: 模板广场, Value: localhost:5200/templates
+				12 text p2_manual_1024_b
+				13 button 退出登录
+		14 container
+			15 link Description: ← 返回题目工作台, Value: localhost:5200/questions
+			16 heading 我的题库, Value: 1
+				17 text 我的题库
+			18 text 题库用于整理。同一道题加入多个库，仍共用一套身份与版本。
+			19 text 题库名称
+			20 text field (settable) 题库名称, ID: new-bank-name
+			21 button (disabled) 创建题库
+			22 heading 题库目录, Value: 2
+				23 text 题库目录
+			24 content list
+				25 checkbox P2-MAN-20261024-02 共享整理库, Value: 0
+			26 text 选择一个题库，查看并整理其中题目。
+		27 text 数据库课程项目 · 问卷工作台
+
+The focused UI element is 16 heading 我的题库, Value: 1

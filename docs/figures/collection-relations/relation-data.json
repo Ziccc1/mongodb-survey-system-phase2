@@ -1,0 +1,24 @@
+{
+  "figure_id": "mongodb_collection_relations",
+  "caption": "图2  MongoDB 四集合关联与嵌入结构",
+  "core_claim": "问卷身份与发布定义分离，答卷关联对应发布版本；题目和答案分别嵌入所属文档。",
+  "source_files": ["apps/api/src/database/models.ts", "apps/api/src/database/schema.ts", "apps/api/src/core/versions.ts", "apps/api/src/core/submission.ts"],
+  "nodes": {
+    "users": {"title": "用户", "name": "users"},
+    "surveys": {"title": "问卷", "name": "surveys", "embedded_title": "待编辑题目", "embedded_field": "questions[]"},
+    "responses": {"title": "答卷", "name": "responses", "embedded_title": "本次有效答案", "embedded_field": "answers[]"},
+    "survey_versions": {"title": "发布版本", "name": "survey_versions", "embedded_title": "已发布题目", "embedded_field": "definition.questions[]"}
+  },
+  "relations": [
+    {"from": "users", "to": "surveys", "label": "创建 1 : N", "reference": "surveys.ownerId → users._id"},
+    {"from": "users", "to": "responses", "label": "提交 1 : N", "reference": "responses.respondentId → users._id"},
+    {"from": "surveys", "to": "survey_versions", "label": "发布 1 : N", "reference": "survey_versions.surveyId → surveys._id"},
+    {"from": "surveys", "to": "responses", "label": "接收 1 : N", "reference": "responses.surveyId → surveys._id"},
+    {"from": "survey_versions", "to": "responses", "label": "对应 1 : N", "reference": "responses.(surveyId, surveyDefinitionVersion) → survey_versions.(surveyId, version)"}
+  ],
+  "notes": [
+    "实线箭头：业务关联（一对多）    虚线框：文档内嵌结构，非独立集合",
+    "答卷通过“问卷ID＋发布版本号”定位快照；匿名答卷仍保留内部用户关联。",
+    "集合间引用由后端检查，MongoDB 不自动执行外键约束。"
+  ]
+}

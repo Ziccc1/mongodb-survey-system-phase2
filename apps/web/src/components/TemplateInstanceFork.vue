@@ -1,0 +1,14 @@
+<script setup lang="ts">
+import {ref,watch} from 'vue';
+import {onBeforeRouteLeave} from 'vue-router';
+import type {Editor,InstanceSource,Question,ResourceReceipt} from '@survey/shared';
+import {validateQuestions} from '@survey/shared';
+import {contentOf,useOperation} from '../library-client';
+import QuestionCard from './QuestionCard.vue';
+const props=defineProps<{survey:Editor;source:InstanceSource}>(),emit=defineEmits<{done:[];cancel:[];locked:[boolean]}>(),question=ref<Question>(JSON.parse(JSON.stringify(props.survey.draftDefinition.questions.find(q=>q.id===props.source.instanceId)!))),created=ref<ResourceReceipt|null>(null),busy=ref(false),error=ref(''),forkOp=useOperation(),replaceOp=useOperation();
+async function fork(){if(busy.value||created.value||replaceOp.pending.value)return;busy.value=true;error.value='';try{created.value=await forkOp.run<ResourceReceipt>(`/question-versions/${props.source.questionVersionId}/forks`,{content:contentOf(question.value),sourceInstance:{surveyId:props.survey.id,instanceId:props.source.instanceId}});}catch(e){error.value=(e as Error).message;}finally{busy.value=false;}}
+async function replace(){if(busy.value||!created.value||forkOp.pending.value)return;busy.value=true;error.value='';try{await replaceOp.run(`/surveys/${props.survey.id}/questions/${props.source.instanceId}/replacement`,{expectedRevision:props.survey.revision,questionVersionId:created.value.versionId});emit('done');}catch(e){error.value=(e as Error).message;}finally{busy.value=false;}}
+watch(()=>busy.value||!!forkOp.pending.value||!!replaceOp.pending.value,v=>emit('locked',v),{immediate:true});
+onBeforeRouteLeave(()=>!(forkOp.pending.value||replaceOp.pending.value)||window.confirm('派生或采用结果尚未确认，确定离开？'));
+</script>
+<template><section class="panel"><h3>从本模板实例派生</h3><p class="muted">只针对当前保存的固定实例创建自己的正式v1，随后明确替换。原作者及全部上游的公开分发限制仍保留；更改必答或规则无需派生。</p><p v-if="error" class="error" role="alert">{{error}}</p><fieldset :disabled="busy||!!forkOp.pending.value||!!replaceOp.pending.value||!!created"><QuestionCard dom-id-prefix="template-fork" :question="question" :index="0" :questions="[question]" content-only/></fieldset><p v-if="forkOp.pending.value||replaceOp.pending.value" role="status">结果尚未确认，只能确认原动作；其他编辑暂时锁定。</p><template v-if="created"><p class="saved">自己的派生正式v1已保存。采用后请检查实例跳转规则并发布。</p><RouterLink :to="`/questions/${created.resourceId}`">查看自己的派生题 →</RouterLink><button class="primary" :disabled="busy||!!forkOp.pending.value" @click="replace">{{replaceOp.pending.value?'确认原采用结果':'采用派生首版替换此实例'}}</button></template><button v-else class="primary" :disabled="busy||!!replaceOp.pending.value||validateQuestions([question]).errors.length>0" @click="fork">{{forkOp.pending.value?'确认原派生结果':'保存为自己的派生正式v1'}}</button><button class="quiet" :disabled="busy||!!forkOp.pending.value||!!replaceOp.pending.value" @click="emit('cancel')">关闭派生编辑</button></section></template>

@@ -1,0 +1,10 @@
+D:\大三\数据库\pj1_2\scripts\verify-runtime-baseline.ts:23
+  if(emptyDatabaseRequired&&totalDocuments!==0)throw Error(`P2_INITIAL_BASELINE_NOT_EMPTY: ${totalDocuments} documents; this flag is only for fresh initialization acceptance`);
+                                                     ^
+
+
+Error: P2_INITIAL_BASELINE_NOT_EMPTY: 2 documents; this flag is only for fresh initialization acceptance
+    at <anonymous> (D:\大三\数据库\pj1_2\scripts\verify-runtime-baseline.ts:23:54)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+Node.js v22.17.0

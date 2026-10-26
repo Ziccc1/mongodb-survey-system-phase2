@@ -1,0 +1,159 @@
+{
+  "runId": "1792893806861_811aaed6",
+  "source": "Stopped real P1 cold copy; original never started or written",
+  "sourceDatabase": "project1_app_v2",
+  "originalFiles": 1179,
+  "sourceUnchanged": true,
+  "manifest": {
+    "format": 1,
+    "task": "P2-008",
+    "runId": "1792893806861_811aaed6",
+    "source": "project2_test_p2008_source_1792893806861_811aaed6",
+    "restore": "project2_restore_1792893806861_811aaed6",
+    "applicationTest": "project2_test_p2008_migrated_1792893806861_811aaed6",
+    "instanceHash": "78c85bd7b51009309de95e9e041fb079586682dd8ee7a36dbe60d61035e17c51"
+  },
+  "steps": [
+    {
+      "step": "inspect",
+      "result": {
+        "source": "project2_test_p2008_source_1792893806861_811aaed6",
+        "sourceHash": "2d962e2381014fe178e6982deb3a2e5c15ad74b099840b25f9759bd6e03fd490",
+        "counts": {
+          "users": 5,
+          "surveys": 6,
+          "survey_versions": 5,
+          "responses": 8
+        },
+        "blocked": [],
+        "formats": {
+          "users": [
+            1
+          ],
+          "surveys": [
+            2
+          ],
+          "survey_versions": [
+            1
+          ],
+          "responses": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "step": "backup",
+      "result": {
+        "sourceHash": "2d962e2381014fe178e6982deb3a2e5c15ad74b099840b25f9759bd6e03fd490",
+        "method": "BSON logical backup; snapshot transaction plus stable metadata; not mongodump",
+        "bytes": 50874,
+        "sha256": "8659a85a2dcb0c9613c27c2f64cbf6fda9ac1715f28d76ad02d2bbdceffb3934"
+      }
+    },
+    {
+      "step": "restore",
+      "result": {
+        "target": "project2_restore_1792893806861_811aaed6",
+        "sourceHash": "2d962e2381014fe178e6982deb3a2e5c15ad74b099840b25f9759bd6e03fd490",
+        "restored": true
+      }
+    },
+    {
+      "step": "dry-run",
+      "target": "project2_restore_1792893806861_811aaed6",
+      "planId": "cb62dc75-682f-4afa-8236-6e506c72ef3f",
+      "batches": 6,
+      "rows": 72,
+      "blocked": []
+    },
+    {
+      "step": "apply",
+      "result": {
+        "planId": "cb62dc75-682f-4afa-8236-6e506c72ef3f",
+        "target": "project2_restore_1792893806861_811aaed6",
+        "committed": 6,
+        "skipped": 0
+      }
+    },
+    {
+      "step": "verify",
+      "result": {
+        "planId": "cb62dc75-682f-4afa-8236-6e506c72ef3f",
+        "target": "project2_restore_1792893806861_811aaed6",
+        "sourceHash": "2d962e2381014fe178e6982deb3a2e5c15ad74b099840b25f9759bd6e03fd490",
+        "verified": true,
+        "surveys": 6,
+        "versions": 16,
+        "bindings": 35,
+        "audit": []
+      }
+    },
+    {
+      "step": "repeat-apply",
+      "result": {
+        "planId": "cb62dc75-682f-4afa-8236-6e506c72ef3f",
+        "target": "project2_restore_1792893806861_811aaed6",
+        "committed": 0,
+        "skipped": 6
+      }
+    },
+    {
+      "step": "restore",
+      "result": {
+        "target": "project2_test_p2008_migrated_1792893806861_811aaed6",
+        "sourceHash": "2d962e2381014fe178e6982deb3a2e5c15ad74b099840b25f9759bd6e03fd490",
+        "restored": true
+      }
+    },
+    {
+      "step": "dry-run",
+      "target": "project2_test_p2008_migrated_1792893806861_811aaed6",
+      "planId": "912f2304-2725-4b1d-b88b-f195a5a89a05",
+      "batches": 6,
+      "rows": 72,
+      "blocked": []
+    },
+    {
+      "step": "apply",
+      "result": {
+        "planId": "912f2304-2725-4b1d-b88b-f195a5a89a05",
+        "target": "project2_test_p2008_migrated_1792893806861_811aaed6",
+        "committed": 6,
+        "skipped": 0
+      }
+    },
+    {
+      "step": "verify",
+      "result": {
+        "planId": "912f2304-2725-4b1d-b88b-f195a5a89a05",
+        "target": "project2_test_p2008_migrated_1792893806861_811aaed6",
+        "sourceHash": "2d962e2381014fe178e6982deb3a2e5c15ad74b099840b25f9759bd6e03fd490",
+        "verified": true,
+        "surveys": 6,
+        "versions": 16,
+        "bindings": 35,
+        "audit": []
+      }
+    },
+    {
+      "step": "repeat-apply",
+      "result": {
+        "planId": "912f2304-2725-4b1d-b88b-f195a5a89a05",
+        "target": "project2_test_p2008_migrated_1792893806861_811aaed6",
+        "committed": 0,
+        "skipped": 6
+      }
+    }
+  ],
+  "counts": {
+    "responses": 8,
+    "survey_versions": 5,
+    "surveys": 6,
+    "users": 5
+  },
+  "logicalBackupSha256": "d4c9d223a6c0727afe391be0597227ad8666c08ce2d511aa1c50a14e8d4e1e98",
+  "status": "passed",
+  "workingCopyStopped": true,
+  "finishedAt": "2026-10-25T02:03:43.984Z"
+}

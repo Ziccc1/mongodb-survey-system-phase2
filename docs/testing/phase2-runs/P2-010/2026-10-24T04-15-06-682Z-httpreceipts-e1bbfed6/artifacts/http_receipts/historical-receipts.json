@@ -1,0 +1,99 @@
+{
+  "operations": [
+    {
+      "path": "/questions",
+      "originalData": {
+        "resourceId": "6adc30d6e6a9c9c330462244",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    },
+    {
+      "path": "/questions/6adc30d6e6a9c9c330462244/versions",
+      "originalData": {
+        "resourceId": "6adc30d6e6a9c9c330462244",
+        "versionId": "6adc30d6e6a9c9c330462246",
+        "revision": 1,
+        "replayed": false
+      }
+    },
+    {
+      "path": "/questions/6adc30d6e6a9c9c330462244/restorations",
+      "originalData": {
+        "resourceId": "6adc30d6e6a9c9c330462244",
+        "versionId": "6adc30d7e6a9c9c330462248",
+        "revision": 2,
+        "replayed": false
+      }
+    },
+    {
+      "path": "/question-versions/6adc30d6e6a9c9c330462246/forks",
+      "originalData": {
+        "resourceId": "6adc30d7e6a9c9c33046224a",
+        "versionId": "6adc30d7e6a9c9c33046224b",
+        "revision": 1,
+        "replayed": false
+      }
+    },
+    {
+      "path": "/question-banks",
+      "originalData": {
+        "resourceId": "6adc30d7e6a9c9c33046224d",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    },
+    {
+      "path": "/surveys/6adc30d7e6a9c9c33046224f/questions/local/formalization",
+      "originalData": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "local",
+        "questionVersionId": "6adc30d7e6a9c9c330462251",
+        "replayed": false
+      }
+    },
+    {
+      "path": "/surveys/6adc30d7e6a9c9c33046224f/question-references",
+      "originalData": {
+        "revision": 3,
+        "draftDefinitionRevision": 4,
+        "validationIssues": [
+          {
+            "code": "TARGET_MISSING",
+            "field": "/questions/1/jumpRules/0/targetQuestionId",
+            "questionId": "bc286522-b5bb-43f3-8811-886db1be3dbc",
+            "message": "第2题：跳转目标尚未选择或已删除，可保存草稿"
+          }
+        ],
+        "instanceId": "bc286522-b5bb-43f3-8811-886db1be3dbc",
+        "questionVersionId": "6adc30d6e6a9c9c330462246",
+        "replayed": false
+      }
+    },
+    {
+      "path": "/surveys/6adc30d7e6a9c9c33046224f/questions/bc286522-b5bb-43f3-8811-886db1be3dbc/replacement",
+      "originalData": {
+        "revision": 4,
+        "draftDefinitionRevision": 5,
+        "validationIssues": [
+          {
+            "code": "TARGET_MISSING",
+            "field": "/questions/1/jumpRules/0/targetQuestionId",
+            "questionId": "bc286522-b5bb-43f3-8811-886db1be3dbc",
+            "message": "第2题：跳转目标尚未选择或已删除，可保存草稿"
+          }
+        ],
+        "instanceId": "bc286522-b5bb-43f3-8811-886db1be3dbc",
+        "questionVersionId": "6adc30d7e6a9c9c330462248",
+        "replayed": false
+      }
+    }
+  ],
+  "allCompleteDtoEqual": true,
+  "currentResourceReads": 0,
+  "databaseFingerprintUnchanged": true
+}

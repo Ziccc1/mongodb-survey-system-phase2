@@ -1,0 +1,61 @@
+{
+  "actual": {
+    "questionId": "6adb7c035f8bd2d92f0a9708",
+    "versionId": "6adb7c035f8bd2d92f0a970a",
+    "generatedAt": "2026-10-23T15:23:50.199Z",
+    "surveyCount": 2,
+    "eligibleResponseCount": 5,
+    "answeredCount": 4,
+    "skippedCount": 1,
+    "unansweredCount": 0,
+    "average": "15",
+    "min": "0",
+    "max": "30",
+    "bins": [
+      {
+        "lower": null,
+        "upper": "0",
+        "upperInclusive": false,
+        "count": 0
+      },
+      {
+        "lower": "0",
+        "upper": "18",
+        "upperInclusive": false,
+        "count": 2
+      },
+      {
+        "lower": "18",
+        "upper": "30",
+        "upperInclusive": false,
+        "count": 1
+      },
+      {
+        "lower": "30",
+        "upper": "121",
+        "upperInclusive": true,
+        "count": 1
+      },
+      {
+        "lower": "121",
+        "upper": null,
+        "upperInclusive": false,
+        "count": 0
+      }
+    ]
+  },
+  "expected": {
+    "mean": "15",
+    "eligible": 5,
+    "answered": 4,
+    "skipped": 1,
+    "bins": [
+      0,
+      2,
+      1,
+      1,
+      0
+    ]
+  },
+  "zeroWriteFingerprint": "c64c6c436df5ffbea3aa4b4375a06cb638de16028bb5cd50fad10bf478f41332"
+}

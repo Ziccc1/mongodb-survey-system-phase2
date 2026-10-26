@@ -1,3 +1,469 @@
+# 问卷系统API第二阶段增量契约
+
+更新日期：2026-10-26。第二阶段八项需求及公开模板扩展均已实现并完成对应验证，当前主应用为 `localhost:27019/rs0` 的十三集合 `project2_app_v2`，通过 `:phase2` 命令启动；`project2_app_v1`仅保留四集合兼容基线。题目、题库、共享、固定引用、使用查询、跨问卷统计和模板均已接入API及页面。
+
+2026-10-25已完成界面收尾、真实第一阶段数据的隔离恢复升级及当前本机数据库认证部署；应用使用受限账号，20项权限检查通过。真实迁移结果保存在独立目标库，当前网站继续使用第二阶段验收数据。S04/S05/S06均已确认实施。见[最终交付核对](phase2/delivery-verification.md)、[认证部署](phase2/authorization-deployment.md)和[真实迁移验证](phase2/real-migration-verification.md)。完整34组自动验收对应10月24日，收尾后的定向复测对应10月25日；原提示词、冻结材料及执行证据保留其历史日期。
+
+已实现HTTP范围：P2-L01—L09、B01—B06、G01—G03、I00—I04、U01共24项，加W05 X01—X03及W06 A01—A03/M01—M06合计36项。新路由统一纳入原认证、CSRF、媒体/重复JSON、query白名单/重复参数、405 Allow与严格body门禁。Content结构错误400 INVALID_REQUEST，硬语义422 DEFINITION_INVALID及原details，未知内部异常不伪装400。phase2公开`/app-config.js`只比baseline增加`libraryEnabled:true`，不公开模式参数、库名、密钥。完整请求/DTO见下文与机器契约；实际端点测试见[覆盖表](phase2/w02-w04-coverage.md)。
+
+## P2 统一规则与类型
+
+沿用/api/v1，不要求整体搬到v2。保留原认证Cookie、同源JSON、2MiB、未知字段/重复JSON键/重复query拒绝、Origin和X-CSRF-Guard写请求检查（DELETE亦如此）、限流与错误体。每个P2接口继承第一阶段公共400/401/403/404/413/415/429/500/503错误；读无正文无key；写表内字段外一律400。资源无权/不存在统一404，操作自己已知资源而当前授权已撤销可409 SOURCE_ACCESS_REVOKED。不返回内部Mongo文档。
+
+OID、SID、N、Key、Content、Rule及BSON/JSON转换见[数据库字典](database-design.md)。JSON所有OID为小写24位字符串、Decimal128为有限精确DecimalString、日期UTC ISO毫秒、N为安全整数。query里的N严格十进制正整数；expectedRevision允许0。body类型不强制转换，不使用服务端默认之外隐式值。
+
+list统一limit默认20、1—100；cursor可选1—2048字符；返回{items:[],nextCursor:null}，空列表200；query仅端点表列的键。版本列表按正式version降序，其余实体按(createdAt,_id)降序；usage按surveyNumber字典序，派生按(createdAt,_id)降序；answers按(submittedAt,responseId,instanceId)降序；distribution按Decimal128数值升序，不能字符串排序。
+
+所有新游标签名scope包含actorId、endpoint、所有path ID、scope/kind/surveyIds规范排序等过滤、排序方向；跨卷统计还绑定asOf及distribution数值位置。下一页重复传完全相同过滤，每页重新验问卷owner和当前授权，撤销后不得仅靠旧cursor放行。跨卷原文/频数首批使用事务外readConcern snapshot的find/aggregate，由服务端返回实际atClusterTime；把该BSON Timestamp、asOf显示时间、查询范围和过期时间放进签名cursor，后批以同atClusterTime读取（causalConsistency=false，不在事务内设atClusterTime），不跨HTTP保持长事务。asOf仅显示时间，不能只用submittedAt<=asOf冒充数据库快照，否则早接受晚提交可能漏页。游标建议最长5分钟，服务端历史窗口可更早失效，SnapshotTooOld/过期统一409 REPORT_SNAPSHOT_EXPIRED并reloadRequired=true，重开第一页；不静默换当前快照。每页先按当前权限验owner，再读固定历史数据。P2-009已实测底层命令及实际Timestamp，局部版本锁定桥、晚提交及过期证据见W05说明。使用core/common签名器，不能复用旧survey列表仅owner作用域的cursor。
+
+新增幂等写使用Idempotency-Key；作用域为(actorId,operation,resourceKey,key)，正文+路径生成requestHash；同key同hash重放200且replayed=true，异hash409 OPERATION_IDEMPOTENCY_CONFLICT。attach/replace/saveInlineQuestion首次成功200，其余新增幂等写首次201，重放均200。每种操作把其完整成功data（除replayed）按固定resultVersion=1、result.kind白名单保存，并记录firstHttpStatus；字段与大小上限见[数据库回执字典](database-design.md#8-通用幂等事实)。instanceSave必须存revision/draftDefinitionRevision/instanceId/questionVersionId/validationIssues全部字段，不允许只存resourceId/versionId/revision。
+
+认证、固定请求结构、actor/操作/资源/key和requestHash核对后，成功重放只读取持久回执，加replayed=true；不用当前问卷/实例/题/模板重建DTO，不先检查当前修订/授权/上下架或实例是否仍存在。实例随后修改/删除或源授权撤销，仍可确认原成功结果；既不新建对象，也不恢复引用或授予新权。历史修订/校验问题不能覆盖前端当前编辑状态，另GET刷新。无成功回执才检查新操作资格；损坏或未知resultVersion返回503 OPERATION_RECEIPT_UNAVAILABLE，不猜补或重做。完整回执超限在事务提交前422 RECEIPT_TOO_LARGE整体回滚，不截断成功结果。结果未知503 OPERATION_OUTCOME_UNKNOWN，原body/key确认；CAS无key操作冲突409 EDIT_CONFLICT，超时GET确认，不用旧revision盲重试。
+
+错误体沿用{error:{code,message,details:[],traceId}}。新增422：DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED、USAGE_SCOPE_TOO_LARGE、RECEIPT_TOO_LARGE、RULE_REVIEW_REQUIRED、DEFINITION_INVALID、DUPLICATE_QUESTION_VERSION、INVALID_RECIPIENT、UNSAVED_QUESTION_CONTENT、UNSUPPORTED_QUESTION_TYPE；新增409：DISTRIBUTION_PROVENANCE_UNVERIFIED、REPORT_SNAPSHOT_EXPIRED、QUESTION_CONTENT_REQUIRES_VERSION、ALREADY_FORMALIZED、QUESTION_DRAFT_CONFLICT、NO_QUESTION_DRAFT、QUESTION_IDENTITY_MISMATCH、SOURCE_ACCESS_REVOKED、TEMPLATE_UNAVAILABLE、OPERATION_IDEMPOTENCY_CONFLICT；新增403 PUBLIC_DISTRIBUTION_REQUIRED；503 DISTRIBUTION_LINEAGE_INVALID/QUESTION_MAPPING_INCOMPLETE/OPERATION_OUTCOME_UNKNOWN/OPERATION_RECEIPT_UNAVAILABLE/OPERATION_RETRY_LATER。USERNAME_NOT_FOUND为404，仅题owner授权操作可得；不新增任意用户名搜索接口。NO_QUESTION_DRAFT用409。各端点列的NOT_FOUND与INVALID_CURSOR继承404/400。details仅field/reason/questionId/expectedRevision/reloadRequired等现有白名单；版本问题用field指向/versionId等，不随意追加数据库字段。
+
+## P2 DTO完整字段
+
+下表定义全部输出白名单，?可缺省、null显式可空。OId、N、S、B含义同数据库；Instant为ISO时间；公共响应包装{data:DTO}。所有具备操作key的创建写返回固定历史回执或InstanceSaveResult，并有replayed；题和库创建回执只返回新ID，再用读取端点获取内容，不向Bank任意追加字段。
+
+| DTO | 完整字段 |
+| --- | --- |
+| QuestionEditor | id:OID,revision:N,draft:null或{content:Content,baseVersionId:OID|null,revision:N},latestVersionId:OID|null,origin:null或{kind:fork|legacyImport,sourceQuestionId:OID|null,sourceVersionId:OID|null}；不回内部evidenceKey |
+| QuestionSummary | id:OID,latestVersionId:OID|null,latestVersion:N|null,title:S（仅有权内容）,ownerUsername:S；无正式版自己可见draft题干，共享列表不列未正式题 |
+| QuestionVersion | id:OID,questionId:OID,version:N>=1,content:Content,parentVersionId:OID|null,restoredFromVersionId:OID|null,operation:save|restore|fork|legacyImport,createdAt:Instant |
+| VersionReceipt/TemplateReceipt | resourceId:OID,versionId:OID|null,revision:N|null,replayed:B；返回原操作结果，不保证仍有内容读取权 |
+| Bank | id:OID,name:S,revision:N,createdAt:Instant |
+| BankMember | questionId:OID,selectable:B,latestVersionId:OID|null,latestVersion:N|null,title:S|null；撤销后后三字段null，不能漏出未来内容 |
+| StateReceipt | id:OID,revision:N,state:deleted|memberPresent|memberAbsent|listed|unlisted |
+| Grant | id:OID,recipientUsername:S,state:active|revoked,revision:N,itemRevision:N |
+| DistributionGrant | id:OID,questionVersionId:OID,publisherUsername:S,state:active|revoked,revision:N,itemRevision:N |
+| InstanceSource | instanceId:SID,questionId:OID,questionVersionId:OID,questionVersion:N,rights:owner|share|retained|template,hasAccessibleUpdate:B；仅问卷owner，配置从旧Editor读取 |
+| InstanceSaveResult | revision:N,draftDefinitionRevision:N,instanceId:SID,questionVersionId:OID,validationIssues:DefinitionIssue[],replayed:B；前五字段为持久回执中的完整历史结果，自动实例ID与非空问题列表也必须保存；hasUnpublishedChanges由GET管理详情刷新 |
+| UpdateNotice | instanceId:SID,currentVersionId:OID,latestAccessibleVersionId:OID,latestAccessibleVersion:N；只列有合法可访问新版项，撤销及窄模板权不提示其他版 |
+| Usage 本人 | surveyId:OID,surveyNumber:S（来自usageNumber，非分享publicId）,title:S,managePath:S,versions:[{versionId:OID,version:N,isDraft:B,isCurrent:B,hasHistorical:B}],isDraft:B,isCurrent:B,onlyHistorical:B |
+| Usage 他人 | surveyNumber:S（来自usageNumber，非分享publicId）,username:S,versions:[{versionId:OID,version:N,isDraft:B,isCurrent:B,hasHistorical:B}],isDraft:B,isCurrent:B,onlyHistorical:B；无title、链接、surveyId或答卷数据 |
+| Derivation | questionId:OID,ownerUsername:S,sourceVersionId:OID,createdAt:Instant；仅题owner查询，不授派生题正文权；接收者kind=derivations返回404 |
+| TemplateSummary | id:OID,title:S,description:S,revision:N,status:listed|unlisted,eligible:B；mine可含本人不可用模板，无答案/统计/源问卷内部ID |
+| TemplatePreview | TemplateSummary全部字段+questions:Question[],sources:[{instanceId:SID,questionId:OID,questionVersionId:OID}]；非publisher遇不可用404/409，不给私有源定义 |
+| TemplateAdoption | surveyId:OID,revision:N,replayed:B；两业务字段按原样保存，revision是新问卷的修订；其余通过原Q03本人管理详情读取 |
+| CrossAnswer | surveyId:OID,publishedVersion:N,instanceId:SID,responseId:OID,submittedAt:Instant,value:S；text原文或number字符串，不返账号、requestId或hash |
+
+CrossStatistics公共字段：questionId:OID,versionId:OID,generatedAt:Instant,surveyCount:N,eligibleResponseCount:N,answeredCount:N,skippedCount:N,unansweredCount:N；single/multiple再含optionCounts:[{optionId:SID,label:S,count:N,percentage:DecimalString|null}]；number再含average/min/max:DecimalString|null、bins:[{lower:DecimalString|null,upper:DecimalString|null,upperInclusive:B,count:N}]；text无数值/选项字段。分母answeredCount，0时percentage=null。路径从对应快照重算；eligibleResponseCount=answered+skipped+unanswered。同题同版一实例已确认S04，迁移历史多实例需要单独边界确认。
+
+区间参数例boundaries=0,18,30,121，输出欠界(-∞,0)、[0,18)、[18,30)、[30,121]、超界(121,+∞)，中间左闭右开、最后给定区间闭右端；不能丢区间外合法数字。区间由服务端Decimal128/decimal.js精确比较；无参数bins=[]，客户端引导打开X03频数或选择区间，不宣称均值即年龄分布。frequency无数据items=[]，汇总count=0且数值null。各题型统计处理详见关键逻辑。
+
+## P2-004 来源公开资格与Usage状态
+
+派生只取得自己身份和维护权，不能绕过来源公开限制。内部来源/证明白名单及hash以[数据库第7节](database-design.md#7-公开模板与分发授权)为准；QuestionVersion和TemplatePreview均不新增distributionSource/distributionProof/祖先清单等输出。A01—A03作者只控制自己的那层权利，授权目标始终是实际模板publisher；M01/M06/M04新分发逐层检查精确源正式版及当前授权。M02/M03完整动态核资格，失效/未知来源不提供公开可选用结构；本人管理摘要eligible=false仍可见。M05可下架失效模板，不要求补授权。成功幂等重放仍按P2-003只读原完整回执，不重新分发或重新验当前授权。
+
+已知资源的公开写：来源未记录409 DISTRIBUTION_PROVENANCE_UNVERIFIED；链缺失/循环/伪造/证明不全503 DISTRIBUTION_LINEAGE_INVALID；超过推荐32节点/模板500版本节点限制422 DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED；任一必须授权缺失/撤销403 PUBLIC_DISTRIBUTION_REQUIRED。只返稳定通用文案，details不加祖先/授权/源问卷内部信息；内部审计留traceId并按数据库修复路径处理。公开广场过滤不可用项，非publisher预览统一404/409 TEMPLATE_UNAVAILABLE，不能据错误枚举他人来源链。S05/S06已确认，来源限制继承为已确认。
+
+Usage由服务端事实计算：版本isDraft为匹配draft绑定；isCurrent为匹配当前发布指针的publication绑定；hasHistorical为非当前发布快照的绑定。暂停/关闭仍以最后发布指针为当前。同版可同时三者true；只存在当前发布不算历史。先versionId过滤，再按(surveyId,versionId)去重，再每问卷一行；版本号降序/ID升序。问卷isDraft/isCurrent为过滤后版本OR，onlyHistorical=无draft且无current且有历史；无匹配不返空行。每行最多1000版本/响应2MiB推荐上限，超限422 USAGE_SCOPE_TOO_LARGE，要求限定versionId而不截断状态。
+
+U01示例是同卷v2仅草稿、v1当前且历史；若query versionId=v1，结果只有v1且问卷isDraft=false、isCurrent=true、onlyHistorical=false，不能继承v2状态。本人DTO有surveyId/title/managePath而不含username；他人只含username、独立surveyNumber、版本与状态。派生列表保持独立。更多边界静态数据见[design-fixtures.json](phase2/design-fixtures.json)，均非已实现响应。
+
+## P2 现有接口逐项兼容
+
+| 原接口 | 第一阶段真实状态与P2影响 |
+| --- | --- |
+| A01—A04 注册/登录/me/logout | 已实现，路径、请求响应及安全协议保持 |
+| Q01 GET surveys、Q02 POST surveys | 已实现，既有DTO保持；服务端新建surveys格式3并originTemplate=null且生成独立usageNumber，来源不从客户端接收 |
+| Q03 GET survey、Q04 PATCH survey | 已实现，原字段保持；来源用P2-I00单读，保存元数据不隐式生成题版；hasUnpublishedChanges要比较绑定元组，换同内容不同正式版也算未发布变化 |
+| Q05 PUT questions | 已实现，扁平Question格式仍允许；绑定实例只能改配置/序/删题，改正式内容409 QUESTION_CONTENT_REQUIRES_VERSION；未绑定本地题可普通保存；删除同步删除draft binding；新增伪造instanceId不授权。需在app/schema/DTO中明确新增错误，不静默接受与来源不符内容 |
+| V01 POST publish | 已实现，原前提/Publication-Key/回执保持；P2增加正式题内容及绑定完整检查，未正式保存422 UNSAVED_QUESTION_CONTENT；新Snapshot格式2+bindingHash；不隐式保存题版。旧客户端直接改绑定内容或发未正式题将收到显式错误，前端必须同步新正式保存流程，这一业务流程兼容限制需回归 |
+| V02/V03 pause/close | 已实现，状态和权限不改；shared撤销不阻存量draft原版发布 |
+| V04 POST copy | 仍501，不把P2模板选用当作已启用原复制；不提供绕过窄权的普通复制 |
+| V05/V06 versions | 已实现，原DTO继续物化Question、过滤内部来源，新格式读额外核bindingHash；旧格式读原hash |
+| F01/F02 填写/提交 | 已实现，协议和Question/Answer形状不改，不返题共享/原作者数据；旧成功key仍原版本原算法重放；提交不查题共享活跃状态以免撤销破坏存量 |
+| H01/H02 历史答卷 | 已实现，原owner和匿名白名单不变，按原快照解释 |
+| S01—S03 分问卷统计/原文 | 已实现，保持version语义及游标，不默认改成跨卷；新增X接口与其并存 |
+| Z01/Z02 live/ready | 已实现，ready改查13集合/严格Schema/索引/迁移覆盖门禁，绝不自动迁移；live不改 |
+
+P2没有破坏性重命名整个旧HTTP结构，不开/api/v2以掩盖适配；明确的题正式保存工作流差异在Q05/V01报错和UI中处理。questionId路径在旧API是实例SID，在P2/questions是独立OID，新X路径也OID；名称相同不代表可互换。
+
+## P2 模板管理修订与选用门闩
+
+expectedTemplateRevision继续是用户看到的管理revision前提，不改为accessFence。新选用在同一事务按_id+listed+expectedTemplateRevision实际$inc accessFence，再按题OID顺序写各题门闩、核当前公开分发权；不改模板revision/updatedAt/contentHash。真实上下架实际变更才使revision+1、accessFence+1和updatedAt变化；现状态相同且revision正确时空操作返回原值。
+
+两用户各持revision=0、使用不同Idempotency-Key，同时选用同一模板：数据库可能让其中一项发生可重试写冲突，但它以原请求开启新事务重读后revision仍0、状态/授权仍有效，就能继续成功，不因另一人选用返回EDIT_CONFLICT。重试有界，单纯竞争耗尽返回503 OPERATION_RETRY_LATER，结果未知返回OPERATION_OUTCOME_UNKNOWN，均保留原key；只在真实管理revision变化时返回409 EDIT_CONFLICT，状态/授权改变按对应错误拒绝。已成功同key只重放回执，不再增任何门闩。M05/M06无key，临时竞争可有界重试，最终503则GET当前状态确认。
+
+## P2 新增接口逐项契约
+
+所有路径以下都带/api/v1；`:questionId/:versionId/:bankId/:templateId/:grantId`是OID，`:instanceId`是SID。query全可选，未列项拒绝。请求中无正文写入不在本轮新增，状态命令仍接收严格CAS正文。表后每例是设计样例，非实际响应。
+
+### P2-L01 POST /api/v1/questions
+
+权限：登录用户。query：无。body：content:Content；baseVersionId禁止，origin禁止。输出：VersionReceipt。
+
+版本/修订/幂等：Idempotency-Key/createQuestion/create；完整成功data持久保存（不含replayed），重放只读原回执。专属错误：DEFINITION_INVALID、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE（再加公共失败集）。
+
+```json
+{"request":{"content":{"type":"number","title":"年龄","validation":{"min":"0","max":"120","integerOnly":true}}},"data":{"resourceId":"710000000000000000000001","versionId":null,"revision":0,"replayed":false}}
+```
+
+### P2-L02 GET /api/v1/questions/:questionId/draft
+
+权限：题owner。query：无。body：无。输出：QuestionEditor。
+
+版本/修订/幂等：只读，无key。专属错误：NOT_FOUND（再加公共失败集）。
+
+```json
+{"data":{"id":"710000000000000000000001","revision":0,"draft":{"content":{"type":"number","title":"年龄","validation":{"min":"0","max":"120","integerOnly":true}},"baseVersionId":null,"revision":0},"latestVersionId":null,"origin":null}}
+```
+
+### P2-L03 PUT /api/v1/questions/:questionId/draft
+
+权限：题owner。query：无。body：expectedRevision:N；content:Content；baseVersionId:OID|null（同题任意正式版）。输出：QuestionEditor。
+
+版本/修订/幂等：CAS item.revision；无key，无变化不增修订。专属错误：EDIT_CONFLICT、DEFINITION_INVALID（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":0,"content":{"type":"number","title":"年龄（整数）","validation":{"min":"0","max":"120","integerOnly":true}},"baseVersionId":null},"data":{"id":"710000000000000000000001","revision":1,"draft":{"content":{"type":"number","title":"年龄（整数）","validation":{"min":"0","max":"120","integerOnly":true}},"baseVersionId":null,"revision":1},"latestVersionId":null,"origin":null}}
+```
+
+### P2-L04 POST /api/v1/questions/:questionId/versions
+
+权限：题owner。query：无。body：expectedRevision:N；expectedDraftRevision:N。输出：VersionReceipt。
+
+版本/修订/幂等：Idempotency-Key/saveVersion/questionId；正式内容不可覆盖；完整成功data持久保存（不含replayed），重放只读原回执。专属错误：EDIT_CONFLICT、QUESTION_DRAFT_CONFLICT、NO_QUESTION_DRAFT、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":1,"expectedDraftRevision":1},"data":{"resourceId":"710000000000000000000001","versionId":"720000000000000000000001","revision":2,"replayed":false}}
+```
+
+### P2-L05 GET /api/v1/questions/:questionId/versions
+
+权限：题owner或当前有效定向share。query：limit、cursor。body：无。输出：Page<QuestionVersion>。
+
+版本/修订/幂等：只读，无key。专属错误：NOT_FOUND、INVALID_CURSOR（再加公共失败集）。
+
+```json
+{"data":{"items":[],"nextCursor":null}}
+```
+
+### P2-L06 GET /api/v1/questions/:questionId/versions/:versionId
+
+权限：题owner或当前有效定向share。query：无。body：无。输出：QuestionVersion。
+
+版本/修订/幂等：只读，无key。专属错误：NOT_FOUND（再加公共失败集）。
+
+```json
+{"data":{"id":"720000000000000000000001","questionId":"710000000000000000000001","version":1,"content":{"type":"number","title":"年龄","validation":{"min":"0","max":"120","integerOnly":true}},"parentVersionId":null,"restoredFromVersionId":null,"operation":"save","createdAt":"2026-10-22T08:00:00.000Z"}}
+```
+
+### P2-L07 POST /api/v1/questions/:questionId/restorations
+
+权限：题owner。query：无。body：expectedRevision:N；sourceVersionId:OID（同题）。输出：VersionReceipt。
+
+版本/修订/幂等：Idempotency-Key/restoreVersion/questionId；不覆盖现草稿，恢复后保留原草稿供用户比较；完整成功data持久保存（不含replayed），重放只读原回执。专属错误：EDIT_CONFLICT、NOT_FOUND、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":2,"sourceVersionId":"720000000000000000000001"},"data":{"resourceId":"710000000000000000000001","versionId":"720000000000000000000002","revision":3,"replayed":false}}
+```
+
+### P2-L08 POST /api/v1/question-versions/:versionId/forks
+
+权限：源题owner或有效share；模板生成实例窄权例外需sourceInstance。query：无。body：content:Content；sourceInstance?:{surveyId:OID,instanceId:SID}（仅本人模板生成实例，须其绑定此版本）；禁止origin。输出：VersionReceipt。
+
+版本/修订/幂等：Idempotency-Key/forkQuestion/versionId；派生即显式建自己身份+v1；完整成功data持久保存（不含replayed），重放只读原回执；服务端固定derived来源，后续正式版/恢复不清除；公开失败不阻正常自用派生。专属错误：NOT_FOUND、SOURCE_ACCESS_REVOKED、DEFINITION_INVALID、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE（再加公共失败集）。
+
+```json
+{"request":{"content":{"type":"number","title":"年龄","validation":{"min":"0","max":"120","integerOnly":true}}},"data":{"resourceId":"710000000000000000000002","versionId":"720000000000000000000003","revision":1,"replayed":false}}
+```
+
+### P2-L09 GET /api/v1/questions
+
+权限：登录用户。query：scope、limit、cursor。body：无；scope=own|shared默认own；不含模板窄权和他人草稿。输出：Page<QuestionSummary>。
+
+版本/修订/幂等：只读，无key。专属错误：INVALID_CURSOR（再加公共失败集）。
+
+```json
+{"data":{"items":[{"id":"710000000000000000000001","latestVersionId":"720000000000000000000001","latestVersion":1,"title":"年龄","ownerUsername":"teacher_demo"}],"nextCursor":null}}
+```
+
+### P2-B01 POST /api/v1/question-banks
+
+权限：登录用户。query：无。body：name:S非空<=100。输出：VersionReceipt。
+
+版本/修订/幂等：Idempotency-Key/createBank/create；完整成功data持久保存（不含replayed），重放只读原回执。专属错误：INVALID_REQUEST、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE（再加公共失败集）。
+
+```json
+{"request":{"name":"基本信息"},"data":{"resourceId":"740000000000000000000001","versionId":null,"revision":0,"replayed":false}}
+```
+
+### P2-B02 GET /api/v1/question-banks
+
+权限：登录用户，仅本人。query：limit、cursor。body：无。输出：Page<Bank>。
+
+版本/修订/幂等：只读，无key。专属错误：INVALID_CURSOR（再加公共失败集）。
+
+```json
+{"data":{"items":[],"nextCursor":null}}
+```
+
+### P2-B03 PATCH /api/v1/question-banks/:bankId
+
+权限：库owner。query：无。body：expectedRevision:N；name:S。输出：Bank。
+
+版本/修订/幂等：CAS；无key。专属错误：EDIT_CONFLICT、NOT_FOUND（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":0,"name":"基本题"},"data":{"id":"740000000000000000000001","name":"基本题","revision":1,"createdAt":"2026-10-22T08:00:00.000Z"}}
+```
+
+### P2-B04 POST /api/v1/question-banks/:bankId/deletion
+
+权限：库owner。query：无。body：expectedRevision:N。输出：StateReceipt。
+
+版本/修订/幂等：CAS墓碑；无key；超时GET确认，删库后404。专属错误：EDIT_CONFLICT、NOT_FOUND（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":1},"data":{"id":"740000000000000000000001","revision":2,"state":"deleted"}}
+```
+
+### P2-B05 GET /api/v1/question-banks/:bankId/members
+
+权限：库owner。query：limit、cursor。body：无。输出：Page<BankMember>。
+
+版本/修订/幂等：只读，无key。专属错误：NOT_FOUND、INVALID_CURSOR（再加公共失败集）。
+
+```json
+{"data":{"items":[{"questionId":"710000000000000000000001","selectable":true,"latestVersionId":"720000000000000000000001","latestVersion":1,"title":"年龄"}],"nextCursor":null}}
+```
+
+### P2-B06 PUT /api/v1/question-banks/:bankId/members/:questionId
+
+权限：库owner；加入另须题owner/有效share。query：无。body：expectedRevision:N（库）；present:B。输出：StateReceipt。
+
+版本/修订/幂等：CAS；present=false只移成员；无key，GET确认。专属错误：EDIT_CONFLICT、SOURCE_ACCESS_REVOKED、NOT_FOUND（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":0,"present":true},"data":{"id":"740000000000000000000001","revision":1,"state":"memberPresent"}}
+```
+
+### P2-G01 GET /api/v1/questions/:questionId/shares
+
+权限：题owner。query：limit、cursor。body：无。输出：Page<Grant>。
+
+版本/修订/幂等：只读，无key。专属错误：NOT_FOUND、INVALID_CURSOR（再加公共失败集）。
+
+```json
+{"data":{"items":[],"nextCursor":null}}
+```
+
+### P2-G02 PUT /api/v1/questions/:questionId/shares
+
+权限：题owner。query：无。body：username:S注册同规范；expectedRevision:N（item）；expectedGrantRevision:N|null（新grant为null）。输出：Grant。
+
+版本/修订/幂等：CAS item+grant；同状态无变化不增号，重授revoked则active。专属错误：EDIT_CONFLICT、USERNAME_NOT_FOUND、INVALID_RECIPIENT（再加公共失败集）。
+
+```json
+{"request":{"username":"student_demo","expectedRevision":2,"expectedGrantRevision":null},"data":{"id":"760000000000000000000001","recipientUsername":"student_demo","state":"active","revision":0,"itemRevision":3}}
+```
+
+### P2-G03 POST /api/v1/questions/:questionId/shares/:grantId/revocation
+
+权限：题owner。query：无。body：expectedRevision:N（item）；expectedGrantRevision:N。输出：Grant。
+
+版本/修订/幂等：CAS+accessFence；无key；存量binding不删。专属错误：EDIT_CONFLICT、NOT_FOUND（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":3,"expectedGrantRevision":0},"data":{"id":"760000000000000000000001","recipientUsername":"student_demo","state":"revoked","revision":1,"itemRevision":4}}
+```
+
+### P2-I00 GET /api/v1/surveys/:surveyId/question-sources
+
+权限：问卷owner。query：无。body：无。输出：{revision:N,items:InstanceSource[]}。
+
+版本/修订/幂等：只读，无key。专属错误：NOT_FOUND（再加公共失败集）。
+
+```json
+{"data":{"revision":1,"items":[{"instanceId":"age","questionId":"710000000000000000000001","questionVersionId":"720000000000000000000001","questionVersion":1,"rights":"owner","hasAccessibleUpdate":false}]}}
+```
+
+### P2-I01 POST /api/v1/surveys/:surveyId/question-references
+
+权限：问卷owner且draft/paused；新增有效题使用权。query：无。body：expectedRevision:N；questionVersionId:OID；instanceId?:SID（缺省服务端UUID）；position:N 0至题数；required?:B默认false；jumpRules?:Rule[]默认[]。输出：InstanceSaveResult。
+
+版本/修订/幂等：Idempotency-Key/attachQuestion/surveyId；原子来源+物化定义；完整成功data持久保存（不含replayed），重放只读原回执。专属错误：EDIT_CONFLICT、SOURCE_ACCESS_REVOKED、SURVEY_STATE_CONFLICT、DUPLICATE_QUESTION_VERSION、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":0,"questionVersionId":"720000000000000000000001","position":0,"required":true},"data":{"revision":1,"draftDefinitionRevision":2,"instanceId":"age","questionVersionId":"720000000000000000000001","validationIssues":[],"replayed":false}}
+```
+
+### P2-I02 POST /api/v1/surveys/:surveyId/questions/:instanceId/replacement
+
+权限：问卷owner且draft/paused；新版本须有效新增权（相同已存版可保留）。query：无。body：expectedRevision:N；questionVersionId:OID（同题版或本人直接派生于原固定版的新题v1）；reviewedJumpRules?:Rule[]（题型变化时用户明确修正规则，不传且旧形状失效则422 RULE_REVIEW_REQUIRED）；不接受内容。输出：InstanceSaveResult。
+
+版本/修订/幂等：Idempotency-Key/replaceQuestion/surveyId；保实例、题序、必答；规则失效返回validationIssues；完整成功data持久保存（不含replayed），重放只读原回执。专属错误：EDIT_CONFLICT、SOURCE_ACCESS_REVOKED、QUESTION_IDENTITY_MISMATCH、SURVEY_STATE_CONFLICT、RULE_REVIEW_REQUIRED、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":1,"questionVersionId":"720000000000000000000002"},"data":{"revision":2,"draftDefinitionRevision":3,"instanceId":"age","questionVersionId":"720000000000000000000002","validationIssues":[],"replayed":false}}
+```
+
+### P2-I03 GET /api/v1/surveys/:surveyId/question-updates
+
+权限：问卷owner。query：无。body：无。输出：{revision:N,items:UpdateNotice[]}。
+
+版本/修订/幂等：只读，无key。专属错误：NOT_FOUND（再加公共失败集）。
+
+```json
+{"data":{"revision":1,"items":[{"instanceId":"age","currentVersionId":"720000000000000000000001","latestAccessibleVersionId":"720000000000000000000002","latestAccessibleVersion":2}]}}
+```
+
+### P2-U01 GET /api/v1/questions/:questionId/usage
+
+权限：题owner或当前share；撤销后仅通过I00看自己实例。query：versionId、kind、limit、cursor。body：无；kind=references|derivations默认references；versionId?先过滤正式版，再计算版本与问卷状态；无匹配不返空行。输出：Page<Usage或Derivation>；Usage.versions每项{versionId,version,isDraft,isCurrent,hasHistorical}。
+
+版本/修订/幂等：只读，无key；单次一致快照，先版本过滤→group(surveyId,versionId)→group surveyId；问卷标志取过滤后OR；版本号降序/ID升序，问卷usageNumber升序，每页重验权；派生另列。专属错误：NOT_FOUND、INVALID_CURSOR、QUESTION_MAPPING_INCOMPLETE、USAGE_SCOPE_TOO_LARGE（再加公共失败集）。
+
+```json
+{"data":{"items":[{"surveyNumber":"usage_B_independent","username":"student_demo","versions":[{"versionId":"720000000000000000000002","version":2,"isDraft":true,"isCurrent":false,"hasHistorical":false},{"versionId":"720000000000000000000001","version":1,"isDraft":false,"isCurrent":true,"hasHistorical":true}],"isDraft":true,"isCurrent":true,"onlyHistorical":false}],"nextCursor":null}}
+```
+
+### P2-A01 PUT /api/v1/questions/:questionId/distribution-grants
+
+权限：题owner（S05已确认）；仅管理自己该层版本权利，不能代表或转授上游权利。query：无。body：questionVersionId:OID；username:S模板发布者；expectedRevision:N（item）；expectedGrantRevision:N|null。输出：DistributionGrant。
+
+版本/修订/幂等：CAS item/授权+fence；不授未来版；同一上游item门闩；实际模板发布者仍需逐层具备所有来源授权（S05/S06已确认）。专属错误：NOT_FOUND、EDIT_CONFLICT、USERNAME_NOT_FOUND（再加公共失败集）。
+
+```json
+{"request":{"questionVersionId":"720000000000000000000001","username":"student_demo","expectedRevision":2,"expectedGrantRevision":null},"data":{"id":"770000000000000000000001","questionVersionId":"720000000000000000000001","publisherUsername":"student_demo","state":"active","revision":0,"itemRevision":3}}
+```
+
+### P2-A02 GET /api/v1/questions/:questionId/distribution-grants
+
+权限：题owner；仅管理自己该层版本权利，不能代表或转授上游权利。query：limit、cursor。body：无。输出：Page<DistributionGrant>。
+
+版本/修订/幂等：只读，无key，不写门闩；仅列作者自己控制的该层授权，不代表模板已满足全部上游义务。专属错误：NOT_FOUND、INVALID_CURSOR（再加公共失败集）。
+
+```json
+{"data":{"items":[],"nextCursor":null}}
+```
+
+### P2-A03 POST /api/v1/questions/:questionId/distribution-grants/:grantId/revocation
+
+权限：题owner（S06已确认）；仅管理自己该层版本权利，不能代表或转授上游权利。query：无。body：expectedRevision:N（item）；expectedGrantRevision:N。输出：DistributionGrant。
+
+版本/修订/幂等：CAS+fence；阻既有模板未来选用，不剥夺既有问卷；同一上游item门闩；实际模板发布者仍需逐层具备所有来源授权（S05/S06已确认）。专属错误：NOT_FOUND、EDIT_CONFLICT（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":3,"expectedGrantRevision":0},"data":{"id":"770000000000000000000001","questionVersionId":"720000000000000000000001","publisherUsername":"student_demo","state":"revoked","revision":1,"itemRevision":4}}
+```
+
+### P2-M01 POST /api/v1/templates
+
+权限：源问卷owner；完整来源链每层对实际publisher的当前公开权，自己仅免自身层。query：无。body：surveyId:OID；publishedVersion:N>=1；expectedSurveyRevision:N；不接收questions或source来源。输出：TemplateReceipt。
+
+版本/修订/幂等：Idempotency-Key/createTemplate/surveyId；服务端读源快照，不读草稿；完整成功data持久保存（不含replayed），重放只读原回执；先已有模板门闩再全部叶/上游题OID全局有序门闩，同事务复核固定证明/链摘要/当前各层grant；无来源不猜原创。专属错误：NOT_FOUND、EDIT_CONFLICT、PUBLIC_DISTRIBUTION_REQUIRED、QUESTION_MAPPING_INCOMPLETE、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE、DISTRIBUTION_PROVENANCE_UNVERIFIED、DISTRIBUTION_LINEAGE_INVALID、DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED（再加公共失败集）。
+
+```json
+{"request":{"surveyId":"730000000000000000000001","publishedVersion":1,"expectedSurveyRevision":2},"data":{"resourceId":"750000000000000000000001","versionId":null,"revision":0,"replayed":false}}
+```
+
+### P2-M02 GET /api/v1/templates
+
+权限：登录用户。query：scope、limit、cursor。body：无；scope=square|mine默认square；square仅listed且当前eligible；失效链/未知来源eligible=false，square过滤，mine可见本人不可用摘要；非publisher不可用预览404/409 TEMPLATE_UNAVAILABLE。输出：Page<TemplateSummary>。
+
+版本/修订/幂等：只读，无key；一致只读快照逐层核来源及当前授权，固定证明不能替代当前状态；不暴露证明或全部祖先详情。专属错误：INVALID_CURSOR（再加公共失败集）。
+
+```json
+{"data":{"items":[{"id":"750000000000000000000001","title":"基本信息调查","description":"课程示例","revision":0,"status":"listed","eligible":true}],"nextCursor":null}}
+```
+
+### P2-M03 GET /api/v1/templates/:templateId
+
+权限：登录用户；公开可用模板或本人管理模板。query：无。body：无；失效链/未知来源eligible=false，square过滤，mine可见本人不可用摘要；非publisher不可用预览404/409 TEMPLATE_UNAVAILABLE。输出：TemplatePreview。
+
+版本/修订/幂等：只读，无key；一致只读快照逐层核来源及当前授权，固定证明不能替代当前状态；不暴露证明或全部祖先详情。专属错误：NOT_FOUND、TEMPLATE_UNAVAILABLE（再加公共失败集）。
+
+```json
+{"data":{"id":"750000000000000000000001","title":"基本信息调查","description":"课程示例","revision":0,"status":"listed","eligible":true,"questions":[{"id":"age","type":"number","title":"年龄","required":true,"jumpRules":[],"validation":{"min":"0","max":"120","integerOnly":true}}],"sources":[{"instanceId":"age","questionId":"710000000000000000000001","questionVersionId":"720000000000000000000001"}]}}
+```
+
+### P2-M04 POST /api/v1/templates/:templateId/adoptions
+
+权限：登录用户；listed且逐题分发权仍有效；完整来源链每层对实际publisher的当前公开权，自己仅免自身层。query：无。body：expectedTemplateRevision:N；title?:S 1—200默认模板标题；策略不继承，匿名/重复默认false、截止null。输出：TemplateAdoption。
+
+版本/修订/幂等：Idempotency-Key/adoptTemplate/templateId；按_id+listed+expectedTemplateRevision实际$inc模板accessFence，普通选用不改管理revision/updatedAt；题门闩及授权核查、新草稿、完整templateAdoption回执同事务；可重试写冲突保持原key重开事务；先已有模板门闩再全部叶/上游题OID全局有序门闩，同事务复核固定证明/链摘要/当前各层grant；无来源不猜原创。专属错误：TEMPLATE_UNAVAILABLE、EDIT_CONFLICT、PUBLIC_DISTRIBUTION_REQUIRED、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE、OPERATION_RETRY_LATER、DISTRIBUTION_PROVENANCE_UNVERIFIED、DISTRIBUTION_LINEAGE_INVALID、DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED（再加公共失败集）。
+
+```json
+{"request":{"expectedTemplateRevision":0},"data":{"surveyId":"730000000000000000000004","revision":0,"replayed":false}}
+```
+
+### P2-M05 POST /api/v1/templates/:templateId/unlisting
+
+权限：模板publisher。query：无。body：expectedRevision:N。输出：StateReceipt。
+
+版本/修订/幂等：管理CAS；实际上下架同事务$inc revision和accessFence并更新updatedAt，普通选用不改revision；同目标状态且修订匹配为空操作；无key，结果未知GET确认；下架不要求来源授权仍有效。专属错误：NOT_FOUND、EDIT_CONFLICT、OPERATION_RETRY_LATER（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":0},"data":{"id":"750000000000000000000001","revision":1,"state":"unlisted"}}
+```
+
+### P2-M06 POST /api/v1/templates/:templateId/listing
+
+权限：模板publisher；逐题当前分发权；完整来源链每层对实际publisher的当前公开权，自己仅免自身层。query：无。body：expectedRevision:N。输出：StateReceipt。
+
+版本/修订/幂等：管理CAS；实际上下架同事务$inc revision和accessFence并更新updatedAt，普通选用不改revision；同目标状态且修订匹配为空操作；无key，结果未知GET确认；先已有模板门闩再全部叶/上游题OID全局有序门闩，同事务复核固定证明/链摘要/当前各层grant；无来源不猜原创。专属错误：NOT_FOUND、EDIT_CONFLICT、PUBLIC_DISTRIBUTION_REQUIRED、OPERATION_RETRY_LATER、DISTRIBUTION_PROVENANCE_UNVERIFIED、DISTRIBUTION_LINEAGE_INVALID、DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":1},"data":{"id":"750000000000000000000001","revision":2,"state":"listed"}}
+```
+
+X01—X03错误优先级（2026-10-24 R1复审修正）：先核当前题owner、有效私人share或本人范围内精确题版publication取得事实；无权统一404 NOT_FOUND，先于正式版存在性、题型/区间、游标到期和相关历史详细校验。撤权存量publication权保留，不等同重新开放全部版本历史；授权后仍完整核相关快照/映射/答案并对损坏返回503。协议结构和游标签名校验仍遵循公共入口。见[R1/R2修正及真实证据](phase2/reviews/W05-W06-R1-R2-fix-2026-10-24.md)。
+
+### P2-X01 GET /api/v1/question-statistics/:questionId/versions/:versionId
+
+权限：登录；仅本人问卷publication绑定形成范围，不能靠题作者身份读他人。query：surveyIds、boundaries。body：无；surveyIds?逗号OID最多100，全部须本人；boundaries?逗号DecimalString 2—21个严格递增；默认无区间，只均值/最小最大和频数入口。输出：CrossStatistics。
+
+版本/修订/幂等：只读，无key。专属错误：NOT_FOUND、QUESTION_MAPPING_INCOMPLETE、INVALID_REQUEST（再加公共失败集）。
+
+```json
+{"data":{"questionId":"710000000000000000000001","versionId":"720000000000000000000001","generatedAt":"2026-10-22T08:00:00.000Z","surveyCount":2,"eligibleResponseCount":5,"answeredCount":4,"skippedCount":1,"unansweredCount":0,"average":"15","min":"0","max":"30","bins":[]}}
+```
+
+### P2-X02 GET /api/v1/question-statistics/:questionId/versions/:versionId/answers
+
+权限：同X01，text/number。query：surveyIds、limit、cursor。body：无。输出：Page<CrossAnswer> + questionId/versionId/generatedAt/asOf。
+
+版本/修订/幂等：只读；首批snapshot选时，后页cursor签名固定atClusterTime及范围，快照过期409重开第一页。专属错误：NOT_FOUND、INVALID_CURSOR、UNSUPPORTED_QUESTION_TYPE、QUESTION_MAPPING_INCOMPLETE、REPORT_SNAPSHOT_EXPIRED（再加公共失败集）。
+
+```json
+{"data":{"questionId":"710000000000000000000001","versionId":"720000000000000000000001","generatedAt":"2026-10-22T08:00:00.000Z","asOf":"2026-10-22T08:00:00.000Z","items":[{"surveyId":"730000000000000000000001","publishedVersion":1,"instanceId":"age","responseId":"780000000000000000000001","submittedAt":"2026-10-22T07:00:00.000Z","value":"0"}],"nextCursor":null}}
+```
+
+### P2-X03 GET /api/v1/question-statistics/:questionId/versions/:versionId/distribution
+
+权限：同X01，仅number。query：surveyIds、limit、cursor。body：无。输出：Page<{value:DecimalString,count:N}> + questionId/versionId/asOf/generatedAt。
+
+版本/修订/幂等：只读；首批snapshot选时，后页cursor签名固定atClusterTime及范围，快照过期409重开第一页。专属错误：NOT_FOUND、INVALID_CURSOR、UNSUPPORTED_QUESTION_TYPE、QUESTION_MAPPING_INCOMPLETE、REPORT_SNAPSHOT_EXPIRED（再加公共失败集）。
+
+```json
+{"data":{"questionId":"710000000000000000000001","versionId":"720000000000000000000001","asOf":"2026-10-22T08:00:00.000Z","generatedAt":"2026-10-22T08:00:00.000Z","items":[{"value":"0","count":1},{"value":"10","count":1}],"nextCursor":null}}
+```
+
+### P2-I04 POST /api/v1/surveys/:surveyId/questions/:instanceId/formalization
+
+权限：本人draft/paused且实例尚无正式绑定；已绑定返回409，不能借此复制撤销共享题。query：无。body：expectedRevision:N（问卷）；无内容/来源字段，服务端取已保存本地实例Content。输出：InstanceSaveResult。
+
+版本/修订/幂等：Idempotency-Key/saveInlineQuestion/surveyId+instanceId；同事务建题身份及正式v1、绑定、问卷CAS和回执；完整成功data持久保存（不含replayed），重放只读原回执。专属错误：EDIT_CONFLICT、SURVEY_STATE_CONFLICT、ALREADY_FORMALIZED、DEFINITION_INVALID、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE（再加公共失败集）。
+
+```json
+{"request":{"expectedRevision":1},"data":{"revision":2,"draftDefinitionRevision":3,"instanceId":"age","questionVersionId":"720000000000000000000001","validationIssues":[],"replayed":false}}
+```
+
+
+事务外固定快照分页机制参照[MongoDB snapshot及atClusterTime](https://www.mongodb.com/docs/manual/reference/read-concern-snapshot/)，P2-009已实测真实Timestamp及过期重开。
+
+## P2 实现配套检查
+
+app.ts必须注册上述GET query白名单并同步405方法表；不得新增路由后被onRequest提前拒绝limit/scope/surveyIds/boundaries。shared新增Content及DTO严格请求schema，保留旧QuestionSchema/AnswerSchema。question-codec为Content与扁平Question分别处理Decimal128，不把OID交给递归fromBson误转普通对象。dto显式构造匿名/使用查询/模板输出。core/common游标签名要完整scope且每页重新验权。幂等回执hash、错误枚举与响应schema同时更新；API公开示例中不发送数据库schemaVersion、owner、来源证据或授权证明。
+
+第一阶段接口详文从此处开始，范围仅限第一阶段基线。原文“唯一新增路径”“不增加跨卷”“本轮”以及历史未实现状态均指其原日期；第二阶段新增及变化以上述P2合同为准。历史编号及锚点保留，便于已有文档链接继续工作。
+
+---
+
 # 问卷系统 API 接口契约
 
 [← 返回项目总 README](../README.md)
@@ -150,7 +616,7 @@ Answer互斥形状完整如下；未答的可选题从answers中省略，不传n
 | --- | --- |
 | User | id:ObjectIdString,username:string,createdAt:Instant；不含usernameKey/passwordHash |
 | Settings | allowAnonymous:bool,allowRepeat:bool,expiresAt:Instant\|null |
-| SurveySummary | id:ObjectIdString,publicId:PublicId,title:string,status:状态枚举,revision:Revision,currentPublishedVersion:PositiveVersion\|null,cumulativeResponseCount:安全非负整数,currentVersionResponseCount:安全非负整数,createdAt:Instant,updatedAt:Instant |
+| SurveySummary | id:ObjectIdString,publicId:PublicId,title:string,status:状态枚举,revision:Revision,currentPublishedVersion:PositiveVersion\|null,cumulativeResponseCount:安全非负整数,currentVersionResponseCount:安全非负整数,expiresAt:Instant\|null,createdAt:Instant,updatedAt:Instant |
 | DefinitionIssue | code:string,field:string(JSON Pointer),questionId:StableId\|null,message:string；这些为只读问题，不回显用户答案 |
 | Editor | id:ObjectIdString,publicId:PublicId,status:状态枚举,draftDefinition:Definition,settings:Settings,draftDefinitionRevision:PositiveVersion,revision:Revision,currentPublishedVersion:PositiveVersion\|null,hasUnpublishedChanges:bool,cumulativeResponseCount:安全非负整数,currentVersionResponseCount:安全非负整数,firstPublishedAt:Instant\|null,createdAt:Instant,updatedAt:Instant,validationIssues:DefinitionIssue[],capabilities:{copySurvey:bool} |
 | SaveResult | revision:Revision,draftDefinitionRevision:PositiveVersion,hasUnpublishedChanges:bool,validationIssues:DefinitionIssue[]；没有新发布号 |
@@ -2272,3 +2738,11 @@ V01 的 shareUrl 使用 PUBLIC_APP_URL（旧配置缺省时使用 APP_ORIGIN）�
 图表取消自定义 palette 和 itemStyle 色彩覆盖，采用 ECharts 默认系列配色；饼图标签不使用 ECharts 自行四舍五入的 percent，而与表格、提示共用 count/answeredCount 的至多一位小数结果。已有数字均值开关及计算/显示范围保持不变。
 
 [← 返回项目总 README](../README.md)
+
+
+## W02-B基础实现说明（2026-10-23）
+
+本轮仅实现内部回执编解码、固定scope/hash、事务和owner来源组合，未注册P2新增HTTP端点，不把上方36条目标接口标成上线。完整data+replayed及首次/重放状态已在内部测试验证；现有HTTP、错误合同和Publication-Key/提交幂等保持。内部未支持来源写返回SOURCE_WRITE_NOT_IMPLEMENTED，仅用于服务器组合边界，不宣布新增公开HTTP错误/路由。见[W02-B实现与证据](phase2/bindings-receipts-foundation.md)。
+
+
+2026-10-25列表到期展示修正：SurveySummary新增expiresAt（未设置为null），列表结合时间显示已截止；持久化status枚举不增加expired。页面定时更新截止标记，不修改数据库状态、历史快照或答卷。旧客户端可忽略该新增字段。

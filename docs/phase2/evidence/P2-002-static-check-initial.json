@@ -1,0 +1,79 @@
+{
+  "task": "P2-002",
+  "date": "2026-10-22 Asia/Shanghai",
+  "result": "NEEDS_REPAIR",
+  "checks": "documentation-static-only",
+  "stats": {
+    "baselineVerifiedFiles": 14,
+    "changedExistingFiles": [
+      "README.md",
+      "docs/api.md",
+      "docs/database-design.md",
+      "docs/decisions.md",
+      "docs/key-logic.md",
+      "docs/requirements.md",
+      "docs/system-design.md",
+      "docs/ai/phase2-usage-log.md"
+    ],
+    "unchangedPreexistingFiles": 363,
+    "newFiles": 32,
+    "businessSourceConfigTestsUnchanged": true,
+    "markdownFilesChecked": 16,
+    "localLinksChecked": 195,
+    "missingLinks": [
+      [
+        "docs/phase2/evidence/README.md",
+        "P2-002-static-check.json"
+      ]
+    ],
+    "missingAnchors": [
+      [
+        "docs/requirements.md",
+        "versioning-change-plan.md#8-待落实与下一轮工程初始化"
+      ]
+    ],
+    "newApiContracts": 36,
+    "plannedTests": 34,
+    "collectionExamples": 13,
+    "sampleHashChecks": {
+      "contentHash": true,
+      "definitionHash": true,
+      "bindingHash": true,
+      "templateHash": true,
+      "responsePayloadHash": true
+    },
+    "handCalculatedFixture": {
+      "surveyCount": 2,
+      "eligibleResponseCount": 5,
+      "answeredCount": 4,
+      "skippedCount": 1,
+      "unansweredCount": 0,
+      "average": "15",
+      "min": "0",
+      "max": "30"
+    },
+    "binCounts": [
+      0,
+      2,
+      1,
+      1,
+      0
+    ],
+    "coverageRows": 9,
+    "teacherRequirements": 8,
+    "extensionRequirements": 1
+  },
+  "warnings": [],
+  "failures": [
+    "AI-log original prefix not matched",
+    "missing link ['docs/phase2/evidence/README.md', 'P2-002-static-check.json']",
+    "missing anchor ['docs/requirements.md', 'versioning-change-plan.md#8-待落实与下一轮工程初始化']"
+  ],
+  "businessTestsExecuted": false,
+  "servicesStarted": false,
+  "dependenciesInstalled": false,
+  "databaseAccessed": false,
+  "databaseMigrationExecuted": false,
+  "backupRestoreExecuted": false,
+  "gitCommitOrPushExecuted": false
+}

@@ -1,0 +1,277 @@
+{
+  "task": "P2-W01 three review fixes",
+  "result": "passed-after-targeted-retry",
+  "checkedAt": "2026-10-22T14:40:54.536636+00:00",
+  "runDirectory": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z",
+  "findings": [
+    {
+      "issue": "API direct startup does not verify ownership",
+      "confirmed": true,
+      "fix": "buildApp validates marker/OS process and data directory before MongoClient; then compares connected server PID/options/primary/member before schema/business access",
+      "verifiedBy": [
+        "compiled missing-marker rejection before connect",
+        "compiled foreign-directory rejection before connect",
+        "connected server PID mismatch rejection",
+        "normal compiled API startup"
+      ]
+    },
+    {
+      "issue": "startup smoke may probe a pre-existing service",
+      "confirmed": true,
+      "fix": "vacant-port preflight; direct child PIDs match OS listeners before HTTP and after all checks; children remain alive; cleanup targets only spawned handles",
+      "verifiedBy": [
+        "occupied API returns200 but smoke rejects without requests/spawns",
+        "occupied Vite returns200 but smoke rejects without requests/spawns",
+        "real OS listener vs wrong expected PID rejects",
+        "positive smoke listenerBeforeHTTP and listenerAfterHTTP match"
+      ]
+    },
+    {
+      "issue": "runtime verification permanently requires zero documents",
+      "confirmed": true,
+      "fix": "daily verifyruntime reports counts; verifyinitial / --expect-empty is separate fresh initialization acceptance",
+      "verifiedBy": [
+        "fresh synthetic empty acceptance exit0",
+        "normal registration and survey creation then daily verification exit0, totalDocuments2",
+        "explicit empty check exit1 expected; data fingerprint unchanged"
+      ]
+    }
+  ],
+  "commandRuns": [
+    {
+      "name": "typecheck",
+      "start": "2026-10-22T13:24:24.028Z",
+      "finished": "2026-10-22T13:24:51.526Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "path": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T13-24-24-026Z-typecheck-a7847a75/result.json"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-22T13:24:51.589Z",
+      "finished": "2026-10-22T13:25:07.827Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "path": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T13-24-51-587Z-build-a4a932d5/result.json"
+    },
+    {
+      "name": "runtimereview",
+      "start": "2026-10-22T14:31:51.726Z",
+      "finished": "2026-10-22T14:32:47.361Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/runtime-review.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "path": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-31-51-724Z-runtimereview-2fcbf996/result.json"
+    },
+    {
+      "name": "runtimereviewapi",
+      "start": "2026-10-22T14:36:07.377Z",
+      "finished": "2026-10-22T14:36:11.869Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "--test-name-pattern=compiled API",
+        "tests/runtime-review.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "path": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-36-07-375Z-runtimereviewapi-edec2171/result.json"
+    },
+    {
+      "name": "startup",
+      "start": "2026-10-22T14:36:11.932Z",
+      "finished": "2026-10-22T14:36:27.552Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/runtime-startup.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "path": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-36-11-930Z-startup-0f043e05/result.json"
+    },
+    {
+      "name": "integration",
+      "start": "2026-10-22T14:37:32.771Z",
+      "finished": "2026-10-22T14:37:41.714Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/integration.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "path": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-37-32-769Z-integration-2542a52a/result.json"
+    },
+    {
+      "name": "publish",
+      "start": "2026-10-22T14:37:41.775Z",
+      "finished": "2026-10-22T14:37:47.854Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/publish.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "path": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-37-41-773Z-publish-5af6d798/result.json"
+    },
+    {
+      "name": "submit",
+      "start": "2026-10-22T14:37:47.913Z",
+      "finished": "2026-10-22T14:37:54.772Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/submit.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "path": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-37-47-910Z-submit-177b2462/result.json"
+    },
+    {
+      "name": "verifyruntime",
+      "start": "2026-10-22T14:37:54.828Z",
+      "finished": "2026-10-22T14:37:57.682Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "scripts/verify-runtime-baseline.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "path": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-37-54-825Z-verifyruntime-d9f09408/result.json"
+    }
+  ],
+  "targetedCases": {
+    "uniqueCases": 6,
+    "firstRun": "4 passed, 2 harness loading failures",
+    "retry": "only 2 compiled API cases rerun, both passed; unchanged 4 prior pass results retained",
+    "harnessFix": "Windows --import hook changed from absolute drive path to file URL; original failure output retained"
+  },
+  "normalDataProof": {
+    "file": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-31-51-724Z-runtimereview-2fcbf996/artifacts/review-cases/used-database-result.json",
+    "status": "passed",
+    "database": "project2_test_runtime_review_1792679544757_01f46550",
+    "normalRegistrationAndSurveyCreation": true,
+    "dailyExitCode": 0,
+    "expectEmptyExitCode": 1,
+    "emptyRejectionExpected": true,
+    "totalDocuments": 2,
+    "readOnlyVerification": true,
+    "connectedPidMismatchRejected": true,
+    "retainedSyntheticData": true
+  },
+  "startupProof": {
+    "file": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-36-11-930Z-startup-0f043e05/artifacts/startup-probes.json",
+    "httpChecks": 10,
+    "listenerBeforeHTTP": [
+      {
+        "port": 5200,
+        "pid": 39432,
+        "address": "::1"
+      },
+      {
+        "port": 3200,
+        "pid": 42784,
+        "address": "127.0.0.1"
+      }
+    ],
+    "listenerAfterHTTP": [
+      {
+        "port": 5200,
+        "pid": 39432,
+        "address": "::1"
+      },
+      {
+        "port": 3200,
+        "pid": 42784,
+        "address": "127.0.0.1"
+      }
+    ]
+  },
+  "currentRuntime": {
+    "file": "docs/testing/phase2-runs/P2-005-review-20261022T132318Z/2026-10-22T14-37-54-825Z-verifyruntime-d9f09408/artifacts/runtime-inspection.json",
+    "database": "project2_app_v1",
+    "totalDocuments": 0,
+    "emptyDatabaseRequired": false,
+    "testDatabases": 17
+  },
+  "approvalEvent": {
+    "automaticReviewTimedOutBeforeCommandStarted": true,
+    "retrySucceeded": true,
+    "notAnUnsafeActionRuling": true
+  },
+  "finalServices": {
+    "note": "Read-only live inventory after review tests; only test-created children were released; P2 MongoDB was not stopped or reconfigured",
+    "ownedMongo": {
+      "dbPath": "D:\\大三\\数据库\\pj1_2\\.local\\mongodb-phase2-rs0",
+      "processId": 13860,
+      "marker": "D:\\大三\\数据库\\pj1_2\\.local\\mongodb-phase2-rs0\\project2-instance.json",
+      "projectRoot": "D:\\大三\\数据库\\pj1_2",
+      "replicaSet": "rs0",
+      "port": 27019,
+      "executable": "D:\\Programmer\\bin\\mongod.exe"
+    },
+    "listeners": [
+      {
+        "LocalPort": 27019,
+        "OwningProcess": 13860,
+        "LocalAddress": "127.0.0.1"
+      }
+    ],
+    "capturedAt": "2026-10-22T14:40:52.9667051Z",
+    "applicationPortsIdle": true
+  },
+  "notExecuted": [
+    "No fresh dependency install or package upgrade",
+    "No P1 access, old data migration or new P2 business/schema",
+    "No repeat of full browser/graphics suite; prior P2-005 evidence stays historical",
+    "No Git commit or push"
+  ]
+}

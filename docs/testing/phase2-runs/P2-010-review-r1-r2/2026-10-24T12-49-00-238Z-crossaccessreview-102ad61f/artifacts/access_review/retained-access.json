@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "status": 200,
+    "body": {
+      "data": {
+        "questionId": "6adca94c185a1f102e0ec8d0",
+        "versionId": "6adca94c185a1f102e0ec8d2",
+        "generatedAt": "2026-10-24T12:49:17.538Z",
+        "surveyCount": 1,
+        "eligibleResponseCount": 1,
+        "answeredCount": 1,
+        "skippedCount": 0,
+        "unansweredCount": 0,
+        "average": "5",
+        "min": "5",
+        "max": "5",
+        "bins": [
+          {
+            "lower": null,
+            "upper": "0",
+            "upperInclusive": false,
+            "count": 0
+          },
+          {
+            "lower": "0",
+            "upper": "10",
+            "upperInclusive": true,
+            "count": 1
+          },
+          {
+            "lower": "10",
+            "upper": null,
+            "upperInclusive": false,
+            "count": 0
+          }
+        ]
+      }
+    }
+  },
+  "answers": {
+    "status": 200,
+    "body": {
+      "data": {
+        "questionId": "6adca94c185a1f102e0ec8d0",
+        "versionId": "6adca94c185a1f102e0ec8d2",
+        "generatedAt": "2026-10-24T12:49:17.548Z",
+        "asOf": "2026-10-24T12:49:17.543Z",
+        "items": [
+          {
+            "surveyId": "6adca94d185a1f102e0ec909",
+            "publishedVersion": 1,
+            "instanceId": "ab1e9343-4586-4c9f-ae12-6281783d0478",
+            "responseId": "6adca94d185a1f102e0ec90f",
+            "submittedAt": "2026-10-24T12:49:17.492Z",
+            "value": "5"
+          }
+        ],
+        "nextCursor": null
+      }
+    }
+  },
+  "distribution": {
+    "status": 200,
+    "body": {
+      "data": {
+        "questionId": "6adca94c185a1f102e0ec8d0",
+        "versionId": "6adca94c185a1f102e0ec8d2",
+        "generatedAt": "2026-10-24T12:49:17.557Z",
+        "asOf": "2026-10-24T12:49:17.551Z",
+        "items": [
+          {
+            "value": "5",
+            "count": 1
+          }
+        ],
+        "nextCursor": null
+      }
+    }
+  },
+  "unknownFutureDenied": true,
+  "allAcquisitionFactsMissing": "NOT_FOUND before history",
+  "listener": [
+    {
+      "port": 3231,
+      "pid": 41936,
+      "address": "127.0.0.1"
+    }
+  ]
+}

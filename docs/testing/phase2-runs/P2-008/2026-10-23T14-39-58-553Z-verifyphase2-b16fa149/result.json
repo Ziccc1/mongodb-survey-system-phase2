@@ -1,0 +1,16 @@
+{
+  "name": "verifyphase2",
+  "start": "2026-10-23T14:39:58.554Z",
+  "finished": "2026-10-23T14:40:01.464Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env.phase2",
+    "--import",
+    "tsx",
+    "scripts/init-phase2-app.ts",
+    "--verify"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

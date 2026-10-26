@@ -1,0 +1,91 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_surveys_sharing__1792766275935_51f23ae4
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_surveys_sharing__1792766275935_51f23ae4
+# Subtest: W04 real source APIs / sharing fences / retained rights / publication / usage privacy
+    # Subtest: four local types stay draft until explicit formalization, preserve IDs/config; bound Content is immutable
+    ok 1 - four local types stay draft until explicit formalization, preserve IDs/config; bound Content is immutable
+      ---
+      duration_ms: 178.3464
+      type: 'test'
+      ...
+    # Subtest: shared history and future formal versions exclude draft; server owns all source fields
+    ok 2 - shared history and future formal versions exclude draft; server owns all source fields
+      ---
+      duration_ms: 180.5375
+      type: 'test'
+      ...
+    # Subtest: same Content different source version counts as unpublished change; explicit pause/replace/re-publish preserves history
+    ok 3 - same Content different source version counts as unpublished change; explicit pause/replace/re-publish preserves history
+      ---
+      duration_ms: 110.736
+      type: 'test'
+      ...
+    # Subtest: usage HTTP whitelist, precise version states and explicit derivation privacy
+    ok 4 - usage HTTP whitelist, precise version states and explicit derivation privacy
+      ---
+      duration_ms: 68.2558
+      type: 'test'
+      ...
+    # Subtest: revocation keeps stored draft/config/publication/fill, hides future versions and blocks all new expansion
+    ok 5 - revocation keeps stored draft/config/publication/fill, hides future versions and blocks all new expansion
+      ---
+      duration_ms: 327.798
+      type: 'test'
+      ...
+    # Subtest: S04 same identity/version rejects duplicate, different versions coexist; version-first usage filtering and history flags
+    ok 6 - S04 same identity/version rejects duplicate, different versions coexist; version-first usage filtering and history flags
+      ---
+      duration_ms: 387.3732
+      type: 'test'
+      ...
+    # Subtest: type change requires explicit reviewed rules; stale option is saveable soft issue that blocks publish
+    ok 7 - type change requires explicit reviewed rules; stale option is saveable soft issue that blocks publish
+      ---
+      duration_ms: 193.0219
+      type: 'test'
+      ...
+    # Subtest: real common-fence barrier attach / new-first
+    ok 8 - real common-fence barrier attach / new-first
+      ---
+      duration_ms: 107.1697
+      type: 'test'
+      ...
+    # Subtest: real common-fence barrier attach / revoke-first
+    ok 9 - real common-fence barrier attach / revoke-first
+      ---
+      duration_ms: 78.0213
+      type: 'test'
+      ...
+    # Subtest: real common-fence barrier fork / new-first
+    ok 10 - real common-fence barrier fork / new-first
+      ---
+      duration_ms: 62.706
+      type: 'test'
+      ...
+    # Subtest: real common-fence barrier fork / revoke-first
+    ok 11 - real common-fence barrier fork / revoke-first
+      ---
+      duration_ms: 67.684
+      type: 'test'
+      ...
+    # Subtest: real formalization receipt capacity rolls back identity, version, binding and survey; HTTP whitelist
+    ok 12 - real formalization receipt capacity rolls back identity, version, binding and survey; HTTP whitelist
+      ---
+      duration_ms: 219.5637
+      type: 'test'
+      ...
+    1..12
+ok 1 - W04 real source APIs / sharing fences / retained rights / publication / usage privacy
+  ---
+  duration_ms: 13488.2074
+  type: 'test'
+  ...
+1..1
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14306.5236

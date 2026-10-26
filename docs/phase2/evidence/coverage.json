@@ -1,0 +1,177 @@
+[
+  {
+    "requirement": "P2-R01",
+    "decision": "P2-D-B/P2-D-C",
+    "collections": [
+      "question_items",
+      "question_versions",
+      "survey_question_bindings"
+    ],
+    "apis": [
+      "P2-L01",
+      "P2-L04",
+      "P2-I01",
+      "P2-I04"
+    ],
+    "tests": [
+      "P2-T07",
+      "P2-T11"
+    ],
+    "state": "not-executed",
+    "kind": "teacher"
+  },
+  {
+    "requirement": "P2-R02",
+    "decision": "P2-D-D",
+    "collections": [
+      "question_grants",
+      "survey_question_bindings"
+    ],
+    "apis": [
+      "P2-G02",
+      "P2-G03",
+      "P2-L08"
+    ],
+    "tests": [
+      "P2-T12",
+      "P2-T13",
+      "P2-T14",
+      "P2-T15"
+    ],
+    "state": "not-executed",
+    "kind": "teacher"
+  },
+  {
+    "requirement": "P2-R03",
+    "decision": "P2-D-B/P2-D-C",
+    "collections": [
+      "question_versions",
+      "survey_versions"
+    ],
+    "apis": [
+      "P2-L04",
+      "P2-I02"
+    ],
+    "tests": [
+      "P2-T08",
+      "P2-T16"
+    ],
+    "state": "not-executed",
+    "kind": "teacher"
+  },
+  {
+    "requirement": "P2-R04",
+    "decision": "P2-D-B",
+    "collections": [
+      "question_items",
+      "question_versions"
+    ],
+    "apis": [
+      "P2-L05",
+      "P2-L07",
+      "P2-L08"
+    ],
+    "tests": [
+      "P2-T08",
+      "P2-T09",
+      "P2-T10"
+    ],
+    "state": "not-executed",
+    "kind": "teacher"
+  },
+  {
+    "requirement": "P2-R05",
+    "decision": "P2-D-C",
+    "collections": [
+      "survey_question_bindings"
+    ],
+    "apis": [
+      "P2-I02",
+      "P2-I03"
+    ],
+    "tests": [
+      "P2-T09",
+      "P2-T16"
+    ],
+    "state": "not-executed",
+    "kind": "teacher"
+  },
+  {
+    "requirement": "P2-R06",
+    "decision": "P2-D-E",
+    "collections": [
+      "survey_question_bindings",
+      "surveys"
+    ],
+    "apis": [
+      "P2-U01"
+    ],
+    "tests": [
+      "P2-T17",
+      "P2-T18"
+    ],
+    "state": "not-executed",
+    "kind": "teacher"
+  },
+  {
+    "requirement": "P2-R07",
+    "decision": "P2-D-F",
+    "collections": [
+      "question_banks",
+      "question_bank_members"
+    ],
+    "apis": [
+      "P2-B01",
+      "P2-B06"
+    ],
+    "tests": [
+      "P2-T19"
+    ],
+    "state": "not-executed",
+    "kind": "teacher"
+  },
+  {
+    "requirement": "P2-R08",
+    "decision": "P2-D-H",
+    "collections": [
+      "survey_question_bindings",
+      "responses"
+    ],
+    "apis": [
+      "P2-X01",
+      "P2-X02",
+      "P2-X03"
+    ],
+    "tests": [
+      "P2-T20",
+      "P2-T21",
+      "P2-T22",
+      "P2-T23"
+    ],
+    "state": "not-executed",
+    "kind": "teacher"
+  },
+  {
+    "requirement": "P2-X01",
+    "decision": "P2-D-G",
+    "collections": [
+      "survey_templates",
+      "template_grants"
+    ],
+    "apis": [
+      "P2-M01",
+      "P2-M04",
+      "P2-A01",
+      "P2-A03"
+    ],
+    "tests": [
+      "P2-T24",
+      "P2-T25",
+      "P2-T26",
+      "P2-T27",
+      "P2-T28"
+    ],
+    "state": "not-executed",
+    "kind": "extension"
+  }
+]

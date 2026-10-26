@@ -4,7 +4,7 @@ import {mkdirSync,writeFileSync,existsSync} from 'node:fs';
 import {chromium,expect} from '@playwright/test';
 import type {Question} from '@survey/shared';
 import {harness} from './harness.js';
-import {MongoClient} from 'mongodb';
+import {MongoClient,testMongoOptions} from '../database-client.js';
 import {loadConfig} from '../../apps/api/src/config.js';
 import {buildApp} from '../../apps/api/src/app.js';
 import {signAuth} from '../../apps/api/src/security.js';
@@ -12,7 +12,7 @@ const origin='http://127.0.0.1:3112',resuming=process.argv[2]==='--after',verify
 async function resume(){
  const dbName=process.argv[3];assert.match(dbName,/^project1_test_desktop_\d+$/);
  const base=loadConfig(),uri=new URL(base.uri);uri.pathname='/'+dbName;
- const config={...base,dbName,uri:uri.toString(),origin,publicAppUrl:origin},client=new MongoClient(config.uri);await client.connect();
+ const config={...base,dbName,uri:uri.toString(),origin,publicAppUrl:origin},client=new MongoClient(config.uri,testMongoOptions());await client.connect();
  const db=client.db(dbName),app=await buildApp(config,{logger:false}),survey=await db.collection('surveys').findOne({title:'校园学习空间使用调查'});assert.ok(survey);
  const cookies=[`survey_auth=${await signAuth(survey.ownerId.toHexString(),config)}`];
  return {app,client,db,dbName,config,cookies,close:async()=>{await app.close();await client.close();}} as Awaited<ReturnType<typeof harness>>;

@@ -1,0 +1,24 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_surveys_sharing_usage_1792753861857_8e7ac51a
+# Subtest: W04 real source APIs / sharing fences / retained rights / publication / usage privacy
+not ok 1 - W04 real source APIs / sharing fences / retained rights / publication / usage privacy
+  ---
+  duration_ms: 4989.5835
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\surveys-sharing-usage.test.ts:1:422'
+  failureType: 'testCodeFailure'
+  error: 'db name must be at most 63 characters, found: 64'
+  code: 73
+  name: 'MongoServerError'
+  stack: |-
+    Connection.sendCommand (D:\大三\数据库\pj1_2\node_modules\mongodb\src\cmap\connection.ts:563:17)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Connection.command (D:\大三\数据库\pj1_2\node_modules\mongodb\src\cmap\connection.ts:636:22)
+    async Server.command (D:\大三\数据库\pj1_2\node_modules\mongodb\src\sdam\server.ts:351:21)
+    async executeOperationWithRetries (D:\大三\数据库\pj1_2\node_modules\mongodb\src\operations\execute_operation.ts:289:24)
+    async executeOperation (D:\大三\数据库\pj1_2\node_modules\mongodb\src\operations\execute_operation.ts:127:12)
+    async ListCollectionsCursor._initialize (D:\大三\数据库\pj1_2\node_modules\mongodb\src\cursor\list_collections_cursor.ts:46:22)
+    async ListCollectionsCursor.cursorInit (D:\大三\数据库\pj1_2\node_modules\mongodb\src\cursor\abstract_cursor.ts:911:21)
+    async ListCollectionsCursor.fetchBatch (D:\大三\数据库\pj1_2\node_modules\mongodb\src\cursor\abstract_cursor.ts:949:7)
+    async ListCollectionsCursor.next (D:\大三\数据库\pj1_2\node_modules\mongodb\src\cursor\abstract_cursor.ts:567:9)
+  ...

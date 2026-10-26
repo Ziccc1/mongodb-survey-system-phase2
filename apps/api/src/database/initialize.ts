@@ -1,5 +1,6 @@
 import type { Db } from 'mongodb';
-import { schemas, indexSpecs } from './schema.js';
+import { baselineRegistry } from './schema-registry.js';
+const { schemas, indexSpecs } = baselineRegistry;
 function stable(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(stable).join(',')}]`;
   if (value && typeof value === 'object') return `{${Object.entries(value).sort(([a], [b]) => a.localeCompare(b)).map(([key, item]) => `${JSON.stringify(key)}:${stable(item)}`).join(',')}}`;

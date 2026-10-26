@@ -1,0 +1,670 @@
+{
+  "state": "synthetic-design-not-database-results",
+  "questionId": "710000000000000000000001",
+  "versionId": "720000000000000000000001",
+  "content": {
+    "type": "number",
+    "title": "年龄",
+    "validation": {
+      "min": "0",
+      "max": "120",
+      "integerOnly": true
+    }
+  },
+  "owner": "700000000000000000000001",
+  "surveys": {
+    "A": {
+      "id": "730000000000000000000001",
+      "owner": "700000000000000000000001"
+    },
+    "B": {
+      "id": "730000000000000000000002",
+      "owner": "700000000000000000000001"
+    },
+    "C": {
+      "id": "730000000000000000000003",
+      "owner": "700000000000000000000001"
+    },
+    "D": {
+      "id": "730000000000000000000004",
+      "owner": "700000000000000000000002"
+    }
+  },
+  "bindings": [
+    {
+      "survey": "A",
+      "publishedVersion": 1,
+      "instance": "age",
+      "questionId": "710000000000000000000001",
+      "versionId": "720000000000000000000001"
+    },
+    {
+      "survey": "A",
+      "publishedVersion": 2,
+      "instance": "age",
+      "questionId": "710000000000000000000001",
+      "versionId": "720000000000000000000001"
+    },
+    {
+      "survey": "B",
+      "publishedVersion": 1,
+      "instance": "ageB",
+      "questionId": "710000000000000000000001",
+      "versionId": "720000000000000000000001"
+    },
+    {
+      "survey": "C",
+      "publishedVersion": 1,
+      "instance": "ageC",
+      "questionId": "710000000000000000000002",
+      "versionId": "720000000000000000000003"
+    },
+    {
+      "survey": "A",
+      "publishedVersion": 3,
+      "instance": "age",
+      "questionId": "710000000000000000000001",
+      "versionId": "720000000000000000000002"
+    },
+    {
+      "survey": "D",
+      "publishedVersion": 1,
+      "instance": "ageD",
+      "questionId": "710000000000000000000001",
+      "versionId": "720000000000000000000001"
+    }
+  ],
+  "responses": [
+    {
+      "id": "r1",
+      "survey": "A",
+      "publishedVersion": 1,
+      "value": "0",
+      "pathContains": true
+    },
+    {
+      "id": "r2",
+      "survey": "A",
+      "publishedVersion": 1,
+      "value": "10",
+      "pathContains": true
+    },
+    {
+      "id": "r3",
+      "survey": "A",
+      "publishedVersion": 2,
+      "value": "20",
+      "pathContains": true
+    },
+    {
+      "id": "r4",
+      "survey": "B",
+      "publishedVersion": 1,
+      "value": "30",
+      "pathContains": true
+    },
+    {
+      "id": "r5",
+      "survey": "B",
+      "publishedVersion": 1,
+      "value": null,
+      "pathContains": false
+    },
+    {
+      "id": "r6",
+      "survey": "C",
+      "publishedVersion": 1,
+      "value": "99",
+      "pathContains": true
+    },
+    {
+      "id": "r7",
+      "survey": "A",
+      "publishedVersion": 3,
+      "value": "80",
+      "pathContains": true
+    },
+    {
+      "id": "r8",
+      "survey": "D",
+      "publishedVersion": 1,
+      "value": "100",
+      "pathContains": true
+    }
+  ],
+  "expected": {
+    "surveyCount": 2,
+    "eligibleResponseCount": 5,
+    "answeredCount": 4,
+    "skippedCount": 1,
+    "unansweredCount": 0,
+    "average": "15",
+    "min": "0",
+    "max": "30",
+    "frequency": [
+      {
+        "value": "0",
+        "count": 1
+      },
+      {
+        "value": "10",
+        "count": 1
+      },
+      {
+        "value": "20",
+        "count": 1
+      },
+      {
+        "value": "30",
+        "count": 1
+      }
+    ],
+    "intervals": [
+      "0",
+      "18",
+      "30",
+      "121"
+    ],
+    "binCountsIncludingUnderOverflow": [
+      0,
+      2,
+      1,
+      1,
+      0
+    ]
+  },
+  "note": "value=null rows require a branch fixture whose snapshot and other answers prove skipped; cannot infer skipped merely from missing answer. Same-key replay is r2 receipt, not a ninth response.",
+  "distributionLineage": {
+    "state": "synthetic-design-only-no-database-execution",
+    "publisherId": "700000000000000000000003",
+    "leafVersionId": "720000000000000000000006",
+    "versionPathLeafToRoot": [
+      "720000000000000000000006",
+      "720000000000000000000003",
+      "720000000000000000000001"
+    ],
+    "candidateTemplateBinding": {
+      "instanceId": "age_h",
+      "questionId": {
+        "$oid": "710000000000000000000003"
+      },
+      "questionVersionId": {
+        "$oid": "720000000000000000000006"
+      },
+      "contentHash": "9385d21349b25cc7dc6e69bf98de1857aa030d99dcd56b4c6194722fa3dfa441",
+      "distributionProof": {
+        "lineageHash": "f79ff3df749b0e2957575838d157d27ef41db8c2a7940aee5cdf5dea8f1aa931",
+        "obligations": [
+          {
+            "questionId": {
+              "$oid": "710000000000000000000003"
+            },
+            "questionVersionId": {
+              "$oid": "720000000000000000000006"
+            },
+            "authorId": {
+              "$oid": "700000000000000000000003"
+            },
+            "grantId": null,
+            "grantRevision": null
+          },
+          {
+            "questionId": {
+              "$oid": "710000000000000000000002"
+            },
+            "questionVersionId": {
+              "$oid": "720000000000000000000003"
+            },
+            "authorId": {
+              "$oid": "700000000000000000000002"
+            },
+            "grantId": {
+              "$oid": "770000000000000000000003"
+            },
+            "grantRevision": 0
+          },
+          {
+            "questionId": {
+              "$oid": "710000000000000000000001"
+            },
+            "questionVersionId": {
+              "$oid": "720000000000000000000001"
+            },
+            "authorId": {
+              "$oid": "700000000000000000000001"
+            },
+            "grantId": {
+              "$oid": "770000000000000000000002"
+            },
+            "grantRevision": 0
+          }
+        ]
+      }
+    },
+    "cases": [
+      {
+        "name": "complete-A-and-B-to-C",
+        "activeGrantIds": [
+          "770000000000000000000002",
+          "770000000000000000000003"
+        ],
+        "expected": "eligible"
+      },
+      {
+        "name": "B-only-missing-A",
+        "activeGrantIds": [
+          "770000000000000000000003"
+        ],
+        "expected": "PUBLIC_DISTRIBUTION_REQUIRED"
+      },
+      {
+        "name": "A-to-B-not-transferable",
+        "activeGrantIds": [
+          "770000000000000000000001",
+          "770000000000000000000003"
+        ],
+        "expected": "PUBLIC_DISTRIBUTION_REQUIRED"
+      },
+      {
+        "name": "upstream-A-revoked",
+        "activeGrantIds": [
+          "770000000000000000000003"
+        ],
+        "expected": "PUBLIC_DISTRIBUTION_REQUIRED"
+      }
+    ],
+    "retainedSourceVersions": [
+      "720000000000000000000003",
+      "720000000000000000000004",
+      "720000000000000000000005"
+    ],
+    "retainedSource": {
+      "questionId": "710000000000000000000001",
+      "versionId": "720000000000000000000001"
+    },
+    "directForkCase": {
+      "publisherId": "700000000000000000000002",
+      "binding": {
+        "instanceId": "age_f",
+        "questionId": {
+          "$oid": "710000000000000000000002"
+        },
+        "questionVersionId": {
+          "$oid": "720000000000000000000003"
+        },
+        "contentHash": "9385d21349b25cc7dc6e69bf98de1857aa030d99dcd56b4c6194722fa3dfa441",
+        "distributionProof": {
+          "lineageHash": "b1e85490dae4b2edc4ac85b880a058a382371a5dac9198338c25cbad419908d1",
+          "obligations": [
+            {
+              "questionId": {
+                "$oid": "710000000000000000000002"
+              },
+              "questionVersionId": {
+                "$oid": "720000000000000000000003"
+              },
+              "authorId": {
+                "$oid": "700000000000000000000002"
+              },
+              "grantId": null,
+              "grantRevision": null
+            },
+            {
+              "questionId": {
+                "$oid": "710000000000000000000001"
+              },
+              "questionVersionId": {
+                "$oid": "720000000000000000000001"
+              },
+              "authorId": {
+                "$oid": "700000000000000000000001"
+              },
+              "grantId": {
+                "$oid": "770000000000000000000001"
+              },
+              "grantRevision": 0
+            }
+          ]
+        }
+      },
+      "cases": [
+        {
+          "name": "share-only-cannot-publish-own-fork",
+          "activeGrantIds": [],
+          "expected": "PUBLIC_DISTRIBUTION_REQUIRED"
+        },
+        {
+          "name": "explicit-A-to-B-can-publish",
+          "activeGrantIds": [
+            "770000000000000000000001"
+          ],
+          "expected": "eligible"
+        }
+      ]
+    }
+  },
+  "usageReview": {
+    "state": "synthetic-design-only-no-database-execution",
+    "questionId": "710000000000000000000001",
+    "versionNumbers": {
+      "720000000000000000000001": 1,
+      "720000000000000000000002": 2
+    },
+    "cases": [
+      {
+        "name": "mixed-v2-draft-v1-current-history",
+        "surveyNumber": "usage_B_independent",
+        "username": "student_demo",
+        "currentPublishedVersion": 2,
+        "bindings": [
+          {
+            "versionId": "720000000000000000000002",
+            "scope": "draft",
+            "publicationVersion": 0
+          },
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 2
+          },
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 1
+          }
+        ],
+        "filterVersionId": null,
+        "expected": {
+          "surveyNumber": "usage_B_independent",
+          "username": "student_demo",
+          "versions": [
+            {
+              "versionId": "720000000000000000000002",
+              "version": 2,
+              "isDraft": true,
+              "isCurrent": false,
+              "hasHistorical": false
+            },
+            {
+              "versionId": "720000000000000000000001",
+              "version": 1,
+              "isDraft": false,
+              "isCurrent": true,
+              "hasHistorical": true
+            }
+          ],
+          "isDraft": true,
+          "isCurrent": true,
+          "onlyHistorical": false
+        }
+      },
+      {
+        "name": "same-version-all-contexts",
+        "surveyNumber": "usage_B_independent",
+        "username": "student_demo",
+        "currentPublishedVersion": 3,
+        "bindings": [
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "draft",
+            "publicationVersion": 0
+          },
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 2
+          },
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 1
+          },
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 3
+          }
+        ],
+        "filterVersionId": null,
+        "expected": {
+          "surveyNumber": "usage_B_independent",
+          "username": "student_demo",
+          "versions": [
+            {
+              "versionId": "720000000000000000000001",
+              "version": 1,
+              "isDraft": true,
+              "isCurrent": true,
+              "hasHistorical": true
+            }
+          ],
+          "isDraft": true,
+          "isCurrent": true,
+          "onlyHistorical": false
+        }
+      },
+      {
+        "name": "history-only",
+        "surveyNumber": "usage_B_independent",
+        "username": "student_demo",
+        "currentPublishedVersion": 4,
+        "bindings": [
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 1
+          },
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 3
+          }
+        ],
+        "filterVersionId": null,
+        "expected": {
+          "surveyNumber": "usage_B_independent",
+          "username": "student_demo",
+          "versions": [
+            {
+              "versionId": "720000000000000000000001",
+              "version": 1,
+              "isDraft": false,
+              "isCurrent": false,
+              "hasHistorical": true
+            }
+          ],
+          "isDraft": false,
+          "isCurrent": false,
+          "onlyHistorical": true
+        }
+      },
+      {
+        "name": "filter-v1-removes-v2-draft",
+        "surveyNumber": "usage_B_independent",
+        "username": "student_demo",
+        "currentPublishedVersion": 2,
+        "bindings": [
+          {
+            "versionId": "720000000000000000000002",
+            "scope": "draft",
+            "publicationVersion": 0
+          },
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 2
+          },
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 1
+          }
+        ],
+        "filterVersionId": "720000000000000000000001",
+        "expected": {
+          "surveyNumber": "usage_B_independent",
+          "username": "student_demo",
+          "versions": [
+            {
+              "versionId": "720000000000000000000001",
+              "version": 1,
+              "isDraft": false,
+              "isCurrent": true,
+              "hasHistorical": true
+            }
+          ],
+          "isDraft": false,
+          "isCurrent": true,
+          "onlyHistorical": false
+        }
+      },
+      {
+        "name": "filter-no-match-no-shell",
+        "surveyNumber": "usage_B_independent",
+        "username": "student_demo",
+        "currentPublishedVersion": 2,
+        "bindings": [
+          {
+            "versionId": "720000000000000000000002",
+            "scope": "draft",
+            "publicationVersion": 0
+          }
+        ],
+        "filterVersionId": "720000000000000000000001",
+        "expected": null
+      },
+      {
+        "name": "current-publication-is-not-history",
+        "surveyNumber": "usage_B_independent",
+        "username": "student_demo",
+        "currentPublishedVersion": 2,
+        "bindings": [
+          {
+            "versionId": "720000000000000000000001",
+            "scope": "publication",
+            "publicationVersion": 2
+          }
+        ],
+        "filterVersionId": null,
+        "expected": {
+          "surveyNumber": "usage_B_independent",
+          "username": "student_demo",
+          "versions": [
+            {
+              "versionId": "720000000000000000000001",
+              "version": 1,
+              "isDraft": false,
+              "isCurrent": true,
+              "hasHistorical": false
+            }
+          ],
+          "isDraft": false,
+          "isCurrent": true,
+          "onlyHistorical": false
+        }
+      }
+    ],
+    "pagination": {
+      "limit": 1,
+      "surveyNumbers": [
+        "usage_B_independent",
+        "usage_D_independent"
+      ],
+      "expectedPages": [
+        [
+          "usage_B_independent"
+        ],
+        [
+          "usage_D_independent"
+        ]
+      ],
+      "note": "排序与去重合成例，不模拟数据库跨页快照或并发",
+      "rows": [
+        {
+          "surveyNumber": "usage_B_independent",
+          "username": "student_demo",
+          "versions": [
+            {
+              "versionId": "720000000000000000000002",
+              "version": 2,
+              "isDraft": true,
+              "isCurrent": false,
+              "hasHistorical": false
+            },
+            {
+              "versionId": "720000000000000000000001",
+              "version": 1,
+              "isDraft": false,
+              "isCurrent": true,
+              "hasHistorical": true
+            }
+          ],
+          "isDraft": true,
+          "isCurrent": true,
+          "onlyHistorical": false
+        },
+        {
+          "surveyNumber": "usage_D_independent",
+          "username": "student_demo",
+          "versions": [
+            {
+              "versionId": "720000000000000000000001",
+              "version": 1,
+              "isDraft": false,
+              "isCurrent": false,
+              "hasHistorical": true
+            }
+          ],
+          "isDraft": false,
+          "isCurrent": false,
+          "onlyHistorical": true
+        }
+      ]
+    },
+    "ownExample": {
+      "surveyNumber": "usage_B_independent",
+      "versions": [
+        {
+          "versionId": "720000000000000000000002",
+          "version": 2,
+          "isDraft": true,
+          "isCurrent": false,
+          "hasHistorical": false
+        },
+        {
+          "versionId": "720000000000000000000001",
+          "version": 1,
+          "isDraft": false,
+          "isCurrent": true,
+          "hasHistorical": true
+        }
+      ],
+      "isDraft": true,
+      "isCurrent": true,
+      "onlyHistorical": false,
+      "surveyId": "730000000000000000000002",
+      "title": "本人问卷",
+      "managePath": "/surveys/730000000000000000000002"
+    },
+    "otherAllowedFields": [
+      "surveyNumber",
+      "username",
+      "versions",
+      "isDraft",
+      "isCurrent",
+      "onlyHistorical"
+    ]
+  },
+  "implementationReference": {
+    "asOf": "2026-10-24",
+    "scope": "W02—W06 implemented; these remain static synthetic examples, not importable or recorded HTTP",
+    "evidence": [
+      "w02-w04-coverage.md",
+      "cross-survey-statistics.md",
+      "template-square-coverage.md"
+    ],
+    "future": [
+      "W07 real P1 migration / final reports / role enforcement deployment"
+    ]
+  }
+}

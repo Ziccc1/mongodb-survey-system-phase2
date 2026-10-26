@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "stage": "documentation evidence generation",
+  "actualError": "AssertionError: ../evidence/P2-010-review-r1-r2-static-check.json",
+  "cause": "Link check ran before generating the static evidence file itself",
+  "repair": "Generate static evidence first, then validate all document links",
+  "businessTestsAffected": false
+}

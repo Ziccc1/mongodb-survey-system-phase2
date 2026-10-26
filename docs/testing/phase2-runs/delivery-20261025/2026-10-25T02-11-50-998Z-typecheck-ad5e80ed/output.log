@@ -1,0 +1,16 @@
+
+> project1-survey@1.0.0 typecheck
+> npm run build -w @survey/shared && npm run typecheck -w @survey/api && npm run typecheck -w @survey/web
+
+
+> @survey/shared@1.0.0 build
+> tsc -p tsconfig.json
+
+
+> @survey/api@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @survey/web@1.0.0 typecheck
+> vue-tsc --noEmit
+

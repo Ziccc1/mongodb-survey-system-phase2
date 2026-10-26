@@ -1,0 +1,26 @@
+
+> project1-survey@1.0.0 typecheck
+> npm run build -w @survey/shared && npm run typecheck -w @survey/api && npm run typecheck -w @survey/web
+
+
+> @survey/shared@1.0.0 build
+> tsc -p tsconfig.json
+
+
+> @survey/api@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+src/database/phase2-context.ts(54,12): error TS2352: Conversion of type '{ httpStatus: 200 | 201; data: { replayed: boolean; resourceId: string; versionId: string | null; revision: number | null; } | { replayed: boolean; revision: number; draftDefinitionRevision: number; instanceId: string; questionVersionId: string; validationIssues: DefinitionIssue[]; } | { ...; }; }' to type 'OperationResponse<O>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Types of property 'data' are incompatible.
+    Type '{ replayed: boolean; resourceId: string; versionId: string | null; revision: number | null; } | { replayed: boolean; revision: number; draftDefinitionRevision: number; instanceId: string; questionVersionId: string; validationIssues: DefinitionIssue[]; } | { ...; }' is not comparable to type 'OperationResults[O] & { replayed: boolean; }'.
+      Type '{ replayed: boolean; surveyId: string; revision: number; }' is not comparable to type 'OperationResults[O] & { replayed: boolean; }'.
+        Type '{ replayed: boolean; surveyId: string; revision: number; }' is not comparable to type 'OperationResults[O]'.
+          Type '{ replayed: boolean; surveyId: string; revision: number; }' is not comparable to type 'ResourceResult & InstanceResult & AdoptionResult'.
+            Type '{ replayed: boolean; surveyId: string; revision: number; }' is missing the following properties from type 'ResourceResult': resourceId, versionId
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path D:\大三\数据库\pj1_2\apps\api
+npm error workspace @survey/api@1.0.0
+npm error location D:\大三\数据库\pj1_2\apps\api
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsc -p tsconfig.json --noEmit

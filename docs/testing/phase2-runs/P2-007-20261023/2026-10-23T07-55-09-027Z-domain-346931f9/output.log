@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: four types round trip; Vue proxy, IDs, options, config isolation and hashes
+ok 1 - four types round trip; Vue proxy, IDs, options, config isolation and hashes
+  ---
+  duration_ms: 15.8445
+  type: 'test'
+  ...
+# Subtest: strict shapes, semantic limits and soft draft validation reuse old path
+ok 2 - strict shapes, semantic limits and soft draft validation reuse old path
+  ---
+  duration_ms: 1.3027
+  type: 'test'
+  ...
+# Subtest: Decimal exact boundaries and BSON special objects stay intact
+ok 3 - Decimal exact boundaries and BSON special objects stay intact
+  ---
+  duration_ms: 1.4239
+  type: 'test'
+  ...
+# Subtest: receipt operation/status/unknown keys and actual BSON size; template node limit
+ok 4 - receipt operation/status/unknown keys and actual BSON size; template node limit
+  ---
+  duration_ms: 10.3841
+  type: 'test'
+  ...
+# Subtest: cold direct import src/questions
+ok 5 - cold direct import src/questions
+  ---
+  duration_ms: 183.9052
+  type: 'test'
+  ...
+# Subtest: cold direct import src/answers
+ok 6 - cold direct import src/answers
+  ---
+  duration_ms: 167.7499
+  type: 'test'
+  ...
+# Subtest: cold direct import src/question-content
+ok 7 - cold direct import src/question-content
+  ---
+  duration_ms: 170.8332
+  type: 'test'
+  ...
+# Subtest: cold direct import src/index
+ok 8 - cold direct import src/index
+  ---
+  duration_ms: 178.5728
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/questions
+ok 9 - cold direct import dist/questions
+  ---
+  duration_ms: 67.198
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/answers
+ok 10 - cold direct import dist/answers
+  ---
+  duration_ms: 74.1204
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/question-content
+ok 11 - cold direct import dist/question-content
+  ---
+  duration_ms: 77.975
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/index
+ok 12 - cold direct import dist/index
+  ---
+  duration_ms: 73.6239
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1154.9749

@@ -2,17 +2,18 @@ import assert from 'node:assert/strict';
 import { randomUUID, createHash } from 'node:crypto';
 import { existsSync } from 'node:fs';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { MongoClient, ObjectId, Decimal128 } from 'mongodb';
+import {ObjectId,Decimal128} from 'mongodb';
+import {MongoClient,testMongoOptions} from './database-client.js';
 import { chromium, expect } from '@playwright/test';
 import { canonical, normalizeQuestions, validateQuestions } from '@survey/shared';
 import type { Question, Editor } from '@survey/shared';
 import { buildApp } from '../apps/api/src/app.js';
-import { loadConfig } from '../apps/api/src/config.js';
+import {isolatedTestConfig,evidenceDirectory} from './runtime-environment.js';
 import { initialize } from '../apps/api/src/database/initialize.js';
 
-const base=loadConfig(), dbName=`project1_test_editor_${Date.now()}`, uri=new URL(base.uri);uri.pathname=`/${dbName}`;
-const config={...base,uri:uri.toString(),dbName,port:3103,origin:'http://127.0.0.1:3103'};
-const client=new MongoClient(config.uri);await client.connect();const db=client.db(dbName);await initialize(db);
+const config=isolatedTestConfig('editor','http://127.0.0.1:3103',3103),dbName=config.dbName;
+const artifactDirectory=evidenceDirectory('editor');
+const client=new MongoClient(config.uri,testMongoOptions());await client.connect();const db=client.db(dbName);await initialize(db);
 const app=await buildApp(config,{logger:false});await app.listen({host:'127.0.0.1',port:3103});
 const headers={origin:config.origin,'x-csrf-guard':'1'}, password=`Editor-${randomUUID()}`, names=['editor_owner','editor_other'];
 const checks:string[]=[];let cookie='',otherCookie='';
@@ -134,10 +135,10 @@ try{
   await check('browser deletion keeps unfinished references, supports save/reload and mobile layout',async()=>{
     const cards=page.getByTestId('question');await cards.nth(3).getByRole('button',{name:'删除第4题',exact:true}).click();await expect(cards).toHaveCount(3);await expect(page.locator('.definition-issues')).toContainText('目标尚未选择或已删除');
     await cards.nth(0).getByRole('button',{name:'删除选项1',exact:true}).click();await expect(page.locator('.definition-issues')).toContainText('条件选项已失效');await page.getByRole('button',{name:'保存题目',exact:true}).click();await expect(page.getByRole('status')).toContainText('题目已保存');await page.reload();await expect(page.getByTestId('question')).toHaveCount(3);await expect(page.locator('.definition-issues')).toContainText('目标尚未选择或已删除');
-    await mkdir('.local/evidence',{recursive:true});await page.screenshot({path:'.local/evidence/editor-desktop.png',fullPage:true});
+    await mkdir(`${artifactDirectory}`,{recursive:true});await page.screenshot({path:`${artifactDirectory}/editor-desktop.png`,fullPage:true});
     for(const width of [320,768,1024,1440]){await page.setViewportSize({width,height:1000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`overflow at ${width}`);}
-    await page.setViewportSize({width:320,height:1000});await page.screenshot({path:'.local/evidence/editor-mobile.png',fullPage:true});assert.deepEqual(pageErrors,[]);
+    await page.setViewportSize({width:320,height:1000});await page.screenshot({path:`${artifactDirectory}/editor-mobile.png`,fullPage:true});assert.deepEqual(pageErrors,[]);
     assert.equal(await page.getByRole('button',{name:/复制问卷|断点恢复|自动保存/}).count(),0);
   });
-  await mkdir('.local/evidence',{recursive:true});const result={date:new Date().toISOString(),status:'passed',database:dbName,checks,checkCount:checks.length,realBrowser:'Edge/Chromium via Playwright',publishedAndResponseFixtures:'DB fixtures only; publication/submission APIs not implemented',retainedTestData:true,noSchemaChange:true};await writeFile('.local/evidence/editor.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
+  await mkdir(`${artifactDirectory}`,{recursive:true});const result={date:new Date().toISOString(),status:'passed',database:dbName,checks,checkCount:checks.length,realBrowser:'Edge/Chromium via Playwright',publishedAndResponseFixtures:'DB fixtures only; publication/submission APIs not implemented',retainedTestData:true,noSchemaChange:true};await writeFile(`${artifactDirectory}/editor.json`,JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
 }finally{await browser.close();await app.close();await client.close();}

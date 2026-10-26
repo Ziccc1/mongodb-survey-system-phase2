@@ -52,3 +52,11 @@ h1{font-size:34px;font-weight:700;letter-spacing:-.025em}h2{font-weight:650}h3{f
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
 @media(max-width:480px){nav{gap:10px}.username{max-width:76px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}nav>.quiet{padding:8px 0}.header-inner{gap:12px}}
+
+/* P2 library screens reuse the existing form/list tokens. */
+.library-page{max-width:1200px;margin:0 auto}.library-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}.library-layout>.panel{min-width:0}.library-rows{list-style:none;padding:0;margin:16px 0}.library-rows>li{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);overflow-wrap:anywhere}.library-create{margin:24px 0}.library-create button{margin-top:12px}.library-page select,.narrow select{font:inherit;width:100%;min-height:44px;padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:inherit}.library-page fieldset{min-width:0}.library-page .question-card{margin:0}.library-page .readonly-definition{overflow-wrap:anywhere}@media(max-width:800px){.library-layout{grid-template-columns:1fr}.library-page .editor-actions{flex-wrap:wrap}.library-page .panel{padding:20px}.library-rows>li{align-items:flex-start}}
+
+.library-page>.library-layout{margin-bottom:24px}.library-page .library-layout>section>fieldset{border:0;padding:0}.library-page .question-card{border:0;border-radius:0;padding:12px 0}.library-usage>.panel{margin-bottom:24px}@media(max-width:600px){.library-page .question-card fieldset{padding:12px}.library-page .question-advanced summary small{display:none}}
+
+.cross-controls > fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.cross-number-summary { overflow-wrap: anywhere; }

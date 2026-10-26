@@ -1,0 +1,90 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_w02b_1792742117681_d357c595
+# Subtest: W02-B actual receipts, binding consistency, CAS and replica-set rollback
+    # Subtest: R01 ten operations strict storage/decode and first/replay status
+    ok 1 - R01 ten operations strict storage/decode and first/replay status
+      ---
+      duration_ms: 93.6395
+      type: 'test'
+      ...
+    # Subtest: R02 scopes, fixed request hash/Decimal normalization and invalid input before callback
+    ok 2 - R02 scopes, fixed request hash/Decimal normalization and invalid input before callback
+      ---
+      duration_ms: 45.012
+      type: 'test'
+      ...
+    # Subtest: R03/B14 owner attach commits full nonempty issues and replays without current-resource reads
+    ok 3 - R03/B14 owner attach commits full nonempty issues and replays without current-resource reads
+      ---
+      duration_ms: 72.3514
+      type: 'test'
+      ...
+    # Subtest: R05 runtime corruption decoder rejects unsupported/missing/mismatched fields and converts safe BSON integers
+    ok 4 - R05 runtime corruption decoder rejects unsupported/missing/mismatched fields and converts safe BSON integers
+      ---
+      duration_ms: 1.4189
+      type: 'test'
+      ...
+    # Subtest: R06/R09 result size and both precommit fault points roll back CAS/binding/receipt
+    ok 5 - R06/R09 result size and both precommit fault points roll back CAS/binding/receipt
+      ---
+      duration_ms: 169.0582
+      type: 'test'
+      ...
+    # Subtest: R07 same-key race commits once; different-key same-revision CAS is one success/one EDIT_CONFLICT
+    ok 6 - R07 same-key race commits once; different-key same-revision CAS is one success/one EDIT_CONFLICT
+      ---
+      duration_ms: 40.8122
+      type: 'test'
+      ...
+    # Subtest: R10 committed response loss replays; labelled hooks bounded and unknown commit confirmation
+    ok 7 - R10 committed response loss replays; labelled hooks bounded and unknown commit confirmation
+      ---
+      duration_ms: 138.1935
+      type: 'test'
+      ...
+    # Subtest: B11/B13/B15/B17 complete draft/publication, bindingHash, config retention and immutable history
+    ok 8 - B11/B13/B15/B17 complete draft/publication, bindingHash, config retention and immutable history
+      ---
+      duration_ms: 204.868
+      type: 'test'
+      ...
+    # Subtest: R08 nonreceipt unique conflict propagates and publication insert never overwrites
+    ok 9 - R08 nonreceipt unique conflict propagates and publication insert never overwrites
+      ---
+      duration_ms: 84.2301
+      type: 'test'
+      ...
+    # Subtest: B12/B16 wrong owner, no transaction and forged unsupported sources rejected without writes
+    ok 10 - B12/B16 wrong owner, no transaction and forged unsupported sources rejected without writes
+      ---
+      duration_ms: 44.4511
+      type: 'test'
+      ...
+    # Subtest: BSON Long content counts normalize without changing the Content hash
+    ok 11 - BSON Long content counts normalize without changing the Content hash
+      ---
+      duration_ms: 34.4911
+      type: 'test'
+      ...
+    # Subtest: B12 corrupted/missing/extra/version/hash/owner mappings and legacy unmapped snapshots fail closed
+    ok 12 - B12 corrupted/missing/extra/version/hash/owner mappings and legacy unmapped snapshots fail closed
+      ---
+      duration_ms: 105.5975
+      type: 'test'
+      ...
+    1..12
+ok 1 - W02-B actual receipts, binding consistency, CAS and replica-set rollback
+  ---
+  duration_ms: 11868.9378
+  type: 'test'
+  ...
+1..1
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12342.6752

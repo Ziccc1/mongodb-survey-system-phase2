@@ -1,0 +1,225 @@
+{
+  "scope": "local single-node MongoDB, real HTTP, no injected faults, no production throughput claim",
+  "surveys": 36,
+  "actors": 28,
+  "respondents": 24,
+  "rateProbeActor": 1,
+  "sourceIPs": "one actual loopback source address per actor, 127.0.0.100—127.0.0.127; no spoofed forwarding header; original limiter unchanged",
+  "rateProbe": {
+    "allowed": 180,
+    "nextStatus": 429,
+    "code": "RATE_LIMITED"
+  },
+  "submissions": 2160,
+  "workers": 12,
+  "maxActive": 12,
+  "setupMs": 9797.664100000002,
+  "submitMs": 40614.941399999996,
+  "queryMs": 6815.028300000005,
+  "totalMs": 57483.97750000001,
+  "statuses": {
+    "200": 246,
+    "201": 2160,
+    "404": 3,
+    "429": 1
+  },
+  "latency": [
+    {
+      "operation": "submit",
+      "requests": 2172,
+      "p50Ms": 118.61829999999463,
+      "p95Ms": 893.0203000000001,
+      "maxMs": 1902.3876000000018
+    },
+    {
+      "operation": "summary",
+      "requests": 15,
+      "p50Ms": 100.15789999999834,
+      "p95Ms": 123.35029999999824,
+      "maxMs": 123.35029999999824
+    },
+    {
+      "operation": "page",
+      "requests": 39,
+      "p50Ms": 100.86609999999928,
+      "p95Ms": 128.4320000000007,
+      "maxMs": 141.40890000000218
+    },
+    {
+      "operation": "distribution",
+      "requests": 3,
+      "p50Ms": 107.80359999999928,
+      "p95Ms": 109.03819999999541,
+      "maxMs": 109.03819999999541
+    }
+  ],
+  "oracles": [
+    {
+      "owner": 0,
+      "number": {
+        "questionId": "6adcb481b6bb56711729e86c",
+        "versionId": "6adcb481b6bb56711729e86e",
+        "generatedAt": "2026-10-24T13:37:50.352Z",
+        "surveyCount": 12,
+        "eligibleResponseCount": 720,
+        "answeredCount": 648,
+        "skippedCount": 0,
+        "unansweredCount": 72,
+        "average": "-1",
+        "min": "-5",
+        "max": "3",
+        "bins": [
+          {
+            "lower": null,
+            "upper": "-5",
+            "upperInclusive": false,
+            "count": 0
+          },
+          {
+            "lower": "-5",
+            "upper": "0",
+            "upperInclusive": false,
+            "count": 360
+          },
+          {
+            "lower": "0",
+            "upper": "5",
+            "upperInclusive": true,
+            "count": 288
+          },
+          {
+            "lower": "5",
+            "upper": null,
+            "upperInclusive": false,
+            "count": 0
+          }
+        ]
+      },
+      "text": {
+        "questionId": "6adcb481b6bb56711729e872",
+        "versionId": "6adcb481b6bb56711729e874",
+        "generatedAt": "2026-10-24T13:37:50.459Z",
+        "surveyCount": 12,
+        "eligibleResponseCount": 720,
+        "answeredCount": 240,
+        "skippedCount": 0,
+        "unansweredCount": 480
+      },
+      "answerPages": 648,
+      "textPages": 240,
+      "allIdsMatchDatabase": true
+    },
+    {
+      "owner": 1,
+      "number": {
+        "questionId": "6adcb481b6bb56711729e86c",
+        "versionId": "6adcb481b6bb56711729e86e",
+        "generatedAt": "2026-10-24T13:37:52.163Z",
+        "surveyCount": 12,
+        "eligibleResponseCount": 720,
+        "answeredCount": 648,
+        "skippedCount": 0,
+        "unansweredCount": 72,
+        "average": "99",
+        "min": "95",
+        "max": "103",
+        "bins": [
+          {
+            "lower": null,
+            "upper": "95",
+            "upperInclusive": false,
+            "count": 0
+          },
+          {
+            "lower": "95",
+            "upper": "100",
+            "upperInclusive": false,
+            "count": 360
+          },
+          {
+            "lower": "100",
+            "upper": "105",
+            "upperInclusive": true,
+            "count": 288
+          },
+          {
+            "lower": "105",
+            "upper": null,
+            "upperInclusive": false,
+            "count": 0
+          }
+        ]
+      },
+      "text": {
+        "questionId": "6adcb481b6bb56711729e872",
+        "versionId": "6adcb481b6bb56711729e874",
+        "generatedAt": "2026-10-24T13:37:52.274Z",
+        "surveyCount": 12,
+        "eligibleResponseCount": 720,
+        "answeredCount": 240,
+        "skippedCount": 0,
+        "unansweredCount": 480
+      },
+      "answerPages": 648,
+      "textPages": 240,
+      "allIdsMatchDatabase": true
+    },
+    {
+      "owner": 2,
+      "number": {
+        "questionId": "6adcb481b6bb56711729e86c",
+        "versionId": "6adcb481b6bb56711729e86e",
+        "generatedAt": "2026-10-24T13:37:54.081Z",
+        "surveyCount": 12,
+        "eligibleResponseCount": 720,
+        "answeredCount": 648,
+        "skippedCount": 0,
+        "unansweredCount": 72,
+        "average": "199",
+        "min": "195",
+        "max": "203",
+        "bins": [
+          {
+            "lower": null,
+            "upper": "195",
+            "upperInclusive": false,
+            "count": 0
+          },
+          {
+            "lower": "195",
+            "upper": "200",
+            "upperInclusive": false,
+            "count": 360
+          },
+          {
+            "lower": "200",
+            "upper": "205",
+            "upperInclusive": true,
+            "count": 288
+          },
+          {
+            "lower": "205",
+            "upper": null,
+            "upperInclusive": false,
+            "count": 0
+          }
+        ]
+      },
+      "text": {
+        "questionId": "6adcb481b6bb56711729e872",
+        "versionId": "6adcb481b6bb56711729e874",
+        "generatedAt": "2026-10-24T13:37:54.188Z",
+        "surveyCount": 12,
+        "eligibleResponseCount": 720,
+        "answeredCount": 240,
+        "skippedCount": 0,
+        "unansweredCount": 480
+      },
+      "answerPages": 648,
+      "textPages": 240,
+      "allIdsMatchDatabase": true
+    }
+  ],
+  "successfulReplayCount": 12,
+  "readsAndReplaysUnchanged": true
+}

@@ -7,7 +7,7 @@ export const userDto = (u: UserDocument): User => ({ id: u._id.toHexString(), us
 export const summaryDto = (s: SurveyDocument): SurveySummary => ({
   id: s._id.toHexString(), publicId: s.publicId, title: s.title, status: s.status, revision: s.revision,
   currentPublishedVersion: s.currentPublishedVersion, cumulativeResponseCount: s.submissionCount,
-  currentVersionResponseCount: s.currentVersionSubmissionCount, createdAt: s.createdAt.toISOString(), updatedAt: s.updatedAt.toISOString(),
+  currentVersionResponseCount: s.currentVersionSubmissionCount, expiresAt: s.expiresAt?.toISOString() ?? null, createdAt: s.createdAt.toISOString(), updatedAt: s.updatedAt.toISOString(),
 });
 export const editorDto = (s: SurveyDocument, hasUnpublishedChanges = true): Editor => ({
   id: s._id.toHexString(), publicId: s.publicId, status: s.status,

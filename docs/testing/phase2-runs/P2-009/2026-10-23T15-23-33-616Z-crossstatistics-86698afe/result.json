@@ -1,0 +1,17 @@
+{
+  "name": "crossstatistics",
+  "start": "2026-10-23T15:23:33.618Z",
+  "finished": "2026-10-23T15:23:52.706Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "--test-concurrency=1",
+    "tests/phase2/cross-statistics.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 1,
+  "status": "failed"
+}

@@ -1,0 +1,75 @@
+
+> project1-survey@1.0.0 test:phase1
+> node scripts/run-check.mjs publish && node scripts/run-check.mjs flow && node scripts/run-check.mjs submit && node scripts/run-check.mjs statistics && node scripts/run-check.mjs edges && node scripts/run-check.mjs pagination && node scripts/run-check.mjs browser
+
+P2 synthetic target localhost:27019 / project2_test_publish_1792673138859_3926724d
+Independent retained database: project2_test_publish_1792673138859_3926724d
+PASS transaction publishes v1 and returns same survey share URL
+PASS publication retry replay and changed-key-content conflict
+PASS pause/edit/republish retains v1 and same ID/link; editing creates no snapshot
+PASS historical pagination and creator isolation
+PASS closed state and old publish receipt replay do not reopen collection
+PASS real transaction rollback after inserted snapshot leaves no orphan or pointer
+PASS invalid empty draft cannot publish
+PUBLICATION MODULE PASSED
+Actual output retained: D:\大三\数据库\pj1_2\docs\testing\phase2-runs\P2-005-20261022T123358Z\2026-10-22T12-45-38-194Z-publish-1d5f6a02
+PASS both multiple rules match: first rule wins and skipped mandatory is not checked
+PASS changing priority changes the path deterministically
+PASS returning to change answers deletes invalid branch values and rechecks newly reachable required questions
+PASS phone 13800138000 exact integer, fractional/letters rejected, required/optional empty and ordinary decimal allowed
+PASS text Unicode limits, choice boundaries, single jumps and illegal options
+FILL/PATH MODULE PASSED
+Actual output retained: D:\大三\数据库\pj1_2\docs\testing\phase2-runs\P2-005-20261022T123358Z\2026-10-22T12-45-45-861Z-flow-c9beca2b
+P2 synthetic target localhost:27019 / project2_test_submit_1792673146676_d03909e1
+Independent retained database: project2_test_submit_1792673146676_d03909e1
+PASS concurrent repeat-forbidden submissions: one answer, one count, other denied
+PASS discarded receipt/network retry semantics and same-key content conflict; no extra counter
+PASS paused/old-version/closed new requests denied; successful old request always replays
+PASS controlled real transaction failure rolls back inserted response and both counters
+PASS cutoff uses server time and no answer is saved
+PASS phone exact Decimal128 13800138000, fraction/letters rejected, mandatory empty rejected, optional empty accepted, ordinary decimals kept
+PASS filling definition output whitelist
+SUBMISSION MODULE PASSED
+Actual output retained: D:\大三\数据库\pj1_2\docs\testing\phase2-runs\P2-005-20261022T123358Z\2026-10-22T12-45-46-074Z-submit-b4f04fe7
+P2 synthetic target localhost:27019 / project2_test_statistics_1792673150238_af42b50d
+Independent retained database: project2_test_statistics_1792673150238_af42b50d
+PASS no-response statistics retain question/zero-option rows and null average
+PASS hand-calculated 3 answers: single 2/1/0, multi 2/2/0, text 2, number mean (0+10)/2=5
+PASS text/number raw pagination, signed query-bound cursors and anonymous whitelist
+PASS v2 default/empty vs v1 history remain separate and old option labels/zero preserved
+PASS no effective numeric answer yields null; zero-only numeric answer yields 0; cumulative/current/selected counts 5/2/2
+PASS every statistics/history management endpoint rejects another account
+PASS phone historical DTO preserves exact 13800138000
+STATISTICS/HISTORY MODULE PASSED
+Actual output retained: D:\大三\数据库\pj1_2\docs\testing\phase2-runs\P2-005-20261022T123358Z\2026-10-22T12-45-49-647Z-statistics-9d3762a4
+P2 synthetic target localhost:27019 / project2_test_edges_1792673153729_274f20fd
+Independent retained database: project2_test_edges_1792673153729_274f20fd
+PASS concurrent first publication with same key creates exactly one immutable release
+PASS inclusive Unicode text and exact decimal lower/upper answer boundaries
+PASS four-type over/under/required/option rejection and anonymous-policy enforcement
+PASS fresh concurrent same-key submissions under allowRepeat=true share one receipt
+PASS backend cleans valid-shaped stale branches and validates only final-path content while still rejecting illegal options
+PASS actual submitted multi-rule overlap uses first matching rule and accepts numeric zero
+PASS snapshot repository exposes no mutation methods; DELETE rejected and optional copy remains disabled
+ADDITIONAL BOUNDARIES/CONCURRENCY PASSED
+Actual output retained: D:\大三\数据库\pj1_2\docs\testing\phase2-runs\P2-005-20261022T123358Z\2026-10-22T12-45-53-127Z-edges-28b3ae1d
+P2 synthetic target localhost:27019 / project2_test_pagination_1792673157211_0de5f933
+Independent retained database: project2_test_pagination_1792673157211_0de5f933
+PASS actual multi-page history, text contents and numeric strings (including zero) have no duplicates or identity fields
+PASS pinned historical pagination survives republish; cross-version cursor reuse is rejected
+PAGINATION MODULE PASSED
+Actual output retained: D:\大三\数据库\pj1_2\docs\testing\phase2-runs\P2-005-20261022T123358Z\2026-10-22T12-45-56-628Z-pagination-464e4b10
+P2 synthetic target localhost:27019 / project2_test_redesign_1792673163419_d1604f39
+Independent retained database: project2_test_redesign_1792673163419_d1604f39
+PASS register/login defaults to dashboard; both real entries work; 11 bottom additions focus title and preserve stable IDs/content after save/refresh
+PASS 11-question browse without answers; simulation page validation focuses original Q4; 10+1 pagination and back navigation retain answers; no preview writes
+PASS configured runtime/publication share origin; public asset whitelist; real paged submit plus dropped response/same-key retry yields one exact Decimal128 response
+PASS republish retains old answer and per-version counts/history; successful key replay still works after close
+PASS same-page jump produces exact 10-question single page; multi first-match and continued checking never advance; branch cleanup retains valid values; cross-page skip removes required errors and preserves original numbering
+PASS page reduction after back/change clamps to nonempty first page
+PASS chart has no palette/itemStyle color overrides and pie labels use shared percentage data (rendered chart tests run separately)
+Screenshots and result: D:\大三\数据库\pj1_2\docs\testing\phase2-runs\P2-005-20261022T123358Z\2026-10-22T12-46-00-047Z-browser-94fe6679\artifacts\redesign-1792673166324
+P2 synthetic target localhost:27019 / project2_test_redesignlan_1792673171590_7e0a3a13
+Independent retained database: project2_test_redesignlan_1792673171590_7e0a3a13
+PASS LAN interface HTTP and configured share base http://192.168.80.1:3110; wrong Origin rejected. Second device/firewall route NOT verified.
+Actual output retained: D:\大三\数据库\pj1_2\docs\testing\phase2-runs\P2-005-20261022T123358Z\2026-10-22T12-46-00-047Z-browser-94fe6679

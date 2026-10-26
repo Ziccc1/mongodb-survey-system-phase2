@@ -1,0 +1,49 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_accept_journey_1792849425822_ea8722f5
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_accept_journey_1792849425822_ea8722f5
+# Subtest: acceptance: four actors traverse versions, sharing, replacement, templates, revocation and isolated statistics
+    # Subtest: formal question enters a bank and two shared surveys; answers retain exact source
+    ok 1 - formal question enters a bank and two shared surveys; answers retain exact source
+      ---
+      duration_ms: 251.6798
+      type: 'test'
+      ...
+    # Subtest: new version only prompts; explicit paused replacement separates old/new statistics
+    ok 2 - new version only prompts; explicit paused replacement separates old/new statistics
+      ---
+      duration_ms: 211.5444
+      type: 'test'
+      ...
+    # Subtest: template fixes v2; new adopter has narrow rights and independent answers
+    ok 3 - template fixes v2; new adopter has narrow rights and independent answers
+      ---
+      duration_ms: 147.9187
+      type: 'test'
+      ...
+    # Subtest: both revocations block new rights while old publications, data and original receipts survive
+    ok 4 - both revocations block new rights while old publications, data and original receipts survive
+      ---
+      duration_ms: 116.1669
+      type: 'test'
+      ...
+    # Subtest: restoration creates v3 without rewriting pending draft, history or retained access
+    ok 5 - restoration creates v3 without rewriting pending draft, history or retained access
+      ---
+      duration_ms: 68.8596
+      type: 'test'
+      ...
+    1..5
+ok 1 - acceptance: four actors traverse versions, sharing, replacement, templates, revocation and isolated statistics
+  ---
+  duration_ms: 18151.2542
+  type: 'test'
+  ...
+1..1
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 18827.5157

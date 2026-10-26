@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1060" viewBox="0 0 1440 1060">
+<rect width="100%" height="100%" fill="white"/>
+<text x="720" y="55.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="35" font-weight="700" fill="#25384B">图2  MongoDB集合关联关系</text>
+<text x="720" y="98.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#53677A">四个集合分工存储；题目与答案采用嵌入结构</text>
+<rect x="65" y="155" width="455" height="220" rx="14" fill="#EAF4FE" stroke="#79A8D0" stroke-width="2"/>
+<text x="90" y="204.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="31" font-weight="700" fill="#25384B">users  用户账号</text>
+<text x="90" y="251.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">_id · ObjectId</text>
+<text x="90" y="294.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">usernameKey · 唯一用户名</text>
+<text x="90" y="337.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">passwordHash · 密码哈希</text>
+<rect x="880" y="155" width="490" height="310" rx="14" fill="#FFF5D7" stroke="#C5A34D" stroke-width="2"/>
+<text x="905" y="204.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="31" font-weight="700" fill="#25384B">surveys  当前问卷</text>
+<text x="905" y="251.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">_id · 问卷ID</text>
+<text x="905" y="294.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">ownerId → users._id</text>
+<text x="905" y="337.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">currentPublishedVersion</text>
+<text x="905" y="380.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">questions[] · 可编辑题目</text>
+<text x="905" y="423.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">累计 / 当前版本答卷计数</text>
+<rect x="65" y="610" width="620" height="300" rx="14" fill="#F2EEFA" stroke="#A393C7" stroke-width="2"/>
+<text x="90" y="659.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="31" font-weight="700" fill="#25384B">responses  正式答卷</text>
+<text x="90" y="706.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">surveyId · 所属问卷</text>
+<text x="90" y="749.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">respondentId → users._id</text>
+<text x="90" y="792.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">surveyDefinitionVersion · 发布号</text>
+<text x="90" y="835.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">answers[] · 有效路径答案</text>
+<text x="90" y="878.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">submittedAt · 提交时间</text>
+<rect x="880" y="610" width="490" height="300" rx="14" fill="#ECF6F0" stroke="#78AA91" stroke-width="2"/>
+<text x="905" y="659.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="31" font-weight="700" fill="#25384B">survey_versions  发布快照</text>
+<text x="905" y="706.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">surveyId → surveys._id</text>
+<text x="905" y="749.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">version · 发布号</text>
+<text x="905" y="792.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">definition · 完整问卷定义</text>
+<text x="905" y="835.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">policySnapshot · 策略快照</text>
+<text x="905" y="878.0" text-anchor="start" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">(surveyId, version) 唯一</text>
+<polyline points="520,245 880,245" fill="none" stroke="#60778A" stroke-width="2.4"/>
+<polygon points="880,245 868.2941876694152,250.654551943446 868.2941876694152,239.345448056554" fill="#60778A" stroke="#60778A" stroke-width="2"/>
+<text x="700" y="198.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#25384B">1 : N  创建问卷</text>
+<text x="700" y="232.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">ownerId</text>
+<polyline points="290,375 290,610" fill="none" stroke="#60778A" stroke-width="2.4"/>
+<polygon points="290,610 284.345448056554,598.2941876694152 295.654551943446,598.2941876694152" fill="#60778A" stroke="#60778A" stroke-width="2"/>
+<text x="440" y="476.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#25384B">1 : N  提交答卷</text>
+<text x="440" y="515.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">respondentId</text>
+<polyline points="1125,465 1125,610" fill="none" stroke="#60778A" stroke-width="2.4"/>
+<polygon points="1125,610 1119.345448056554,598.2941876694152 1130.654551943446,598.2941876694152" fill="#60778A" stroke="#60778A" stroke-width="2"/>
+<text x="1260" y="524.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="26" font-weight="400" fill="#25384B">1 : N</text>
+<text x="1260" y="560.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">发布版本</text>
+<polyline points="880,385 780,385 780,650 685,650" fill="none" stroke="#60778A" stroke-width="2.4"/>
+<polygon points="685,650 696.7058123305848,644.345448056554 696.7058123305848,655.654551943446" fill="#60778A" stroke="#60778A" stroke-width="2"/>
+<text x="772" y="453.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#25384B">1 : N</text>
+<text x="772" y="490.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="400" fill="#25384B">问卷答卷</text>
+<text x="772" y="527.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="400" fill="#53677A">surveyId</text>
+<polyline points="880,795 685,795" fill="none" stroke="#60778A" stroke-width="2.4" stroke-dasharray="8 7"/>
+<polygon points="685,795 696.7058123305848,789.345448056554 696.7058123305848,800.654551943446" fill="#60778A" stroke="#60778A" stroke-width="2"/>
+<text x="782" y="718.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="26" font-weight="400" fill="#25384B">1 : N</text>
+<text x="782" y="754.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#25384B">按版解释</text>
+<text x="720" y="965.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="700" fill="#25384B">复合关联：(surveyId, surveyDefinitionVersion) → (surveyId, version)</text>
+<text x="720" y="1010.0" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#53677A">当前发布指针定位最新快照；引用有效性由后端检查，MongoDB不自动提供外键。</text>
+</svg>

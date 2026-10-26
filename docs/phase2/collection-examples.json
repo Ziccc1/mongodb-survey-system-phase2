@@ -1,0 +1,908 @@
+{
+  "state": "design-only-not-importable",
+  "hashNormalization": "canonical JSON DTO with sorted keys, Decimal128 converted to normalized strings, OID to lowercase hex, date to ISO",
+  "examples": {
+    "users": {
+      "_id": {
+        "$oid": "700000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "username": "teacher_demo",
+      "usernameKey": "teacher_demo",
+      "passwordHash": "scrypt-设计占位-不可用于登录",
+      "updatedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      }
+    },
+    "surveys": {
+      "_id": {
+        "$oid": "730000000000000000000001"
+      },
+      "schemaVersion": 3,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "ownerId": {
+        "$oid": "700000000000000000000001"
+      },
+      "publicId": "survey_A",
+      "title": "基本信息调查",
+      "description": "课程示例",
+      "status": "published",
+      "allowAnonymous": false,
+      "allowRepeat": false,
+      "expiresAt": null,
+      "definitionVersion": 2,
+      "revision": 2,
+      "structureLocked": false,
+      "submissionCount": 1,
+      "currentPublishedVersion": 1,
+      "currentVersionSubmissionCount": 1,
+      "questions": [
+        {
+          "id": "age",
+          "type": "number",
+          "title": "年龄",
+          "validation": {
+            "min": {
+              "$numberDecimal": "0"
+            },
+            "max": {
+              "$numberDecimal": "120"
+            },
+            "integerOnly": true
+          },
+          "required": true,
+          "jumpRules": []
+        }
+      ],
+      "copiedFromId": null,
+      "firstPublishedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "originTemplate": null,
+      "usageNumber": "usage_A_independent"
+    },
+    "question_items": {
+      "_id": {
+        "$oid": "710000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "ownerId": {
+        "$oid": "700000000000000000000001"
+      },
+      "revision": 1,
+      "accessFence": 0,
+      "latestVersionId": {
+        "$oid": "720000000000000000000002"
+      },
+      "nextVersion": 3,
+      "draft": {
+        "content": {
+          "type": "number",
+          "title": "年龄",
+          "validation": {
+            "min": {
+              "$numberDecimal": "0"
+            },
+            "max": {
+              "$numberDecimal": "120"
+            },
+            "integerOnly": true
+          }
+        },
+        "baseVersionId": {
+          "$oid": "720000000000000000000001"
+        },
+        "revision": 1
+      },
+      "origin": null
+    },
+    "question_versions": {
+      "_id": {
+        "$oid": "720000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "questionId": {
+        "$oid": "710000000000000000000001"
+      },
+      "version": 1,
+      "content": {
+        "type": "number",
+        "title": "年龄",
+        "validation": {
+          "min": {
+            "$numberDecimal": "0"
+          },
+          "max": {
+            "$numberDecimal": "120"
+          },
+          "integerOnly": true
+        }
+      },
+      "contentHash": "9385d21349b25cc7dc6e69bf98de1857aa030d99dcd56b4c6194722fa3dfa441",
+      "parentVersionId": null,
+      "restoredFromVersionId": null,
+      "operation": "save",
+      "createdBy": {
+        "$oid": "700000000000000000000001"
+      },
+      "evidenceKey": null,
+      "distributionSource": {
+        "kind": "original",
+        "sourceQuestionId": null,
+        "sourceVersionId": null
+      }
+    },
+    "survey_versions": {
+      "_id": {
+        "$oid": "7a0000000000000000000001"
+      },
+      "schemaVersion": 2,
+      "surveyId": {
+        "$oid": "730000000000000000000001"
+      },
+      "version": 1,
+      "sourceDefinitionVersion": 2,
+      "definition": {
+        "title": "基本信息调查",
+        "description": "课程示例",
+        "questions": [
+          {
+            "id": "age",
+            "type": "number",
+            "title": "年龄",
+            "validation": {
+              "min": {
+                "$numberDecimal": "0"
+              },
+              "max": {
+                "$numberDecimal": "120"
+              },
+              "integerOnly": true
+            },
+            "required": true,
+            "jumpRules": []
+          }
+        ]
+      },
+      "policySnapshot": {
+        "allowAnonymous": false,
+        "allowRepeat": false
+      },
+      "definitionHash": "5907a60c2fdbf946c3652235ce032b7564c118d1e84d9c1810ab16001c087791",
+      "publishedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "publishedBy": {
+        "$oid": "700000000000000000000001"
+      },
+      "publicationRequestId": "design-publish-1",
+      "publicationRequestHash": "b64806e3c4bce19c1394af0d3f0375dfb79b6f2f0fe499d901a5487d74114471",
+      "origin": {
+        "kind": "publication"
+      },
+      "bindingHash": "b2169d9f61a59bc9e5998e6a94b5ecd0ef32d6a64a109a7af640a53a254d9d7b"
+    },
+    "responses": {
+      "_id": {
+        "$oid": "780000000000000000000001"
+      },
+      "schemaVersion": 2,
+      "surveyId": {
+        "$oid": "730000000000000000000001"
+      },
+      "surveyDefinitionVersion": 1,
+      "respondentId": {
+        "$oid": "700000000000000000000002"
+      },
+      "anonymous": false,
+      "repeatAllowed": false,
+      "requestId": "design-answer-1",
+      "payloadHash": "e678bb4c4e6f564fcd22bd99bcb12dc480d7ce60e0d175c9adbbd3825a67077d",
+      "payloadHashVersion": 2,
+      "answers": [
+        {
+          "questionId": "age",
+          "type": "number",
+          "number": {
+            "$numberDecimal": "0"
+          }
+        }
+      ],
+      "submittedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      }
+    },
+    "question_banks": {
+      "_id": {
+        "$oid": "740000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "ownerId": {
+        "$oid": "700000000000000000000001"
+      },
+      "name": "基本信息",
+      "revision": 0,
+      "deletedAt": null
+    },
+    "question_bank_members": {
+      "_id": {
+        "$oid": "7b0000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "bankId": {
+        "$oid": "740000000000000000000001"
+      },
+      "questionId": {
+        "$oid": "710000000000000000000001"
+      },
+      "ownerId": {
+        "$oid": "700000000000000000000001"
+      }
+    },
+    "question_grants": {
+      "_id": {
+        "$oid": "760000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "questionId": {
+        "$oid": "710000000000000000000001"
+      },
+      "recipientId": {
+        "$oid": "700000000000000000000002"
+      },
+      "grantedBy": {
+        "$oid": "700000000000000000000001"
+      },
+      "state": "active",
+      "revision": 0,
+      "revokedAt": null
+    },
+    "survey_question_bindings": {
+      "_id": {
+        "$oid": "7c0000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "surveyId": {
+        "$oid": "730000000000000000000001"
+      },
+      "ownerId": {
+        "$oid": "700000000000000000000001"
+      },
+      "instanceId": "age",
+      "scope": "publication",
+      "publicationVersion": 1,
+      "questionId": {
+        "$oid": "710000000000000000000001"
+      },
+      "questionVersionId": {
+        "$oid": "720000000000000000000001"
+      },
+      "contentHash": "9385d21349b25cc7dc6e69bf98de1857aa030d99dcd56b4c6194722fa3dfa441",
+      "snapshotHash": "5907a60c2fdbf946c3652235ce032b7564c118d1e84d9c1810ab16001c087791",
+      "acquisitionId": {
+        "$oid": "790000000000000000000001"
+      },
+      "acquiredAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "authorization": {
+        "kind": "owner"
+      },
+      "mappingKind": "native",
+      "evidenceKey": null
+    },
+    "survey_templates": {
+      "_id": {
+        "$oid": "750000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "publisherId": {
+        "$oid": "700000000000000000000001"
+      },
+      "sourceSurveyId": {
+        "$oid": "730000000000000000000001"
+      },
+      "sourcePublishedVersion": 1,
+      "status": "listed",
+      "revision": 0,
+      "title": "基本信息调查",
+      "description": "课程示例",
+      "questions": [
+        {
+          "id": "age",
+          "type": "number",
+          "title": "年龄",
+          "validation": {
+            "min": {
+              "$numberDecimal": "0"
+            },
+            "max": {
+              "$numberDecimal": "120"
+            },
+            "integerOnly": true
+          },
+          "required": true,
+          "jumpRules": []
+        }
+      ],
+      "bindings": [
+        {
+          "instanceId": "age",
+          "questionId": {
+            "$oid": "710000000000000000000001"
+          },
+          "questionVersionId": {
+            "$oid": "720000000000000000000001"
+          },
+          "contentHash": "9385d21349b25cc7dc6e69bf98de1857aa030d99dcd56b4c6194722fa3dfa441",
+          "distributionProof": {
+            "lineageHash": "a0a5570b47a0eb8a9d25acebd57e50a5dc1b0c5fea823def0b303900b4c45d7c",
+            "obligations": [
+              {
+                "questionId": {
+                  "$oid": "710000000000000000000001"
+                },
+                "questionVersionId": {
+                  "$oid": "720000000000000000000001"
+                },
+                "authorId": {
+                  "$oid": "700000000000000000000001"
+                },
+                "grantId": null,
+                "grantRevision": null
+              }
+            ]
+          }
+        }
+      ],
+      "contentHash": "af580d9c03e48842f210f5e6bd77e2c16722dd0f74b6d6575ae132e53a41820a",
+      "accessFence": 0
+    },
+    "template_grants": {
+      "_id": {
+        "$oid": "770000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "updatedAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "questionId": {
+        "$oid": "710000000000000000000001"
+      },
+      "questionVersionId": {
+        "$oid": "720000000000000000000001"
+      },
+      "publisherId": {
+        "$oid": "700000000000000000000002"
+      },
+      "grantedBy": {
+        "$oid": "700000000000000000000001"
+      },
+      "state": "active",
+      "revision": 0,
+      "revokedAt": null
+    },
+    "operation_receipts": {
+      "_id": {
+        "$oid": "7d0000000000000000000001"
+      },
+      "schemaVersion": 1,
+      "createdAt": {
+        "$date": "2026-10-22T08:00:00.000Z"
+      },
+      "actorId": {
+        "$oid": "700000000000000000000001"
+      },
+      "operation": "saveVersion",
+      "resourceKey": "710000000000000000000001",
+      "requestKey": "design-save-1",
+      "requestHash": "de7697776cfc515309579c1b765fc585f866ada550b94a242d0efcdb8b38dd12",
+      "result": {
+        "kind": "resourceReceipt",
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": "720000000000000000000001",
+          "revision": 1
+        }
+      },
+      "resultVersion": 1,
+      "firstHttpStatus": 201
+    }
+  },
+  "supportingDocuments": {
+    "users": [
+      {
+        "_id": {
+          "$oid": "700000000000000000000002"
+        },
+        "schemaVersion": 1,
+        "username": "student_demo",
+        "usernameKey": "student_demo",
+        "passwordHash": "scrypt-设计占位-不可用于登录",
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "updatedAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        }
+      },
+      {
+        "_id": {
+          "$oid": "700000000000000000000003"
+        },
+        "schemaVersion": 1,
+        "username": "student_c",
+        "usernameKey": "student_c",
+        "passwordHash": "scrypt-设计占位-不可用于登录",
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "updatedAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        }
+      }
+    ],
+    "operation_receipts": [
+      {
+        "_id": {
+          "$oid": "7d0000000000000000000002"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "actorId": {
+          "$oid": "700000000000000000000001"
+        },
+        "operation": "attachQuestion",
+        "resourceKey": "730000000000000000000001",
+        "requestKey": "review-P2-I01",
+        "requestHash": "7bd7cc114ff02c026336be065ca258c9a5421f3883d5ea46f93b4fb24e4eac78",
+        "resultVersion": 1,
+        "firstHttpStatus": 200,
+        "result": {
+          "kind": "instanceSave",
+          "data": {
+            "revision": 1,
+            "draftDefinitionRevision": 2,
+            "instanceId": "auto_age_001",
+            "questionVersionId": "720000000000000000000001",
+            "validationIssues": [
+              {
+                "code": "TARGET_MISSING",
+                "field": "/questions/0/jumpRules/0/targetQuestionId",
+                "questionId": "auto_age_001",
+                "message": "第1题：跳转目标尚未选择或已删除，可保存草稿"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "_id": {
+          "$oid": "7d0000000000000000000003"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "actorId": {
+          "$oid": "700000000000000000000001"
+        },
+        "operation": "adoptTemplate",
+        "resourceKey": "750000000000000000000001",
+        "requestKey": "review-P2-M04",
+        "requestHash": "0c4be6bd044fc87f1b53eb9c25f2f0c3b8691e54346305a07d62b13ca431fa22",
+        "resultVersion": 1,
+        "firstHttpStatus": 201,
+        "result": {
+          "kind": "templateAdoption",
+          "data": {
+            "surveyId": "730000000000000000000004",
+            "revision": 0
+          }
+        }
+      }
+    ],
+    "question_items": [
+      {
+        "_id": {
+          "$oid": "710000000000000000000002"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "updatedAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "ownerId": {
+          "$oid": "700000000000000000000002"
+        },
+        "revision": 3,
+        "accessFence": 0,
+        "latestVersionId": {
+          "$oid": "720000000000000000000005"
+        },
+        "nextVersion": 4,
+        "draft": null,
+        "origin": {
+          "kind": "fork",
+          "sourceQuestionId": {
+            "$oid": "710000000000000000000001"
+          },
+          "sourceVersionId": {
+            "$oid": "720000000000000000000001"
+          },
+          "evidenceKey": null
+        }
+      },
+      {
+        "_id": {
+          "$oid": "710000000000000000000003"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "updatedAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "ownerId": {
+          "$oid": "700000000000000000000003"
+        },
+        "revision": 1,
+        "accessFence": 0,
+        "latestVersionId": {
+          "$oid": "720000000000000000000006"
+        },
+        "nextVersion": 2,
+        "draft": null,
+        "origin": {
+          "kind": "fork",
+          "sourceQuestionId": {
+            "$oid": "710000000000000000000002"
+          },
+          "sourceVersionId": {
+            "$oid": "720000000000000000000003"
+          },
+          "evidenceKey": null
+        }
+      }
+    ],
+    "question_versions": [
+      {
+        "_id": {
+          "$oid": "720000000000000000000003"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "questionId": {
+          "$oid": "710000000000000000000002"
+        },
+        "version": 1,
+        "content": {
+          "type": "number",
+          "title": "年龄",
+          "validation": {
+            "min": {
+              "$numberDecimal": "0"
+            },
+            "max": {
+              "$numberDecimal": "120"
+            },
+            "integerOnly": true
+          }
+        },
+        "contentHash": "9385d21349b25cc7dc6e69bf98de1857aa030d99dcd56b4c6194722fa3dfa441",
+        "parentVersionId": null,
+        "restoredFromVersionId": null,
+        "operation": "fork",
+        "createdBy": {
+          "$oid": "700000000000000000000002"
+        },
+        "evidenceKey": null,
+        "distributionSource": {
+          "kind": "derived",
+          "sourceQuestionId": {
+            "$oid": "710000000000000000000001"
+          },
+          "sourceVersionId": {
+            "$oid": "720000000000000000000001"
+          }
+        }
+      },
+      {
+        "_id": {
+          "$oid": "720000000000000000000006"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "questionId": {
+          "$oid": "710000000000000000000003"
+        },
+        "version": 1,
+        "content": {
+          "type": "number",
+          "title": "年龄",
+          "validation": {
+            "min": {
+              "$numberDecimal": "0"
+            },
+            "max": {
+              "$numberDecimal": "120"
+            },
+            "integerOnly": true
+          }
+        },
+        "contentHash": "9385d21349b25cc7dc6e69bf98de1857aa030d99dcd56b4c6194722fa3dfa441",
+        "parentVersionId": null,
+        "restoredFromVersionId": null,
+        "operation": "fork",
+        "createdBy": {
+          "$oid": "700000000000000000000003"
+        },
+        "evidenceKey": null,
+        "distributionSource": {
+          "kind": "derived",
+          "sourceQuestionId": {
+            "$oid": "710000000000000000000002"
+          },
+          "sourceVersionId": {
+            "$oid": "720000000000000000000003"
+          }
+        }
+      },
+      {
+        "_id": {
+          "$oid": "720000000000000000000004"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "questionId": {
+          "$oid": "710000000000000000000002"
+        },
+        "version": 2,
+        "content": {
+          "type": "number",
+          "title": "年龄（周岁）",
+          "validation": {
+            "min": {
+              "$numberDecimal": "0"
+            },
+            "max": {
+              "$numberDecimal": "120"
+            },
+            "integerOnly": true
+          }
+        },
+        "contentHash": "abb7ef7c4539499cda6bcb0bb4c5b9503a98de65c3ae93ffdc9a94d4c8446724",
+        "parentVersionId": {
+          "$oid": "720000000000000000000003"
+        },
+        "restoredFromVersionId": null,
+        "operation": "save",
+        "createdBy": {
+          "$oid": "700000000000000000000002"
+        },
+        "evidenceKey": null,
+        "distributionSource": {
+          "kind": "derived",
+          "sourceQuestionId": {
+            "$oid": "710000000000000000000001"
+          },
+          "sourceVersionId": {
+            "$oid": "720000000000000000000001"
+          }
+        }
+      },
+      {
+        "_id": {
+          "$oid": "720000000000000000000005"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "questionId": {
+          "$oid": "710000000000000000000002"
+        },
+        "version": 3,
+        "content": {
+          "type": "number",
+          "title": "年龄",
+          "validation": {
+            "min": {
+              "$numberDecimal": "0"
+            },
+            "max": {
+              "$numberDecimal": "120"
+            },
+            "integerOnly": true
+          }
+        },
+        "contentHash": "9385d21349b25cc7dc6e69bf98de1857aa030d99dcd56b4c6194722fa3dfa441",
+        "parentVersionId": {
+          "$oid": "720000000000000000000003"
+        },
+        "restoredFromVersionId": {
+          "$oid": "720000000000000000000003"
+        },
+        "operation": "restore",
+        "createdBy": {
+          "$oid": "700000000000000000000002"
+        },
+        "evidenceKey": null,
+        "distributionSource": {
+          "kind": "derived",
+          "sourceQuestionId": {
+            "$oid": "710000000000000000000001"
+          },
+          "sourceVersionId": {
+            "$oid": "720000000000000000000001"
+          }
+        }
+      },
+      {
+        "_id": {
+          "$oid": "720000000000000000000002"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "questionId": {
+          "$oid": "710000000000000000000001"
+        },
+        "version": 2,
+        "content": {
+          "type": "number",
+          "title": "年龄（更新）",
+          "validation": {
+            "min": {
+              "$numberDecimal": "0"
+            },
+            "max": {
+              "$numberDecimal": "120"
+            },
+            "integerOnly": true
+          }
+        },
+        "contentHash": "73cb6ea3746ae4732dee58950b36b9b6fc763d62127bca9f7c25ae3b5c37a64c",
+        "parentVersionId": {
+          "$oid": "720000000000000000000001"
+        },
+        "restoredFromVersionId": null,
+        "operation": "save",
+        "createdBy": {
+          "$oid": "700000000000000000000001"
+        },
+        "evidenceKey": null,
+        "distributionSource": {
+          "kind": "original",
+          "sourceQuestionId": null,
+          "sourceVersionId": null
+        }
+      }
+    ],
+    "template_grants": [
+      {
+        "_id": {
+          "$oid": "770000000000000000000002"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "updatedAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "questionId": {
+          "$oid": "710000000000000000000001"
+        },
+        "questionVersionId": {
+          "$oid": "720000000000000000000001"
+        },
+        "publisherId": {
+          "$oid": "700000000000000000000003"
+        },
+        "grantedBy": {
+          "$oid": "700000000000000000000001"
+        },
+        "state": "active",
+        "revision": 0,
+        "revokedAt": null
+      },
+      {
+        "_id": {
+          "$oid": "770000000000000000000003"
+        },
+        "schemaVersion": 1,
+        "createdAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "updatedAt": {
+          "$date": "2026-10-22T08:00:00.000Z"
+        },
+        "questionId": {
+          "$oid": "710000000000000000000002"
+        },
+        "questionVersionId": {
+          "$oid": "720000000000000000000003"
+        },
+        "publisherId": {
+          "$oid": "700000000000000000000003"
+        },
+        "grantedBy": {
+          "$oid": "700000000000000000000002"
+        },
+        "state": "active",
+        "revision": 0,
+        "revokedAt": null
+      }
+    ]
+  },
+  "reviewRevision": "P2-004",
+  "implementationReference": {
+    "asOf": "2026-10-24",
+    "scope": "W02—W06 implemented; these remain static synthetic examples, not importable or recorded HTTP",
+    "evidence": [
+      "w02-w04-coverage.md",
+      "cross-survey-statistics.md",
+      "template-square-coverage.md"
+    ],
+    "future": [
+      "W07 real P1 migration / final reports / role enforcement deployment"
+    ]
+  }
+}

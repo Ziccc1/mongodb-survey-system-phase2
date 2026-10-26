@@ -1,0 +1,96 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_access_review_1792846045471_125d5fed
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_access_review_1792846045471_125d5fed
+# Subtest: R1 real HTTP access gate precedes type/boundary/version/history errors; retained publication stays authorized
+    # Subtest: four types × three endpoints: private/nonexistent resources all404, no snapshot/detail read
+    not ok 1 - four types × three endpoints: private/nonexistent resources all404, no snapshot/detail read
+      ---
+      duration_ms: 185.0767
+      type: 'test'
+      location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\cross-access-review.test.ts:1:1729'
+      failureType: 'testCodeFailure'
+      error: '[{"type":"single","suffix":"","existing":true,"status":404,"code":"NOT_FOUND"},{"type":"single","suffix":"","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"single","suffix":"","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"single","suffix":"/answers","existing":true,"status":422,"code":"UNSUPPORTED_QUESTION_TYPE"},{"type":"single","suffix":"/answers","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"single","suffix":"/answers","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"single","suffix":"/distribution","existing":true,"status":422,"code":"UNSUPPORTED_QUESTION_TYPE"},{"type":"single","suffix":"/distribution","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"single","suffix":"/distribution","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"multiple","suffix":"","existing":true,"status":404,"code":"NOT_FOUND"},{"type":"multiple","suffix":"","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"multiple","suffix":"","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"multiple","suffix":"/answers","existing":true,"status":422,"code":"UNSUPPORTED_QUESTION_TYPE"},{"type":"multiple","suffix":"/answers","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"multiple","suffix":"/answers","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"multiple","suffix":"/distribution","existing":true,"status":422,"code":"UNSUPPORTED_QUESTION_TYPE"},{"type":"multiple","suffix":"/distribution","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"multiple","suffix":"/distribution","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"text","suffix":"","existing":true,"status":404,"code":"NOT_FOUND"},{"type":"text","suffix":"","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"text","suffix":"","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"text","suffix":"/answers","existing":true,"status":404,"code":"NOT_FOUND"},{"type":"text","suffix":"/answers","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"text","suffix":"/answers","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"text","suffix":"/distribution","existing":true,"status":422,"code":"UNSUPPORTED_QUESTION_TYPE"},{"type":"text","suffix":"/distribution","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"text","suffix":"/distribution","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"number","suffix":"","existing":true,"status":404,"code":"NOT_FOUND"},{"type":"number","suffix":"","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"number","suffix":"","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"number","suffix":"/answers","existing":true,"status":404,"code":"NOT_FOUND"},{"type":"number","suffix":"/answers","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"number","suffix":"/answers","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"number","suffix":"/distribution","existing":true,"status":404,"code":"NOT_FOUND"},{"type":"number","suffix":"/distribution","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"number","suffix":"/distribution","existing":false,"status":404,"code":"NOT_FOUND"},{"type":"single","suffix":"invalid-boundaries","status":400,"code":"INVALID_REQUEST"},{"type":"multiple","suffix":"invalid-boundaries","status":400,"code":"INVALID_REQUEST"},{"type":"text","suffix":"invalid-boundaries","status":400,"code":"INVALID_REQUEST"},{"type":"number","suffix":"invalid-boundaries","status":400,"code":"INVALID_REQUEST"}]'
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\cross-access-review.test.ts:22:56)
+        process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\cross-access-review.test.ts:18:3)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+      ...
+    # Subtest: unrelated broken own publication and corrupt private version cannot precede denial
+    not ok 2 - unrelated broken own publication and corrupt private version cannot precede denial
+      ---
+      duration_ms: 196.2116
+      type: 'test'
+      location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\cross-access-review.test.ts:1:2596'
+      failureType: 'testCodeFailure'
+      error: '[{"status":503,"body":{"error":{"code":"VERSION_DEFINITION_UNAVAILABLE","message":"历史发布定义损坏或待恢复","details":[],"traceId":"a84b3926-20f0-45af-ba9d-d736bf39f3e8"}}},{"status":422,"body":{"error":{"code":"UNSUPPORTED_QUESTION_TYPE","message":"所选题型不支持此统计","details":[],"traceId":"30995380-df40-4c00-99f5-6f3cd03a197f"}}},{"status":422,"body":{"error":{"code":"UNSUPPORTED_QUESTION_TYPE","message":"所选题型不支持此统计","details":[],"traceId":"9398317d-b56d-4d5c-af7c-10a2436cb9b1"}}},{"status":503,"body":{"error":{"code":"VERSION_DEFINITION_UNAVAILABLE","message":"历史发布定义损坏或待恢复","details":[],"traceId":"76ea2627-3190-42f8-966e-b9f70fe578af"}}},{"status":422,"body":{"error":{"code":"UNSUPPORTED_QUESTION_TYPE","message":"所选题型不支持此统计","details":[],"traceId":"7738c0bc-d566-48c3-9959-ba5839dcc3a3"}}},{"status":422,"body":{"error":{"code":"UNSUPPORTED_QUESTION_TYPE","message":"所选题型不支持此统计","details":[],"traceId":"30256ed9-1357-4c27-9bf5-534d5dfcc3d9"}}},{"status":503,"body":{"error":{"code":"VERSION_DEFINITION_UNAVAILABLE","message":"历史发布定义损坏或待恢复","details":[],"traceId":"38f7ac5f-d35b-4327-b7c1-e297f861a962"}}},{"status":503,"body":{"error":{"code":"VERSION_DEFINITION_UNAVAILABLE","message":"历史发布定义损坏或待恢复","details":[],"traceId":"25877eff-10d7-4650-832b-9de5555549fe"}}},{"status":422,"body":{"error":{"code":"UNSUPPORTED_QUESTION_TYPE","message":"所选题型不支持此统计","details":[],"traceId":"b5f2dd32-fd6e-425e-943a-939957de303f"}}},{"status":503,"body":{"error":{"code":"VERSION_DEFINITION_UNAVAILABLE","message":"历史发布定义损坏或待恢复","details":[],"traceId":"afe36b4f-4e72-4ebf-90fe-12a121014347"}}},{"status":503,"body":{"error":{"code":"VERSION_DEFINITION_UNAVAILABLE","message":"历史发布定义损坏或待恢复","details":[],"traceId":"e94feb3c-bf5e-47b3-b375-e02046977e40"}}},{"status":503,"body":{"error":{"code":"VERSION_DEFINITION_UNAVAILABLE","message":"历史发布定义损坏或待恢复","details":[],"traceId":"eca24929-4149-4a36-973c-005be386505f"}}},{"status":503,"body":{"error":{"code":"QUESTION_MAPPING_INCOMPLETE","message":"题目来源映射缺失或不一致","details":[],"traceId":"e89e31de-187b-4161-aeeb-c9d067a6686b"}}},{"status":503,"body":{"error":{"code":"QUESTION_MAPPING_INCOMPLETE","message":"题目来源映射缺失或不一致","details":[],"traceId":"c9d0ed21-347a-4674-84be-7819b428b1c7"}}},{"status":503,"body":{"error":{"code":"QUESTION_MAPPING_INCOMPLETE","message":"题目来源映射缺失或不一致","details":[],"traceId":"fb34584e-150e-4fee-896b-bef350c3e49a"}}}]'
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: '=='
+      stack: |-
+        TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\cross-access-review.test.ts:31:58)
+        process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\cross-access-review.test.ts:24:3)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+      ...
+    # Subtest: authorized callers still receive supported business errors; no answers leak to source author
+    ok 3 - authorized callers still receive supported business errors; no answers leak to source author
+      ---
+      duration_ms: 134.1563
+      type: 'test'
+      ...
+    # Subtest: revocation keeps fixed publication summary/answers/distribution and rejects unreadable future versions
+    not ok 4 - revocation keeps fixed publication summary/answers/distribution and rejects unreadable future versions
+      ---
+      duration_ms: 166.5152
+      type: 'test'
+      location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\cross-access-review.test.ts:1:4515'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+        
+        503 !== 404
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: 404
+      actual: 503
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\cross-access-review.test.ts:45:174)
+        process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\cross-access-review.test.ts:37:3)
+        async Test.run (node:internal/test_runner/test:1054:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+      ...
+    1..4
+not ok 1 - R1 real HTTP access gate precedes type/boundary/version/history errors; retained publication stays authorized
+  ---
+  duration_ms: 16452.3601
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\cross-access-review.test.ts:1:413'
+  failureType: 'subtestsFailed'
+  error: '3 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 5
+# suites 0
+# pass 1
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17157.2761

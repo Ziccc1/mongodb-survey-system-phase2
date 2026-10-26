@@ -1,0 +1,68 @@
+Browser tab: 4, Title: "问卷工作台", URL: "http://localhost:5200/surveys/6adcd02bba826d37d9e2d259/preview".
+1 AXWebArea 问卷工作台, URL: localhost:5200/surveys/6adcd02bba826d37d9e2d259/preview
+	2 container app
+		3 link Description: 跳到主要内容, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/preview#main
+		4 container
+			5 link Description: 问卷工作台, Value: localhost:5200/dashboard
+			6 container 主导航
+				7 link Description: 首页, Value: localhost:5200/dashboard
+				8 link Description: 我的问卷, Value: localhost:5200/surveys
+				9 link Description: 题目, Value: localhost:5200/questions
+				10 link Description: 题库, Value: localhost:5200/question-banks
+				11 link Description: 模板广场, Value: localhost:5200/templates
+				12 text p2_manual_1024_b
+				13 button 退出登录
+		14 container
+			15 link Description: ← 返回编辑, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259
+			16 text 创建者预览 · 不保存答卷
+			17 heading P2-MAN-20261024-02 活动模板源, Value: 1
+				18 text P2-MAN-20261024-02 活动模板源
+			19 text P2-MAN-20261024-02 活动模板源
+			20 text 请根据实际情况填写，标有“必答”的题目需要回答。
+			21 container 预览方式
+				22 text 预览方式
+				23 container
+					24 radio button (settable, integer) Description: 分页浏览, Value: 1
+					25 text 分页浏览
+				26 container
+					27 radio button (settable, integer) Description: 模拟填写, Value: 0
+					28 text 模拟填写
+				29 text 无需作答，按原题序查看全部题目，不执行跳转。切换方式会返回第一页，两种方式均不保存答卷。
+			30 heading 第 1 页 / 1 页, Value: 2, ID: fill-step
+				31 text 第 1 页 / 1 页
+			32 text 共 4 题，按原题序浏览 · 每页最多 10 题
+			33 container Description: 第1题, ID: fill-question-86de87d2-2bc8-40af-87ce-b06272a3c6f2
+				34 container 1. P2-MAN-20261024-02 是否参加下一期活动？ （必答）
+					35 container
+						36 text 1.  P2-MAN-20261024-02 是否参加下一期活动？  （必答）
+					37 radio button (disabled, settable, integer) Description: 参加, Value: 0
+					38 radio button (disabled, settable, integer) Description: 不参加, Value: 0
+			39 container Description: 第2题, ID: fill-question-8373eb96-d56c-4ddc-8e90-df93a512d310
+				40 container 2. P2-MAN-20261024-02 每周可参加几次活动？ （可选）
+					41 container
+						42 text 2.  P2-MAN-20261024-02 每周可参加几次活动？  （可选）
+					43 text P2-MAN-20261024-02 每周可参加几次活动？
+					44 text field (disabled) P2-MAN-20261024-02 每周可参加几次活动？, ID: input-8373eb96-d56c-4ddc-8e90-df93a512d310
+					45 container
+						46 text 请输入整数 ，下限 0 ，上限 7
+			47 container Description: 第3题, ID: fill-question-cc96775f-3fb2-4237-aca8-87be271fa1a1
+				48 container 3. 偏好的活动形式？ （必答）
+					49 container
+						50 text 3.  偏好的活动形式？  （必答）
+					51 checkbox (disabled, settable, integer) Description: 线下讲座, Value: 0
+					52 checkbox (disabled, settable, integer) Description: 线上直播, Value: 0
+					53 checkbox (disabled, settable, integer) Description: 小组讨论, Value: 0
+					54 text 可选 1—2 项
+			55 container Description: 第4题, ID: fill-question-6198d159-9056-4194-84f1-8fa49517b860
+				56 container 4. 活动安排建议 （可选）
+					57 container
+						58 text 4.  活动安排建议  （可选）
+					59 text 活动安排建议
+					60 text entry area (disabled) 活动安排建议, ID: input-6198d159-9056-4194-84f1-8fa49517b860
+					61 text 0 / 20 个字符
+			62 button (disabled) 上一页
+			63 text 第 1 页
+			64 button 检查问卷
+		65 text 数据库课程项目 · 问卷工作台
+
+The focused UI element is 1 AXWebArea 问卷工作台, URL: localhost:5200/surveys/6adcd02bba826d37d9e2d259/preview

@@ -1,0 +1,19 @@
+{
+  "multiplicityError": {
+    "error": {
+      "code": "QUESTION_MAPPING_INCOMPLETE",
+      "message": "历史同题同版存在多个实例，需先审阅legacyMultiplicity边界",
+      "details": [],
+      "traceId": "20b1a2e6-6814-4878-a07c-00fc077910d5"
+    }
+  },
+  "legacyUnchanged": true,
+  "corruptResponseError": {
+    "error": {
+      "code": "REPORT_DATA_INVALID",
+      "message": "历史答卷损坏或不符合发布定义，统计已停止",
+      "details": [],
+      "traceId": "bbb25173-78af-4e5a-96d0-fe9459ffb1db"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+P2 synthetic target localhost:27019 / project2_test_publish_1792673138859_3926724d
+Independent retained database: project2_test_publish_1792673138859_3926724d
+PASS transaction publishes v1 and returns same survey share URL
+PASS publication retry replay and changed-key-content conflict
+PASS pause/edit/republish retains v1 and same ID/link; editing creates no snapshot
+PASS historical pagination and creator isolation
+PASS closed state and old publish receipt replay do not reopen collection
+PASS real transaction rollback after inserted snapshot leaves no orphan or pointer
+PASS invalid empty draft cannot publish
+PUBLICATION MODULE PASSED

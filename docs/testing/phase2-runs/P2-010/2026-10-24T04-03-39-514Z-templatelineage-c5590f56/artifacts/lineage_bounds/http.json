@@ -1,0 +1,6244 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2e428037dfc82db0410b",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2e428037dfc82db0410b/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db0410b",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2e428037dfc82db0410b/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2e428037dfc82db0410b",
+        "versionId": "6adc2e428037dfc82db0410d",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db0414f",
+        "publicId": "olHfpFfET9BLt1FdHOvoMg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.397Z",
+        "updatedAt": "2026-10-24T04:04:18.397Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db0414f",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db0414f",
+        "publicId": "olHfpFfET9BLt1FdHOvoMg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.397Z",
+        "updatedAt": "2026-10-24T04:04:18.397Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db0414f/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "53ac15c8-0661-48ce-b29f-c9f15efff83c",
+        "questionVersionId": "6adc2e428037dfc82db0414e",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db0414f",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db0414f",
+        "publicId": "olHfpFfET9BLt1FdHOvoMg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "53ac15c8-0661-48ce-b29f-c9f15efff83c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.397Z",
+        "updatedAt": "2026-10-24T04:04:18.411Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db0414f/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adc2e428037dfc82db0414f",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T04:04:18.425Z",
+        "firstPublishedAt": "2026-10-24T04:04:18.425Z",
+        "shareUrl": "http://localhost:5200/survey/olHfpFfET9BLt1FdHOvoMg",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db0414f",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db0414f",
+        "publicId": "olHfpFfET9BLt1FdHOvoMg",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "53ac15c8-0661-48ce-b29f-c9f15efff83c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T04:04:18.425Z",
+        "createdAt": "2026-10-24T04:04:18.397Z",
+        "updatedAt": "2026-10-24T04:04:18.425Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2e428037dfc82db04155",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db04199",
+        "publicId": "KWUO8lQwCMSGxX4i6LHUsQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.546Z",
+        "updatedAt": "2026-10-24T04:04:18.546Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db04199",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db04199",
+        "publicId": "KWUO8lQwCMSGxX4i6LHUsQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.546Z",
+        "updatedAt": "2026-10-24T04:04:18.546Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db04199/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "68e2f6cf-1deb-4df2-adfc-d20674e00fb1",
+        "questionVersionId": "6adc2e428037dfc82db04198",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db04199",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db04199",
+        "publicId": "KWUO8lQwCMSGxX4i6LHUsQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "68e2f6cf-1deb-4df2-adfc-d20674e00fb1",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.546Z",
+        "updatedAt": "2026-10-24T04:04:18.558Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db04199/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adc2e428037dfc82db04199",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T04:04:18.569Z",
+        "firstPublishedAt": "2026-10-24T04:04:18.569Z",
+        "shareUrl": "http://localhost:5200/survey/KWUO8lQwCMSGxX4i6LHUsQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db04199",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db04199",
+        "publicId": "KWUO8lQwCMSGxX4i6LHUsQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "68e2f6cf-1deb-4df2-adfc-d20674e00fb1",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T04:04:18.569Z",
+        "createdAt": "2026-10-24T04:04:18.546Z",
+        "updatedAt": "2026-10-24T04:04:18.569Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED",
+        "message": "公开来源链超过容量限制",
+        "details": [],
+        "traceId": "c8a90741-f6f8-4aa2-ac53-fdd861159a5b"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041a1",
+        "publicId": "fMYwckVGhqkAnTBns7aZpg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.647Z",
+        "updatedAt": "2026-10-24T04:04:18.647Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041a1",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041a1",
+        "publicId": "fMYwckVGhqkAnTBns7aZpg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.647Z",
+        "updatedAt": "2026-10-24T04:04:18.647Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041a1/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "16b87214-07a3-464a-a1d9-c9c9d786cf54",
+        "questionVersionId": "6adc2e428037dfc82db041a0",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041a1",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041a1",
+        "publicId": "fMYwckVGhqkAnTBns7aZpg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "16b87214-07a3-464a-a1d9-c9c9d786cf54",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.647Z",
+        "updatedAt": "2026-10-24T04:04:18.658Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041a1/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adc2e428037dfc82db041a1",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T04:04:18.672Z",
+        "firstPublishedAt": "2026-10-24T04:04:18.672Z",
+        "shareUrl": "http://localhost:5200/survey/fMYwckVGhqkAnTBns7aZpg",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041a1",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041a1",
+        "publicId": "fMYwckVGhqkAnTBns7aZpg",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "16b87214-07a3-464a-a1d9-c9c9d786cf54",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T04:04:18.672Z",
+        "createdAt": "2026-10-24T04:04:18.647Z",
+        "updatedAt": "2026-10-24T04:04:18.672Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "DISTRIBUTION_PROVENANCE_UNVERIFIED",
+        "message": "该题原始来源未核实，仍可自用，暂不可公开分发",
+        "details": [],
+        "traceId": "d737c0e1-f0fa-4a05-b5ee-dfb1414d670e"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041ab",
+        "publicId": "VYFJm1gsfxZqgJRGeS4nlg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.717Z",
+        "updatedAt": "2026-10-24T04:04:18.717Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041ab",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041ab",
+        "publicId": "VYFJm1gsfxZqgJRGeS4nlg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.717Z",
+        "updatedAt": "2026-10-24T04:04:18.717Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041ab/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "bd87578b-cb56-47ca-942a-940c72c34d3f",
+        "questionVersionId": "6adc2e428037dfc82db041a8",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041ab",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041ab",
+        "publicId": "VYFJm1gsfxZqgJRGeS4nlg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "bd87578b-cb56-47ca-942a-940c72c34d3f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.717Z",
+        "updatedAt": "2026-10-24T04:04:18.730Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041ab/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adc2e428037dfc82db041ab",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T04:04:18.747Z",
+        "firstPublishedAt": "2026-10-24T04:04:18.747Z",
+        "shareUrl": "http://localhost:5200/survey/VYFJm1gsfxZqgJRGeS4nlg",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041ab",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041ab",
+        "publicId": "VYFJm1gsfxZqgJRGeS4nlg",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "bd87578b-cb56-47ca-942a-940c72c34d3f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T04:04:18.747Z",
+        "createdAt": "2026-10-24T04:04:18.717Z",
+        "updatedAt": "2026-10-24T04:04:18.747Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 503,
+    "response": {
+      "error": {
+        "code": "DISTRIBUTION_LINEAGE_INVALID",
+        "message": "模板来源链或固定证明不完整，暂不可公开使用",
+        "details": [],
+        "traceId": "26a3cf8e-8cba-4912-b848-7e856897c990"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041b3",
+        "publicId": "OSru5tZ7r7YRjVMkwsvIpQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.791Z",
+        "updatedAt": "2026-10-24T04:04:18.791Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041b3",
+        "publicId": "OSru5tZ7r7YRjVMkwsvIpQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.791Z",
+        "updatedAt": "2026-10-24T04:04:18.791Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "8d0cac6a-bb06-4fbf-ab80-99ad782a1407",
+        "questionVersionId": "6adc2e428037dfc82db041b2",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041b3",
+        "publicId": "OSru5tZ7r7YRjVMkwsvIpQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "8d0cac6a-bb06-4fbf-ab80-99ad782a1407",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.791Z",
+        "updatedAt": "2026-10-24T04:04:18.802Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041b3/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adc2e428037dfc82db041b3",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T04:04:18.817Z",
+        "firstPublishedAt": "2026-10-24T04:04:18.817Z",
+        "shareUrl": "http://localhost:5200/survey/OSru5tZ7r7YRjVMkwsvIpQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041b3",
+        "publicId": "OSru5tZ7r7YRjVMkwsvIpQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "8d0cac6a-bb06-4fbf-ab80-99ad782a1407",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T04:04:18.817Z",
+        "createdAt": "2026-10-24T04:04:18.791Z",
+        "updatedAt": "2026-10-24T04:04:18.817Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 503,
+    "response": {
+      "error": {
+        "code": "DISTRIBUTION_LINEAGE_INVALID",
+        "message": "模板来源链或固定证明不完整，暂不可公开使用",
+        "details": [],
+        "traceId": "078f8b4d-20d3-425e-8935-488c2e0cf410"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041be",
+        "publicId": "rsgqo7_3dq4iNVd0F1UL8g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.863Z",
+        "updatedAt": "2026-10-24T04:04:18.863Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041be",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041be",
+        "publicId": "rsgqo7_3dq4iNVd0F1UL8g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.863Z",
+        "updatedAt": "2026-10-24T04:04:18.863Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041be/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "ab8628e5-b502-4476-9e59-fbd9cc2c50d4",
+        "questionVersionId": "6adc2e428037dfc82db041bc",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041be",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041be",
+        "publicId": "rsgqo7_3dq4iNVd0F1UL8g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "ab8628e5-b502-4476-9e59-fbd9cc2c50d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.863Z",
+        "updatedAt": "2026-10-24T04:04:18.874Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041be/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adc2e428037dfc82db041be",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T04:04:18.887Z",
+        "firstPublishedAt": "2026-10-24T04:04:18.887Z",
+        "shareUrl": "http://localhost:5200/survey/rsgqo7_3dq4iNVd0F1UL8g",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041be",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041be",
+        "publicId": "rsgqo7_3dq4iNVd0F1UL8g",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "ab8628e5-b502-4476-9e59-fbd9cc2c50d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T04:04:18.887Z",
+        "createdAt": "2026-10-24T04:04:18.863Z",
+        "updatedAt": "2026-10-24T04:04:18.887Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 503,
+    "response": {
+      "error": {
+        "code": "DISTRIBUTION_LINEAGE_INVALID",
+        "message": "模板来源链或固定证明不完整，暂不可公开使用",
+        "details": [],
+        "traceId": "3180dc91-d087-49f9-a128-644ad57b2d15"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041c7",
+        "publicId": "GcPsOHR4cTMAd7ceiTKt9g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.925Z",
+        "updatedAt": "2026-10-24T04:04:18.925Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041c7",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041c7",
+        "publicId": "GcPsOHR4cTMAd7ceiTKt9g",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.925Z",
+        "updatedAt": "2026-10-24T04:04:18.925Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041c7/question-references",
+    "who": 0,
+    "status": 503,
+    "response": {
+      "error": {
+        "code": "QUESTION_MAPPING_INCOMPLETE",
+        "message": "题目来源映射缺失或不一致",
+        "details": [],
+        "traceId": "02f66aa8-25b7-41b9-a9ee-959a445e50af"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041ca",
+        "publicId": "tmc4TGlv9Ylwx0yPr5vG9A",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.962Z",
+        "updatedAt": "2026-10-24T04:04:18.962Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e428037dfc82db041ca",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e428037dfc82db041ca",
+        "publicId": "tmc4TGlv9Ylwx0yPr5vG9A",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:18.962Z",
+        "updatedAt": "2026-10-24T04:04:18.962Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e428037dfc82db041ca/question-references",
+    "who": 0,
+    "status": 503,
+    "response": {
+      "error": {
+        "code": "QUESTION_MAPPING_INCOMPLETE",
+        "message": "题目来源映射缺失或不一致",
+        "details": [],
+        "traceId": "af77fec8-3caf-44ed-b023-5751d2272d48"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.134Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.134Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+        "questionVersionId": "6adc2e428037dfc82db0420a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.147Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "ab653daa-be52-430a-b198-1009bef6b2f0",
+        "questionVersionId": "6adc2e438037dfc82db0424a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 2,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.161Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 3,
+        "draftDefinitionRevision": 4,
+        "validationIssues": [],
+        "instanceId": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+        "questionVersionId": "6adc2e438037dfc82db0428a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 4,
+        "revision": 3,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.175Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 5,
+        "validationIssues": [],
+        "instanceId": "85bf39a1-9816-4153-9cdb-afe21482e046",
+        "questionVersionId": "6adc2e438037dfc82db042ca",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 5,
+        "revision": 4,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.189Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 5,
+        "draftDefinitionRevision": 6,
+        "validationIssues": [],
+        "instanceId": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+        "questionVersionId": "6adc2e438037dfc82db0430a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 5,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.203Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 6,
+        "draftDefinitionRevision": 7,
+        "validationIssues": [],
+        "instanceId": "b429f228-f104-4f8d-85c8-9fde317e7460",
+        "questionVersionId": "6adc2e438037dfc82db0434a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 6,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.219Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 7,
+        "draftDefinitionRevision": 8,
+        "validationIssues": [],
+        "instanceId": "19729f0b-bb09-4345-90a4-272a0d320061",
+        "questionVersionId": "6adc2e438037dfc82db0438a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 8,
+        "revision": 7,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.239Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 8,
+        "draftDefinitionRevision": 9,
+        "validationIssues": [],
+        "instanceId": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+        "questionVersionId": "6adc2e438037dfc82db043ca",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 9,
+        "revision": 8,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.255Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 9,
+        "draftDefinitionRevision": 10,
+        "validationIssues": [],
+        "instanceId": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+        "questionVersionId": "6adc2e438037dfc82db0440a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 10,
+        "revision": 9,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.271Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 10,
+        "draftDefinitionRevision": 11,
+        "validationIssues": [],
+        "instanceId": "bdbc65cb-51fd-43aa-923f-da89dada1378",
+        "questionVersionId": "6adc2e438037dfc82db0444a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "bdbc65cb-51fd-43aa-923f-da89dada1378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 11,
+        "revision": 10,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.290Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 11,
+        "draftDefinitionRevision": 12,
+        "validationIssues": [],
+        "instanceId": "0fa60360-dbf6-49a5-a398-30df4b45cbfc",
+        "questionVersionId": "6adc2e438037dfc82db0448a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "bdbc65cb-51fd-43aa-923f-da89dada1378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0fa60360-dbf6-49a5-a398-30df4b45cbfc",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 12,
+        "revision": 11,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.312Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 12,
+        "draftDefinitionRevision": 13,
+        "validationIssues": [],
+        "instanceId": "89f1e257-06f3-4530-899d-8b569fd9189b",
+        "questionVersionId": "6adc2e438037dfc82db044ca",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "bdbc65cb-51fd-43aa-923f-da89dada1378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0fa60360-dbf6-49a5-a398-30df4b45cbfc",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "89f1e257-06f3-4530-899d-8b569fd9189b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 13,
+        "revision": 12,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.336Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 13,
+        "draftDefinitionRevision": 14,
+        "validationIssues": [],
+        "instanceId": "d100f992-f0b0-4b5d-b7b3-47804208576b",
+        "questionVersionId": "6adc2e438037dfc82db0450a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "bdbc65cb-51fd-43aa-923f-da89dada1378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0fa60360-dbf6-49a5-a398-30df4b45cbfc",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "89f1e257-06f3-4530-899d-8b569fd9189b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "d100f992-f0b0-4b5d-b7b3-47804208576b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 14,
+        "revision": 13,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.355Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 14,
+        "draftDefinitionRevision": 15,
+        "validationIssues": [],
+        "instanceId": "0414e0b9-456c-4243-aeda-66e56d4e44b6",
+        "questionVersionId": "6adc2e438037dfc82db0454a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "bdbc65cb-51fd-43aa-923f-da89dada1378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0fa60360-dbf6-49a5-a398-30df4b45cbfc",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "89f1e257-06f3-4530-899d-8b569fd9189b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "d100f992-f0b0-4b5d-b7b3-47804208576b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0414e0b9-456c-4243-aeda-66e56d4e44b6",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 15,
+        "revision": 14,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.377Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 15,
+        "draftDefinitionRevision": 16,
+        "validationIssues": [],
+        "instanceId": "b5c8b2bc-aa04-421e-848d-0fa741debb00",
+        "questionVersionId": "6adc2e438037dfc82db0458a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "bdbc65cb-51fd-43aa-923f-da89dada1378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0fa60360-dbf6-49a5-a398-30df4b45cbfc",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "89f1e257-06f3-4530-899d-8b569fd9189b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "d100f992-f0b0-4b5d-b7b3-47804208576b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0414e0b9-456c-4243-aeda-66e56d4e44b6",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b5c8b2bc-aa04-421e-848d-0fa741debb00",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 16,
+        "revision": 15,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.401Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 16,
+        "draftDefinitionRevision": 17,
+        "validationIssues": [],
+        "instanceId": "d8269917-3208-4d14-ab37-583fe7af7f8a",
+        "questionVersionId": "6adc2e438037dfc82db045b2",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "bdbc65cb-51fd-43aa-923f-da89dada1378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0fa60360-dbf6-49a5-a398-30df4b45cbfc",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "89f1e257-06f3-4530-899d-8b569fd9189b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "d100f992-f0b0-4b5d-b7b3-47804208576b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0414e0b9-456c-4243-aeda-66e56d4e44b6",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b5c8b2bc-aa04-421e-848d-0fa741debb00",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "d8269917-3208-4d14-ab37-583fe7af7f8a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 17,
+        "revision": 16,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.421Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e438037dfc82db045b3/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adc2e438037dfc82db045b3",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 17,
+        "publishedAt": "2026-10-24T04:04:19.444Z",
+        "firstPublishedAt": "2026-10-24T04:04:19.444Z",
+        "shareUrl": "http://localhost:5200/survey/AdzV9Q1qehNVWIxMShFhbA",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e438037dfc82db045b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e438037dfc82db045b3",
+        "publicId": "AdzV9Q1qehNVWIxMShFhbA",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "d4ee4374-c77d-4b92-8320-8d9b08eba378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "ab653daa-be52-430a-b198-1009bef6b2f0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "a2a76a38-bdf6-497a-bfae-97a1f3647268",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "85bf39a1-9816-4153-9cdb-afe21482e046",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "15ba3997-d9d0-423c-b0fc-c77587fb78dd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b429f228-f104-4f8d-85c8-9fde317e7460",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "19729f0b-bb09-4345-90a4-272a0d320061",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "aa5416cf-7d5f-4da2-a39c-eb3c74f34d5a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "7af5ee9f-0bfc-4bd8-93db-f7f9f33e2c1e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "bdbc65cb-51fd-43aa-923f-da89dada1378",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0fa60360-dbf6-49a5-a398-30df4b45cbfc",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "89f1e257-06f3-4530-899d-8b569fd9189b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "d100f992-f0b0-4b5d-b7b3-47804208576b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "0414e0b9-456c-4243-aeda-66e56d4e44b6",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "b5c8b2bc-aa04-421e-848d-0fa741debb00",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "d8269917-3208-4d14-ab37-583fe7af7f8a",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 17,
+        "revision": 17,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T04:04:19.444Z",
+        "createdAt": "2026-10-24T04:04:19.134Z",
+        "updatedAt": "2026-10-24T04:04:19.444Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2e448037dfc82db045f5",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.728Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.728Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+        "questionVersionId": "6adc2e428037dfc82db0420a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.737Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+        "questionVersionId": "6adc2e438037dfc82db0424a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 2,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.748Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 3,
+        "draftDefinitionRevision": 4,
+        "validationIssues": [],
+        "instanceId": "012e7e48-635b-4856-b314-8cc246779646",
+        "questionVersionId": "6adc2e438037dfc82db0428a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 4,
+        "revision": 3,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.760Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 5,
+        "validationIssues": [],
+        "instanceId": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+        "questionVersionId": "6adc2e438037dfc82db042ca",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 5,
+        "revision": 4,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.774Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 5,
+        "draftDefinitionRevision": 6,
+        "validationIssues": [],
+        "instanceId": "34d45096-d391-492f-b989-8f8ac16175d4",
+        "questionVersionId": "6adc2e438037dfc82db0430a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 6,
+        "revision": 5,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.788Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 6,
+        "draftDefinitionRevision": 7,
+        "validationIssues": [],
+        "instanceId": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+        "questionVersionId": "6adc2e438037dfc82db0434a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 7,
+        "revision": 6,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.803Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 7,
+        "draftDefinitionRevision": 8,
+        "validationIssues": [],
+        "instanceId": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+        "questionVersionId": "6adc2e438037dfc82db0438a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 8,
+        "revision": 7,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.819Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 8,
+        "draftDefinitionRevision": 9,
+        "validationIssues": [],
+        "instanceId": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+        "questionVersionId": "6adc2e438037dfc82db043ca",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 9,
+        "revision": 8,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.837Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 9,
+        "draftDefinitionRevision": 10,
+        "validationIssues": [],
+        "instanceId": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+        "questionVersionId": "6adc2e438037dfc82db0440a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 10,
+        "revision": 9,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.860Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 10,
+        "draftDefinitionRevision": 11,
+        "validationIssues": [],
+        "instanceId": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+        "questionVersionId": "6adc2e438037dfc82db0444a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 11,
+        "revision": 10,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.881Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 11,
+        "draftDefinitionRevision": 12,
+        "validationIssues": [],
+        "instanceId": "259cbf34-89c4-4529-822e-bf19864a806c",
+        "questionVersionId": "6adc2e438037dfc82db0448a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "259cbf34-89c4-4529-822e-bf19864a806c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 12,
+        "revision": 11,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.907Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 12,
+        "draftDefinitionRevision": 13,
+        "validationIssues": [],
+        "instanceId": "39907cb8-8970-4970-883f-4d4ba5c3ca03",
+        "questionVersionId": "6adc2e438037dfc82db044ca",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "259cbf34-89c4-4529-822e-bf19864a806c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "39907cb8-8970-4970-883f-4d4ba5c3ca03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 13,
+        "revision": 12,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.932Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 13,
+        "draftDefinitionRevision": 14,
+        "validationIssues": [],
+        "instanceId": "97ea54a6-6477-4016-8888-e50b543a7084",
+        "questionVersionId": "6adc2e438037dfc82db0450a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "259cbf34-89c4-4529-822e-bf19864a806c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "39907cb8-8970-4970-883f-4d4ba5c3ca03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "97ea54a6-6477-4016-8888-e50b543a7084",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 14,
+        "revision": 13,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.962Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 14,
+        "draftDefinitionRevision": 15,
+        "validationIssues": [],
+        "instanceId": "3a21e5e9-4127-4a3c-9513-efe013d0fb03",
+        "questionVersionId": "6adc2e438037dfc82db0454a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "259cbf34-89c4-4529-822e-bf19864a806c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "39907cb8-8970-4970-883f-4d4ba5c3ca03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "97ea54a6-6477-4016-8888-e50b543a7084",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "3a21e5e9-4127-4a3c-9513-efe013d0fb03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 15,
+        "revision": 14,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:20.990Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 15,
+        "draftDefinitionRevision": 16,
+        "validationIssues": [],
+        "instanceId": "42f027af-6079-4402-bd46-962b375980bd",
+        "questionVersionId": "6adc2e438037dfc82db0458a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "259cbf34-89c4-4529-822e-bf19864a806c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "39907cb8-8970-4970-883f-4d4ba5c3ca03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "97ea54a6-6477-4016-8888-e50b543a7084",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "3a21e5e9-4127-4a3c-9513-efe013d0fb03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "42f027af-6079-4402-bd46-962b375980bd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 16,
+        "revision": 15,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:21.015Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 16,
+        "draftDefinitionRevision": 17,
+        "validationIssues": [],
+        "instanceId": "61b551ed-5c52-4ff9-8a2f-ae899f1b7964",
+        "questionVersionId": "6adc2e438037dfc82db045b2",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "259cbf34-89c4-4529-822e-bf19864a806c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "39907cb8-8970-4970-883f-4d4ba5c3ca03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "97ea54a6-6477-4016-8888-e50b543a7084",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "3a21e5e9-4127-4a3c-9513-efe013d0fb03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "42f027af-6079-4402-bd46-962b375980bd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "61b551ed-5c52-4ff9-8a2f-ae899f1b7964",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 17,
+        "revision": 16,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:21.037Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 17,
+        "draftDefinitionRevision": 18,
+        "validationIssues": [],
+        "instanceId": "8aefa2d0-e9df-44c6-b842-323c33ede2f6",
+        "questionVersionId": "6adc2e448037dfc82db045f8",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "259cbf34-89c4-4529-822e-bf19864a806c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "39907cb8-8970-4970-883f-4d4ba5c3ca03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "97ea54a6-6477-4016-8888-e50b543a7084",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "3a21e5e9-4127-4a3c-9513-efe013d0fb03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "42f027af-6079-4402-bd46-962b375980bd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "61b551ed-5c52-4ff9-8a2f-ae899f1b7964",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8aefa2d0-e9df-44c6-b842-323c33ede2f6",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 18,
+        "revision": 17,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:21.062Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adc2e448037dfc82db045f9/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adc2e448037dfc82db045f9",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 18,
+        "publishedAt": "2026-10-24T04:04:21.089Z",
+        "firstPublishedAt": "2026-10-24T04:04:21.089Z",
+        "shareUrl": "http://localhost:5200/survey/7evDUi473gFdgngeqAKoiQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adc2e448037dfc82db045f9",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2e448037dfc82db045f9",
+        "publicId": "7evDUi473gFdgngeqAKoiQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "fc12fff4-b243-4e97-9862-ffd8c7c1ebe9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "79639c2a-d484-4232-bfb3-558c074c6b8b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "012e7e48-635b-4856-b314-8cc246779646",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "76d83749-c31b-4203-9b1b-a01c0cb24fb9",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "34d45096-d391-492f-b989-8f8ac16175d4",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "2e86799f-0ffe-4a30-94a2-5fdaa90bf97f",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "4e85d98b-64e3-4213-8d65-35d2f381f383",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8dbe88f0-de81-4da4-8fec-ff478754fa0b",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "9e7f53a7-6db2-417e-8cbc-9ccd3b8713ba",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "68ae20ca-f27d-4cd7-8ec1-ba352b972f56",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "259cbf34-89c4-4529-822e-bf19864a806c",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "39907cb8-8970-4970-883f-4d4ba5c3ca03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "97ea54a6-6477-4016-8888-e50b543a7084",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "3a21e5e9-4127-4a3c-9513-efe013d0fb03",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "42f027af-6079-4402-bd46-962b375980bd",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "61b551ed-5c52-4ff9-8a2f-ae899f1b7964",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            },
+            {
+              "id": "8aefa2d0-e9df-44c6-b842-323c33ede2f6",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 18,
+        "revision": 18,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T04:04:21.089Z",
+        "createdAt": "2026-10-24T04:04:20.728Z",
+        "updatedAt": "2026-10-24T04:04:21.089Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED",
+        "message": "公开来源链超过容量限制",
+        "details": [],
+        "traceId": "68a653c2-8e9e-4809-82fa-a611fd4b6403"
+      }
+    }
+  }
+]

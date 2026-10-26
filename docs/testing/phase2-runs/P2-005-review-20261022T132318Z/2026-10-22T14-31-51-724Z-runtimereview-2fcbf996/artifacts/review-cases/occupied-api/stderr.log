@@ -1,0 +1,13 @@
+D:\大三\数据库\pj1_2\tests\runtime-listeners.ts:14
+  if(existing.length)throw Error(`P2_SMOKE_PORT_IN_USE: ${existing.map(r=>`${r.port}/pid=${r.pid}`).join(',')}`);
+                           ^
+
+
+Error: P2_SMOKE_PORT_IN_USE: 52770/pid=37424
+    at assertPortsFree (D:\大三\数据库\pj1_2\tests\runtime-listeners.ts:14:28)
+    at <anonymous> (D:\大三\数据库\pj1_2\tests\runtime-startup.ts:32:3)
+    at ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.17.0

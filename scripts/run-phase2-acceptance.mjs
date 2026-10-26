@@ -1,0 +1,38 @@
+import {maintenanceMongoOptions} from './mongo-maintenance.mjs';
+import assert from 'node:assert/strict';
+import {spawn,execFileSync} from 'node:child_process';
+import {createHash,randomUUID} from 'node:crypto';
+import {readFileSync,writeFileSync,mkdirSync,readdirSync,existsSync} from 'node:fs';
+import {resolve,relative,isAbsolute} from 'node:path';
+import {BSON,MongoClient} from 'mongodb';
+import {assertOwnedPhase2Instance} from './phase2-runtime.mjs';
+
+// Serial execution avoids fixed test-port collisions; configuration/init/startup actions are deliberately absent.
+const checks=['typecheck','build','domain','operationretry','schemafoundation','bindingsreceipts','isolation','phase2targets','runtimereviewapi','versionsbanks','surveyssharingusage','httpreceipts','crossstatistics','crossboundaries','crossaccessreview','templates','templatelineage','templateraces','usagecapacity','phase2compatibility','migration','migratedapi','integration','acceptancejourney','acceptancepermissions','acceptancescale','phase2browser','crossbrowser','crossretainedbrowser','templatebrowser','phase1','existingregression','verifyruntime','verifyphase2'];
+const args=process.argv.slice(2);assert.ok(args.length<=1&&args.every(a=>a.startsWith('--only=')),'Only optional --only=check1,check2 is supported');
+const selected=args.length?args[0].slice(7).split(','):checks;
+assert.ok(selected.length&&new Set(selected).size===selected.length&&selected.every(c=>checks.includes(c)),'Unknown/duplicate/empty acceptance check');
+const parent=resolve('docs/testing/phase2-runs'),root=resolve(process.env.PHASE2_RUN_ROOT??`${parent}/acceptance-${new Date().toISOString().replace(/[:.]/g,'-')}-${randomUUID().slice(0,8)}`),rel=relative(parent,root);
+assert.ok(rel&&!rel.startsWith('..')&&!isAbsolute(rel)&&!existsSync(root),'Use a new dedicated evidence directory');mkdirSync(root,{recursive:true});
+const save=(name,data)=>writeFileSync(resolve(root,name+'.json'),JSON.stringify(data,null,2));
+const started=new Date().toISOString(),rows=[],guardFailures=[],client=new MongoClient('mongodb://localhost:27019/?replicaSet=rs0',{...maintenanceMongoOptions(),promoteLongs:false}),ports=[27019,3200,5200],temporary=[3110,3210,3211,3212,3219,3220,3225,3231,3232,3233,3234];
+let before,sourceBefore,listenersBefore,connected=false;
+function sourceInventory(){const out=[];function visit(dir){for(const e of readdirSync(dir,{withFileTypes:true})){if(['node_modules','dist','.git','.local'].includes(e.name))continue;const path=resolve(dir,e.name);if(e.isDirectory())visit(path);else if(/\.(ts|vue|mjs|json|css|html)$/.test(e.name))out.push({path:relative(process.cwd(),path).replaceAll('\\','/'),sha256:createHash('sha256').update(readFileSync(path)).digest('hex')});}}for(const dir of ['apps','packages','tests','scripts'])visit(dir);for(const file of ['package.json','package-lock.json'])out.push({path:file,sha256:createHash('sha256').update(readFileSync(file)).digest('hex')});return out.sort((a,b)=>a.path.localeCompare(b.path));}
+function listeners(ps){return JSON.parse(execFileSync('powershell.exe',['-NoProfile','-ExecutionPolicy','Bypass','-File',resolve('scripts/check-listeners.ps1'),'-Ports',ps.join(',')],{encoding:'utf8',windowsHide:true,timeout:20000}).trim().replace(/^\uFEFF/,''));}
+async function inventory(){const out={};for(const name of ['project2_app_v1','project2_app_v2']){const db=client.db(name),rows=[];for(const c of await db.listCollections().toArray()){const hash=createHash('sha256');let count=0;for await(const doc of db.collection(c.name).find().sort({_id:1})){hash.update(BSON.serialize(doc));count++;}rows.push({name:c.name,options:c.options,indexes:await db.collection(c.name).indexes(),count,sha256:hash.digest('hex')});}out[name]=rows.sort((a,b)=>a.name.localeCompare(b.name));}return out;}
+async function run(name){const start=new Date().toISOString();console.log(`\n[${rows.length+1}/${selected.length}] ${name} ${start}`);return new Promise(resolvePromise=>{const child=spawn(process.execPath,['scripts/run-check.mjs',name],{stdio:'inherit',windowsHide:true,env:{...process.env,PHASE2_RUN_ROOT:root}});let spawnError;child.on('error',e=>spawnError=e.message);child.on('close',(code,signal)=>resolvePromise({name,start,finished:new Date().toISOString(),exitCode:code,signal,spawnError,status:code===0?'passed':'failed'}));});}
+try{
+ const owned=assertOwnedPhase2Instance();save('instance',owned);await client.connect();connected=true;const options=await client.db('admin').command({getCmdLineOpts:1});assert.equal(options.parsed.net.port,27019);assert.equal(options.parsed.storage.dbPath,owned.dbPath);
+ before=await inventory();save('applications-before',before);sourceBefore=sourceInventory();save('source-before',sourceBefore);listenersBefore=listeners(ports);save('listeners-before',listenersBefore);assert.equal(listeners(temporary).length,0,'A dedicated test port is already occupied');
+ for(const name of selected){if(rows.some(r=>['typecheck','build'].includes(r.name)&&r.status!=='passed')){rows.push({name,status:'not-run',reason:'Build/typecheck prerequisite failed'});continue;}rows.push(await run(name));save('progress',{started,checks:rows});}
+}catch(error){guardFailures.push({stage:'execution',message:error.stack??String(error)});console.error(error);}
+finally{
+ if(connected&&before){try{const after=await inventory();save('applications-after',after);assert.deepEqual(after,before,'Application data/options/indexes changed during acceptance');}catch(error){guardFailures.push({stage:'application-preservation',message:error.message});}}
+ if(sourceBefore){try{const after=sourceInventory();save('source-after',after);assert.deepEqual(after,sourceBefore,'Sources changed during the acceptance run');}catch(error){guardFailures.push({stage:'source-preservation',message:error.message});}}
+ if(listenersBefore){try{const after=listeners(ports);save('listeners-after',after);assert.deepEqual(after,listenersBefore,'Existing application/Mongo listener PIDs changed');const leftovers=listeners(temporary);save('temporary-listeners-after',leftovers);assert.equal(leftovers.length,0,'A test left temporary listeners running');}catch(error){guardFailures.push({stage:'listener-preservation',message:error.message});}}
+ await client.close();
+ const complete=selected.length===checks.length&&checks.every(c=>selected.includes(c)),passed=rows.length===selected.length&&rows.every(r=>r.status==='passed')&&!guardFailures.length;
+ const result={task:'phase2-automated-acceptance',started,finished:new Date().toISOString(),scope:complete?'complete-automated-regression':'targeted-checks',status:passed?'passed':'failed',checks:rows,guardFailures,limits:['Synthetic P2 databases only; no real P1 migration or DB authorization deployment.','Existing application startup ports remain occupied by user services; dedicated browser servers and runtime target/ownership checks replace restarting those services.','Controlled failure hooks are not a real network outage or primary failover.','Manual acceptance remains unexecuted.']};save('summary',result);
+ writeFileSync(resolve(root,'README.md'),`# 第二阶段自动化验收\n\n开始：${started}；结束：${result.finished}；结果：${result.status}；范围：${result.scope}。\n\n| 检查 | 结果 | 退出码 |\n| --- | --- | --- |\n${rows.map(r=>`| ${r.name} | ${r.status} | ${r.exitCode??'—'} |`).join('\n')}\n\n[机器汇总](summary.json)；各子目录保留原始输出、命令、时间和退出码。组数不是独立场景数。\n\n保护检查：${guardFailures.length?JSON.stringify(guardFailures):'两个应用库的数据、验证器、索引一致；源文件摘要一致；现有监听PID保留；临时测试端口已释放。'}\n\n${result.limits.map(x=>'- '+x).join('\n')}\n`);
+ console.log(`\nACCEPTANCE ${result.status.toUpperCase()}: ${root}`);process.exitCode=passed?0:1;
+}

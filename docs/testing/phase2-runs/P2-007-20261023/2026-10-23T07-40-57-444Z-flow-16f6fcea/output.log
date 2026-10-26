@@ -1,0 +1,6 @@
+PASS both multiple rules match: first rule wins and skipped mandatory is not checked
+PASS changing priority changes the path deterministically
+PASS returning to change answers deletes invalid branch values and rechecks newly reachable required questions
+PASS phone 13800138000 exact integer, fractional/letters rejected, required/optional empty and ordinary decimal allowed
+PASS text Unicode limits, choice boundaries, single jumps and illegal options
+FILL/PATH MODULE PASSED

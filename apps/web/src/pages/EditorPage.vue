@@ -8,6 +8,10 @@ import MetadataEditor from '../components/MetadataEditor.vue';
 import QuestionCard from '../components/QuestionCard.vue';
 import PublicationPanel from '../components/PublicationPanel.vue';
 import UiIcon from '../components/UiIcon.vue';
+import SurveyQuestionSources from '../components/SurveyQuestionSources.vue';
+import {libraryEnabled} from '../public-config';
+import type {InstanceSource} from '@survey/shared';
+const sources=ref<InstanceSource[]>([]),sourceLocked=ref(false);
 const selectedQuestion=ref('');
 const publicationLocked = ref(false);
 const route = useRoute(), router = useRouter(), survey = ref<Editor | null>(null), metadata = ref<CreateSurvey>({ title: '' }), questions = ref<Question[]>([]);
@@ -25,11 +29,11 @@ const url = computed(() => `/surveys/${route.params.surveyId}`);
 const metaFrom = (data: Editor): CreateSurvey => ({ title: data.draftDefinition.title, description: data.draftDefinition.description, ...data.settings });
 function adopt(data: Editor) {
   survey.value = data; metadata.value = structuredClone(metaFrom(data)); questions.value = JSON.parse(JSON.stringify(data.draftDefinition.questions));
-  baselineMetadata.value = metadataKey(metadata.value); baselineQuestions.value = questionKey(questions.value); blocked.value = false; remote.value = null;
+  baselineMetadata.value = metadataKey(metadata.value); baselineQuestions.value = questionKey(questions.value); blocked.value = false; remote.value = null; sourceLocked.value=false;
 }
 async function load() {
   loading.value = true; error.value = '';
-  try { adopt(await api<Editor>(url.value)); }
+  try { const data=await api<Editor>(url.value);if(libraryEnabled())sources.value=(await api<{items:InstanceSource[]}>(url.value+'/question-sources')).items;adopt(data); }
   catch (e) { if (e instanceof RequestError && e.status === 401) await router.push('/login'); else error.value = (e as Error).message; }
   finally { loading.value = false; }
 }
@@ -41,7 +45,7 @@ async function inspectRemote() {
   try { remote.value = await api<Editor>(url.value); } catch (e) { error.value = `本地编辑已保留，读取服务器版本失败：${(e as Error).message}`; }
 }
 async function save(section: 'metadata' | 'questions') {
-  if (!survey.value || busy.value || blocked.value || publicationLocked.value) return;
+  if (!survey.value || busy.value || blocked.value || publicationLocked.value || sourceLocked.value) return;
   if (section === 'questions' && checks.value.errors.length) return;
   if (section === 'metadata' && surveyTextIssues(metadata.value).length) return;
   busy.value = true; error.value = ''; notice.value = '';
@@ -82,8 +86,8 @@ async function selectQuestion(id:string){selectedQuestion.value=id;await nextTic
 async function openSettings(){const el=document.getElementById('editor-settings') as HTMLDetailsElement|null;if(el){el.open=true;await nextTick();el.scrollIntoView({block:'start'});el.querySelector<HTMLElement>('input:not(:disabled)')?.focus({preventScroll:true});}}
 function showAdd(){document.querySelector('.add-question-area')?.scrollIntoView({block:'center',behavior:'auto'});}
 function move(index: number, delta: number) { const [question] = questions.value.splice(index, 1); questions.value.splice(index + delta, 0, question); }
-function beforeUnload(event: BeforeUnloadEvent) { if (dirty.value) { event.preventDefault(); event.returnValue = ''; } }
-onBeforeRouteLeave(() => !dirty.value || window.confirm('有未保存的编辑，确定离开？'));
+function beforeUnload(event: BeforeUnloadEvent) { if (dirty.value || sourceLocked.value) { event.preventDefault(); event.returnValue = ''; } }
+onBeforeRouteLeave(() => (!dirty.value&&!sourceLocked.value) || window.confirm(sourceLocked.value?'题目操作尚未确认，离开会丢失原请求重试信息。确定离开？':'有未保存的编辑，确定离开？'));
 onMounted(() => { window.addEventListener('beforeunload', beforeUnload); load(); });
 onBeforeUnmount(() => window.removeEventListener('beforeunload', beforeUnload));
 </script>
@@ -93,14 +97,14 @@ onBeforeUnmount(() => window.removeEventListener('beforeunload', beforeUnload));
   <p v-if="notice" class="saved" role="status">{{ notice }}</p>
   <section v-if="blocked" class="conflict panel" aria-labelledby="conflict-heading"><h2 id="conflict-heading">先比较服务器版本，本地编辑已保留</h2><p>不会自动覆盖或重试保存。请比较后选择如何继续。</p><template v-if="remote"><p>服务器修订 {{ remote.revision }}；{{ remote.draftDefinition.title }}，共 {{ remote.draftDefinition.questions.length }} 题。</p><details><summary>查看服务器内容</summary><pre>{{ JSON.stringify({ metadata: metaFrom(remote), questions: remote.draftDefinition.questions }, null, 2) }}</pre></details><div class="editor-actions"><button type="button" class="secondary" @click="keepLocal">已比较，保留本地并采用最新修订号</button><button type="button" class="quiet" @click="useRemote">放弃本地并采用服务器版本</button></div></template><button v-else class="secondary" @click="inspectRemote">重新读取服务器版本</button></section>
   <div class="editor-layout"><aside class="question-outline"><div class="outline-heading"><UiIcon name="layers" :size="18"/><h2>题目目录</h2><span>{{questions.length}}</span></div><button type="button" class="outline-settings" @click="openSettings"><UiIcon name="edit" :size="16"/>基本信息与填写设置</button><p v-if="!questions.length" class="outline-empty">题目添加后，将在这里显示。</p><ol><li v-for="(q,i) in questions" :key="q.id"><button type="button" :aria-label="`第${i+1}题：${q.title||'未命名题目'}`" :aria-current="selectedQuestion===q.id?'true':undefined" @click="selectQuestion(q.id)"><span class="outline-number">{{i+1}}</span><span class="outline-title">{{q.title||'未命名题目'}}<small>{{QUESTION_LABELS[q.type]}}</small></span><UiIcon :name="q.type" :size="16"/></button></li></ol><button class="outline-add" type="button" :disabled="!editable" @click="showAdd"><UiIcon name="plus" :size="16"/>添加题目</button><p class="outline-help">点击目录直达题目。修改后请手动保存。</p></aside><div class="editor-canvas">
-  <details id="editor-settings" class="editor-settings" :open="questions.length===0"><summary><span><UiIcon name="edit" :size="18"/>基本信息与填写设置</span><small>{{metadataDirty?'有未保存修改':'展开修改标题、说明和填写策略'}}</small></summary><MetadataEditor :model="metadata" :survey="survey" :busy="busy || publicationLocked" :blocked="blocked" :dirty="metadataDirty" @save="save('metadata')" /></details>
+  <details id="editor-settings" class="editor-settings" :open="questions.length===0"><summary><span><UiIcon name="edit" :size="18"/>基本信息与填写设置</span><small>{{metadataDirty?'有未保存修改':'展开修改标题、说明和填写策略'}}</small></summary><MetadataEditor :model="metadata" :survey="survey" :busy="busy || publicationLocked || sourceLocked" :blocked="blocked" :dirty="metadataDirty" @save="save('metadata')" /></details>
   <section class="question-section"><h2>题目 <span class="muted">{{ questions.length }} / 100</span></h2><p v-if="!editable" class="muted">当前状态不能编辑题目。可前往“发布与收集”暂停收集，再返回修改。</p>
     <div v-if="checks.errors.length" class="error" role="alert"><strong>请先修复配置再保存题目</strong><ul><li v-for="item in checks.errors" :key="`${item.field}-${item.code}`">{{ item.message }}</li></ul></div>
     <div v-if="issues.length" class="definition-issues" aria-live="polite"><h3>草稿待完善</h3><p>以下问题允许保留在草稿中，发布前需要完善。</p><ul><li v-for="item in issues" :key="`${item.field}-${item.code}`">{{ item.message }}</li></ul></div>
-    <fieldset class="plain-fieldset" :disabled="busy || publicationLocked || !editable">
-      <QuestionCard :class="{'is-current':selectedQuestion===question.id}" @focusin="selectedQuestion=question.id" v-for="(question, index) in questions" :key="question.id" :question="question" :index="index" :questions="questions" @move="move(index, $event)" @remove="questions.splice(index, 1)" />
+    <SurveyQuestionSources v-if="libraryEnabled()" :survey="survey" :dirty="dirty" @changed="load" @sources="sources=$event" @locked="sourceLocked=$event"/><fieldset class="plain-fieldset" :disabled="busy || publicationLocked || sourceLocked || !editable">
+      <QuestionCard :class="{'is-current':selectedQuestion===question.id}" @focusin="selectedQuestion=question.id" v-for="(question, index) in questions" :key="question.id" :question="question" :index="index" :questions="questions" :content-locked="libraryEnabled() && sources.some(s=>s.instanceId===question.id)" @move="move(index, $event)" @remove="questions.splice(index, 1)" />
       <div class="add-question-area"><h3>{{ questions.length ? "继续添加题目" : "添加第一道题" }}</h3><p class="muted">选择题型，添加后直接编辑题干。修改后请手动保存。</p><div class="editor-actions add-questions"><button v-for="item in (['single', 'multiple', 'text', 'number'] as const)" :key="item" type="button" class="secondary" :disabled="questions.length >= 100" @click="add(item)">添加{{ { single: '单选题', multiple: '多选题', text: '文本题', number: '数字题' }[item] }}</button></div></div>
     </fieldset>
 
-  </section></div><aside class="editor-side"><section class="save-panel"><div class="save-panel-heading"><UiIcon name="check" :size="18"/><h2>保存编辑</h2></div><p>基本信息和题目分别保存；保存草稿不会生成发布版本。</p>    <div class="editor-save-bar"><span class="muted">{{ questionsDirty ? '有未保存的题目修改' : '题目已保存' }} · 修订 {{ survey.revision }}</span><button class="primary" :disabled="busy || publicationLocked || blocked || !editable || checks.errors.length > 0" @click="save('questions')">{{ busy ? '保存中…' : '保存题目' }}</button></div></section><PublicationPanel :survey="survey" :dirty="dirty" @changed="load" @published="openPublication" @locked="publicationLocked = $event" /></aside></div></template>
+  </section></div><aside class="editor-side"><section class="save-panel"><div class="save-panel-heading"><UiIcon name="check" :size="18"/><h2>保存编辑</h2></div><p>基本信息和题目分别保存；保存草稿不会生成发布版本。</p>    <div class="editor-save-bar"><span class="muted">{{ questionsDirty ? '有未保存的题目修改' : '题目已保存' }} · 修订 {{ survey.revision }}</span><button class="primary" :disabled="busy || publicationLocked || sourceLocked || blocked || !editable || checks.errors.length > 0" @click="save('questions')">{{ busy ? '保存中…' : '保存题目' }}</button></div></section><PublicationPanel :survey="survey" :dirty="dirty" :disabled="sourceLocked||busy||blocked" @changed="load" @published="openPublication" @locked="publicationLocked = $event" /></aside></div></template>
 </section></template>

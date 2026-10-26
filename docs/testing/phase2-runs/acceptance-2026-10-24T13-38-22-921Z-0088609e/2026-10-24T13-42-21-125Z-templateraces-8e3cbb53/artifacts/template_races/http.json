@@ -1,0 +1,4326 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec48",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec48/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec48",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec48/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec48",
+        "versionId": "6adcb5cbbfd3e3a0682fec4a",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec4c",
+        "publicId": "lSNVhMfVxd9iF7EDgrNQVA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.391Z",
+        "updatedAt": "2026-10-24T13:42:35.391Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec4c",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec4c",
+        "publicId": "lSNVhMfVxd9iF7EDgrNQVA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.391Z",
+        "updatedAt": "2026-10-24T13:42:35.391Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec4c/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "21581fbc-3223-4876-81a2-a241bf6a90a0",
+        "questionVersionId": "6adcb5cbbfd3e3a0682fec4a",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec4c",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec4c",
+        "publicId": "lSNVhMfVxd9iF7EDgrNQVA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "21581fbc-3223-4876-81a2-a241bf6a90a0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.391Z",
+        "updatedAt": "2026-10-24T13:42:35.407Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec4c/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cbbfd3e3a0682fec4c",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:35.424Z",
+        "firstPublishedAt": "2026-10-24T13:42:35.424Z",
+        "shareUrl": "http://localhost:5200/survey/lSNVhMfVxd9iF7EDgrNQVA",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec4c",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec4c",
+        "publicId": "lSNVhMfVxd9iF7EDgrNQVA",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "21581fbc-3223-4876-81a2-a241bf6a90a0",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:35.424Z",
+        "createdAt": "2026-10-24T13:42:35.391Z",
+        "updatedAt": "2026-10-24T13:42:35.424Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec52",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5cbbfd3e3a0682fec52/adoptions",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cbbfd3e3a0682fec54",
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5cbbfd3e3a0682fec52/unlisting",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec52",
+        "revision": 1,
+        "state": "unlisted"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec54",
+    "who": 2,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec54",
+        "publicId": "UVPHZ7LN_G5f63tLz9a8sw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "72cdeab5-ad04-4a70-a5c2-4c68d5347052",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.474Z",
+        "updatedAt": "2026-10-24T13:42:35.474Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec54/publish",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cbbfd3e3a0682fec54",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 1,
+        "publishedAt": "2026-10-24T13:42:35.547Z",
+        "firstPublishedAt": "2026-10-24T13:42:35.547Z",
+        "shareUrl": "http://localhost:5200/survey/UVPHZ7LN_G5f63tLz9a8sw",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec54",
+    "who": 2,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec54",
+        "publicId": "UVPHZ7LN_G5f63tLz9a8sw",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "72cdeab5-ad04-4a70-a5c2-4c68d5347052",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 1,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:35.547Z",
+        "createdAt": "2026-10-24T13:42:35.474Z",
+        "updatedAt": "2026-10-24T13:42:35.547Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/UVPHZ7LN_G5f63tLz9a8sw/responses",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adcb5cbbfd3e3a0682fec5a",
+        "submittedAt": "2026-10-24T13:42:35.573Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec5b",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec5b/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec5b",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec5b/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec5b",
+        "versionId": "6adcb5cbbfd3e3a0682fec5d",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec5f",
+        "publicId": "vrQmAGIsWHR8gl5tz0zGfQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.604Z",
+        "updatedAt": "2026-10-24T13:42:35.604Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec5f",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec5f",
+        "publicId": "vrQmAGIsWHR8gl5tz0zGfQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.604Z",
+        "updatedAt": "2026-10-24T13:42:35.604Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec5f/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "254d3edc-e095-4d6d-89e5-8427b56bf72d",
+        "questionVersionId": "6adcb5cbbfd3e3a0682fec5d",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec5f",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec5f",
+        "publicId": "vrQmAGIsWHR8gl5tz0zGfQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "254d3edc-e095-4d6d-89e5-8427b56bf72d",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.604Z",
+        "updatedAt": "2026-10-24T13:42:35.617Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec5f/publish",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cbbfd3e3a0682fec5f",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:35.628Z",
+        "firstPublishedAt": "2026-10-24T13:42:35.628Z",
+        "shareUrl": "http://localhost:5200/survey/vrQmAGIsWHR8gl5tz0zGfQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec5f",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec5f",
+        "publicId": "vrQmAGIsWHR8gl5tz0zGfQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "254d3edc-e095-4d6d-89e5-8427b56bf72d",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:35.628Z",
+        "createdAt": "2026-10-24T13:42:35.604Z",
+        "updatedAt": "2026-10-24T13:42:35.628Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec65",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5cbbfd3e3a0682fec65/unlisting",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec65",
+        "revision": 1,
+        "state": "unlisted"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5cbbfd3e3a0682fec65/adoptions",
+    "who": 2,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "EDIT_CONFLICT",
+        "message": "内容已变化，本地编辑已保留，请重新读取并比较",
+        "details": [],
+        "traceId": "a2ec2abb-f797-44a9-ac3f-2b52a7a67bed"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec67",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec67/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec67",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec67/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec67",
+        "versionId": "6adcb5cbbfd3e3a0682fec69",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec67/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec67",
+        "revision": 1,
+        "latestVersionId": "6adcb5cbbfd3e3a0682fec69",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cbbfd3e3a0682fec69",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec67/shares",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec6b",
+        "recipientUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 2
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec67/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec67",
+        "revision": 2,
+        "latestVersionId": "6adcb5cbbfd3e3a0682fec69",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cbbfd3e3a0682fec69",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec67/distribution-grants",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec6c",
+        "questionVersionId": "6adcb5cbbfd3e3a0682fec69",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 3
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec6d",
+        "publicId": "uIkdbdm53PnsDFwjINSNyQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.794Z",
+        "updatedAt": "2026-10-24T13:42:35.794Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec6d",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec6d",
+        "publicId": "uIkdbdm53PnsDFwjINSNyQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.794Z",
+        "updatedAt": "2026-10-24T13:42:35.794Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec6d/question-references",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "1075970d-099d-433a-9183-7162ca1aed07",
+        "questionVersionId": "6adcb5cbbfd3e3a0682fec69",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec6d",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec6d",
+        "publicId": "uIkdbdm53PnsDFwjINSNyQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "1075970d-099d-433a-9183-7162ca1aed07",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.794Z",
+        "updatedAt": "2026-10-24T13:42:35.807Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec6d/publish",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cbbfd3e3a0682fec6d",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:35.818Z",
+        "firstPublishedAt": "2026-10-24T13:42:35.818Z",
+        "shareUrl": "http://localhost:5200/survey/uIkdbdm53PnsDFwjINSNyQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec6d",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec6d",
+        "publicId": "uIkdbdm53PnsDFwjINSNyQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "1075970d-099d-433a-9183-7162ca1aed07",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:35.818Z",
+        "createdAt": "2026-10-24T13:42:35.794Z",
+        "updatedAt": "2026-10-24T13:42:35.818Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec73",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec67/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec67",
+        "revision": 3,
+        "latestVersionId": "6adcb5cbbfd3e3a0682fec69",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cbbfd3e3a0682fec69",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5cbbfd3e3a0682fec73/adoptions",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cbbfd3e3a0682fec75",
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec67/distribution-grants/6adcb5cbbfd3e3a0682fec6c/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec6c",
+        "questionVersionId": "6adcb5cbbfd3e3a0682fec69",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 4
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec75",
+    "who": 2,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec75",
+        "publicId": "Gue-LuE_dwzb6Z9wLRpY_A",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "35a3a7d0-fc2b-4c6c-ba38-a03ccc93980e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:35.874Z",
+        "updatedAt": "2026-10-24T13:42:35.874Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec75/publish",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cbbfd3e3a0682fec75",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 1,
+        "publishedAt": "2026-10-24T13:42:35.956Z",
+        "firstPublishedAt": "2026-10-24T13:42:35.956Z",
+        "shareUrl": "http://localhost:5200/survey/Gue-LuE_dwzb6Z9wLRpY_A",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cbbfd3e3a0682fec75",
+    "who": 2,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec75",
+        "publicId": "Gue-LuE_dwzb6Z9wLRpY_A",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "35a3a7d0-fc2b-4c6c-ba38-a03ccc93980e",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 1,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:35.956Z",
+        "createdAt": "2026-10-24T13:42:35.874Z",
+        "updatedAt": "2026-10-24T13:42:35.956Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/Gue-LuE_dwzb6Z9wLRpY_A/responses",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adcb5cbbfd3e3a0682fec7b",
+        "submittedAt": "2026-10-24T13:42:35.977Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec7c",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec7c/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec7c",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec7c/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cbbfd3e3a0682fec7c",
+        "versionId": "6adcb5cbbfd3e3a0682fec7e",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec7c/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec7c",
+        "revision": 1,
+        "latestVersionId": "6adcb5cbbfd3e3a0682fec7e",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cbbfd3e3a0682fec7e",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec7c/shares",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec80",
+        "recipientUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 2
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec7c/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec7c",
+        "revision": 2,
+        "latestVersionId": "6adcb5cbbfd3e3a0682fec7e",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cbbfd3e3a0682fec7e",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec7c/distribution-grants",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec81",
+        "questionVersionId": "6adcb5cbbfd3e3a0682fec7e",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 3
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec82",
+        "publicId": "FTp1Iooukb40B2piLIYyLQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.036Z",
+        "updatedAt": "2026-10-24T13:42:36.036Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec82",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec82",
+        "publicId": "FTp1Iooukb40B2piLIYyLQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.036Z",
+        "updatedAt": "2026-10-24T13:42:36.036Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec82/question-references",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "284beeab-6dee-4215-82df-a24266028896",
+        "questionVersionId": "6adcb5cbbfd3e3a0682fec7e",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec82",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec82",
+        "publicId": "FTp1Iooukb40B2piLIYyLQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "284beeab-6dee-4215-82df-a24266028896",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.036Z",
+        "updatedAt": "2026-10-24T13:42:36.051Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec82/publish",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5ccbfd3e3a0682fec82",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:36.064Z",
+        "firstPublishedAt": "2026-10-24T13:42:36.064Z",
+        "shareUrl": "http://localhost:5200/survey/FTp1Iooukb40B2piLIYyLQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec82",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec82",
+        "publicId": "FTp1Iooukb40B2piLIYyLQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "284beeab-6dee-4215-82df-a24266028896",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:36.064Z",
+        "createdAt": "2026-10-24T13:42:36.036Z",
+        "updatedAt": "2026-10-24T13:42:36.064Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fec88",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec7c/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cbbfd3e3a0682fec7c",
+        "revision": 3,
+        "latestVersionId": "6adcb5cbbfd3e3a0682fec7e",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cbbfd3e3a0682fec7e",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cbbfd3e3a0682fec7c/distribution-grants/6adcb5ccbfd3e3a0682fec81/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec81",
+        "questionVersionId": "6adcb5cbbfd3e3a0682fec7e",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 4
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5ccbfd3e3a0682fec88/adoptions",
+    "who": 2,
+    "status": 403,
+    "response": {
+      "error": {
+        "code": "PUBLIC_DISTRIBUTION_REQUIRED",
+        "message": "此模板尚缺当前有效的具体版本公开分发授权",
+        "details": [],
+        "traceId": "43a0edb7-0fe3-4d3b-8729-52742f9ceb72"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fec8a",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fec8a/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec8a",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5ccbfd3e3a0682fec8a/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fec8a",
+        "versionId": "6adcb5ccbfd3e3a0682fec8c",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fec8a/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec8a",
+        "revision": 1,
+        "latestVersionId": "6adcb5ccbfd3e3a0682fec8c",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682fec8c",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5ccbfd3e3a0682fec8a/shares",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec8e",
+        "recipientUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 2
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fec8a/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec8a",
+        "revision": 2,
+        "latestVersionId": "6adcb5ccbfd3e3a0682fec8c",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682fec8c",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5ccbfd3e3a0682fec8a/distribution-grants",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec8f",
+        "questionVersionId": "6adcb5ccbfd3e3a0682fec8c",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 3
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adcb5ccbfd3e3a0682fec8c/forks",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fec90",
+        "versionId": "6adcb5ccbfd3e3a0682fec91",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec93",
+        "publicId": "2v89daAwGTJmQbQZLp47bA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.274Z",
+        "updatedAt": "2026-10-24T13:42:36.274Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec93",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec93",
+        "publicId": "2v89daAwGTJmQbQZLp47bA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.274Z",
+        "updatedAt": "2026-10-24T13:42:36.274Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec93/question-references",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "6f9a596d-c465-475a-ac77-ceb5c6676f57",
+        "questionVersionId": "6adcb5ccbfd3e3a0682fec91",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec93",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec93",
+        "publicId": "2v89daAwGTJmQbQZLp47bA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "6f9a596d-c465-475a-ac77-ceb5c6676f57",
+              "type": "text",
+              "title": "有上游的叶题",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.274Z",
+        "updatedAt": "2026-10-24T13:42:36.285Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec93/publish",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5ccbfd3e3a0682fec93",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:36.297Z",
+        "firstPublishedAt": "2026-10-24T13:42:36.297Z",
+        "shareUrl": "http://localhost:5200/survey/2v89daAwGTJmQbQZLp47bA",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec93",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec93",
+        "publicId": "2v89daAwGTJmQbQZLp47bA",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "6f9a596d-c465-475a-ac77-ceb5c6676f57",
+              "type": "text",
+              "title": "有上游的叶题",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:36.297Z",
+        "createdAt": "2026-10-24T13:42:36.274Z",
+        "updatedAt": "2026-10-24T13:42:36.297Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fec99",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fec8a/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec8a",
+        "revision": 3,
+        "latestVersionId": "6adcb5ccbfd3e3a0682fec8c",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682fec8c",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5ccbfd3e3a0682fec99/adoptions",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5ccbfd3e3a0682fec9b",
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5ccbfd3e3a0682fec8a/distribution-grants/6adcb5ccbfd3e3a0682fec8f/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec8f",
+        "questionVersionId": "6adcb5ccbfd3e3a0682fec8c",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 4
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec9b",
+    "who": 2,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec9b",
+        "publicId": "QUmiQAA9kpie_qHsqnE7mg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "5cf4aff7-5b0b-47ff-b6fa-06c96f3257a5",
+              "type": "text",
+              "title": "有上游的叶题",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.351Z",
+        "updatedAt": "2026-10-24T13:42:36.351Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec9b/publish",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5ccbfd3e3a0682fec9b",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 1,
+        "publishedAt": "2026-10-24T13:42:36.446Z",
+        "firstPublishedAt": "2026-10-24T13:42:36.446Z",
+        "shareUrl": "http://localhost:5200/survey/QUmiQAA9kpie_qHsqnE7mg",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fec9b",
+    "who": 2,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fec9b",
+        "publicId": "QUmiQAA9kpie_qHsqnE7mg",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "5cf4aff7-5b0b-47ff-b6fa-06c96f3257a5",
+              "type": "text",
+              "title": "有上游的叶题",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 1,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:36.446Z",
+        "createdAt": "2026-10-24T13:42:36.351Z",
+        "updatedAt": "2026-10-24T13:42:36.446Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/public/surveys/QUmiQAA9kpie_qHsqnE7mg/responses",
+    "who": 2,
+    "status": 201,
+    "response": {
+      "data": {
+        "receiptId": "6adcb5ccbfd3e3a0682feca1",
+        "submittedAt": "2026-10-24T13:42:36.467Z",
+        "publishedVersion": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682feca2",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682feca2/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682feca2",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5ccbfd3e3a0682feca2/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682feca2",
+        "versionId": "6adcb5ccbfd3e3a0682feca4",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682feca2/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682feca2",
+        "revision": 1,
+        "latestVersionId": "6adcb5ccbfd3e3a0682feca4",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682feca4",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5ccbfd3e3a0682feca2/shares",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682feca6",
+        "recipientUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 2
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682feca2/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682feca2",
+        "revision": 2,
+        "latestVersionId": "6adcb5ccbfd3e3a0682feca4",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682feca4",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5ccbfd3e3a0682feca2/distribution-grants",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682feca7",
+        "questionVersionId": "6adcb5ccbfd3e3a0682feca4",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 3
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adcb5ccbfd3e3a0682feca4/forks",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682feca8",
+        "versionId": "6adcb5ccbfd3e3a0682feca9",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecab",
+        "publicId": "idYcOl-a3lOX154BiQHTHQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.547Z",
+        "updatedAt": "2026-10-24T13:42:36.547Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecab",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecab",
+        "publicId": "idYcOl-a3lOX154BiQHTHQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.547Z",
+        "updatedAt": "2026-10-24T13:42:36.547Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecab/question-references",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "f1da9615-f104-40d4-8868-0a5e288893f6",
+        "questionVersionId": "6adcb5ccbfd3e3a0682feca9",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecab",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecab",
+        "publicId": "idYcOl-a3lOX154BiQHTHQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "f1da9615-f104-40d4-8868-0a5e288893f6",
+              "type": "text",
+              "title": "有上游的叶题",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.547Z",
+        "updatedAt": "2026-10-24T13:42:36.556Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecab/publish",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5ccbfd3e3a0682fecab",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:36.567Z",
+        "firstPublishedAt": "2026-10-24T13:42:36.567Z",
+        "shareUrl": "http://localhost:5200/survey/idYcOl-a3lOX154BiQHTHQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecab",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecab",
+        "publicId": "idYcOl-a3lOX154BiQHTHQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "f1da9615-f104-40d4-8868-0a5e288893f6",
+              "type": "text",
+              "title": "有上游的叶题",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:36.567Z",
+        "createdAt": "2026-10-24T13:42:36.547Z",
+        "updatedAt": "2026-10-24T13:42:36.567Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fecb1",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682feca2/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682feca2",
+        "revision": 3,
+        "latestVersionId": "6adcb5ccbfd3e3a0682feca4",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682feca4",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5ccbfd3e3a0682feca2/distribution-grants/6adcb5ccbfd3e3a0682feca7/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682feca7",
+        "questionVersionId": "6adcb5ccbfd3e3a0682feca4",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 4
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5ccbfd3e3a0682fecb1/adoptions",
+    "who": 2,
+    "status": 403,
+    "response": {
+      "error": {
+        "code": "PUBLIC_DISTRIBUTION_REQUIRED",
+        "message": "此模板尚缺当前有效的具体版本公开分发授权",
+        "details": [],
+        "traceId": "5865307a-9ac3-4d9d-9d6d-7a7351dfa112"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fecb3",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecb3/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecb3",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecb3/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fecb3",
+        "versionId": "6adcb5ccbfd3e3a0682fecb5",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecb3/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecb3",
+        "revision": 1,
+        "latestVersionId": "6adcb5ccbfd3e3a0682fecb5",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682fecb5",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecb3/shares",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecb7",
+        "recipientUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 2
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecb3/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecb3",
+        "revision": 2,
+        "latestVersionId": "6adcb5ccbfd3e3a0682fecb5",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682fecb5",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecb3/distribution-grants",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecb8",
+        "questionVersionId": "6adcb5ccbfd3e3a0682fecb5",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 3
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adcb5ccbfd3e3a0682fecb5/forks",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fecb9",
+        "versionId": "6adcb5ccbfd3e3a0682fecba",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecbc",
+        "publicId": "UDBxiKb-OtLs-WGn_KI3eQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.789Z",
+        "updatedAt": "2026-10-24T13:42:36.789Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecbc",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecbc",
+        "publicId": "UDBxiKb-OtLs-WGn_KI3eQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.789Z",
+        "updatedAt": "2026-10-24T13:42:36.789Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecbc/question-references",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "2c930a96-9027-4e49-8d15-18518a322502",
+        "questionVersionId": "6adcb5ccbfd3e3a0682fecba",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecbc",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecbc",
+        "publicId": "UDBxiKb-OtLs-WGn_KI3eQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "2c930a96-9027-4e49-8d15-18518a322502",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:36.789Z",
+        "updatedAt": "2026-10-24T13:42:36.799Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecbc/publish",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5ccbfd3e3a0682fecbc",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:36.812Z",
+        "firstPublishedAt": "2026-10-24T13:42:36.812Z",
+        "shareUrl": "http://localhost:5200/survey/UDBxiKb-OtLs-WGn_KI3eQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5ccbfd3e3a0682fecbc",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecbc",
+        "publicId": "UDBxiKb-OtLs-WGn_KI3eQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "2c930a96-9027-4e49-8d15-18518a322502",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:36.812Z",
+        "createdAt": "2026-10-24T13:42:36.789Z",
+        "updatedAt": "2026-10-24T13:42:36.812Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecb3/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecb3",
+        "revision": 3,
+        "latestVersionId": "6adcb5ccbfd3e3a0682fecb5",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682fecb5",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fecc2",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecb3/distribution-grants/6adcb5ccbfd3e3a0682fecb8/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecb8",
+        "questionVersionId": "6adcb5ccbfd3e3a0682fecb5",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 4
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fecc4",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecc4/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecc4",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecc4/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5ccbfd3e3a0682fecc4",
+        "versionId": "6adcb5ccbfd3e3a0682fecc6",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecc4/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecc4",
+        "revision": 1,
+        "latestVersionId": "6adcb5ccbfd3e3a0682fecc6",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682fecc6",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecc4/shares",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecc8",
+        "recipientUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 2
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecc4/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecc4",
+        "revision": 2,
+        "latestVersionId": "6adcb5ccbfd3e3a0682fecc6",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682fecc6",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecc4/distribution-grants",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecc9",
+        "questionVersionId": "6adcb5ccbfd3e3a0682fecc6",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 3
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adcb5ccbfd3e3a0682fecc6/forks",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cdbfd3e3a0682fecca",
+        "versionId": "6adcb5cdbfd3e3a0682feccb",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682feccd",
+        "publicId": "9lTNlm1DUSZgVOUfrmCQXg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:37.020Z",
+        "updatedAt": "2026-10-24T13:42:37.020Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feccd",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682feccd",
+        "publicId": "9lTNlm1DUSZgVOUfrmCQXg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:37.020Z",
+        "updatedAt": "2026-10-24T13:42:37.020Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feccd/question-references",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "8a5a5bb6-4b13-4962-84f1-dae2ed251f18",
+        "questionVersionId": "6adcb5cdbfd3e3a0682feccb",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feccd",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682feccd",
+        "publicId": "9lTNlm1DUSZgVOUfrmCQXg",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "8a5a5bb6-4b13-4962-84f1-dae2ed251f18",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:37.020Z",
+        "updatedAt": "2026-10-24T13:42:37.032Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feccd/publish",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cdbfd3e3a0682feccd",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:37.043Z",
+        "firstPublishedAt": "2026-10-24T13:42:37.043Z",
+        "shareUrl": "http://localhost:5200/survey/9lTNlm1DUSZgVOUfrmCQXg",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feccd",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682feccd",
+        "publicId": "9lTNlm1DUSZgVOUfrmCQXg",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "8a5a5bb6-4b13-4962-84f1-dae2ed251f18",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:37.043Z",
+        "createdAt": "2026-10-24T13:42:37.020Z",
+        "updatedAt": "2026-10-24T13:42:37.043Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecc4/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5ccbfd3e3a0682fecc4",
+        "revision": 3,
+        "latestVersionId": "6adcb5ccbfd3e3a0682fecc6",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5ccbfd3e3a0682fecc6",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5ccbfd3e3a0682fecc4/distribution-grants/6adcb5cdbfd3e3a0682fecc9/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecc9",
+        "questionVersionId": "6adcb5ccbfd3e3a0682fecc6",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 4
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 1,
+    "status": 403,
+    "response": {
+      "error": {
+        "code": "PUBLIC_DISTRIBUTION_REQUIRED",
+        "message": "此模板尚缺当前有效的具体版本公开分发授权",
+        "details": [],
+        "traceId": "33b99e55-d7e5-4161-b059-3026d431d65b"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cdbfd3e3a0682fecd3",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cdbfd3e3a0682fecd3/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecd3",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cdbfd3e3a0682fecd3/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cdbfd3e3a0682fecd3",
+        "versionId": "6adcb5cdbfd3e3a0682fecd5",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cdbfd3e3a0682fecd3/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecd3",
+        "revision": 1,
+        "latestVersionId": "6adcb5cdbfd3e3a0682fecd5",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cdbfd3e3a0682fecd5",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5cdbfd3e3a0682fecd3/shares",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecd7",
+        "recipientUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 2
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cdbfd3e3a0682fecd3/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecd3",
+        "revision": 2,
+        "latestVersionId": "6adcb5cdbfd3e3a0682fecd5",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cdbfd3e3a0682fecd5",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5cdbfd3e3a0682fecd3/distribution-grants",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecd8",
+        "questionVersionId": "6adcb5cdbfd3e3a0682fecd5",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 3
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adcb5cdbfd3e3a0682fecd5/forks",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cdbfd3e3a0682fecd9",
+        "versionId": "6adcb5cdbfd3e3a0682fecda",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecdc",
+        "publicId": "thrU1pR6JInszzg2qcu8vQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:37.235Z",
+        "updatedAt": "2026-10-24T13:42:37.235Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cdbfd3e3a0682fecdc",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecdc",
+        "publicId": "thrU1pR6JInszzg2qcu8vQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:37.235Z",
+        "updatedAt": "2026-10-24T13:42:37.235Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cdbfd3e3a0682fecdc/question-references",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "f015daf6-009c-4211-b59c-9289915ad0f7",
+        "questionVersionId": "6adcb5cdbfd3e3a0682fecda",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cdbfd3e3a0682fecdc",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecdc",
+        "publicId": "thrU1pR6JInszzg2qcu8vQ",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "f015daf6-009c-4211-b59c-9289915ad0f7",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:37.235Z",
+        "updatedAt": "2026-10-24T13:42:37.244Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cdbfd3e3a0682fecdc/publish",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cdbfd3e3a0682fecdc",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:37.255Z",
+        "firstPublishedAt": "2026-10-24T13:42:37.255Z",
+        "shareUrl": "http://localhost:5200/survey/thrU1pR6JInszzg2qcu8vQ",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cdbfd3e3a0682fecdc",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecdc",
+        "publicId": "thrU1pR6JInszzg2qcu8vQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "f015daf6-009c-4211-b59c-9289915ad0f7",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:37.255Z",
+        "createdAt": "2026-10-24T13:42:37.235Z",
+        "updatedAt": "2026-10-24T13:42:37.255Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cdbfd3e3a0682fece2",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5cdbfd3e3a0682fece2/unlisting",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fece2",
+        "revision": 1,
+        "state": "unlisted"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cdbfd3e3a0682fecd3/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecd3",
+        "revision": 3,
+        "latestVersionId": "6adcb5cdbfd3e3a0682fecd5",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cdbfd3e3a0682fecd5",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5cdbfd3e3a0682fece2/listing",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fece2",
+        "revision": 2,
+        "state": "listed"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cdbfd3e3a0682fecd3/distribution-grants/6adcb5cdbfd3e3a0682fecd8/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecd8",
+        "questionVersionId": "6adcb5cdbfd3e3a0682fecd5",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 4
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cdbfd3e3a0682fece4",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cdbfd3e3a0682fece4/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fece4",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cdbfd3e3a0682fece4/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cdbfd3e3a0682fece4",
+        "versionId": "6adcb5cdbfd3e3a0682fece6",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cdbfd3e3a0682fece4/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fece4",
+        "revision": 1,
+        "latestVersionId": "6adcb5cdbfd3e3a0682fece6",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cdbfd3e3a0682fece6",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5cdbfd3e3a0682fece4/shares",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fece8",
+        "recipientUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 2
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cdbfd3e3a0682fece4/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fece4",
+        "revision": 2,
+        "latestVersionId": "6adcb5cdbfd3e3a0682fece6",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cdbfd3e3a0682fece6",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adcb5cdbfd3e3a0682fece4/distribution-grants",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fece9",
+        "questionVersionId": "6adcb5cdbfd3e3a0682fece6",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "active",
+        "revision": 0,
+        "itemRevision": 3
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adcb5cdbfd3e3a0682fece6/forks",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cdbfd3e3a0682fecea",
+        "versionId": "6adcb5cdbfd3e3a0682feceb",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682feced",
+        "publicId": "L0CEkTOWXu5IGh9qKgWfZw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:37.454Z",
+        "updatedAt": "2026-10-24T13:42:37.454Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feced",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682feced",
+        "publicId": "L0CEkTOWXu5IGh9qKgWfZw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:37.454Z",
+        "updatedAt": "2026-10-24T13:42:37.454Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feced/question-references",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "instanceId": "47741e39-d9ba-40f6-9cc9-1db44eed6adf",
+        "questionVersionId": "6adcb5cdbfd3e3a0682feceb",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feced",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682feced",
+        "publicId": "L0CEkTOWXu5IGh9qKgWfZw",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "47741e39-d9ba-40f6-9cc9-1db44eed6adf",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 1,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:37.454Z",
+        "updatedAt": "2026-10-24T13:42:37.465Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feced/publish",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "surveyId": "6adcb5cdbfd3e3a0682feced",
+        "publishedVersion": 1,
+        "status": "published",
+        "revision": 2,
+        "publishedAt": "2026-10-24T13:42:37.476Z",
+        "firstPublishedAt": "2026-10-24T13:42:37.476Z",
+        "shareUrl": "http://localhost:5200/survey/L0CEkTOWXu5IGh9qKgWfZw",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adcb5cdbfd3e3a0682feced",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682feced",
+        "publicId": "L0CEkTOWXu5IGh9qKgWfZw",
+        "status": "published",
+        "draftDefinition": {
+          "title": "固定模板源",
+          "description": "",
+          "questions": [
+            {
+              "id": "47741e39-d9ba-40f6-9cc9-1db44eed6adf",
+              "type": "text",
+              "title": "作者原创内容",
+              "required": false,
+              "jumpRules": [],
+              "validation": {}
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": true,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 2,
+        "revision": 2,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-24T13:42:37.476Z",
+        "createdAt": "2026-10-24T13:42:37.454Z",
+        "updatedAt": "2026-10-24T13:42:37.476Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates",
+    "who": 1,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5cdbfd3e3a0682fecf3",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5cdbfd3e3a0682fecf3/unlisting",
+    "who": 1,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fecf3",
+        "revision": 1,
+        "state": "unlisted"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5cdbfd3e3a0682fece4/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fece4",
+        "revision": 3,
+        "latestVersionId": "6adcb5cdbfd3e3a0682fece6",
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "作者原创内容",
+            "validation": {}
+          },
+          "baseVersionId": "6adcb5cdbfd3e3a0682fece6",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5cdbfd3e3a0682fece4/distribution-grants/6adcb5cdbfd3e3a0682fece9/revocation",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5cdbfd3e3a0682fece9",
+        "questionVersionId": "6adcb5cdbfd3e3a0682fece6",
+        "publisherUsername": "p2008_template_races_1_5d4fe2",
+        "state": "revoked",
+        "revision": 1,
+        "itemRevision": 4
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/templates/6adcb5cdbfd3e3a0682fecf3/listing",
+    "who": 1,
+    "status": 403,
+    "response": {
+      "error": {
+        "code": "PUBLIC_DISTRIBUTION_REQUIRED",
+        "message": "此模板尚缺当前有效的具体版本公开分发授权",
+        "details": [],
+        "traceId": "f9a3fea7-4947-4d09-84a8-087180cbc29d"
+      }
+    }
+  }
+]

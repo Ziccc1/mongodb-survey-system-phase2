@@ -1,0 +1,153 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5db0449a0c9bb446bd2",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5db0449a0c9bb446bd2/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adcb5db0449a0c9bb446bd2",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "text",
+            "title": "使用容量夹具",
+            "validation": {}
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adcb5db0449a0c9bb446bd2/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adcb5db0449a0c9bb446bd2",
+        "versionId": "6adcb5db0449a0c9bb446bd4",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adcb5db0449a0c9bb446bd6",
+        "publicId": "i06Wn5RNlzud83NoLZfvxA",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "容量边界问卷",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-24T13:42:51.893Z",
+        "updatedAt": "2026-10-24T13:42:51.893Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5db0449a0c9bb446bd2/usage",
+    "who": 0,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "USAGE_SCOPE_TOO_LARGE",
+        "message": "请限定正式版本后查询",
+        "details": [],
+        "traceId": "6a285828-1400-4cb7-9ec6-d69dbbfe935b"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adcb5db0449a0c9bb446bd2/usage?versionId=6adcb5db0449a0c9bb446bd4",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "items": [
+          {
+            "surveyNumber": "FYiPZmZE9smwhTN-poz5OOPH",
+            "versions": [
+              {
+                "versionId": "6adcb5db0449a0c9bb446bd4",
+                "version": 1,
+                "isDraft": false,
+                "isCurrent": false,
+                "hasHistorical": true
+              }
+            ],
+            "isDraft": false,
+            "isCurrent": false,
+            "onlyHistorical": true,
+            "surveyId": "6adcb5db0449a0c9bb446bd6",
+            "title": "容量边界问卷",
+            "managePath": "/surveys/6adcb5db0449a0c9bb446bd6"
+          }
+        ],
+        "nextCursor": null
+      }
+    }
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "name": "httpreceipts",
+  "start": "2026-10-24T13:40:16.118Z",
+  "finished": "2026-10-24T13:40:28.897Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/phase2/receipts-api.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

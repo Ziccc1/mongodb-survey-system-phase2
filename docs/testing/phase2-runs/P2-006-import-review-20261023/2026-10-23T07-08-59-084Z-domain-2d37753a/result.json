@@ -1,0 +1,17 @@
+{
+  "name": "domain",
+  "start": "2026-10-23T07:08:59.086Z",
+  "finished": "2026-10-23T07:09:00.334Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/domain-foundation.test.ts",
+    "tests/shared-imports.test.mjs"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

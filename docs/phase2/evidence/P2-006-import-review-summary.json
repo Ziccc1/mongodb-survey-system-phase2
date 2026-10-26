@@ -1,0 +1,110 @@
+{
+  "task": "P2-006-import-review",
+  "date": "2026-10-23 Asia/Shanghai",
+  "finding": "Confirmed questions -> index -> question-content -> questions TDZ; direct answers imports also affected",
+  "fix": "Move codePointLength and DefinitionIssue into dependency-free validation-common; questions/answers import leaf; index retains public reexports",
+  "before": {
+    "coldImportPassed": 4,
+    "coldImportFailed": 4,
+    "failingEntries": [
+      "src/questions",
+      "src/answers",
+      "dist/questions",
+      "dist/answers"
+    ]
+  },
+  "after": {
+    "coldImportPassed": 8,
+    "coldImportFailed": 0,
+    "domainCombinedPassed": 12,
+    "flow": "passed",
+    "typecheckExit": 0,
+    "buildExit": 0
+  },
+  "commands": [
+    {
+      "name": "sharedimports",
+      "start": "2026-10-23T07:08:08.486Z",
+      "finished": "2026-10-23T07:08:09.584Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "tests/shared-imports.test.mjs"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "evidence": "docs/testing/phase2-runs/P2-006-import-review-20261023/2026-10-23T07-08-08-481Z-sharedimports-697f12cc/result.json"
+    },
+    {
+      "name": "typecheck",
+      "start": "2026-10-23T07:08:47.259Z",
+      "finished": "2026-10-23T07:08:52.664Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "evidence": "docs/testing/phase2-runs/P2-006-import-review-20261023/2026-10-23T07-08-47-256Z-typecheck-1ffc088f/result.json"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-23T07:08:52.727Z",
+      "finished": "2026-10-23T07:08:58.992Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "evidence": "docs/testing/phase2-runs/P2-006-import-review-20261023/2026-10-23T07-08-52-724Z-build-cf3593ed/result.json"
+    },
+    {
+      "name": "domain",
+      "start": "2026-10-23T07:08:59.086Z",
+      "finished": "2026-10-23T07:09:00.334Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/domain-foundation.test.ts",
+        "tests/shared-imports.test.mjs"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "evidence": "docs/testing/phase2-runs/P2-006-import-review-20261023/2026-10-23T07-08-59-084Z-domain-2d37753a/result.json"
+    },
+    {
+      "name": "flow",
+      "start": "2026-10-23T07:09:00.389Z",
+      "finished": "2026-10-23T07:09:00.571Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/flow.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "evidence": "docs/testing/phase2-runs/P2-006-import-review-20261023/2026-10-23T07-09-00-387Z-flow-673dd855/result.json"
+    }
+  ],
+  "databaseAccess": false,
+  "notRun": [
+    "Mongo schema tests",
+    "full phase1/browser regression"
+  ],
+  "reason": "Dependency-only refactor; pure domain/import/path tests plus full typecheck/build run; no schema/business changes"
+}

@@ -1,0 +1,688 @@
+{
+  "task": "P2-009",
+  "status": "W05-completed",
+  "at": "2026-10-23T15:45:43.492800+00:00",
+  "requiredChecks": [
+    {
+      "name": "typecheck",
+      "start": "2026-10-23T15:42:29.783Z",
+      "finished": "2026-10-23T15:42:36.109Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-42-29-781Z-typecheck-e6f2157a"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-23T15:42:36.219Z",
+      "finished": "2026-10-23T15:42:43.811Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-42-36-216Z-build-596ae6fa"
+    },
+    {
+      "name": "domain",
+      "start": "2026-10-23T15:28:55.352Z",
+      "finished": "2026-10-23T15:28:56.633Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/domain-foundation.test.ts",
+        "tests/operation-content-errors.test.ts",
+        "tests/shared-imports.test.mjs"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-28-55-346Z-domain-f4a6f216"
+    },
+    {
+      "name": "operationretry",
+      "start": "2026-10-23T15:23:26.023Z",
+      "finished": "2026-10-23T15:23:26.384Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/operation-retry.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-23-26-019Z-operationretry-1656a381"
+    },
+    {
+      "name": "crossstatistics",
+      "start": "2026-10-23T15:37:01.292Z",
+      "finished": "2026-10-23T15:37:23.501Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/cross-statistics.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-37-01-290Z-crossstatistics-1763ea6e"
+    },
+    {
+      "name": "crossboundaries",
+      "start": "2026-10-23T15:32:55.883Z",
+      "finished": "2026-10-23T15:33:18.061Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/cross-boundaries.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-32-55-881Z-crossboundaries-c5f2ef41"
+    },
+    {
+      "name": "crossbrowser",
+      "start": "2026-10-23T15:36:16.098Z",
+      "finished": "2026-10-23T15:37:01.201Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-36-16-096Z-crossbrowser-dd22fdcf"
+    },
+    {
+      "name": "versionsbanks",
+      "start": "2026-10-23T15:27:55.398Z",
+      "finished": "2026-10-23T15:28:13.284Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/versions-banks.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-27-55-396Z-versionsbanks-faae5009"
+    },
+    {
+      "name": "surveyssharingusage",
+      "start": "2026-10-23T15:41:51.433Z",
+      "finished": "2026-10-23T15:42:13.704Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/surveys-sharing-usage.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-41-51-431Z-surveyssharingusage-95ec3ad1"
+    },
+    {
+      "name": "phase2compatibility",
+      "start": "2026-10-23T15:28:36.242Z",
+      "finished": "2026-10-23T15:28:55.208Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/compatibility.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-28-36-240Z-phase2compatibility-2f5195e4"
+    },
+    {
+      "name": "integration",
+      "start": "2026-10-23T15:28:56.743Z",
+      "finished": "2026-10-23T15:29:07.265Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/integration.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-28-56-740Z-integration-9141ec31"
+    },
+    {
+      "name": "bindingsreceipts",
+      "start": "2026-10-23T15:42:13.814Z",
+      "finished": "2026-10-23T15:42:29.660Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/bindings-receipts.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-42-13-810Z-bindingsreceipts-99af2df3"
+    }
+  ],
+  "allRuns": [
+    {
+      "name": "typecheck",
+      "start": "2026-10-23T15:17:37.159Z",
+      "finished": "2026-10-23T15:17:40.632Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 2,
+      "status": "failed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-17-37-157Z-typecheck-392ce1eb"
+    },
+    {
+      "name": "operationretry",
+      "start": "2026-10-23T15:18:26.642Z",
+      "finished": "2026-10-23T15:18:26.968Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/operation-retry.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-18-26-640Z-operationretry-3475f8bb"
+    },
+    {
+      "name": "typecheck",
+      "start": "2026-10-23T15:18:27.031Z",
+      "finished": "2026-10-23T15:18:33.029Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-18-27-027Z-typecheck-c845186b"
+    },
+    {
+      "name": "crossstatistics",
+      "start": "2026-10-23T15:20:20.998Z",
+      "finished": "2026-10-23T15:20:37.311Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/cross-statistics.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-20-20-997Z-crossstatistics-35b3e652"
+    },
+    {
+      "name": "typecheck",
+      "start": "2026-10-23T15:23:19.440Z",
+      "finished": "2026-10-23T15:23:25.892Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-23-19-438Z-typecheck-0f05848f"
+    },
+    {
+      "name": "operationretry",
+      "start": "2026-10-23T15:23:26.023Z",
+      "finished": "2026-10-23T15:23:26.384Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/operation-retry.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-23-26-019Z-operationretry-1656a381"
+    },
+    {
+      "name": "crossstatistics",
+      "start": "2026-10-23T15:23:33.618Z",
+      "finished": "2026-10-23T15:23:52.706Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/cross-statistics.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-23-33-616Z-crossstatistics-86698afe"
+    },
+    {
+      "name": "crossstatistics",
+      "start": "2026-10-23T15:25:11.414Z",
+      "finished": "2026-10-23T15:25:31.958Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/cross-statistics.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-25-11-412Z-crossstatistics-9ce8b8ab"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-23T15:26:56.193Z",
+      "finished": "2026-10-23T15:27:03.290Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-26-56-191Z-build-abb13b3f"
+    },
+    {
+      "name": "crossbrowser",
+      "start": "2026-10-23T15:27:33.503Z",
+      "finished": "2026-10-23T15:28:19.544Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-27-33-501Z-crossbrowser-660e3a13"
+    },
+    {
+      "name": "versionsbanks",
+      "start": "2026-10-23T15:27:55.398Z",
+      "finished": "2026-10-23T15:28:13.284Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/versions-banks.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-27-55-396Z-versionsbanks-faae5009"
+    },
+    {
+      "name": "surveyssharingusage",
+      "start": "2026-10-23T15:28:13.412Z",
+      "finished": "2026-10-23T15:28:36.143Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/surveys-sharing-usage.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-28-13-410Z-surveyssharingusage-ee42ab61"
+    },
+    {
+      "name": "phase2compatibility",
+      "start": "2026-10-23T15:28:36.242Z",
+      "finished": "2026-10-23T15:28:55.208Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/compatibility.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-28-36-240Z-phase2compatibility-2f5195e4"
+    },
+    {
+      "name": "domain",
+      "start": "2026-10-23T15:28:55.352Z",
+      "finished": "2026-10-23T15:28:56.633Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/domain-foundation.test.ts",
+        "tests/operation-content-errors.test.ts",
+        "tests/shared-imports.test.mjs"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-28-55-346Z-domain-f4a6f216"
+    },
+    {
+      "name": "integration",
+      "start": "2026-10-23T15:28:56.743Z",
+      "finished": "2026-10-23T15:29:07.265Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/integration.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-28-56-740Z-integration-9141ec31"
+    },
+    {
+      "name": "crossstatistics",
+      "start": "2026-10-23T15:30:35.709Z",
+      "finished": "2026-10-23T15:30:57.372Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/cross-statistics.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-30-35-708Z-crossstatistics-28360e76"
+    },
+    {
+      "name": "crossboundaries",
+      "start": "2026-10-23T15:32:55.883Z",
+      "finished": "2026-10-23T15:33:18.061Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/cross-boundaries.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-32-55-881Z-crossboundaries-c5f2ef41"
+    },
+    {
+      "name": "typecheck",
+      "start": "2026-10-23T15:34:29.894Z",
+      "finished": "2026-10-23T15:34:35.998Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-34-29-893Z-typecheck-f9ac31d0"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-23T15:34:36.095Z",
+      "finished": "2026-10-23T15:34:43.329Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-34-36-094Z-build-2b7c2335"
+    },
+    {
+      "name": "crossbrowser",
+      "start": "2026-10-23T15:34:43.555Z",
+      "finished": "2026-10-23T15:35:27.319Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-34-43-551Z-crossbrowser-685e2db9"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-23T15:36:09.040Z",
+      "finished": "2026-10-23T15:36:15.987Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-36-09-038Z-build-8313efcc"
+    },
+    {
+      "name": "crossbrowser",
+      "start": "2026-10-23T15:36:16.098Z",
+      "finished": "2026-10-23T15:37:01.201Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-36-16-096Z-crossbrowser-dd22fdcf"
+    },
+    {
+      "name": "crossstatistics",
+      "start": "2026-10-23T15:37:01.292Z",
+      "finished": "2026-10-23T15:37:23.501Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/cross-statistics.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-37-01-290Z-crossstatistics-1763ea6e"
+    },
+    {
+      "name": "surveyssharingusage",
+      "start": "2026-10-23T15:41:51.433Z",
+      "finished": "2026-10-23T15:42:13.704Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/surveys-sharing-usage.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-41-51-431Z-surveyssharingusage-95ec3ad1"
+    },
+    {
+      "name": "bindingsreceipts",
+      "start": "2026-10-23T15:42:13.814Z",
+      "finished": "2026-10-23T15:42:29.660Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/bindings-receipts.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-42-13-810Z-bindingsreceipts-99af2df3"
+    },
+    {
+      "name": "typecheck",
+      "start": "2026-10-23T15:42:29.783Z",
+      "finished": "2026-10-23T15:42:36.109Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-42-29-781Z-typecheck-e6f2157a"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-23T15:42:36.219Z",
+      "finished": "2026-10-23T15:42:43.811Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-009/2026-10-23T15-42-36-216Z-build-596ae6fa"
+    }
+  ],
+  "handOracle": {
+    "surveys": 2,
+    "eligible": 5,
+    "answered": 4,
+    "skipped": 1,
+    "unanswered": 0,
+    "mean": "15",
+    "bins": [
+      0,
+      2,
+      1,
+      1,
+      0
+    ]
+  },
+  "scope": "W04 two frontend fixes and W05 completed. W06 next under joint authorization. W07 excluded.",
+  "snapshot": "Actual server atClusterTime, pinned mongodb7.7.0 snapshotTime bridge; late-commit and SnapshotTooOld verified",
+  "capacity": {
+    "surveys": 1000,
+    "snapshots": 5000,
+    "responses": 100000,
+    "BSON": 2097152,
+    "batch": 200
+  }
+}

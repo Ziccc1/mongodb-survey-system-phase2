@@ -1,0 +1,32 @@
+{
+  "started": "2026-10-22T12:48:26.151Z",
+  "finished": "2026-10-22T12:48:28.461Z",
+  "status": "passed",
+  "checks": [
+    "http://127.0.0.1:3200/",
+    "http://127.0.0.1:3200/api/v1/health/live",
+    "http://127.0.0.1:3200/api/v1/health/ready",
+    "http://127.0.0.1:3200/app-config.js whitelist",
+    "http://127.0.0.1:3200 rejects wrong Origin",
+    "http://localhost:5200/",
+    "http://localhost:5200/api/v1/health/live",
+    "http://localhost:5200/api/v1/health/ready",
+    "http://localhost:5200/app-config.js whitelist",
+    "http://localhost:5200 rejects wrong Origin"
+  ],
+  "apiUrl": "http://127.0.0.1:3200",
+  "webUrl": "http://localhost:5200",
+  "applicationDatabase": "project2_app_v1",
+  "processes": [
+    {
+      "name": "api",
+      "pid": 37828
+    },
+    {
+      "name": "vite",
+      "pid": 35496
+    }
+  ],
+  "note": "Built API/static service and actual Vite proxy tested; all child application processes are released in finally; no sample data inserted"
+}
+Dedicated API and Vite test processes released; owned P2 MongoDB retained.

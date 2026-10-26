@@ -1,3 +1,4 @@
+import {evidenceDirectory} from '../runtime-environment.js';
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import {existsSync,mkdirSync,writeFileSync,readFileSync} from 'node:fs';
@@ -11,7 +12,7 @@ await h.app.listen({host:'127.0.0.1',port:3105});
 const browser=await chromium.launch({headless:true,...(existsSync('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe')?{channel:'msedge'}:{})});
 const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage(),errors:string[]=[],passed:string[]=[];
 page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());
-const run=Date.now(),directory=`docs/testing/screenshots/redesign-${run}`;mkdirSync(directory,{recursive:true});
+const run=Date.now(),directory=evidenceDirectory(`redesign-${run}`);mkdirSync(directory,{recursive:true});
 const pass=(s:string)=>{console.log(`PASS ${s}`);passed.push(s);};
 async function dimensions(name:string){for(const width of [320,768,1024,1440]){await page.setViewportSize({width,height:1000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`${name} overflows ${width}`);if(width===320||width===1440)await page.screenshot({path:`${directory}/${name}-${width}.png`,fullPage:true});}}
 async function leave(url:string){await page.goto(url);}

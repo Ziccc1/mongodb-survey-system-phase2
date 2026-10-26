@@ -1,0 +1,37 @@
+{
+  "at": "2026-10-24T12:56:23.7640668Z",
+  "userServicesRetained": true,
+  "replacedApiPid": 42252,
+  "http": [
+    {
+      "status": 200,
+      "url": "http://localhost:5200/"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:3200/api/v1/health/ready"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost:5200/api/v1/health/ready"
+    }
+  ],
+  "listeners": [
+    {
+      "port": 5200,
+      "pid": 12592,
+      "address": "::1"
+    },
+    {
+      "port": 27019,
+      "pid": 33144,
+      "address": "127.0.0.1"
+    },
+    {
+      "port": 3200,
+      "pid": 13160,
+      "address": "127.0.0.1"
+    }
+  ],
+  "updatedApiPid": 13160
+}

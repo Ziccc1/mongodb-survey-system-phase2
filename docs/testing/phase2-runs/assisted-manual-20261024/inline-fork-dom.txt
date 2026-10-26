@@ -1,0 +1,266 @@
+- link "跳到主要内容":
+  - /url: "#main"
+- banner:
+  - link "问卷工作台":
+    - /url: /dashboard
+    - generic: 问
+    - text: 问卷工作台
+  - navigation "主导航":
+    - link "首页":
+      - /url: /dashboard
+    - link "我的问卷":
+      - /url: /surveys
+    - link "题目":
+      - /url: /questions
+    - link "题库":
+      - /url: /question-banks
+    - link "模板广场":
+      - /url: /templates
+    - generic: p2_manual_1024_b
+    - button "退出登录"
+- main:
+  - link "← 返回我的问卷":
+    - /url: /surveys
+  - heading "P2-MAN-20261024-02 活动模板源" [level=1]
+  - paragraph: 基本信息和题目分别保存，不会自动保存。
+  - generic: 未发布草稿
+  - complementary:
+    - heading "题目目录" [level=2]
+    - generic: "4"
+    - button "基本信息与填写设置":
+      - text: 基本信息与填写设置
+    - list:
+      - button "第1题：P2-MAN-20261024-02 是否参加下一期活动？":
+        - generic: "1"
+        - text: P2-MAN-20261024-02 是否参加下一期活动？
+        - generic: 单选题
+      - button "第2题：P2-MAN-20261024-02 每周可参加几次活动？":
+        - generic: "2"
+        - text: P2-MAN-20261024-02 每周可参加几次活动？
+        - generic: 数字题
+      - button "第3题：偏好的活动形式？":
+        - generic: "3"
+        - text: 偏好的活动形式？
+        - generic: 多选题
+      - button "第4题：活动安排建议":
+        - generic: "4"
+        - text: 活动安排建议
+        - generic: 文本题
+    - button "添加题目":
+      - text: 添加题目
+    - paragraph: 点击目录直达题目。修改后请手动保存。
+  - generic "基本信息与填写设置 展开修改标题、说明和填写策略 +":
+    - text: 基本信息与填写设置
+    - generic: 展开修改标题、说明和填写策略
+    - text: +
+  - heading "题目 4 / 100" [level=2]:
+    - text: 题目
+    - generic: 4 / 100
+  - heading "正式题目与引用" [level=2]
+  - paragraph: 先保存普通编辑，再逐题明确保存正式版，或从我的题目、共享题及题库选用。发布只检查，不会自动生成题版本。
+  - list:
+    - strong: P2-MAN-20261024-02 是否参加下一期活动？
+    - generic: 正式 v1 · 模板固定版本
+    - link "统计本人问卷中的此版":
+      - /url: /question-statistics/6adcc3d7ba826d37d9e2d1ec?versionId=6adcc3e4ba826d37d9e2d1ee
+    - button "修改并派生自己的题目" [disabled]
+    - strong: 偏好的活动形式？
+    - generic: 正式 v1 · 本人题目
+    - link "统计本人问卷中的此版":
+      - /url: /question-statistics/6adcd0adba826d37d9e2d260?versionId=6adcd0adba826d37d9e2d261
+    - link "编辑题目及正式版本":
+      - /url: /questions/6adcd0adba826d37d9e2d260
+    - button "选择版本替换" [disabled]
+    - strong: P2-MAN-20261024-02 每周可参加几次活动？
+    - generic: 正式 v1 · 模板固定版本
+    - link "统计本人问卷中的此版":
+      - /url: /question-statistics/6adcc3f3ba826d37d9e2d1f0?versionId=6adcc3ffba826d37d9e2d1f2
+    - button "修改并派生自己的题目" [disabled]
+    - strong: 活动安排建议
+    - generic: 正式 v1 · 本人题目
+    - link "统计本人问卷中的此版":
+      - /url: /question-statistics/6adcd0afba826d37d9e2d265?versionId=6adcd0afba826d37d9e2d266
+    - link "编辑题目及正式版本":
+      - /url: /questions/6adcd0afba826d37d9e2d265
+    - button "选择版本替换" [disabled]
+  - heading "从本模板实例派生" [level=3]
+  - paragraph: 只针对当前保存的固定实例创建自己的正式v1，随后明确替换。原作者及全部上游的公开分发限制仍保留；更改必答或规则无需派生。
+  - article:
+    - heading "1 数字题" [level=3]:
+      - generic: "1"
+      - generic: 数字题
+    - generic: 题干
+    - textbox "题干 题干": P2-MAN-20261024-02 每周可参加几次活动？
+    - generic: 29 / 500 个字符
+    - generic "内容校验 按需配置 −":
+      - text: 内容校验
+      - generic: 按需配置
+      - text: −
+    - group "数字范围":
+      - generic: 数字范围
+      - generic: 数字下限
+      - textbox "数字下限 数字下限": "0"
+      - generic: 数字上限
+      - textbox "数字上限 数字上限": "7"
+      - checkbox "只允许整数" [checked]
+      - text: 只允许整数
+      - generic: 留空表示不限制该边界；支持小数和科学计数法，保留十进制精度。
+  - button "保存为自己的派生正式v1"
+  - button "关闭派生编辑"
+  - button "从题目或题库选用" [disabled]
+  - article:
+    - heading "1 单选题" [level=3]:
+      - generic: "1"
+      - generic: 单选题
+    - button "第1题上移" [disabled]: 上移
+    - button "第1题下移" [disabled]: 下移
+    - button "删除第1题" [disabled]: 删除题目
+    - generic: 题干
+    - textbox "题干" [disabled]: P2-MAN-20261024-02 是否参加下一期活动？
+    - generic: 29 / 500 个字符
+    - checkbox "必答" [checked] [disabled]
+    - text: 必答
+    - group "选项":
+      - generic: 选项
+      - generic: 选项 1
+      - textbox "选项 1" [disabled]: 参加
+      - generic: 2 / 200 个字符
+      - button "删除选项1" [disabled]: 删除
+      - generic: 选项 2
+      - textbox "选项 2" [disabled]: 不参加
+      - generic: 3 / 200 个字符
+      - button "删除选项2" [disabled]: 删除
+      - button "添加选项" [disabled]
+      - generic: 需要2—100个选项；删除选项后，相关跳转条件会提示待完善。
+    - generic "校验与跳转 1 条跳转规则 −":
+      - text: 校验与跳转
+      - generic: 1 条跳转规则
+      - text: −
+    - group "跳转规则":
+      - generic: 跳转规则
+      - paragraph: 按从上到下的顺序匹配，首条满足时跳转；未命中时进入下一题。
+      - strong: 规则 1
+      - button "规则1上移" [disabled]: 上移
+      - button "规则1下移" [disabled]: 下移
+      - button "删除规则" [disabled]
+      - generic: 答案等于
+      - combobox "答案等于" [disabled]:
+        - option "参加" [disabled]
+        - option "不参加" [disabled] [selected]
+      - generic: 跳转到
+      - combobox "跳转到" [disabled]:
+        - option "第 2 题：P2-MAN-20261024-02 每周可参加几次活动？" [disabled]
+        - option "第 3 题：偏好的活动形式？" [disabled] [selected]
+        - option "第 4 题：活动安排建议" [disabled]
+      - button "添加跳转规则" [disabled]
+  - article:
+    - heading "2 数字题" [level=3]:
+      - generic: "2"
+      - generic: 数字题
+    - button "第2题上移" [disabled]: 上移
+    - button "第2题下移" [disabled]: 下移
+    - button "删除第2题" [disabled]: 删除题目
+    - generic: 题干
+    - textbox [disabled]: P2-MAN-20261024-02 每周可参加几次活动？
+    - generic: 29 / 500 个字符
+    - checkbox "必答" [checked] [disabled]
+    - text: 必答
+    - generic "校验与跳转 按需配置 −":
+      - text: 校验与跳转
+      - generic: 按需配置
+      - text: −
+    - group "数字范围":
+      - generic: 数字范围
+      - generic: 数字下限
+      - textbox [disabled]: "0"
+      - generic: 数字上限
+      - textbox [disabled]: "7"
+      - checkbox "只允许整数" [checked] [disabled]
+      - text: 只允许整数
+      - generic: 留空表示不限制该边界；支持小数和科学计数法，保留十进制精度。
+    - group "跳转规则":
+      - generic: 跳转规则
+      - paragraph: 按从上到下的顺序匹配，首条满足时跳转；未命中时进入下一题。
+      - button "添加跳转规则" [disabled]
+  - article:
+    - heading "3 多选题" [level=3]:
+      - generic: "3"
+      - generic: 多选题
+    - button "第3题上移" [disabled]: 上移
+    - button "第3题下移" [disabled]: 下移
+    - button "删除第3题" [disabled]: 删除题目
+    - generic: 题干
+    - textbox "题干" [disabled]: 偏好的活动形式？
+    - generic: 8 / 500 个字符
+    - checkbox "必答" [checked] [disabled]
+    - text: 必答
+    - group "选项":
+      - generic: 选项
+      - generic: 选项 1
+      - textbox "选项 1" [disabled]: 线下讲座
+      - generic: 4 / 200 个字符
+      - button "删除选项1" [disabled]: 删除
+      - generic: 选项 2
+      - textbox "选项 2" [disabled]: 线上直播
+      - generic: 4 / 200 个字符
+      - button "删除选项2" [disabled]: 删除
+      - generic: 选项 3
+      - textbox "选项 3" [disabled]: 小组讨论
+      - generic: 4 / 200 个字符
+      - button "删除选项3" [disabled]: 删除
+      - button "添加选项" [disabled]
+      - generic: 需要2—100个选项；删除选项后，相关跳转条件会提示待完善。
+    - generic "校验与跳转 按需配置 −":
+      - text: 校验与跳转
+      - generic: 按需配置
+      - text: −
+    - group "选择数量":
+      - generic: 选择数量
+      - generic: 最少选择
+      - spinbutton "最少选择" [disabled]: "1"
+      - generic: 最多选择
+      - spinbutton "最多选择" [disabled]: "2"
+      - generic: 留空使用默认限制；两项填相同值表示恰好选择该数量。
+    - group "跳转规则":
+      - generic: 跳转规则
+      - paragraph: 按从上到下的顺序匹配，首条满足时跳转；未命中时进入下一题。
+      - button "添加跳转规则" [disabled]
+  - article:
+    - heading "4 文本题" [level=3]:
+      - generic: "4"
+      - generic: 文本题
+    - button "第4题上移" [disabled]: 上移
+    - button "第4题下移" [disabled]: 下移
+    - button "删除第4题" [disabled]: 删除题目
+    - generic: 题干
+    - textbox "题干" [disabled]: 活动安排建议
+    - generic: 6 / 500 个字符
+    - checkbox "必答" [disabled]
+    - text: 必答
+    - generic "校验与跳转 按需配置 −":
+      - text: 校验与跳转
+      - generic: 按需配置
+      - text: −
+    - group "文本长度":
+      - generic: 文本长度
+      - generic: 最少字符
+      - spinbutton "最少字符" [disabled]
+      - generic: 最多字符
+      - spinbutton "最多字符" [disabled]: "20"
+      - generic: 按Unicode码点计数；留空分别使用0和10000。
+  - heading "继续添加题目" [level=3]
+  - paragraph: 选择题型，添加后直接编辑题干。修改后请手动保存。
+  - button "添加单选题" [disabled]
+  - button "添加多选题" [disabled]
+  - button "添加文本题" [disabled]
+  - button "添加数字题" [disabled]
+  - complementary:
+    - heading "保存编辑" [level=2]
+    - paragraph: 基本信息和题目分别保存；保存草稿不会生成发布版本。
+    - generic: 题目已保存 · 修订 0
+    - button "保存题目" [disabled]
+    - heading "发布与收集" [level=2]
+    - button "发布问卷" [disabled]
+    - link "预览问卷":
+      - /url: /surveys/6adcd31fba826d37d9e2d275/preview
+- contentinfo: 数据库课程项目 · 问卷工作台

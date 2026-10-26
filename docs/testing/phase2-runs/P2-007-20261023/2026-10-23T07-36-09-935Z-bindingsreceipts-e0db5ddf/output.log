@@ -1,0 +1,27 @@
+TAP version 13
+# Subtest: W02-B actual receipts, binding consistency, CAS and replica-set rollback
+not ok 1 - W02-B actual receipts, binding consistency, CAS and replica-set rollback
+  ---
+  duration_ms: 2374.3637
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\bindings-receipts.test.ts:1:1913'
+  failureType: 'testCodeFailure'
+  error: 'P2_INSTANCE_OWNERSHIP_REQUIRED: marker, data directory and listening process must belong to this project'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    assertOwnedDatabaseInstance (D:\大三\数据库\pj1_2\apps\api\src\database\instance-ownership.ts:25:11)
+    TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\bindings-receipts.test.ts:26:81)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2876.7866

@@ -1,0 +1,15 @@
+{
+  "name": "publish",
+  "start": "2026-10-24T12:23:13.078Z",
+  "finished": "2026-10-24T12:23:20.311Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "tests/phase1/publish.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

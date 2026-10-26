@@ -1,0 +1,52 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_template_lineage_1792814552230_0b6a8057
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_template_lineage_1792814552230_0b6a8057
+# Subtest: W06 multi-author fixed chain, proof integrity, unavailable pagination and source publication independence
+    # Subtest: A→B does not authorize C; leaf self never exempts ancestors; complete leaf-to-root proof/hash
+    ok 1 - A→B does not authorize C; leaf self never exempts ancestors; complete leaf-to-root proof/hash
+      ---
+      duration_ms: 248.4262
+      type: 'test'
+      ...
+    # Subtest: filtered empty page retains scan cursor; scopes/actors and next-page current grants are checked
+# P2 synthetic target localhost:27019 / project2_test_p2008_lineage_bounds_1792814564865_f55df38c
+    ok 2 - filtered empty page retains scan cursor; scopes/actors and next-page current grants are checked
+      ---
+      duration_ms: 120.31
+      type: 'test'
+      ...
+    1..2
+ok 1 - W06 multi-author fixed chain, proof integrity, unavailable pagination and source publication independence
+  ---
+  duration_ms: 12635.0106
+  type: 'test'
+  ...
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_lineage_bounds_1792814564865_f55df38c
+# Subtest: W06 actual schema-valid synthetic graph bounds 32/33, union 500/501 and malformed provenance
+    # Subtest: 32 nodes accepted, 33 rejected atomically; unknown409 and broken chains503
+    ok 1 - 32 nodes accepted, 33 rejected atomically; unknown409 and broken chains503
+      ---
+      duration_ms: 614.7714
+      type: 'test'
+      ...
+    # Subtest: full distinct union500 accepted; union501 fails before any template or receipt survives
+    ok 2 - full distinct union500 accepted; union501 fails before any template or receipt survives
+      ---
+      duration_ms: 2627.7603
+      type: 'test'
+      ...
+    1..2
+ok 2 - W06 actual schema-valid synthetic graph bounds 32/33, union 500/501 and malformed provenance
+  ---
+  duration_ms: 14877.1659
+  type: 'test'
+  ...
+1..2
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 28206.7837

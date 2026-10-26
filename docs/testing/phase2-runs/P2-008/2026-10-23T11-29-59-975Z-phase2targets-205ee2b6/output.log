@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: baseline and phase2 application entries reject the other fixed DB and every restore target before connection
+ok 1 - baseline and phase2 application entries reject the other fixed DB and every restore target before connection
+  ---
+  duration_ms: 1.5505
+  type: 'test'
+  ...
+# Subtest: both explicit validators retain exact host/port/URI/replicaSet and finite MongoDB name boundary
+ok 2 - both explicit validators retain exact host/port/URI/replicaSet and finite MongoDB name boundary
+  ---
+  duration_ms: 0.3486
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 758.3842

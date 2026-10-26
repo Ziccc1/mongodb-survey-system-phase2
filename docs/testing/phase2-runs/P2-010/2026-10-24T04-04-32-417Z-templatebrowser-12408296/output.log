@@ -1,0 +1,18 @@
+P2 synthetic target localhost:27019 / project2_test_p2008_template_browser_1792814677777_fd44b4bc
+P2-008 thirteen-collection synthetic app: project2_test_p2008_template_browser_1792814677777_fd44b4bc
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: '下架', exact: true })[22m
+
+    at <anonymous> (D:\大三\数据库\pj1_2\tests\phase2\template-browser.ts:26:239) {
+  log: [
+    "  - waiting for getByRole('button', { name: '下架', exact: true })"
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v22.17.0

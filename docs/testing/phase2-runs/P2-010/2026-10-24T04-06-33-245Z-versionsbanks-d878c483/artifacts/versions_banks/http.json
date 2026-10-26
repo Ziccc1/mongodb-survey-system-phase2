@@ -1,0 +1,1291 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ad",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄😀",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 1,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄修改1",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": null,
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 2,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄修改2",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": null,
+          "revision": 2
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 3,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄修改3",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": null,
+          "revision": 3
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 4,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄修改4",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": null,
+          "revision": 4
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 5,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄修改5",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": null,
+          "revision": 5
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 5,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄修改5",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": null,
+          "revision": 5
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 400,
+    "response": {
+      "error": {
+        "code": "INVALID_REQUEST",
+        "message": "请求参数不符合接口契约",
+        "details": [],
+        "traceId": "dfa3b625-33a4-449c-bf37-5e48552accb4"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "DEFINITION_INVALID",
+        "message": "第1题：请输入可精确保存为Decimal128的有限数字字符串",
+        "details": [
+          {
+            "field": "/content/validation/min",
+            "reason": "DECIMAL_INVALID"
+          }
+        ],
+        "traceId": "6c3f39fe-f14b-4b4b-a5a1-b25c8ba1e3b2"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "DEFINITION_INVALID",
+        "message": "第1题：选项ID无效或重复",
+        "details": [
+          {
+            "field": "/content/options/1/id",
+            "reason": "DUPLICATE_ID"
+          }
+        ],
+        "traceId": "2d3fbf50-3b5f-47b1-ab11-b2b9c8bbcf10"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 1,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "a2ee4018-c03e-47e1-9f86-2a32872e0ae2"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 5,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄修改5",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": null,
+          "revision": 5
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ad",
+        "versionId": "6adc2ed8600dc2c367a846af",
+        "revision": 6,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 6,
+        "latestVersionId": "6adc2ed8600dc2c367a846af",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄修改5",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846af",
+          "revision": 6
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 7,
+        "latestVersionId": "6adc2ed8600dc2c367a846af",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "第二正式内容",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846af",
+          "revision": 7
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ad",
+        "versionId": "6adc2ed8600dc2c367a846af",
+        "revision": 6,
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "OPERATION_IDEMPOTENCY_CONFLICT",
+        "message": "该操作key已用于不同的固定请求",
+        "details": [],
+        "traceId": "73659a87-8455-4e9e-96e8-e3b54063298e"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 7,
+        "latestVersionId": "6adc2ed8600dc2c367a846af",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "第二正式内容",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846af",
+          "revision": 7
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ad",
+        "versionId": "6adc2ed8600dc2c367a846b1",
+        "revision": 8,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 8,
+        "latestVersionId": "6adc2ed8600dc2c367a846b1",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "第二正式内容",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846b1",
+          "revision": 8
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 9,
+        "latestVersionId": "6adc2ed8600dc2c367a846b1",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "从v1编辑",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846af",
+          "revision": 9
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 9,
+        "latestVersionId": "6adc2ed8600dc2c367a846b1",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "从v1编辑",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846af",
+          "revision": 9
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ad",
+        "versionId": "6adc2ed8600dc2c367a846b3",
+        "revision": 10,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions/6adc2ed8600dc2c367a846b3",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846b3",
+        "questionId": "6adc2ed8600dc2c367a846ad",
+        "version": 3,
+        "content": {
+          "type": "number",
+          "title": "从v1编辑",
+          "validation": {
+            "integerOnly": true,
+            "min": "0",
+            "max": "120"
+          }
+        },
+        "parentVersionId": "6adc2ed8600dc2c367a846af",
+        "restoredFromVersionId": null,
+        "operation": "save",
+        "createdAt": "2026-10-24T04:06:48.348Z"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 10,
+        "latestVersionId": "6adc2ed8600dc2c367a846b3",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "从v1编辑",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846b3",
+          "revision": 10
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 11,
+        "latestVersionId": "6adc2ed8600dc2c367a846b3",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "未正式保存的编辑",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846b1",
+          "revision": 11
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 11,
+        "latestVersionId": "6adc2ed8600dc2c367a846b3",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "未正式保存的编辑",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846b1",
+          "revision": 11
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/restorations",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ad",
+        "versionId": "6adc2ed8600dc2c367a846b5",
+        "revision": 12,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions/6adc2ed8600dc2c367a846b5",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846b5",
+        "questionId": "6adc2ed8600dc2c367a846ad",
+        "version": 4,
+        "content": {
+          "type": "number",
+          "title": "年龄修改5",
+          "validation": {
+            "integerOnly": true,
+            "min": "0",
+            "max": "120"
+          }
+        },
+        "parentVersionId": "6adc2ed8600dc2c367a846af",
+        "restoredFromVersionId": "6adc2ed8600dc2c367a846af",
+        "operation": "restore",
+        "createdAt": "2026-10-24T04:06:48.405Z"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 12,
+        "latestVersionId": "6adc2ed8600dc2c367a846b5",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "未正式保存的编辑",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846b1",
+          "revision": 11
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 12,
+        "latestVersionId": "6adc2ed8600dc2c367a846b5",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "未正式保存的编辑",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846b1",
+          "revision": 11
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ad",
+        "versionId": "6adc2ed8600dc2c367a846b7",
+        "revision": 13,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 409,
+    "response": {
+      "error": {
+        "code": "EDIT_CONFLICT",
+        "message": "内容已变化，本地编辑已保留，请重新读取并比较",
+        "details": [],
+        "traceId": "febb63a8-fbba-4165-91d2-1481fd99a285"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 13,
+        "latestVersionId": "6adc2ed8600dc2c367a846b7",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "未正式保存的编辑",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846b7",
+          "revision": 12
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ad",
+        "versionId": "6adc2ed8600dc2c367a846b9",
+        "revision": 14,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ad",
+        "versionId": "6adc2ed8600dc2c367a846b9",
+        "revision": 14,
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846ad",
+        "revision": 14,
+        "latestVersionId": "6adc2ed8600dc2c367a846b9",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "未正式保存的编辑",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846b9",
+          "revision": 13
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions",
+    "who": 0,
+    "status": 500,
+    "response": {
+      "error": {
+        "code": "INTERNAL_ERROR",
+        "message": "服务暂时出错，请稍后重试",
+        "details": [],
+        "traceId": "3c5b2061-864e-404d-9af2-cc6ebc5eea80"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adc2ed8600dc2c367a846af/forks",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846bd",
+        "versionId": "6adc2ed8600dc2c367a846be",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846bd/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846bd",
+        "revision": 1,
+        "latestVersionId": "6adc2ed8600dc2c367a846be",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄😀",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846be",
+          "revision": 0
+        },
+        "origin": {
+          "kind": "fork",
+          "sourceQuestionId": "6adc2ed8600dc2c367a846ad",
+          "sourceVersionId": "6adc2ed8600dc2c367a846af"
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846bd/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846bd",
+        "versionId": "6adc2ed8600dc2c367a846c0",
+        "revision": 2,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846bd/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846bd",
+        "revision": 2,
+        "latestVersionId": "6adc2ed8600dc2c367a846c0",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "年龄😀",
+            "validation": {
+              "integerOnly": true,
+              "min": "0",
+              "max": "120"
+            }
+          },
+          "baseVersionId": "6adc2ed8600dc2c367a846c0",
+          "revision": 1
+        },
+        "origin": {
+          "kind": "fork",
+          "sourceQuestionId": "6adc2ed8600dc2c367a846ad",
+          "sourceVersionId": "6adc2ed8600dc2c367a846af"
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adc2ed8600dc2c367a846bd/restorations",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846bd",
+        "versionId": "6adc2ed8600dc2c367a846c2",
+        "revision": 3,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-banks",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846c4",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-banks",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846c6",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/question-banks/6adc2ed8600dc2c367a846c4/members/6adc2ed8600dc2c367a846ad",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846c4",
+        "revision": 1,
+        "state": "memberPresent"
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/question-banks/6adc2ed8600dc2c367a846c6/members/6adc2ed8600dc2c367a846ad",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846c6",
+        "revision": 1,
+        "state": "memberPresent"
+      }
+    }
+  },
+  {
+    "method": "PATCH",
+    "path": "/question-banks/6adc2ed8600dc2c367a846c4",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846c4",
+        "name": "改名题库",
+        "revision": 2,
+        "createdAt": "2026-10-24T04:06:48.630Z"
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/question-banks/6adc2ed8600dc2c367a846c4/members/6adc2ed8600dc2c367a846ad",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846c4",
+        "revision": 3,
+        "state": "memberAbsent"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846ca",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-banks/6adc2ed8600dc2c367a846c6/deletion",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adc2ed8600dc2c367a846c6",
+        "revision": 2,
+        "state": "deleted"
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/question-banks/6adc2ed8600dc2c367a846c6/members/6adc2ed8600dc2c367a846ca",
+    "who": 0,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "1b084b4b-79b0-4539-9251-37a429844ada"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/question-banks/6adc2ed8600dc2c367a846c6/members",
+    "who": 0,
+    "status": 404,
+    "response": {
+      "error": {
+        "code": "NOT_FOUND",
+        "message": "资源不存在或不可访问",
+        "details": [],
+        "traceId": "fa5ad154-1550-47f2-a290-7dbd7a56f1b7"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions?limit=1",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "items": [
+          {
+            "id": "6adc2ed8600dc2c367a846b9",
+            "questionId": "6adc2ed8600dc2c367a846ad",
+            "version": 6,
+            "content": {
+              "type": "number",
+              "title": "未正式保存的编辑",
+              "validation": {
+                "integerOnly": true,
+                "min": "0",
+                "max": "120"
+              }
+            },
+            "parentVersionId": "6adc2ed8600dc2c367a846b7",
+            "restoredFromVersionId": null,
+            "operation": "save",
+            "createdAt": "2026-10-24T04:06:48.466Z"
+          }
+        ],
+        "nextCursor": "eyJzY29wZSI6eyJhY3RvcklkIjoiNmFkYzJlZDc2MDBkYzJjMzY3YTg0NmFhIiwiZW5kcG9pbnQiOiJxdWVzdGlvblZlcnNpb25zIiwicXVlc3Rpb25JZCI6IjZhZGMyZWQ4NjAwZGMyYzM2N2E4NDZhZCIsInNvcnQiOiJ2ZXJzaW9uX2Rlc2MifSwiYWZ0ZXIiOjZ9.HtxyMjpFVJbJzhtcOT-Uo-3T8JD21PkljzoV4gCV_w0"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions?limit=1&cursor=eyJzY29wZSI6eyJhY3RvcklkIjoiNmFkYzJlZDc2MDBkYzJjMzY3YTg0NmFhIiwiZW5kcG9pbnQiOiJxdWVzdGlvblZlcnNpb25zIiwicXVlc3Rpb25JZCI6IjZhZGMyZWQ4NjAwZGMyYzM2N2E4NDZhZCIsInNvcnQiOiJ2ZXJzaW9uX2Rlc2MifSwiYWZ0ZXIiOjZ9.HtxyMjpFVJbJzhtcOT-Uo-3T8JD21PkljzoV4gCV_w0",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "items": [
+          {
+            "id": "6adc2ed8600dc2c367a846b7",
+            "questionId": "6adc2ed8600dc2c367a846ad",
+            "version": 5,
+            "content": {
+              "type": "number",
+              "title": "未正式保存的编辑",
+              "validation": {
+                "integerOnly": true,
+                "min": "0",
+                "max": "120"
+              }
+            },
+            "parentVersionId": "6adc2ed8600dc2c367a846b1",
+            "restoredFromVersionId": null,
+            "operation": "save",
+            "createdAt": "2026-10-24T04:06:48.446Z"
+          }
+        ],
+        "nextCursor": "eyJzY29wZSI6eyJhY3RvcklkIjoiNmFkYzJlZDc2MDBkYzJjMzY3YTg0NmFhIiwiZW5kcG9pbnQiOiJxdWVzdGlvblZlcnNpb25zIiwicXVlc3Rpb25JZCI6IjZhZGMyZWQ4NjAwZGMyYzM2N2E4NDZhZCIsInNvcnQiOiJ2ZXJzaW9uX2Rlc2MifSwiYWZ0ZXIiOjV9.oZuOqJ2Ej16nQ4dvyNb2O7V6ARmMAN46i7PBIOJDHCk"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/versions?limit=1&limit=2",
+    "who": 0,
+    "status": 400,
+    "response": {
+      "error": {
+        "code": "INVALID_REQUEST",
+        "message": "请求参数不符合接口契约",
+        "details": [],
+        "traceId": "9a2c0108-29a4-4c93-8990-68e4f857771b"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions?unknown=true",
+    "who": 0,
+    "status": 400,
+    "response": {
+      "error": {
+        "code": "INVALID_REQUEST",
+        "message": "请求参数不符合接口契约",
+        "details": [],
+        "traceId": "5035dbdb-70da-45a1-9b62-5cf3987cf148"
+      }
+    }
+  },
+  {
+    "method": "DELETE",
+    "path": "/questions/6adc2ed8600dc2c367a846ad/draft",
+    "who": 0,
+    "status": 405,
+    "response": {
+      "error": {
+        "code": "METHOD_NOT_ALLOWED",
+        "message": "该接口不支持此方法",
+        "details": [],
+        "traceId": "666450e0-d0cc-4491-b82d-690dbf210b2a"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": -1,
+    "status": 401,
+    "response": {
+      "error": {
+        "code": "AUTH_REQUIRED",
+        "message": "请先登录",
+        "details": [],
+        "traceId": "9e34808b-a92f-44d8-aefb-72f0ab6c488a"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 403,
+    "response": {
+      "error": {
+        "code": "CSRF_REJECTED",
+        "message": "请求来源校验失败",
+        "details": [],
+        "traceId": "d6a55442-3209-4603-8ca0-d1c2e7928724"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adc2ed8600dc2c367a846cc",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adc2ed8600dc2c367a846cc/versions?cursor=eyJzY29wZSI6eyJhY3RvcklkIjoiNmFkYzJlZDc2MDBkYzJjMzY3YTg0NmFhIiwiZW5kcG9pbnQiOiJxdWVzdGlvblZlcnNpb25zIiwicXVlc3Rpb25JZCI6IjZhZGMyZWQ4NjAwZGMyYzM2N2E4NDZhZCIsInNvcnQiOiJ2ZXJzaW9uX2Rlc2MifSwiYWZ0ZXIiOjZ9.HtxyMjpFVJbJzhtcOT-Uo-3T8JD21PkljzoV4gCV_w0",
+    "who": 0,
+    "status": 400,
+    "response": {
+      "error": {
+        "code": "INVALID_CURSOR",
+        "message": "分页游标与查询范围不匹配",
+        "details": [],
+        "traceId": "3edefec4-18d7-461d-8965-4c7d7cedfd07"
+      }
+    }
+  }
+]

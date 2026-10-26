@@ -1,0 +1,29 @@
+Browser tab: 4, Title: "问卷工作台", URL: "http://localhost:5200/templates".
+1 AXWebArea 问卷工作台, URL: localhost:5200/templates
+	2 container app
+		3 link Description: 跳到主要内容, Value: localhost:5200/templates#main
+		4 container
+			5 link Description: 问卷工作台, Value: localhost:5200/dashboard
+			6 container 主导航
+				7 link Description: 首页, Value: localhost:5200/dashboard
+				8 link Description: 我的问卷, Value: localhost:5200/surveys
+				9 link Description: 题目, Value: localhost:5200/questions
+				10 link Description: 题库, Value: localhost:5200/question-banks
+				11 link Description: 模板广场, Value: localhost:5200/templates
+				12 text p2_manual_1024_b
+				13 button 退出登录
+		14 container
+			15 heading 模板广场, Value: 1
+				16 text 模板广场
+			17 text 选用固定问卷结构，生成自己的新草稿。这里不公开他人答卷或统计；私人共享不等于公开分发授权。
+			18 checkbox 可选用模板, Value: 1
+			19 checkbox 我的模板, Value: 0
+			20 content list
+				21 container
+					22 heading P2-MAN-20261024-02 活动模板源, Value: 2
+						23 link Description: P2-MAN-20261024-02 活动模板源, Value: localhost:5200/templates/6adcd317ba826d37d9e2d273
+					24 text P2-MAN-20261024-02 活动模板源 已上架 · 当前来源授权有效
+					25 link Description: 查看固定模板 →, Value: localhost:5200/templates/6adcd317ba826d37d9e2d273
+		26 text 数据库课程项目 · 问卷工作台
+
+The focused UI element is 15 heading 模板广场, Value: 1

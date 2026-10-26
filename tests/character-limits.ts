@@ -3,17 +3,16 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { randomUUID } from 'node:crypto';
 import { chromium, expect } from '@playwright/test';
-import { MongoClient } from 'mongodb';
+import {MongoClient,testMongoOptions} from './database-client.js';
 import { codePointLength, SURVEY_TEXT_LIMITS, surveyTextIssues } from '@survey/shared';
-import { loadConfig } from '../apps/api/src/config.js';
+import {isolatedTestConfig,evidenceDirectory} from './runtime-environment.js';
 import { initialize } from '../apps/api/src/database/initialize.js';
 import { buildApp } from '../apps/api/src/app.js';
 
 // Focused regression: no old account/version/statistics suites are rerun.
-const base = loadConfig(), dbName = `project1_test_characters_${Date.now()}`, uri = new URL(base.uri);
-uri.pathname = `/${dbName}`;
-const config = { ...base, uri: uri.toString(), dbName, origin: 'http://127.0.0.1:3102', port: 3102 };
-const client = new MongoClient(config.uri); await client.connect(); const db = client.db(dbName); await initialize(db);
+const config = isolatedTestConfig('characters','http://127.0.0.1:3102',3102), dbName = config.dbName;
+const artifactDirectory=evidenceDirectory('character-limits');
+const client = new MongoClient(config.uri,testMongoOptions()); await client.connect(); const db = client.db(dbName); await initialize(db);
 const app = await buildApp(config, { logger: false }); await app.listen({ host: '127.0.0.1', port: config.port });
 const channel = process.env.PLAYWRIGHT_CHANNEL ?? (existsSync('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe') ? 'msedge' : undefined);
 const browser = await chromium.launch({ headless: true, ...(channel ? { channel } : {}) });
@@ -58,17 +57,17 @@ try {
     await page.locator('form').evaluate(form => form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true })));
     assert.equal(postCount, 0); assert.equal(await field.inputValue(), sample.text + '汉');
   }
-  await mkdir('.local/evidence', { recursive: true });
-  await page.screenshot({ path: '.local/evidence/character-limit-desktop.png', fullPage: true });
+  await mkdir(`${artifactDirectory}`, { recursive: true });
+  await page.screenshot({ path: `${artifactDirectory}/character-limit-desktop.png`, fullPage: true });
   await page.setViewportSize({ width: 320, height: 1000 });
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
-  await page.screenshot({ path: '.local/evidence/character-limit-mobile.png', fullPage: true });
+  await page.screenshot({ path: `${artifactDirectory}/character-limit-mobile.png`, fullPage: true });
   await field.fill('😀'.repeat(2000)); await expect(page.locator('#description-error')).toHaveCount(0); await expect(create).toBeEnabled(); await expect(field).toHaveAttribute('aria-invalid', 'false');
   await create.click(); await page.waitForURL(/\/surveys\/[0-9a-f]{24}$/);
   assert.equal(postCount, 1); await page.getByRole('heading', { name: '字符计数回归', exact: true }).waitFor();
   assert.equal((await db.collection('surveys').findOne({ title: '字符计数回归' }))?.description, '😀'.repeat(2000));
   assert.deepEqual(failures, []);
   const result = { date: new Date().toISOString(), status: 'passed', database: dbName, samples: samples.map(sample => sample.name), validCodePoints: 2000, rejectedCodePoints: 2001, bypassUiRejectedByApi: true, overLimitInputPreserved: true, overLimitUiPosts: 0, correctedUiPosts: postCount, consoleErrors: failures, retainedTestData: true };
-  await writeFile('.local/evidence/character-limits.json', JSON.stringify(result, null, 2));
+  await writeFile(`${artifactDirectory}/character-limits.json`, JSON.stringify(result, null, 2));
   console.log(JSON.stringify(result, null, 2));
 } finally { await browser.close(); await app.close(); await client.close(); }

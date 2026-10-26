@@ -1,0 +1,108 @@
+{
+  "manifest": {
+    "format": 1,
+    "task": "P2-008",
+    "runId": "1792849390747_c294168b",
+    "source": "project2_test_p2008_source_1792849390747_c294168b",
+    "restore": "project2_restore_1792849390747_c294168b",
+    "applicationTest": "project2_test_p2008_migrated_1792849390747_c294168b",
+    "instanceHash": "78c85bd7b51009309de95e9e041fb079586682dd8ee7a36dbe60d61035e17c51"
+  },
+  "checks": [],
+  "inspect": {
+    "source": "project2_test_p2008_source_1792849390747_c294168b",
+    "sourceHash": "6afde786675f8f7fa00999524f544d91ecea5b2e557efa35885be2b627b004f2",
+    "counts": {
+      "users": 2,
+      "surveys": 2,
+      "survey_versions": 6,
+      "responses": 6
+    },
+    "blocked": [],
+    "formats": {
+      "users": [
+        1
+      ],
+      "surveys": [
+        2
+      ],
+      "survey_versions": [
+        1
+      ],
+      "responses": [
+        2
+      ]
+    }
+  },
+  "backup": {
+    "sourceHash": "6afde786675f8f7fa00999524f544d91ecea5b2e557efa35885be2b627b004f2",
+    "method": "BSON logical backup; snapshot transaction plus stable metadata; not mongodump",
+    "bytes": 36146,
+    "sha256": "021d29226a62950873cbca62408b61ee1506238c283642185e917970215984d5"
+  },
+  "restore": {
+    "target": "project2_test_p2008_migrated_1792849390747_c294168b",
+    "sourceHash": "6afde786675f8f7fa00999524f544d91ecea5b2e557efa35885be2b627b004f2",
+    "restored": true
+  },
+  "recovery": {
+    "planId": "6b011fc1-1493-4163-a476-ce77d4761dc0",
+    "target": "project2_test_p2008_migrated_1792849390747_c294168b",
+    "committed": 1,
+    "skipped": 1
+  },
+  "verify": {
+    "planId": "6b011fc1-1493-4163-a476-ce77d4761dc0",
+    "target": "project2_test_p2008_migrated_1792849390747_c294168b",
+    "sourceHash": "6afde786675f8f7fa00999524f544d91ecea5b2e557efa35885be2b627b004f2",
+    "verified": true,
+    "surveys": 2,
+    "versions": 12,
+    "bindings": 40,
+    "audit": [
+      "LEGACY_SIMILAR_CONTENT_MULTIPLICITY:1:text,text_copy:KEPT_SEPARATE_UNPROVEN_IDENTITIES",
+      "LEGACY_SIMILAR_CONTENT_MULTIPLICITY:2:text,text_copy:KEPT_SEPARATE_UNPROVEN_IDENTITIES",
+      "LEGACY_SIMILAR_CONTENT_MULTIPLICITY:3:text,text_copy:KEPT_SEPARATE_UNPROVEN_IDENTITIES",
+      "local:LOCAL_UNFORMALIZED_DRAFT",
+      "LEGACY_SIMILAR_CONTENT_MULTIPLICITY:1:text,text_copy:KEPT_SEPARATE_UNPROVEN_IDENTITIES",
+      "LEGACY_SIMILAR_CONTENT_MULTIPLICITY:2:text,text_copy:KEPT_SEPARATE_UNPROVEN_IDENTITIES",
+      "LEGACY_SIMILAR_CONTENT_MULTIPLICITY:3:text,text_copy:KEPT_SEPARATE_UNPROVEN_IDENTITIES",
+      "local:LOCAL_UNFORMALIZED_DRAFT"
+    ]
+  },
+  "repeat": {
+    "planId": "6b011fc1-1493-4163-a476-ce77d4761dc0",
+    "target": "project2_test_p2008_migrated_1792849390747_c294168b",
+    "committed": 0,
+    "skipped": 2
+  },
+  "sourceBefore": "09aaae3129136a8acb9d6f976b4b62e8484edce5786371b4ede2a26d7a6a4caf",
+  "sourceAfter": "09aaae3129136a8acb9d6f976b4b62e8484edce5786371b4ede2a26d7a6a4caf",
+  "targetAfter": "2d268e9015417d92e44ec03c6fc60077f31b2b5b923d0737c9fe16b82c09f1a1",
+  "targetConflict": {
+    "target": "project2_restore_1792849390747_c294168b",
+    "blocked": true,
+    "unchanged": true
+  },
+  "sourceDriftBlocked": true,
+  "badSource": {
+    "database": "project2_test_p2008_source_1792849398535_fdecb2da",
+    "blocked": [
+      "6adcb5f65a6631326b25145a:SURVEY_FORMAT_OR_OWNER",
+      "6adcb5f65a6631326b25145a:CURRENT_SNAPSHOT_MISSING"
+    ],
+    "unchanged": true
+  },
+  "unknownSource": {
+    "database": "project2_test_p2008_source_1792849401245_dfeb593b",
+    "blocked": [
+      "BASELINE_SCHEMA_OR_INDEX_MISMATCH",
+      "surveys:UNKNOWN_FIELDS_OR_FORMAT",
+      "6adcb5f95a6631326b25145b:SURVEY_FORMAT_OR_OWNER",
+      "6adcb5f95a6631326b25145b:COUNTERS",
+      "6adcb5f95a6631326b25145b:CURRENT_SNAPSHOT_MISSING"
+    ],
+    "sourceUnchanged": true,
+    "targetUntouched": true
+  }
+}

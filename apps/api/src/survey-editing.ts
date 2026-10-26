@@ -7,13 +7,17 @@ import type { SurveyDocument, UserDocument } from './database/models.js';
 import { editorDto } from './dto.js';
 import { fromBson, toBson } from './question-codec.js';
 import { ApiError, invalid } from './errors.js';
+import {readSourceSet} from './database/source-read.js';
+import {bindingHashOf} from './database/binding-integrity.js';
+import type {Phase2SurveyDocument,Phase2SnapshotDocument} from './database/phase2-models.js';
 export async function loadEditor(db: Db, survey: SurveyDocument) {
   if(survey.currentPublishedVersion===null) return editorDto(survey);
   const snapshot=await db.collection('survey_versions').findOne({surveyId:survey._id,version:survey.currentPublishedVersion});
   if(!snapshot) throw new ApiError(503,'VERSION_DEFINITION_UNAVAILABLE','发布定义不可用，请先恢复历史定义');
   const definition={title:survey.title,description:survey.description,questions:normalizeQuestions(fromBson(survey.questions) as Question[])};
   const original={...snapshot.definition,questions:normalizeQuestions(fromBson(snapshot.definition.questions) as Question[])};
-  const changed=canonical(definition)!==canonical(original)||canonical({allowAnonymous:survey.allowAnonymous,allowRepeat:survey.allowRepeat})!==canonical(snapshot.policySnapshot);
+  let changed=canonical(definition)!==canonical(original)||canonical({allowAnonymous:survey.allowAnonymous,allowRepeat:survey.allowRepeat})!==canonical(snapshot.policySnapshot);
+  if(survey.schemaVersion===3){const current=await readSourceSet(db,survey as Phase2SurveyDocument),published=await readSourceSet(db,survey as Phase2SurveyDocument,snapshot as Phase2SnapshotDocument);changed=changed||bindingHashOf(current.bindings)!==bindingHashOf(published.bindings);}
   return editorDto(survey,changed);
 }
 export function parseInstant(iso: string): Date {
@@ -22,7 +26,7 @@ export function parseInstant(iso: string): Date {
   if(month<1||month>12||day<1||day>new Date(Date.UTC(year,month,0)).getUTCDate()) throw invalid();
   return new Date(iso);
 }
-export function registerEditingRoutes(app: FastifyInstance, db: Db, surveys: Collection<SurveyDocument>, auth: (request: {cookies:Record<string,string|undefined>})=>Promise<UserDocument>) {
+export function registerEditingRoutes(app: FastifyInstance, db: Db, surveys: Collection<SurveyDocument>, auth: (request: {cookies:Record<string,string|undefined>})=>Promise<UserDocument>,phase2Save?:(userId:SurveyDocument['ownerId'],surveyId:string,expected:number,questions:Question[])=>Promise<SaveResult>) {
   async function owned(request: {cookies:Record<string,string|undefined>;params:{surveyId:string}}, expected: number) {
     const user=await auth(request),id=request.params.surveyId;
     if(!/^[0-9a-fA-F]{24}$/.test(id)) throw invalid();
@@ -59,6 +63,7 @@ export function registerEditingRoutes(app: FastifyInstance, db: Db, surveys: Col
     return {data:await save(survey,changes,'title'in changes||'description'in changes)};
   });
   app.put<{Params:{surveyId:string};Body:SaveQuestions}>('/api/v1/surveys/:surveyId/questions',{schema:{body:saveQuestionsSchema}},async request=>{
+    if(phase2Save){const user=await auth(request);return {data:await phase2Save(user._id,request.params.surveyId,request.body.expectedRevision,request.body.questions)};}
     const survey=await owned(request,request.body.expectedRevision);
     if(!['draft','paused'].includes(survey.status)) throw new ApiError(409,'SURVEY_STATE_CONFLICT','当前收集状态不允许编辑题目');
     if(survey.revision>=Number.MAX_SAFE_INTEGER||survey.definitionVersion>=Number.MAX_SAFE_INTEGER) throw invalid();

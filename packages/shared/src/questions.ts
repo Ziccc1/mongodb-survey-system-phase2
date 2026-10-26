@@ -1,6 +1,6 @@
 import { Decimal } from 'decimal.js';
-import { codePointLength } from './index.js';
-import type { DefinitionIssue } from './index.js';
+import { codePointLength } from './validation-common.js';
+import type { DefinitionIssue } from './validation-common.js';
 export type QuestionType = 'single' | 'multiple' | 'text' | 'number';
 export interface Option { id: string; label: string }
 export interface Condition { op: 'eq' | 'containsAny' | 'containsAll' | 'lt' | 'lte' | 'gt' | 'gte'; optionId?: string; optionIds?: string[]; number?: string }

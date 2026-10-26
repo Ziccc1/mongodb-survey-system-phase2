@@ -1,0 +1,288 @@
+{
+  "task": "phase2-automated-acceptance",
+  "started": "2026-10-24T13:38:22.923Z",
+  "finished": "2026-10-24T13:49:28.067Z",
+  "scope": "complete-automated-regression",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "typecheck",
+      "start": "2026-10-24T13:38:28.898Z",
+      "finished": "2026-10-24T13:38:35.447Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-24T13:38:35.448Z",
+      "finished": "2026-10-24T13:38:42.934Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "domain",
+      "start": "2026-10-24T13:38:42.934Z",
+      "finished": "2026-10-24T13:38:44.372Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "operationretry",
+      "start": "2026-10-24T13:38:44.372Z",
+      "finished": "2026-10-24T13:38:44.737Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "schemafoundation",
+      "start": "2026-10-24T13:38:44.738Z",
+      "finished": "2026-10-24T13:39:26.831Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "bindingsreceipts",
+      "start": "2026-10-24T13:39:26.832Z",
+      "finished": "2026-10-24T13:39:40.907Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "isolation",
+      "start": "2026-10-24T13:39:40.907Z",
+      "finished": "2026-10-24T13:39:41.709Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "phase2targets",
+      "start": "2026-10-24T13:39:41.710Z",
+      "finished": "2026-10-24T13:39:42.482Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "runtimereviewapi",
+      "start": "2026-10-24T13:39:42.482Z",
+      "finished": "2026-10-24T13:39:47.235Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "versionsbanks",
+      "start": "2026-10-24T13:39:47.236Z",
+      "finished": "2026-10-24T13:40:01.004Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "surveyssharingusage",
+      "start": "2026-10-24T13:40:01.004Z",
+      "finished": "2026-10-24T13:40:16.071Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "httpreceipts",
+      "start": "2026-10-24T13:40:16.072Z",
+      "finished": "2026-10-24T13:40:28.904Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "crossstatistics",
+      "start": "2026-10-24T13:40:28.904Z",
+      "finished": "2026-10-24T13:40:43.877Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "crossboundaries",
+      "start": "2026-10-24T13:40:43.878Z",
+      "finished": "2026-10-24T13:40:58.725Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "crossaccessreview",
+      "start": "2026-10-24T13:40:58.726Z",
+      "finished": "2026-10-24T13:41:15.707Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "templates",
+      "start": "2026-10-24T13:41:15.707Z",
+      "finished": "2026-10-24T13:41:36.570Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "templatelineage",
+      "start": "2026-10-24T13:41:36.570Z",
+      "finished": "2026-10-24T13:42:21.062Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "templateraces",
+      "start": "2026-10-24T13:42:21.063Z",
+      "finished": "2026-10-24T13:42:37.665Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "usagecapacity",
+      "start": "2026-10-24T13:42:37.666Z",
+      "finished": "2026-10-24T13:42:54.608Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "phase2compatibility",
+      "start": "2026-10-24T13:42:54.609Z",
+      "finished": "2026-10-24T13:43:10.138Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "migration",
+      "start": "2026-10-24T13:43:10.139Z",
+      "finished": "2026-10-24T13:43:23.941Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "migratedapi",
+      "start": "2026-10-24T13:43:23.942Z",
+      "finished": "2026-10-24T13:43:36.310Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "integration",
+      "start": "2026-10-24T13:43:36.311Z",
+      "finished": "2026-10-24T13:43:45.086Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "acceptancejourney",
+      "start": "2026-10-24T13:43:45.087Z",
+      "finished": "2026-10-24T13:44:04.010Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "acceptancepermissions",
+      "start": "2026-10-24T13:44:04.010Z",
+      "finished": "2026-10-24T13:44:18.588Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "acceptancescale",
+      "start": "2026-10-24T13:44:18.588Z",
+      "finished": "2026-10-24T13:45:26.617Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "phase2browser",
+      "start": "2026-10-24T13:45:26.617Z",
+      "finished": "2026-10-24T13:46:12.278Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "crossbrowser",
+      "start": "2026-10-24T13:46:12.278Z",
+      "finished": "2026-10-24T13:46:55.208Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "crossretainedbrowser",
+      "start": "2026-10-24T13:46:55.209Z",
+      "finished": "2026-10-24T13:47:18.709Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "templatebrowser",
+      "start": "2026-10-24T13:47:18.709Z",
+      "finished": "2026-10-24T13:47:44.239Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "phase1",
+      "start": "2026-10-24T13:47:44.239Z",
+      "finished": "2026-10-24T13:48:38.760Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "existingregression",
+      "start": "2026-10-24T13:48:38.761Z",
+      "finished": "2026-10-24T13:49:16.968Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "verifyruntime",
+      "start": "2026-10-24T13:49:16.968Z",
+      "finished": "2026-10-24T13:49:20.302Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    },
+    {
+      "name": "verifyphase2",
+      "start": "2026-10-24T13:49:20.303Z",
+      "finished": "2026-10-24T13:49:23.880Z",
+      "exitCode": 0,
+      "signal": null,
+      "status": "passed"
+    }
+  ],
+  "guardFailures": [],
+  "limits": [
+    "Synthetic P2 databases only; no real P1 migration or DB authorization deployment.",
+    "Existing application startup ports remain occupied by user services; dedicated browser servers and runtime target/ownership checks replace restarting those services.",
+    "Controlled failure hooks are not a real network outage or primary failover.",
+    "Manual acceptance remains unexecuted."
+  ]
+}

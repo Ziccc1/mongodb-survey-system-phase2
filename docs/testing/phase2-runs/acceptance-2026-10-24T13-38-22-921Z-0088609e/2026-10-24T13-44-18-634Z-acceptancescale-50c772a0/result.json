@@ -1,0 +1,16 @@
+{
+  "name": "acceptancescale",
+  "start": "2026-10-24T13:44:18.635Z",
+  "finished": "2026-10-24T13:45:26.609Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/phase2/acceptance-scale.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

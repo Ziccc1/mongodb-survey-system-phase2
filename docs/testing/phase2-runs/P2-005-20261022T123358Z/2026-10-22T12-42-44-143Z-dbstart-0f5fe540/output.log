@@ -1,0 +1,22 @@
+
+> project1-survey@1.0.0 db:start
+> powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-mongo.ps1
+
+Started dedicated P2 MongoDB pid 39456 in D:\大三\数据库\pj1_2\.local\mongodb-phase2-rs0
+D:\大三\数据库\pj1_2\scripts\init-replica.ts:11
+  if (actual.parsed.storage.dbPath !== owned.dbPath || actual.parsed.net.port !== 27019 || actual.parsed.replication.replSetName !== 'rs0') throw new Error('Actual P2 MongoDB options do not match verified process ownership');
+                                                                                                                                                  ^
+
+
+Error: Actual P2 MongoDB options do not match verified process ownership
+    at <anonymous> (D:\大三\数据库\pj1_2\scripts\init-replica.ts:11:147)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+Node.js v22.17.0
+P2 replica setup failed; no reconfiguration was attempted.
+At D:\大三\数据库\pj1_2\scripts\start-mongo.ps1:32 char:28
++ ... DE -ne 0) { throw 'P2 replica setup failed; no reconfiguration was at ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (P2 replica setu... was attempted.:String) [], RuntimeException
+    + FullyQualifiedErrorId : P2 replica setup failed; no reconfiguration was attempted.
+ 

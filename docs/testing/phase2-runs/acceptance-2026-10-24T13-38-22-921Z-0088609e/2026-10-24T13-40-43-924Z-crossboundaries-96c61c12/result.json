@@ -1,0 +1,16 @@
+{
+  "name": "crossboundaries",
+  "start": "2026-10-24T13:40:43.926Z",
+  "finished": "2026-10-24T13:40:58.718Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/phase2/cross-boundaries.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

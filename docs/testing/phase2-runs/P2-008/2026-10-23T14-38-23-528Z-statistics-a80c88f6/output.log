@@ -1,0 +1,10 @@
+P2 synthetic target localhost:27019 / project2_test_statistics_1792766304209_f529b4d5
+Independent retained database: project2_test_statistics_1792766304209_f529b4d5
+PASS no-response statistics retain question/zero-option rows and null average
+PASS hand-calculated 3 answers: single 2/1/0, multi 2/2/0, text 2, number mean (0+10)/2=5
+PASS text/number raw pagination, signed query-bound cursors and anonymous whitelist
+PASS v2 default/empty vs v1 history remain separate and old option labels/zero preserved
+PASS no effective numeric answer yields null; zero-only numeric answer yields 0; cumulative/current/selected counts 5/2/2
+PASS every statistics/history management endpoint rejects another account
+PASS phone historical DTO preserves exact 13800138000
+STATISTICS/HISTORY MODULE PASSED

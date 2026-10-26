@@ -1,0 +1,33 @@
+
+> project1-survey@1.0.0 build
+> npm run build -w @survey/shared && npm run build -w @survey/api && npm run build -w @survey/web
+
+
+> @survey/shared@1.0.0 build
+> tsc -p tsconfig.json
+
+
+> @survey/api@1.0.0 build
+> tsc -p tsconfig.json
+
+
+> @survey/web@1.0.0 build
+> vue-tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+<script src="/app-config.js"> in "/index.html" can't be bundled without type="module" attribute
+✓ 705 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                        0.39 kB │ gzip:   0.29 kB
+dist/assets/index-Pn-DMSnj.css        44.90 kB │ gzip:   9.53 kB
+dist/assets/index-DrV9OhPn.js        286.27 kB │ gzip:  96.84 kB
+dist/assets/ChoiceChart-TGrq2pG0.js  517.06 kB │ gzip: 176.88 kB
+
+✓ built in 435ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

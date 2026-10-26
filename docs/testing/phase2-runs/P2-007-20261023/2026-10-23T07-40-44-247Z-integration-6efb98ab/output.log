@@ -1,0 +1,97 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_api_1792741244898_1b936b21
+# Subtest: accounts, persistent drafts, isolation and four-collection initialization
+    # Subtest: four validators and all target indexes exist; initializer is repeatable
+    ok 1 - four validators and all target indexes exist; initializer is repeatable
+      ---
+      duration_ms: 3.5397
+      type: 'test'
+      ...
+    # Subtest: register creates accounts without logging in and exposes only User DTO
+    ok 2 - register creates accounts without logging in and exposes only User DTO
+      ---
+      duration_ms: 148.7548
+      type: 'test'
+      ...
+    # Subtest: duplicate normalized registration and bad credentials are rejected
+    ok 3 - duplicate normalized registration and bad credentials are rejected
+      ---
+      duration_ms: 112.7361
+      type: 'test'
+      ...
+    # Subtest: login sets HttpOnly cookie; current user is restored
+    ok 4 - login sets HttpOnly cookie; current user is restored
+      ---
+      duration_ms: 81.6258
+      type: 'test'
+      ...
+    # Subtest: CSRF, forged fields, duplicate JSON keys, duplicate query and method checks
+    ok 5 - CSRF, forged fields, duplicate JSON keys, duplicate query and method checks
+      ---
+      duration_ms: 8.6064
+      type: 'test'
+      ...
+    # Subtest: unauthenticated management and malformed cookies are rejected
+    ok 6 - unauthenticated management and malformed cookies are rejected
+      ---
+      duration_ms: 1.8824
+      type: 'test'
+      ...
+    # Subtest: create stores server-owned defaults and exact draft Editor DTO
+    ok 7 - create stores server-owned defaults and exact draft Editor DTO
+      ---
+      duration_ms: 13.7289
+      type: 'test'
+      ...
+    # Subtest: own list, stable signed pagination and detail
+    ok 8 - own list, stable signed pagination and detail
+      ---
+      duration_ms: 21.1365
+      type: 'test'
+      ...
+    # Subtest: cross-user reads, cursor reuse and modification are rejected
+    ok 9 - cross-user reads, cursor reuse and modification are rejected
+      ---
+      duration_ms: 11.8865
+      type: 'test'
+      ...
+    # Subtest: fresh backend connection still reads persisted draft; health is ready
+    ok 10 - fresh backend connection still reads persisted draft; health is ready
+      ---
+      duration_ms: 1969.1155
+      type: 'test'
+      ...
+    # Subtest: rs0 supports transactions (aborted probe does not persist)
+    ok 11 - rs0 supports transactions (aborted probe does not persist)
+      ---
+      duration_ms: 3.5216
+      type: 'test'
+      ...
+    # Subtest: logout clears cookie; missing-cookie repeat logout remains successful
+    ok 12 - logout clears cookie; missing-cookie repeat logout remains successful
+      ---
+      duration_ms: 1.2602
+      type: 'test'
+      ...
+    # Subtest: initializer refuses unknown old database without changing it
+    ok 13 - initializer refuses unknown old database without changing it
+      ---
+      duration_ms: 22.1057
+      type: 'test'
+      ...
+# Retained test database: project2_test_api_1792741244898_1b936b21
+    1..13
+ok 1 - accounts, persistent drafts, isolation and four-collection initialization
+  ---
+  duration_ms: 6731.8387
+  type: 'test'
+  ...
+1..1
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7358.1085

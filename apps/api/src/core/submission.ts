@@ -8,13 +8,13 @@ import {ApiError,invalid} from '../errors.js';
 import {fromBson} from '../question-codec.js';
 import type {Auth,FaultHooks} from './common.js';
 import {hash,key} from './common.js';
-import {definitionOf,versionRepository} from './versions.js';
+import {definitionOf,versionRepository,validateStoredVersion} from './versions.js';
 import {transactionOptions} from './publication.js';
 export interface ResponseDocument {_id:ObjectId;schemaVersion:2;surveyId:ObjectId;surveyDefinitionVersion:number;respondentId:ObjectId;anonymous:boolean;repeatAllowed:boolean;requestId:string;payloadHash:string;payloadHashVersion:2;answers:unknown[];submittedAt:Date}
 export const storedAnswers=(answers:Answer[])=>answers.map(a=>a.type==='number'?{...a,number:Decimal128.fromString(a.number)}:a);
 export const responseAnswers=(r:ResponseDocument)=>fromBson(r.answers) as Answer[];
 export function receiptOf(r:ResponseDocument,replayed:boolean):SubmitReceipt{return {receiptId:r._id.toHexString(),submittedAt:r.submittedAt.toISOString(),publishedVersion:r.surveyDefinitionVersion,replayed};}
-export async function referencedVersion(db:Db,surveyId:ObjectId,version:number,session?:ClientSession){const stored=await versionRepository(db).find(surveyId,version,session);if(!stored)throw new ApiError(503,'VERSION_DEFINITION_UNAVAILABLE','答卷或问卷引用的发布定义缺失');definitionOf(stored);return stored;}
+export async function referencedVersion(db:Db,surveyId:ObjectId,version:number,session?:ClientSession){const stored=await versionRepository(db).find(surveyId,version,session);if(!stored)throw new ApiError(503,'VERSION_DEFINITION_UNAVAILABLE','答卷或问卷引用的发布定义缺失');await validateStoredVersion(db,stored,session);return stored;}
 export function registerSubmission(app:FastifyInstance,db:Db,client:MongoClient,auth:Auth,faults:FaultHooks={}){
   const surveys=db.collection<SurveyDocument>('surveys'),responses=db.collection<ResponseDocument>('responses');
   const unavailable=(s:SurveyDocument)=>s.status==='closed'?'SURVEY_CLOSED':s.status==='paused'?'SURVEY_PAUSED':s.status!=='published'||s.currentPublishedVersion===null?'SURVEY_NOT_PUBLISHED':s.expiresAt&&s.expiresAt.getTime()<=Date.now()?'SURVEY_EXPIRED':null;

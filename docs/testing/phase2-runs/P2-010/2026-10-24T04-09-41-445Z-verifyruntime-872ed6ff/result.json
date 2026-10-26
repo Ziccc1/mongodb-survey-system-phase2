@@ -1,0 +1,15 @@
+{
+  "name": "verifyruntime",
+  "start": "2026-10-24T04:09:41.448Z",
+  "finished": "2026-10-24T04:09:44.160Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "scripts/verify-runtime-baseline.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

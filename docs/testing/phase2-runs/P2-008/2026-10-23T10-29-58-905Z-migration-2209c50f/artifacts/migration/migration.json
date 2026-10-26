@@ -1,0 +1,85 @@
+{
+  "manifest": {
+    "format": 1,
+    "task": "P2-008",
+    "runId": "1792751401306_cfcd1c9e",
+    "source": "project2_test_p2008_source_1792751401306_cfcd1c9e",
+    "restore": "project2_restore_1792751401306_cfcd1c9e",
+    "applicationTest": "project2_test_p2008_migrated_1792751401306_cfcd1c9e",
+    "instanceHash": "78c85bd7b51009309de95e9e041fb079586682dd8ee7a36dbe60d61035e17c51"
+  },
+  "checks": [],
+  "inspect": {
+    "source": "project2_test_p2008_source_1792751401306_cfcd1c9e",
+    "sourceHash": "73eeebe158a05bdf1a69560d196cb6ec23df67f50044a31c03657290ca8c3c4b",
+    "counts": {
+      "users": 2,
+      "surveys": 2,
+      "survey_versions": 6,
+      "responses": 6
+    },
+    "blocked": [],
+    "formats": {
+      "users": [
+        1
+      ],
+      "surveys": [
+        2
+      ],
+      "survey_versions": [
+        1
+      ],
+      "responses": [
+        2
+      ]
+    }
+  },
+  "backup": {
+    "sourceHash": "73eeebe158a05bdf1a69560d196cb6ec23df67f50044a31c03657290ca8c3c4b",
+    "method": "BSON logical backup; snapshot transaction plus stable metadata; not mongodump",
+    "bytes": 34894,
+    "sha256": "501e41fd104a4816581a18ec2ed8613ac483cbdba79321443f1e899da41b0f89"
+  },
+  "restore": {
+    "target": "project2_test_p2008_migrated_1792751401306_cfcd1c9e",
+    "sourceHash": "73eeebe158a05bdf1a69560d196cb6ec23df67f50044a31c03657290ca8c3c4b",
+    "restored": true
+  },
+  "recovery": {
+    "planId": "5773e45e-39d2-45ea-b7c2-d4153c42e16a",
+    "target": "project2_test_p2008_migrated_1792751401306_cfcd1c9e",
+    "committed": 1,
+    "skipped": 1
+  },
+  "verify": {
+    "planId": "5773e45e-39d2-45ea-b7c2-d4153c42e16a",
+    "target": "project2_test_p2008_migrated_1792751401306_cfcd1c9e",
+    "sourceHash": "73eeebe158a05bdf1a69560d196cb6ec23df67f50044a31c03657290ca8c3c4b",
+    "verified": true,
+    "surveys": 2,
+    "versions": 10,
+    "bindings": 32,
+    "audit": [
+      "local:LOCAL_UNFORMALIZED_DRAFT",
+      "local:LOCAL_UNFORMALIZED_DRAFT"
+    ]
+  },
+  "repeat": {
+    "planId": "5773e45e-39d2-45ea-b7c2-d4153c42e16a",
+    "target": "project2_test_p2008_migrated_1792751401306_cfcd1c9e",
+    "committed": 0,
+    "skipped": 2
+  },
+  "sourceBefore": "567cad162edc1cdc0e7aa43fc7d61ad2f07a714256825a29505a3ec99680a1ae",
+  "sourceAfter": "567cad162edc1cdc0e7aa43fc7d61ad2f07a714256825a29505a3ec99680a1ae",
+  "targetAfter": "ac56db4f23e622f224b79a5af3511acf7cf6a172c216f743fa71552d2e16a37d",
+  "sourceDriftBlocked": true,
+  "badSource": {
+    "database": "project2_test_p2008_source_1792751407401_2bcb89af",
+    "blocked": [
+      "6adb372fc8a1c7282161a912:SURVEY_FORMAT_OR_OWNER",
+      "6adb372fc8a1c7282161a912:CURRENT_SNAPSHOT_MISSING"
+    ],
+    "unchanged": true
+  }
+}

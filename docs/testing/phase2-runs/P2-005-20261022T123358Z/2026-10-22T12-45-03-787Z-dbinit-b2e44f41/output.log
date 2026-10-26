@@ -1,0 +1,5 @@
+
+> project1-survey@1.0.0 db:init
+> node --env-file=.env --import tsx scripts/init-db.ts
+
+P2 isolated P1 compatibility baseline: four collections, original strict validators and indexes ready. No sample data inserted; no migration performed; P2 13-collection schema NOT implemented.

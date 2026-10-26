@@ -21,11 +21,18 @@
     "build": "npm run build -w @survey/shared && npm run build -w @survey/api && npm run build -w @survey/web",
     "start": "node --env-file=.env apps/api/dist/main.js",
     "test": "npm run test:integration",
+    "test:phase2:acceptance": "node scripts/run-phase2-acceptance.mjs",
     "test:integration": "node --env-file=.env --import tsx --test --test-concurrency=1 tests/integration.test.ts",
     "test:e2e": "node --env-file=.env --import tsx tests/browser.ts",
     "test:editor": "node --env-file=.env --import tsx tests/editor.ts",
     "test:phase1": "node scripts/run-check.mjs publish && node scripts/run-check.mjs flow && node scripts/run-check.mjs submit && node scripts/run-check.mjs statistics && node scripts/run-check.mjs edges && node scripts/run-check.mjs pagination && node scripts/run-check.mjs browser",
-    "test:regression": "node scripts/run-check.mjs regression"
+    "test:regression": "node scripts/run-check.mjs regression",
+    "configure:phase2": "node scripts/configure-phase2.mjs",
+    "db:init:phase2": "node --env-file=.env.phase2 --import tsx scripts/init-phase2-app.ts",
+    "db:verify:phase2": "node --env-file=.env.phase2 --import tsx scripts/init-phase2-app.ts --verify",
+    "dev:api:phase2": "node --env-file=.env.phase2 --import tsx --watch apps/api/src/main-phase2.ts",
+    "dev:web:phase2": "npm run dev -w @survey/web -- --mode phase2",
+    "start:phase2": "node --env-file=.env.phase2 apps/api/dist/main-phase2.js"
   },
   "devDependencies": {
     "typescript": "5.9.3",

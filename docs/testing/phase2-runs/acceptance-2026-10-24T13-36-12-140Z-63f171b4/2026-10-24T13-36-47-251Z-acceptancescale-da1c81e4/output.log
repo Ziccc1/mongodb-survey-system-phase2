@@ -1,0 +1,20 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_accept_scale_1792849008009_18676907
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_accept_scale_1792849008009_18676907
+# Scale setup: 36 surveys created/attached/published through normal APIs; starting 2160 real HTTP submissions, concurrency 12.
+# Scale passed: 2160 real HTTP writes, exact per-survey counters, three isolated four-type oracles, complete pagination and 12 unchanged replays.
+# Subtest: acceptance: 36 API-created surveys, 2160 real HTTP submissions, 12 workers and independent four-type oracles
+ok 1 - acceptance: 36 API-created surveys, 2160 real HTTP submissions, 12 workers and independent four-type oracles
+  ---
+  duration_ms: 69063.5848
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 69817.2116

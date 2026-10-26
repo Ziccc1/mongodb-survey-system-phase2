@@ -1,0 +1,16 @@
+{
+  "name": "integration",
+  "command": [
+    "node",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/integration.test.ts"
+  ],
+  "status": "passed",
+  "exitCode": 0,
+  "tests": 14,
+  "failed": 0,
+  "evidenceSource": "Interactive exec session 8546 output, not a separately captured raw log"
+}

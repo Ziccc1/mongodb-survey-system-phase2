@@ -1,0 +1,1175 @@
+{
+  "state": "implemented-through-W06",
+  "date": "2026-10-24",
+  "endpoints": [
+    {
+      "id": "P2-L01",
+      "method": "POST",
+      "path": "/api/v1/questions",
+      "permission": "登录用户",
+      "query": [],
+      "body": "content:Content；baseVersionId禁止，origin禁止",
+      "result": "VersionReceipt",
+      "errors": "DEFINITION_INVALID、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE",
+      "concurrency": "Idempotency-Key/createQuestion/create；完整成功data持久保存（不含replayed），重放只读原回执",
+      "example": {
+        "request": {
+          "content": {
+            "type": "number",
+            "title": "年龄",
+            "validation": {
+              "min": "0",
+              "max": "120",
+              "integerOnly": true
+            }
+          }
+        },
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": null,
+          "revision": 0,
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "createQuestion",
+        "resultVersion": 1,
+        "firstHttpStatus": 201,
+        "kind": "resourceReceipt",
+        "dataFields": [
+          "resourceId",
+          "versionId",
+          "revision"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-L02",
+      "method": "GET",
+      "path": "/api/v1/questions/:questionId/draft",
+      "permission": "题owner",
+      "query": [],
+      "body": "无",
+      "result": "QuestionEditor",
+      "errors": "NOT_FOUND",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "id": "710000000000000000000001",
+          "revision": 0,
+          "draft": {
+            "content": {
+              "type": "number",
+              "title": "年龄",
+              "validation": {
+                "min": "0",
+                "max": "120",
+                "integerOnly": true
+              }
+            },
+            "baseVersionId": null,
+            "revision": 0
+          },
+          "latestVersionId": null,
+          "origin": null
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-L03",
+      "method": "PUT",
+      "path": "/api/v1/questions/:questionId/draft",
+      "permission": "题owner",
+      "query": [],
+      "body": "expectedRevision:N；content:Content；baseVersionId:OID|null（同题任意正式版）",
+      "result": "QuestionEditor",
+      "errors": "EDIT_CONFLICT、DEFINITION_INVALID",
+      "concurrency": "CAS item.revision；无key，无变化不增修订",
+      "example": {
+        "request": {
+          "expectedRevision": 0,
+          "content": {
+            "type": "number",
+            "title": "年龄（整数）",
+            "validation": {
+              "min": "0",
+              "max": "120",
+              "integerOnly": true
+            }
+          },
+          "baseVersionId": null
+        },
+        "data": {
+          "id": "710000000000000000000001",
+          "revision": 1,
+          "draft": {
+            "content": {
+              "type": "number",
+              "title": "年龄（整数）",
+              "validation": {
+                "min": "0",
+                "max": "120",
+                "integerOnly": true
+              }
+            },
+            "baseVersionId": null,
+            "revision": 1
+          },
+          "latestVersionId": null,
+          "origin": null
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-L04",
+      "method": "POST",
+      "path": "/api/v1/questions/:questionId/versions",
+      "permission": "题owner",
+      "query": [],
+      "body": "expectedRevision:N；expectedDraftRevision:N",
+      "result": "VersionReceipt",
+      "errors": "EDIT_CONFLICT、QUESTION_DRAFT_CONFLICT、NO_QUESTION_DRAFT、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE",
+      "concurrency": "Idempotency-Key/saveVersion/questionId；正式内容不可覆盖；完整成功data持久保存（不含replayed），重放只读原回执",
+      "example": {
+        "request": {
+          "expectedRevision": 1,
+          "expectedDraftRevision": 1
+        },
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": "720000000000000000000001",
+          "revision": 2,
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "saveVersion",
+        "resultVersion": 1,
+        "firstHttpStatus": 201,
+        "kind": "resourceReceipt",
+        "dataFields": [
+          "resourceId",
+          "versionId",
+          "revision"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-L05",
+      "method": "GET",
+      "path": "/api/v1/questions/:questionId/versions",
+      "permission": "题owner或当前有效定向share",
+      "query": [
+        "limit",
+        "cursor"
+      ],
+      "body": "无",
+      "result": "Page<QuestionVersion>",
+      "errors": "NOT_FOUND、INVALID_CURSOR",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "items": [],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-L06",
+      "method": "GET",
+      "path": "/api/v1/questions/:questionId/versions/:versionId",
+      "permission": "题owner或当前有效定向share",
+      "query": [],
+      "body": "无",
+      "result": "QuestionVersion",
+      "errors": "NOT_FOUND",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "id": "720000000000000000000001",
+          "questionId": "710000000000000000000001",
+          "version": 1,
+          "content": {
+            "type": "number",
+            "title": "年龄",
+            "validation": {
+              "min": "0",
+              "max": "120",
+              "integerOnly": true
+            }
+          },
+          "parentVersionId": null,
+          "restoredFromVersionId": null,
+          "operation": "save",
+          "createdAt": "2026-10-22T08:00:00.000Z"
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-L07",
+      "method": "POST",
+      "path": "/api/v1/questions/:questionId/restorations",
+      "permission": "题owner",
+      "query": [],
+      "body": "expectedRevision:N；sourceVersionId:OID（同题）",
+      "result": "VersionReceipt",
+      "errors": "EDIT_CONFLICT、NOT_FOUND、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE",
+      "concurrency": "Idempotency-Key/restoreVersion/questionId；不覆盖现草稿，恢复后保留原草稿供用户比较；完整成功data持久保存（不含replayed），重放只读原回执",
+      "example": {
+        "request": {
+          "expectedRevision": 2,
+          "sourceVersionId": "720000000000000000000001"
+        },
+        "data": {
+          "resourceId": "710000000000000000000001",
+          "versionId": "720000000000000000000002",
+          "revision": 3,
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "restoreVersion",
+        "resultVersion": 1,
+        "firstHttpStatus": 201,
+        "kind": "resourceReceipt",
+        "dataFields": [
+          "resourceId",
+          "versionId",
+          "revision"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-L08",
+      "method": "POST",
+      "path": "/api/v1/question-versions/:versionId/forks",
+      "permission": "源题owner或有效share；模板生成实例窄权例外需sourceInstance",
+      "query": [],
+      "body": "content:Content；sourceInstance?:{surveyId:OID,instanceId:SID}（仅本人模板生成实例，须其绑定此版本）；禁止origin",
+      "result": "VersionReceipt",
+      "errors": "NOT_FOUND、SOURCE_ACCESS_REVOKED、DEFINITION_INVALID、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE",
+      "concurrency": "Idempotency-Key/forkQuestion/versionId；派生即显式建自己身份+v1；完整成功data持久保存（不含replayed），重放只读原回执；服务端固定derived来源，后续正式版/恢复不清除；公开失败不阻正常自用派生",
+      "example": {
+        "request": {
+          "content": {
+            "type": "number",
+            "title": "年龄",
+            "validation": {
+              "min": "0",
+              "max": "120",
+              "integerOnly": true
+            }
+          }
+        },
+        "data": {
+          "resourceId": "710000000000000000000002",
+          "versionId": "720000000000000000000003",
+          "revision": 1,
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "forkQuestion",
+        "resultVersion": 1,
+        "firstHttpStatus": 201,
+        "kind": "resourceReceipt",
+        "dataFields": [
+          "resourceId",
+          "versionId",
+          "revision"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-L09",
+      "method": "GET",
+      "path": "/api/v1/questions",
+      "permission": "登录用户",
+      "query": [
+        "scope",
+        "limit",
+        "cursor"
+      ],
+      "body": "无；scope=own|shared默认own；不含模板窄权和他人草稿",
+      "result": "Page<QuestionSummary>",
+      "errors": "INVALID_CURSOR",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "items": [
+            {
+              "id": "710000000000000000000001",
+              "latestVersionId": "720000000000000000000001",
+              "latestVersion": 1,
+              "title": "年龄",
+              "ownerUsername": "teacher_demo"
+            }
+          ],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-B01",
+      "method": "POST",
+      "path": "/api/v1/question-banks",
+      "permission": "登录用户",
+      "query": [],
+      "body": "name:S非空<=100",
+      "result": "VersionReceipt",
+      "errors": "INVALID_REQUEST、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE",
+      "concurrency": "Idempotency-Key/createBank/create；完整成功data持久保存（不含replayed），重放只读原回执",
+      "example": {
+        "request": {
+          "name": "基本信息"
+        },
+        "data": {
+          "resourceId": "740000000000000000000001",
+          "versionId": null,
+          "revision": 0,
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "createBank",
+        "resultVersion": 1,
+        "firstHttpStatus": 201,
+        "kind": "resourceReceipt",
+        "dataFields": [
+          "resourceId",
+          "versionId",
+          "revision"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-B02",
+      "method": "GET",
+      "path": "/api/v1/question-banks",
+      "permission": "登录用户，仅本人",
+      "query": [
+        "limit",
+        "cursor"
+      ],
+      "body": "无",
+      "result": "Page<Bank>",
+      "errors": "INVALID_CURSOR",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "items": [],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-B03",
+      "method": "PATCH",
+      "path": "/api/v1/question-banks/:bankId",
+      "permission": "库owner",
+      "query": [],
+      "body": "expectedRevision:N；name:S",
+      "result": "Bank",
+      "errors": "EDIT_CONFLICT、NOT_FOUND",
+      "concurrency": "CAS；无key",
+      "example": {
+        "request": {
+          "expectedRevision": 0,
+          "name": "基本题"
+        },
+        "data": {
+          "id": "740000000000000000000001",
+          "name": "基本题",
+          "revision": 1,
+          "createdAt": "2026-10-22T08:00:00.000Z"
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-B04",
+      "method": "POST",
+      "path": "/api/v1/question-banks/:bankId/deletion",
+      "permission": "库owner",
+      "query": [],
+      "body": "expectedRevision:N",
+      "result": "StateReceipt",
+      "errors": "EDIT_CONFLICT、NOT_FOUND",
+      "concurrency": "CAS墓碑；无key；超时GET确认，删库后404",
+      "example": {
+        "request": {
+          "expectedRevision": 1
+        },
+        "data": {
+          "id": "740000000000000000000001",
+          "revision": 2,
+          "state": "deleted"
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-B05",
+      "method": "GET",
+      "path": "/api/v1/question-banks/:bankId/members",
+      "permission": "库owner",
+      "query": [
+        "limit",
+        "cursor"
+      ],
+      "body": "无",
+      "result": "Page<BankMember>",
+      "errors": "NOT_FOUND、INVALID_CURSOR",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "items": [
+            {
+              "questionId": "710000000000000000000001",
+              "selectable": true,
+              "latestVersionId": "720000000000000000000001",
+              "latestVersion": 1,
+              "title": "年龄"
+            }
+          ],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-B06",
+      "method": "PUT",
+      "path": "/api/v1/question-banks/:bankId/members/:questionId",
+      "permission": "库owner；加入另须题owner/有效share",
+      "query": [],
+      "body": "expectedRevision:N（库）；present:B",
+      "result": "StateReceipt",
+      "errors": "EDIT_CONFLICT、SOURCE_ACCESS_REVOKED、NOT_FOUND",
+      "concurrency": "CAS；present=false只移成员；无key，GET确认",
+      "example": {
+        "request": {
+          "expectedRevision": 0,
+          "present": true
+        },
+        "data": {
+          "id": "740000000000000000000001",
+          "revision": 1,
+          "state": "memberPresent"
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-G01",
+      "method": "GET",
+      "path": "/api/v1/questions/:questionId/shares",
+      "permission": "题owner",
+      "query": [
+        "limit",
+        "cursor"
+      ],
+      "body": "无",
+      "result": "Page<Grant>",
+      "errors": "NOT_FOUND、INVALID_CURSOR",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "items": [],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-G02",
+      "method": "PUT",
+      "path": "/api/v1/questions/:questionId/shares",
+      "permission": "题owner",
+      "query": [],
+      "body": "username:S注册同规范；expectedRevision:N（item）；expectedGrantRevision:N|null（新grant为null）",
+      "result": "Grant",
+      "errors": "EDIT_CONFLICT、USERNAME_NOT_FOUND、INVALID_RECIPIENT",
+      "concurrency": "CAS item+grant；同状态无变化不增号，重授revoked则active",
+      "example": {
+        "request": {
+          "username": "student_demo",
+          "expectedRevision": 2,
+          "expectedGrantRevision": null
+        },
+        "data": {
+          "id": "760000000000000000000001",
+          "recipientUsername": "student_demo",
+          "state": "active",
+          "revision": 0,
+          "itemRevision": 3
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-G03",
+      "method": "POST",
+      "path": "/api/v1/questions/:questionId/shares/:grantId/revocation",
+      "permission": "题owner",
+      "query": [],
+      "body": "expectedRevision:N（item）；expectedGrantRevision:N",
+      "result": "Grant",
+      "errors": "EDIT_CONFLICT、NOT_FOUND",
+      "concurrency": "CAS+accessFence；无key；存量binding不删",
+      "example": {
+        "request": {
+          "expectedRevision": 3,
+          "expectedGrantRevision": 0
+        },
+        "data": {
+          "id": "760000000000000000000001",
+          "recipientUsername": "student_demo",
+          "state": "revoked",
+          "revision": 1,
+          "itemRevision": 4
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-I00",
+      "method": "GET",
+      "path": "/api/v1/surveys/:surveyId/question-sources",
+      "permission": "问卷owner",
+      "query": [],
+      "body": "无",
+      "result": "{revision:N,items:InstanceSource[]}",
+      "errors": "NOT_FOUND",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "revision": 1,
+          "items": [
+            {
+              "instanceId": "age",
+              "questionId": "710000000000000000000001",
+              "questionVersionId": "720000000000000000000001",
+              "questionVersion": 1,
+              "rights": "owner",
+              "hasAccessibleUpdate": false
+            }
+          ]
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-I01",
+      "method": "POST",
+      "path": "/api/v1/surveys/:surveyId/question-references",
+      "permission": "问卷owner且draft/paused；新增有效题使用权",
+      "query": [],
+      "body": "expectedRevision:N；questionVersionId:OID；instanceId?:SID（缺省服务端UUID）；position:N 0至题数；required?:B默认false；jumpRules?:Rule[]默认[]",
+      "result": "InstanceSaveResult",
+      "errors": "EDIT_CONFLICT、SOURCE_ACCESS_REVOKED、SURVEY_STATE_CONFLICT、DUPLICATE_QUESTION_VERSION、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE",
+      "concurrency": "Idempotency-Key/attachQuestion/surveyId；原子来源+物化定义；完整成功data持久保存（不含replayed），重放只读原回执",
+      "example": {
+        "request": {
+          "expectedRevision": 0,
+          "questionVersionId": "720000000000000000000001",
+          "position": 0,
+          "required": true
+        },
+        "data": {
+          "revision": 1,
+          "draftDefinitionRevision": 2,
+          "instanceId": "age",
+          "questionVersionId": "720000000000000000000001",
+          "validationIssues": [],
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "attachQuestion",
+        "resultVersion": 1,
+        "firstHttpStatus": 200,
+        "kind": "instanceSave",
+        "dataFields": [
+          "revision",
+          "draftDefinitionRevision",
+          "instanceId",
+          "questionVersionId",
+          "validationIssues"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-I02",
+      "method": "POST",
+      "path": "/api/v1/surveys/:surveyId/questions/:instanceId/replacement",
+      "permission": "问卷owner且draft/paused；新版本须有效新增权（相同已存版可保留）",
+      "query": [],
+      "body": "expectedRevision:N；questionVersionId:OID（同题版或本人直接派生于原固定版的新题v1）；reviewedJumpRules?:Rule[]（题型变化时用户明确修正规则，不传且旧形状失效则422 RULE_REVIEW_REQUIRED）；不接受内容",
+      "result": "InstanceSaveResult",
+      "errors": "EDIT_CONFLICT、SOURCE_ACCESS_REVOKED、QUESTION_IDENTITY_MISMATCH、SURVEY_STATE_CONFLICT、RULE_REVIEW_REQUIRED、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE",
+      "concurrency": "Idempotency-Key/replaceQuestion/surveyId；保实例、题序、必答；规则失效返回validationIssues；完整成功data持久保存（不含replayed），重放只读原回执",
+      "example": {
+        "request": {
+          "expectedRevision": 1,
+          "questionVersionId": "720000000000000000000002"
+        },
+        "data": {
+          "revision": 2,
+          "draftDefinitionRevision": 3,
+          "instanceId": "age",
+          "questionVersionId": "720000000000000000000002",
+          "validationIssues": [],
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "replaceQuestion",
+        "resultVersion": 1,
+        "firstHttpStatus": 200,
+        "kind": "instanceSave",
+        "dataFields": [
+          "revision",
+          "draftDefinitionRevision",
+          "instanceId",
+          "questionVersionId",
+          "validationIssues"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-I03",
+      "method": "GET",
+      "path": "/api/v1/surveys/:surveyId/question-updates",
+      "permission": "问卷owner",
+      "query": [],
+      "body": "无",
+      "result": "{revision:N,items:UpdateNotice[]}",
+      "errors": "NOT_FOUND",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "revision": 1,
+          "items": [
+            {
+              "instanceId": "age",
+              "currentVersionId": "720000000000000000000001",
+              "latestAccessibleVersionId": "720000000000000000000002",
+              "latestAccessibleVersion": 2
+            }
+          ]
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-U01",
+      "method": "GET",
+      "path": "/api/v1/questions/:questionId/usage",
+      "permission": "题owner或当前share；撤销后仅通过I00看自己实例",
+      "query": [
+        "versionId",
+        "kind",
+        "limit",
+        "cursor"
+      ],
+      "body": "无；kind=references|derivations默认references；versionId?先过滤正式版，再计算版本与问卷状态；无匹配不返空行",
+      "result": "Page<Usage或Derivation>；Usage.versions每项{versionId,version,isDraft,isCurrent,hasHistorical}",
+      "errors": "NOT_FOUND、INVALID_CURSOR、QUESTION_MAPPING_INCOMPLETE、USAGE_SCOPE_TOO_LARGE",
+      "concurrency": "只读，无key；单次一致快照，先版本过滤→group(surveyId,versionId)→group surveyId；问卷标志取过滤后OR；版本号降序/ID升序，问卷usageNumber升序，每页重验权；派生另列",
+      "example": {
+        "data": {
+          "items": [
+            {
+              "surveyNumber": "usage_B_independent",
+              "username": "student_demo",
+              "versions": [
+                {
+                  "versionId": "720000000000000000000002",
+                  "version": 2,
+                  "isDraft": true,
+                  "isCurrent": false,
+                  "hasHistorical": false
+                },
+                {
+                  "versionId": "720000000000000000000001",
+                  "version": 1,
+                  "isDraft": false,
+                  "isCurrent": true,
+                  "hasHistorical": true
+                }
+              ],
+              "isDraft": true,
+              "isCurrent": true,
+              "onlyHistorical": false
+            }
+          ],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-008"
+    },
+    {
+      "id": "P2-A01",
+      "method": "PUT",
+      "path": "/api/v1/questions/:questionId/distribution-grants",
+      "permission": "题owner（S05已确认）；仅管理自己该层版本权利，不能代表或转授上游权利",
+      "query": [],
+      "body": "questionVersionId:OID；username:S模板发布者；expectedRevision:N（item）；expectedGrantRevision:N|null",
+      "result": "DistributionGrant",
+      "errors": "NOT_FOUND、EDIT_CONFLICT、USERNAME_NOT_FOUND",
+      "concurrency": "CAS item/授权+fence；不授未来版；同一上游item门闩；实际模板发布者仍需逐层具备所有来源授权（S05/S06已确认）",
+      "example": {
+        "request": {
+          "questionVersionId": "720000000000000000000001",
+          "username": "student_demo",
+          "expectedRevision": 2,
+          "expectedGrantRevision": null
+        },
+        "data": {
+          "id": "770000000000000000000001",
+          "questionVersionId": "720000000000000000000001",
+          "publisherUsername": "student_demo",
+          "state": "active",
+          "revision": 0,
+          "itemRevision": 3
+        }
+      },
+      "implementationStatus": "implemented-P2-010"
+    },
+    {
+      "id": "P2-A02",
+      "method": "GET",
+      "path": "/api/v1/questions/:questionId/distribution-grants",
+      "permission": "题owner；仅管理自己该层版本权利，不能代表或转授上游权利",
+      "query": [
+        "limit",
+        "cursor"
+      ],
+      "body": "无",
+      "result": "Page<DistributionGrant>",
+      "errors": "NOT_FOUND、INVALID_CURSOR",
+      "concurrency": "只读，无key，不写门闩；仅列作者自己控制的该层授权，不代表模板已满足全部上游义务",
+      "example": {
+        "data": {
+          "items": [],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-010"
+    },
+    {
+      "id": "P2-A03",
+      "method": "POST",
+      "path": "/api/v1/questions/:questionId/distribution-grants/:grantId/revocation",
+      "permission": "题owner（S06已确认）；仅管理自己该层版本权利，不能代表或转授上游权利",
+      "query": [],
+      "body": "expectedRevision:N（item）；expectedGrantRevision:N",
+      "result": "DistributionGrant",
+      "errors": "NOT_FOUND、EDIT_CONFLICT",
+      "concurrency": "CAS+fence；阻既有模板未来选用，不剥夺既有问卷；同一上游item门闩；实际模板发布者仍需逐层具备所有来源授权（S05/S06已确认）",
+      "example": {
+        "request": {
+          "expectedRevision": 3,
+          "expectedGrantRevision": 0
+        },
+        "data": {
+          "id": "770000000000000000000001",
+          "questionVersionId": "720000000000000000000001",
+          "publisherUsername": "student_demo",
+          "state": "revoked",
+          "revision": 1,
+          "itemRevision": 4
+        }
+      },
+      "implementationStatus": "implemented-P2-010"
+    },
+    {
+      "id": "P2-M01",
+      "method": "POST",
+      "path": "/api/v1/templates",
+      "permission": "源问卷owner；完整来源链每层对实际publisher的当前公开权，自己仅免自身层",
+      "query": [],
+      "body": "surveyId:OID；publishedVersion:N>=1；expectedSurveyRevision:N；不接收questions或source来源",
+      "result": "TemplateReceipt",
+      "errors": "NOT_FOUND、EDIT_CONFLICT、PUBLIC_DISTRIBUTION_REQUIRED、QUESTION_MAPPING_INCOMPLETE、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE、DISTRIBUTION_PROVENANCE_UNVERIFIED、DISTRIBUTION_LINEAGE_INVALID、DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED",
+      "concurrency": "Idempotency-Key/createTemplate/surveyId；服务端读源快照，不读草稿；完整成功data持久保存（不含replayed），重放只读原回执；新建无已有模板门闩，全部叶/上游题OID全局有序门闩，同事务复核固定证明/链摘要/当前各层grant；无来源不猜原创",
+      "example": {
+        "request": {
+          "surveyId": "730000000000000000000001",
+          "publishedVersion": 1,
+          "expectedSurveyRevision": 2
+        },
+        "data": {
+          "resourceId": "750000000000000000000001",
+          "versionId": null,
+          "revision": 0,
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "createTemplate",
+        "resultVersion": 1,
+        "firstHttpStatus": 201,
+        "kind": "resourceReceipt",
+        "dataFields": [
+          "resourceId",
+          "versionId",
+          "revision"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-010"
+    },
+    {
+      "id": "P2-M02",
+      "method": "GET",
+      "path": "/api/v1/templates",
+      "permission": "登录用户",
+      "query": [
+        "scope",
+        "limit",
+        "cursor"
+      ],
+      "body": "无；scope=square|mine默认square；square仅listed且当前eligible；失效链/未知来源eligible=false，square过滤，mine可见本人不可用摘要；非publisher不可用预览404/409 TEMPLATE_UNAVAILABLE",
+      "result": "Page<TemplateSummary>",
+      "errors": "INVALID_CURSOR",
+      "concurrency": "只读，无key；一致只读快照逐层核来源及当前授权，固定证明不能替代当前状态；不暴露证明或全部祖先详情",
+      "example": {
+        "data": {
+          "items": [
+            {
+              "id": "750000000000000000000001",
+              "title": "基本信息调查",
+              "description": "课程示例",
+              "revision": 0,
+              "status": "listed",
+              "eligible": true
+            }
+          ],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-010"
+    },
+    {
+      "id": "P2-M03",
+      "method": "GET",
+      "path": "/api/v1/templates/:templateId",
+      "permission": "登录用户；公开可用模板或本人管理模板",
+      "query": [],
+      "body": "无；失效链/未知来源eligible=false，square过滤，mine可见本人不可用摘要；非publisher不可用预览404/409 TEMPLATE_UNAVAILABLE",
+      "result": "TemplatePreview",
+      "errors": "NOT_FOUND、TEMPLATE_UNAVAILABLE",
+      "concurrency": "只读，无key；一致只读快照逐层核来源及当前授权，固定证明不能替代当前状态；不暴露证明或全部祖先详情",
+      "example": {
+        "data": {
+          "id": "750000000000000000000001",
+          "title": "基本信息调查",
+          "description": "课程示例",
+          "revision": 0,
+          "status": "listed",
+          "eligible": true,
+          "questions": [
+            {
+              "id": "age",
+              "type": "number",
+              "title": "年龄",
+              "required": true,
+              "jumpRules": [],
+              "validation": {
+                "min": "0",
+                "max": "120",
+                "integerOnly": true
+              }
+            }
+          ],
+          "sources": [
+            {
+              "instanceId": "age",
+              "questionId": "710000000000000000000001",
+              "questionVersionId": "720000000000000000000001"
+            }
+          ]
+        }
+      },
+      "implementationStatus": "implemented-P2-010"
+    },
+    {
+      "id": "P2-M04",
+      "method": "POST",
+      "path": "/api/v1/templates/:templateId/adoptions",
+      "permission": "登录用户；listed且逐题分发权仍有效；完整来源链每层对实际publisher的当前公开权，自己仅免自身层",
+      "query": [],
+      "body": "expectedTemplateRevision:N；title?:S 1—200默认模板标题；策略不继承，匿名/重复默认false、截止null",
+      "result": "TemplateAdoption",
+      "errors": "TEMPLATE_UNAVAILABLE、EDIT_CONFLICT、PUBLIC_DISTRIBUTION_REQUIRED、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE、OPERATION_RETRY_LATER、DISTRIBUTION_PROVENANCE_UNVERIFIED、DISTRIBUTION_LINEAGE_INVALID、DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED",
+      "concurrency": "Idempotency-Key/adoptTemplate/templateId；按_id+listed+expectedTemplateRevision实际$inc模板accessFence，普通选用不改管理revision/updatedAt；题门闩及授权核查、新草稿、完整templateAdoption回执同事务；可重试写冲突保持原key重开事务；先已有模板门闩再全部叶/上游题OID全局有序门闩，同事务复核固定证明/链摘要/当前各层grant；无来源不猜原创",
+      "example": {
+        "request": {
+          "expectedTemplateRevision": 0
+        },
+        "data": {
+          "surveyId": "730000000000000000000004",
+          "revision": 0,
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "adoptTemplate",
+        "resultVersion": 1,
+        "firstHttpStatus": 201,
+        "kind": "templateAdoption",
+        "dataFields": [
+          "surveyId",
+          "revision"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-010"
+    },
+    {
+      "id": "P2-M05",
+      "method": "POST",
+      "path": "/api/v1/templates/:templateId/unlisting",
+      "permission": "模板publisher",
+      "query": [],
+      "body": "expectedRevision:N",
+      "result": "StateReceipt",
+      "errors": "NOT_FOUND、EDIT_CONFLICT、OPERATION_RETRY_LATER",
+      "concurrency": "管理CAS；实际上下架同事务$inc revision和accessFence并更新updatedAt，普通选用不改revision；同目标状态且修订匹配为空操作；无key，结果未知GET确认；下架不要求来源授权仍有效",
+      "example": {
+        "request": {
+          "expectedRevision": 0
+        },
+        "data": {
+          "id": "750000000000000000000001",
+          "revision": 1,
+          "state": "unlisted"
+        }
+      },
+      "implementationStatus": "implemented-P2-010"
+    },
+    {
+      "id": "P2-M06",
+      "method": "POST",
+      "path": "/api/v1/templates/:templateId/listing",
+      "permission": "模板publisher；逐题当前分发权；完整来源链每层对实际publisher的当前公开权，自己仅免自身层",
+      "query": [],
+      "body": "expectedRevision:N",
+      "result": "StateReceipt",
+      "errors": "NOT_FOUND、EDIT_CONFLICT、PUBLIC_DISTRIBUTION_REQUIRED、OPERATION_RETRY_LATER、DISTRIBUTION_PROVENANCE_UNVERIFIED、DISTRIBUTION_LINEAGE_INVALID、DISTRIBUTION_LINEAGE_LIMIT_EXCEEDED",
+      "concurrency": "管理CAS；实际上下架同事务$inc revision和accessFence并更新updatedAt，普通选用不改revision；同目标状态且修订匹配为空操作；无key，结果未知GET确认；先已有模板门闩再全部叶/上游题OID全局有序门闩，同事务复核固定证明/链摘要/当前各层grant；无来源不猜原创",
+      "example": {
+        "request": {
+          "expectedRevision": 1
+        },
+        "data": {
+          "id": "750000000000000000000001",
+          "revision": 2,
+          "state": "listed"
+        }
+      },
+      "implementationStatus": "implemented-P2-010"
+    },
+    {
+      "id": "P2-X01",
+      "method": "GET",
+      "path": "/api/v1/question-statistics/:questionId/versions/:versionId",
+      "permission": "登录；仅本人问卷publication绑定形成范围，不能靠题作者身份读他人",
+      "query": [
+        "surveyIds",
+        "boundaries"
+      ],
+      "body": "无；surveyIds?逗号OID最多100，全部须本人；boundaries?逗号DecimalString 2—21个严格递增；默认无区间，只均值/最小最大和频数入口",
+      "result": "CrossStatistics",
+      "errors": "NOT_FOUND、QUESTION_MAPPING_INCOMPLETE、INVALID_REQUEST",
+      "concurrency": "只读，无key",
+      "example": {
+        "data": {
+          "questionId": "710000000000000000000001",
+          "versionId": "720000000000000000000001",
+          "generatedAt": "2026-10-22T08:00:00.000Z",
+          "surveyCount": 2,
+          "eligibleResponseCount": 5,
+          "answeredCount": 4,
+          "skippedCount": 1,
+          "unansweredCount": 0,
+          "average": "15",
+          "min": "0",
+          "max": "30",
+          "bins": []
+        }
+      },
+      "implementationStatus": "implemented-P2-009"
+    },
+    {
+      "id": "P2-X02",
+      "method": "GET",
+      "path": "/api/v1/question-statistics/:questionId/versions/:versionId/answers",
+      "permission": "同X01，text/number",
+      "query": [
+        "surveyIds",
+        "limit",
+        "cursor"
+      ],
+      "body": "无",
+      "result": "Page<CrossAnswer> + questionId/versionId/generatedAt/asOf",
+      "errors": "NOT_FOUND、INVALID_CURSOR、UNSUPPORTED_QUESTION_TYPE、QUESTION_MAPPING_INCOMPLETE、REPORT_SNAPSHOT_EXPIRED",
+      "concurrency": "只读；首批snapshot选时，后页cursor签名固定atClusterTime及范围，快照过期409重开第一页",
+      "example": {
+        "data": {
+          "questionId": "710000000000000000000001",
+          "versionId": "720000000000000000000001",
+          "generatedAt": "2026-10-22T08:00:00.000Z",
+          "asOf": "2026-10-22T08:00:00.000Z",
+          "items": [
+            {
+              "surveyId": "730000000000000000000001",
+              "publishedVersion": 1,
+              "instanceId": "age",
+              "responseId": "780000000000000000000001",
+              "submittedAt": "2026-10-22T07:00:00.000Z",
+              "value": "0"
+            }
+          ],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-009"
+    },
+    {
+      "id": "P2-X03",
+      "method": "GET",
+      "path": "/api/v1/question-statistics/:questionId/versions/:versionId/distribution",
+      "permission": "同X01，仅number",
+      "query": [
+        "surveyIds",
+        "limit",
+        "cursor"
+      ],
+      "body": "无",
+      "result": "Page<{value:DecimalString,count:N}> + questionId/versionId/asOf/generatedAt",
+      "errors": "NOT_FOUND、INVALID_CURSOR、UNSUPPORTED_QUESTION_TYPE、QUESTION_MAPPING_INCOMPLETE、REPORT_SNAPSHOT_EXPIRED",
+      "concurrency": "只读；首批snapshot选时，后页cursor签名固定atClusterTime及范围，快照过期409重开第一页",
+      "example": {
+        "data": {
+          "questionId": "710000000000000000000001",
+          "versionId": "720000000000000000000001",
+          "asOf": "2026-10-22T08:00:00.000Z",
+          "generatedAt": "2026-10-22T08:00:00.000Z",
+          "items": [
+            {
+              "value": "0",
+              "count": 1
+            },
+            {
+              "value": "10",
+              "count": 1
+            }
+          ],
+          "nextCursor": null
+        }
+      },
+      "implementationStatus": "implemented-P2-009"
+    },
+    {
+      "id": "P2-I04",
+      "method": "POST",
+      "path": "/api/v1/surveys/:surveyId/questions/:instanceId/formalization",
+      "permission": "本人draft/paused且实例尚无正式绑定；已绑定返回409，不能借此复制撤销共享题",
+      "query": [],
+      "body": "expectedRevision:N（问卷）；无内容/来源字段，服务端取已保存本地实例Content",
+      "result": "InstanceSaveResult",
+      "errors": "EDIT_CONFLICT、SURVEY_STATE_CONFLICT、ALREADY_FORMALIZED、DEFINITION_INVALID、RECEIPT_TOO_LARGE、OPERATION_RECEIPT_UNAVAILABLE",
+      "concurrency": "Idempotency-Key/saveInlineQuestion/surveyId+instanceId；同事务建题身份及正式v1、绑定、问卷CAS和回执；完整成功data持久保存（不含replayed），重放只读原回执",
+      "example": {
+        "request": {
+          "expectedRevision": 1
+        },
+        "data": {
+          "revision": 2,
+          "draftDefinitionRevision": 3,
+          "instanceId": "age",
+          "questionVersionId": "720000000000000000000001",
+          "validationIssues": [],
+          "replayed": false
+        }
+      },
+      "receipt": {
+        "operation": "saveInlineQuestion",
+        "resultVersion": 1,
+        "firstHttpStatus": 200,
+        "kind": "instanceSave",
+        "dataFields": [
+          "revision",
+          "draftDefinitionRevision",
+          "instanceId",
+          "questionVersionId",
+          "validationIssues"
+        ],
+        "replayHttpStatus": 200,
+        "replayedStored": false,
+        "source": "immutable operation_receipts.result.data, never current resource"
+      },
+      "implementationStatus": "implemented-P2-008"
+    }
+  ],
+  "reviewRevision": "P2-004",
+  "implementationEvidence": [
+    "w02-w04-coverage.md",
+    "cross-survey-statistics.md",
+    "template-square-coverage.md",
+    "reviews/W05-W06-R1-R2-fix-2026-10-24.md"
+  ],
+  "examplePolicy": "Static synthetic contract examples, not recorded HTTP responses",
+  "runtimeGuards": {
+    "lineageNodes": 32,
+    "templateDistinctVersions": 500,
+    "templateMaxBsonBytes": 2097152,
+    "adoptedSurveyMaxBsonBytes": 2097152,
+    "templateRevisionOnOrdinaryAdoption": "unchanged",
+    "grantRevisionInProof": "historical audit, regrant same ID may advance",
+    "filteredPagination": "cursor follows scanned boundary even for empty items",
+    "crossStatisticsAccessOrder": "owner/active share/exact owned publication fact before version existence, type, boundaries, expiry, history; denied404; authorized integrity503",
+    "retainedNumberControls": "authorized summary branch scoped to exact question/version; no history rights expansion"
+  }
+}

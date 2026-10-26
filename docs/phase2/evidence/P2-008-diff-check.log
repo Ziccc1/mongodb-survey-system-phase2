@@ -1,0 +1,462 @@
+apps/web/src/App.vue:1: trailing whitespace.
++<script setup lang="ts">
+apps/web/src/App.vue:2: trailing whitespace.
++import { ref } from 'vue';
+apps/web/src/App.vue:3: trailing whitespace.
++import { useRouter } from 'vue-router';
+apps/web/src/App.vue:4: trailing whitespace.
++import { api } from './api';
+apps/web/src/App.vue:5: trailing whitespace.
++import { currentUser } from './session';
+apps/web/src/App.vue:6: trailing whitespace.
++import {libraryEnabled} from './public-config';
+apps/web/src/App.vue:7: trailing whitespace.
++const router = useRouter(), error = ref(''), busy = ref(false);
+apps/web/src/App.vue:8: trailing whitespace.
++async function logout() {
+apps/web/src/App.vue:9: trailing whitespace.
++  busy.value = true; error.value = '';
+apps/web/src/App.vue:10: trailing whitespace.
++  try { await api('/auth/logout', 'POST'); currentUser.value = null; await router.push('/login'); }
+apps/web/src/App.vue:11: trailing whitespace.
++  catch (e) { error.value = (e as Error).message; } finally { busy.value = false; }
+apps/web/src/App.vue:12: trailing whitespace.
++}
+apps/web/src/App.vue:13: trailing whitespace.
++</script>
+apps/web/src/App.vue:14: trailing whitespace.
++<template>
+apps/web/src/App.vue:15: trailing whitespace.
++  <a class="skip" href="#main">跳到主要内容</a>
+apps/web/src/App.vue:16: trailing whitespace.
++  <header><div class="header-inner"><RouterLink class="brand" to="/dashboard"><span class="brand-mark" aria-hidden="true">问</span>问卷工作台</RouterLink>
+apps/web/src/App.vue:17: trailing whitespace.
++    <nav aria-label="主导航" v-if="currentUser"><RouterLink to="/dashboard">首页</RouterLink><RouterLink to="/surveys">我的问卷</RouterLink><RouterLink v-if="libraryEnabled()" to="/questions">题目</RouterLink><RouterLink v-if="libraryEnabled()" to="/question-banks">题库</RouterLink><span class="username">{{ currentUser.username }}</span><button class="quiet" :disabled="busy" @click="logout">{{ busy ? '退出中…' : '退出登录' }}</button></nav>
+apps/web/src/App.vue:18: trailing whitespace.
++  </div></header>
+apps/web/src/App.vue:19: trailing whitespace.
++  <main id="main"><p v-if="error" role="alert" class="error">{{ error }}</p><RouterView :key="$route.fullPath" /></main>
+apps/web/src/App.vue:20: trailing whitespace.
++  <footer>数据库课程项目 · 问卷工作台</footer>
+apps/web/src/App.vue:21: trailing whitespace.
++</template>
+apps/web/src/components/QuestionCard.vue:1: trailing whitespace.
++<script setup lang="ts">
+apps/web/src/components/QuestionCard.vue:2: trailing whitespace.
++import { codePointLength, QUESTION_LABELS } from '@survey/shared';
+apps/web/src/components/QuestionCard.vue:3: trailing whitespace.
++import type { Question, Validation } from '@survey/shared';
+apps/web/src/components/QuestionCard.vue:4: trailing whitespace.
++import RuleEditor from './RuleEditor.vue';
+apps/web/src/components/QuestionCard.vue:5: trailing whitespace.
++import UiIcon from './UiIcon.vue';
+apps/web/src/components/QuestionCard.vue:6: trailing whitespace.
++const props = defineProps<{ question: Question; index: number; questions: Question[]; contentOnly?:boolean; contentLocked?:boolean }>();
+apps/web/src/components/QuestionCard.vue:7: trailing whitespace.
++defineEmits<{ move: [delta: number]; remove: [] }>();
+apps/web/src/components/QuestionCard.vue:8: trailing whitespace.
++function limit(key: keyof Validation, event: Event, decimal = false) {
+apps/web/src/components/QuestionCard.vue:9: trailing whitespace.
++  const value = (event.target as HTMLInputElement).value;
+apps/web/src/components/QuestionCard.vue:10: trailing whitespace.
++  const validation = props.question.validation ??= {};
+apps/web/src/components/QuestionCard.vue:11: trailing whitespace.
++  if (value === '') delete validation[key];
+apps/web/src/components/QuestionCard.vue:12: trailing whitespace.
++  else (validation as Record<string, unknown>)[key] = decimal ? value : Number(value);
+apps/web/src/components/QuestionCard.vue:13: trailing whitespace.
++}
+apps/web/src/components/QuestionCard.vue:14: trailing whitespace.
++function option() { props.question.options!.push({ id: crypto.randomUUID(), label: `选项${props.question.options!.length + 1}` }); }
+apps/web/src/components/QuestionCard.vue:15: trailing whitespace.
++</script>
+apps/web/src/components/QuestionCard.vue:16: trailing whitespace.
++<template><article class="question-card panel" data-testid="question" :data-question-id="question.id">
+apps/web/src/components/QuestionCard.vue:17: trailing whitespace.
++  <div class="question-heading"><h3 :id="`heading-${question.id}`" tabindex="-1"><span class="editor-question-number">{{ index + 1 }}</span><UiIcon :name="question.type" :size="18"/><span>{{ QUESTION_LABELS[question.type] }}</span></h3><div v-if="!contentOnly" class="editor-actions">
+apps/web/src/components/QuestionCard.vue:18: trailing whitespace.
++    <button type="button" class="quiet" :aria-label="`第${index + 1}题上移`" :disabled="index === 0" @click="$emit('move', -1)">上移</button>
+apps/web/src/components/QuestionCard.vue:19: trailing whitespace.
++    <button type="button" class="quiet" :aria-label="`第${index + 1}题下移`" :disabled="index === questions.length - 1" @click="$emit('move', 1)">下移</button>
+apps/web/src/components/QuestionCard.vue:20: trailing whitespace.
++    <button type="button" class="quiet danger" :aria-label="`删除第${index + 1}题`" @click="$emit('remove')">删除题目</button>
+apps/web/src/components/QuestionCard.vue:21: trailing whitespace.
++  </div></div>
+apps/web/src/components/QuestionCard.vue:22: trailing whitespace.
++  <label :for="`title-${question.id}`">题干</label><textarea :id="`title-${question.id}`" v-model="question.title" :disabled="contentLocked" rows="2" :aria-describedby="`title-count-${question.id}`" :aria-invalid="!question.title.trim() || codePointLength(question.title) > 500"></textarea>
+apps/web/src/components/QuestionCard.vue:23: trailing whitespace.
++  <small :id="`title-count-${question.id}`">{{ codePointLength(question.title) }} / 500 个字符</small>
+apps/web/src/components/QuestionCard.vue:24: trailing whitespace.
++  <label v-if="!contentOnly" class="check"><input v-model="question.required" type="checkbox">必答</label>
+apps/web/src/components/QuestionCard.vue:25: trailing whitespace.
++  <fieldset v-if="question.options" :disabled="contentLocked"><legend>选项</legend><div v-for="(item, n) in question.options" :key="item.id" class="option-row" :data-option-id="item.id">
+apps/web/src/components/QuestionCard.vue:26: trailing whitespace.
++    <div><label :for="`option-${item.id}`">选项 {{ n + 1 }}</label><input :id="`option-${item.id}`" v-model="item.label" :aria-invalid="!item.label.trim() || codePointLength(item.label) > 200"><small>{{ codePointLength(item.label) }} / 200 个字符</small></div>
+apps/web/src/components/QuestionCard.vue:27: trailing whitespace.
++    <button type="button" class="quiet danger" :aria-label="`删除选项${n + 1}`" :disabled="question.options.length <= 2" @click="question.options.splice(n, 1)">删除</button>
+apps/web/src/components/QuestionCard.vue:28: trailing whitespace.
++  </div><button type="button" class="secondary" :disabled="question.options.length >= 100" @click="option">添加选项</button><small>需要2—100个选项；删除选项后，相关跳转条件会提示待完善。</small></fieldset>
+apps/web/src/components/QuestionCard.vue:29: trailing whitespace.
++  <details class="question-advanced" open><summary><span><UiIcon name="layers" :size="16"/>{{contentOnly?'内容校验':'校验与跳转'}}</span><small>{{question.jumpRules.length?`${question.jumpRules.length} 条跳转规则`:'按需配置'}}</small></summary>
+apps/web/src/components/QuestionCard.vue:30: trailing whitespace.
++  <fieldset v-if="question.type === 'multiple'" :disabled="contentLocked"><legend>选择数量</legend><div class="editor-grid"><div><label :for="`minChoices-${question.id}`">最少选择</label><input :id="`minChoices-${question.id}`" type="number" min="0" max="100" step="1" :value="question.validation?.minChoices ?? ''" @input="limit('minChoices', $event)"></div><div><label :for="`maxChoices-${question.id}`">最多选择</label><input :id="`maxChoices-${question.id}`" type="number" min="0" max="100" step="1" :value="question.validation?.maxChoices ?? ''" @input="limit('maxChoices', $event)"></div></div><small>留空使用默认限制；两项填相同值表示恰好选择该数量。</small></fieldset>
+apps/web/src/components/QuestionCard.vue:31: trailing whitespace.
++  <fieldset v-if="question.type === 'text'" :disabled="contentLocked"><legend>文本长度</legend><div class="editor-grid"><div><label :for="`minLength-${question.id}`">最少字符</label><input :id="`minLength-${question.id}`" type="number" min="0" max="10000" step="1" :value="question.validation?.minLength ?? ''" @input="limit('minLength', $event)"></div><div><label :for="`maxLength-${question.id}`">最多字符</label><input :id="`maxLength-${question.id}`" type="number" min="0" max="10000" step="1" :value="question.validation?.maxLength ?? ''" @input="limit('maxLength', $event)"></div></div><small>按Unicode码点计数；留空分别使用0和10000。</small></fieldset>
+apps/web/src/components/QuestionCard.vue:32: trailing whitespace.
++  <fieldset v-if="question.type === 'number'" :disabled="contentLocked"><legend>数字范围</legend><div class="editor-grid"><div><label :for="`min-${question.id}`">数字下限</label><input :id="`min-${question.id}`" type="text" inputmode="decimal" :value="question.validation?.min ?? ''" @input="limit('min', $event, true)"></div><div><label :for="`max-${question.id}`">数字上限</label><input :id="`max-${question.id}`" type="text" inputmode="decimal" :value="question.validation?.max ?? ''" @input="limit('max', $event, true)"></div></div><label v-if="question.validation" class="check"><input v-model="question.validation.integerOnly" type="checkbox">只允许整数</label><small>留空表示不限制该边界；支持小数和科学计数法，保留十进制精度。</small></fieldset>
+apps/web/src/components/QuestionCard.vue:33: trailing whitespace.
++  <RuleEditor v-if="!contentOnly && question.type !== 'text'" :question="question" :questions="questions" />
+apps/web/src/components/QuestionCard.vue:34: trailing whitespace.
++</details></article></template>
+apps/web/src/pages/EditorPage.vue:1: trailing whitespace.
++<script setup lang="ts">
+apps/web/src/pages/EditorPage.vue:2: trailing whitespace.
++import { computed, watch, nextTick, onMounted, onBeforeUnmount, ref } from 'vue';
+apps/web/src/pages/EditorPage.vue:3: trailing whitespace.
++import { onBeforeRouteLeave, useRoute, useRouter } from 'vue-router';
+apps/web/src/pages/EditorPage.vue:4: trailing whitespace.
++import { canonical, newQuestion, normalizeQuestions, validateQuestions, surveyTextIssues, QUESTION_LABELS } from '@survey/shared';
+apps/web/src/pages/EditorPage.vue:5: trailing whitespace.
++import type { Editor, CreateSurvey, Question, QuestionType, SaveResult } from '@survey/shared';
+apps/web/src/pages/EditorPage.vue:6: trailing whitespace.
++import { api, RequestError } from '../api';
+apps/web/src/pages/EditorPage.vue:7: trailing whitespace.
++import MetadataEditor from '../components/MetadataEditor.vue';
+apps/web/src/pages/EditorPage.vue:8: trailing whitespace.
++import QuestionCard from '../components/QuestionCard.vue';
+apps/web/src/pages/EditorPage.vue:9: trailing whitespace.
++import PublicationPanel from '../components/PublicationPanel.vue';
+apps/web/src/pages/EditorPage.vue:10: trailing whitespace.
++import UiIcon from '../components/UiIcon.vue';
+apps/web/src/pages/EditorPage.vue:11: trailing whitespace.
++import SurveyQuestionSources from '../components/SurveyQuestionSources.vue';
+apps/web/src/pages/EditorPage.vue:12: trailing whitespace.
++import {libraryEnabled} from '../public-config';
+apps/web/src/pages/EditorPage.vue:13: trailing whitespace.
++import type {InstanceSource} from '@survey/shared';
+apps/web/src/pages/EditorPage.vue:14: trailing whitespace.
++const sources=ref<InstanceSource[]>([]),sourceLocked=ref(false);
+apps/web/src/pages/EditorPage.vue:15: trailing whitespace.
++const selectedQuestion=ref('');
+apps/web/src/pages/EditorPage.vue:16: trailing whitespace.
++const publicationLocked = ref(false);
+apps/web/src/pages/EditorPage.vue:17: trailing whitespace.
++const route = useRoute(), router = useRouter(), survey = ref<Editor | null>(null), metadata = ref<CreateSurvey>({ title: '' }), questions = ref<Question[]>([]);
+apps/web/src/pages/EditorPage.vue:18: trailing whitespace.
++const loading = ref(true), busy = ref(false), error = ref(''), notice = ref(''), blocked = ref(false), remote = ref<Editor | null>(null);
+apps/web/src/pages/EditorPage.vue:19: trailing whitespace.
++const baselineMetadata = ref(''), baselineQuestions = ref('');
+apps/web/src/pages/EditorPage.vue:20: trailing whitespace.
++const metadataKey = (input: CreateSurvey) => canonical({ ...input, title: input.title.trim() });
+apps/web/src/pages/EditorPage.vue:21: trailing whitespace.
++const questionKey = (input: Question[]) => { try { return canonical(normalizeQuestions(input)); } catch { return canonical(input); } };
+apps/web/src/pages/EditorPage.vue:22: trailing whitespace.
++const metadataDirty = computed(() => metadataKey(metadata.value) !== baselineMetadata.value);
+apps/web/src/pages/EditorPage.vue:23: trailing whitespace.
++const questionsDirty = computed(() => questionKey(questions.value) !== baselineQuestions.value);
+apps/web/src/pages/EditorPage.vue:24: trailing whitespace.
++const dirty = computed(() => !!survey.value && (metadataDirty.value || questionsDirty.value));
+apps/web/src/pages/EditorPage.vue:25: trailing whitespace.
++const checks = computed(() => validateQuestions(questions.value));
+apps/web/src/pages/EditorPage.vue:26: trailing whitespace.
++const issues = computed(() => questionsDirty.value ? checks.value.validationIssues : survey.value?.validationIssues ?? []);
+apps/web/src/pages/EditorPage.vue:27: trailing whitespace.
++const editable = computed(() => !!survey.value && ['draft', 'paused'].includes(survey.value.status));
+apps/web/src/pages/EditorPage.vue:28: trailing whitespace.
++const url = computed(() => `/surveys/${route.params.surveyId}`);
+apps/web/src/pages/EditorPage.vue:29: trailing whitespace.
++const metaFrom = (data: Editor): CreateSurvey => ({ title: data.draftDefinition.title, description: data.draftDefinition.description, ...data.settings });
+apps/web/src/pages/EditorPage.vue:30: trailing whitespace.
++function adopt(data: Editor) {
+apps/web/src/pages/EditorPage.vue:31: trailing whitespace.
++  survey.value = data; metadata.value = structuredClone(metaFrom(data)); questions.value = JSON.parse(JSON.stringify(data.draftDefinition.questions));
+apps/web/src/pages/EditorPage.vue:32: trailing whitespace.
++  baselineMetadata.value = metadataKey(metadata.value); baselineQuestions.value = questionKey(questions.value); blocked.value = false; remote.value = null; sourceLocked.value=false;
+apps/web/src/pages/EditorPage.vue:33: trailing whitespace.
++}
+apps/web/src/pages/EditorPage.vue:34: trailing whitespace.
++async function load() {
+apps/web/src/pages/EditorPage.vue:35: trailing whitespace.
++  loading.value = true; error.value = '';
+apps/web/src/pages/EditorPage.vue:36: trailing whitespace.
++  try { const data=await api<Editor>(url.value);if(libraryEnabled())sources.value=(await api<{items:InstanceSource[]}>(url.value+'/question-sources')).items;adopt(data); }
+apps/web/src/pages/EditorPage.vue:37: trailing whitespace.
++  catch (e) { if (e instanceof RequestError && e.status === 401) await router.push('/login'); else error.value = (e as Error).message; }
+apps/web/src/pages/EditorPage.vue:38: trailing whitespace.
++  finally { loading.value = false; }
+apps/web/src/pages/EditorPage.vue:39: trailing whitespace.
++}
+apps/web/src/pages/EditorPage.vue:40: trailing whitespace.
++async function openPublication() {
+apps/web/src/pages/EditorPage.vue:41: trailing whitespace.
++  try { await router.push(`${url.value}/publication`); }
+apps/web/src/pages/EditorPage.vue:42: trailing whitespace.
++  catch { await load(); error.value = '发布已成功，但页面跳转失败。请通过“发布与收集”入口查看分享链接。'; }
+apps/web/src/pages/EditorPage.vue:43: trailing whitespace.
++}
+apps/web/src/pages/EditorPage.vue:44: trailing whitespace.
++async function inspectRemote() {
+apps/web/src/pages/EditorPage.vue:45: trailing whitespace.
++  try { remote.value = await api<Editor>(url.value); } catch (e) { error.value = `本地编辑已保留，读取服务器版本失败：${(e as Error).message}`; }
+apps/web/src/pages/EditorPage.vue:46: trailing whitespace.
++}
+apps/web/src/pages/EditorPage.vue:47: trailing whitespace.
++async function save(section: 'metadata' | 'questions') {
+apps/web/src/pages/EditorPage.vue:48: trailing whitespace.
++  if (!survey.value || busy.value || blocked.value || publicationLocked.value || sourceLocked.value) return;
+apps/web/src/pages/EditorPage.vue:49: trailing whitespace.
++  if (section === 'questions' && checks.value.errors.length) return;
+apps/web/src/pages/EditorPage.vue:50: trailing whitespace.
++  if (section === 'metadata' && surveyTextIssues(metadata.value).length) return;
+apps/web/src/pages/EditorPage.vue:51: trailing whitespace.
++  busy.value = true; error.value = ''; notice.value = '';
+apps/web/src/pages/EditorPage.vue:52: trailing whitespace.
++  try {
+apps/web/src/pages/EditorPage.vue:53: trailing whitespace.
++    const patch: Record<string, unknown> = { expectedRevision: survey.value.revision };
+apps/web/src/pages/EditorPage.vue:54: trailing whitespace.
++    const original = metaFrom(survey.value);
+apps/web/src/pages/EditorPage.vue:55: trailing whitespace.
++    for (const key of ['title', 'description', 'allowAnonymous', 'allowRepeat', 'expiresAt'] as const) {
+apps/web/src/pages/EditorPage.vue:56: trailing whitespace.
++      const value = key === 'title' ? metadata.value.title.trim() : metadata.value[key];
+apps/web/src/pages/EditorPage.vue:57: trailing whitespace.
++      if (canonical(value) !== canonical(original[key])) patch[key] = value;
+apps/web/src/pages/EditorPage.vue:58: trailing whitespace.
++    }
+apps/web/src/pages/EditorPage.vue:59: trailing whitespace.
++    if (Object.keys(patch).length === 1) patch.expiresAt = metadata.value.expiresAt ?? null;
+apps/web/src/pages/EditorPage.vue:60: trailing whitespace.
++    const data = await api<SaveResult>(section === 'metadata' ? url.value : `${url.value}/questions`, section === 'metadata' ? 'PATCH' : 'PUT', section === 'metadata' ? patch : { questions: questions.value, expectedRevision: survey.value.revision });
+apps/web/src/pages/EditorPage.vue:61: trailing whitespace.
++    Object.assign(survey.value, data);
+apps/web/src/pages/EditorPage.vue:62: trailing whitespace.
++    if (section === 'metadata') { survey.value.draftDefinition.title = metadata.value.title.trim(); survey.value.draftDefinition.description = metadata.value.description ?? ''; survey.value.settings = { allowAnonymous: metadata.value.allowAnonymous ?? false, allowRepeat: metadata.value.allowRepeat ?? false, expiresAt: metadata.value.expiresAt ?? null }; baselineMetadata.value = metadataKey(metadata.value); }
+apps/web/src/pages/EditorPage.vue:63: trailing whitespace.
++    else { survey.value.draftDefinition.questions = structuredClone(questions.value.map(q => JSON.parse(JSON.stringify(q)))); baselineQuestions.value = questionKey(questions.value); }
+apps/web/src/pages/EditorPage.vue:64: trailing whitespace.
++    notice.value = section === 'metadata' ? '基本信息已保存。' : '题目已保存，刷新后可以恢复。';
+apps/web/src/pages/EditorPage.vue:65: trailing whitespace.
++  } catch (e) {
+apps/web/src/pages/EditorPage.vue:66: trailing whitespace.
++    error.value = (e as Error).message;
+apps/web/src/pages/EditorPage.vue:67: trailing whitespace.
++    if (e instanceof RequestError && e.status === 401) { /* Keep local content visible instead of navigating away. */ error.value = '登录已失效，本地编辑仍保留。请在另一个标签页重新登录后再保存。'; }
+apps/web/src/pages/EditorPage.vue:68: trailing whitespace.
++    else if (e instanceof RequestError && ['EDIT_CONFLICT', 'SURVEY_STATE_CONFLICT', 'POLICY_LOCKED'].includes(e.code)) { blocked.value = true; await inspectRemote(); }
+apps/web/src/pages/EditorPage.vue:69: trailing whitespace.
++    else if (!(e instanceof RequestError) || e.status >= 500) { blocked.value = true; error.value = '保存结果尚未确认，本地编辑已保留。请先核对服务器版本。'; await inspectRemote(); }
+apps/web/src/pages/EditorPage.vue:70: trailing whitespace.
++  } finally { busy.value = false; }
+apps/web/src/pages/EditorPage.vue:71: trailing whitespace.
++}
+apps/web/src/pages/EditorPage.vue:72: trailing whitespace.
++function keepLocal() {
+apps/web/src/pages/EditorPage.vue:73: trailing whitespace.
++  if (!remote.value) return;
+apps/web/src/pages/EditorPage.vue:74: trailing whitespace.
++  const data = remote.value;
+apps/web/src/pages/EditorPage.vue:75: trailing whitespace.
++  survey.value = data; baselineMetadata.value = metadataKey(metaFrom(data)); baselineQuestions.value = questionKey(data.draftDefinition.questions);
+apps/web/src/pages/EditorPage.vue:76: trailing whitespace.
++  remote.value = null; blocked.value = false; error.value = ''; notice.value = '本地编辑已保留，并采用服务器最新修订号。请确认差异后分别保存，保存题目会整体替换服务器题目。';
+apps/web/src/pages/EditorPage.vue:77: trailing whitespace.
++}
+apps/web/src/pages/EditorPage.vue:78: trailing whitespace.
++function useRemote() { if (remote.value && window.confirm('放弃本地未保存的编辑，采用服务器版本？')) { adopt(remote.value); error.value = ''; notice.value = '已采用服务器版本。'; } }
+apps/web/src/pages/EditorPage.vue:79: trailing whitespace.
++async function add(type: QuestionType) {
+apps/web/src/pages/EditorPage.vue:80: trailing whitespace.
++  if (questions.value.length >= 100) return;
+apps/web/src/pages/EditorPage.vue:81: trailing whitespace.
++  const question = newQuestion(type); questions.value.push(question); selectedQuestion.value=question.id;
+apps/web/src/pages/EditorPage.vue:82: trailing whitespace.
++  await nextTick(); const input = document.getElementById(`title-${question.id}`); input?.focus({preventScroll:true}); input?.scrollIntoView({block:"center",behavior:"auto"});
+apps/web/src/pages/EditorPage.vue:83: trailing whitespace.
++}
+apps/web/src/pages/EditorPage.vue:84: trailing whitespace.
++watch(()=>questions.value.map(q=>q.id),ids=>{if(!ids.includes(selectedQuestion.value))selectedQuestion.value=ids[0]??'';});
+apps/web/src/pages/EditorPage.vue:85: trailing whitespace.
++async function selectQuestion(id:string){selectedQuestion.value=id;await nextTick();const input=document.getElementById(`title-${id}`) as HTMLTextAreaElement|null;const target=input&&!input.disabled&&!input.matches(':disabled')?input:document.getElementById(`heading-${id}`);target?.focus({preventScroll:true});target?.scrollIntoView({block:'center',behavior:'auto'});}
+apps/web/src/pages/EditorPage.vue:86: trailing whitespace.
++async function openSettings(){const el=document.getElementById('editor-settings') as HTMLDetailsElement|null;if(el){el.open=true;await nextTick();el.scrollIntoView({block:'start'});el.querySelector<HTMLElement>('input:not(:disabled)')?.focus({preventScroll:true});}}
+apps/web/src/pages/EditorPage.vue:87: trailing whitespace.
++function showAdd(){document.querySelector('.add-question-area')?.scrollIntoView({block:'center',behavior:'auto'});}
+apps/web/src/pages/EditorPage.vue:88: trailing whitespace.
++function move(index: number, delta: number) { const [question] = questions.value.splice(index, 1); questions.value.splice(index + delta, 0, question); }
+apps/web/src/pages/EditorPage.vue:89: trailing whitespace.
++function beforeUnload(event: BeforeUnloadEvent) { if (dirty.value || sourceLocked.value) { event.preventDefault(); event.returnValue = ''; } }
+apps/web/src/pages/EditorPage.vue:90: trailing whitespace.
++onBeforeRouteLeave(() => (!dirty.value&&!sourceLocked.value) || window.confirm(sourceLocked.value?'题目操作尚未确认，离开会丢失原请求重试信息。确定离开？':'有未保存的编辑，确定离开？'));
+apps/web/src/pages/EditorPage.vue:91: trailing whitespace.
++onMounted(() => { window.addEventListener('beforeunload', beforeUnload); load(); });
+apps/web/src/pages/EditorPage.vue:92: trailing whitespace.
++onBeforeUnmount(() => window.removeEventListener('beforeunload', beforeUnload));
+apps/web/src/pages/EditorPage.vue:93: trailing whitespace.
++</script>
+apps/web/src/pages/EditorPage.vue:94: trailing whitespace.
++<template><section class="editor-page"><RouterLink class="back" to="/surveys">← 返回我的问卷</RouterLink><p v-if="loading" class="panel" role="status" aria-busy="true">正在读取问卷…</p>
+apps/web/src/pages/EditorPage.vue:95: trailing whitespace.
++  <p v-if="error" class="error" role="alert">{{ error }} <button v-if="!survey" class="quiet" @click="load">重新加载</button></p>
+apps/web/src/pages/EditorPage.vue:96: trailing whitespace.
++  <template v-if="survey && !loading"><div class="page-heading"><div><h1 tabindex="-1">{{ survey.draftDefinition.title }}</h1><p class="muted">基本信息和题目分别保存，不会自动保存。</p></div><div class="editor-actions"><RouterLink v-if="survey.currentPublishedVersion !== null" class="button secondary" :to="`${url}/publication`">发布与收集</RouterLink><span class="badge">{{ survey.status === 'draft' ? '未发布草稿' : survey.status === 'paused' ? '已暂停' : survey.status === 'published' ? '收集中' : '已关闭' }}</span></div></div>
+apps/web/src/pages/EditorPage.vue:97: trailing whitespace.
++  <p v-if="notice" class="saved" role="status">{{ notice }}</p>
+apps/web/src/pages/EditorPage.vue:98: trailing whitespace.
++  <section v-if="blocked" class="conflict panel" aria-labelledby="conflict-heading"><h2 id="conflict-heading">先比较服务器版本，本地编辑已保留</h2><p>不会自动覆盖或重试保存。请比较后选择如何继续。</p><template v-if="remote"><p>服务器修订 {{ remote.revision }}；{{ remote.draftDefinition.title }}，共 {{ remote.draftDefinition.questions.length }} 题。</p><details><summary>查看服务器内容</summary><pre>{{ JSON.stringify({ metadata: metaFrom(remote), questions: remote.draftDefinition.questions }, null, 2) }}</pre></details><div class="editor-actions"><button type="button" class="secondary" @click="keepLocal">已比较，保留本地并采用最新修订号</button><button type="button" class="quiet" @click="useRemote">放弃本地并采用服务器版本</button></div></template><button v-else class="secondary" @click="inspectRemote">重新读取服务器版本</button></section>
+apps/web/src/pages/EditorPage.vue:99: trailing whitespace.
++  <div class="editor-layout"><aside class="question-outline"><div class="outline-heading"><UiIcon name="layers" :size="18"/><h2>题目目录</h2><span>{{questions.length}}</span></div><button type="button" class="outline-settings" @click="openSettings"><UiIcon name="edit" :size="16"/>基本信息与填写设置</button><p v-if="!questions.length" class="outline-empty">题目添加后，将在这里显示。</p><ol><li v-for="(q,i) in questions" :key="q.id"><button type="button" :aria-label="`第${i+1}题：${q.title||'未命名题目'}`" :aria-current="selectedQuestion===q.id?'true':undefined" @click="selectQuestion(q.id)"><span class="outline-number">{{i+1}}</span><span class="outline-title">{{q.title||'未命名题目'}}<small>{{QUESTION_LABELS[q.type]}}</small></span><UiIcon :name="q.type" :size="16"/></button></li></ol><button class="outline-add" type="button" :disabled="!editable" @click="showAdd"><UiIcon name="plus" :size="16"/>添加题目</button><p class="outline-help">点击目录直达题目。修改后请手动保存。</p></aside><div class="editor-canvas">
+apps/web/src/pages/EditorPage.vue:100: trailing whitespace.
++  <details id="editor-settings" class="editor-settings" :open="questions.length===0"><summary><span><UiIcon name="edit" :size="18"/>基本信息与填写设置</span><small>{{metadataDirty?'有未保存修改':'展开修改标题、说明和填写策略'}}</small></summary><MetadataEditor :model="metadata" :survey="survey" :busy="busy || publicationLocked || sourceLocked" :blocked="blocked" :dirty="metadataDirty" @save="save('metadata')" /></details>
+apps/web/src/pages/EditorPage.vue:101: trailing whitespace.
++  <section class="question-section"><h2>题目 <span class="muted">{{ questions.length }} / 100</span></h2><p v-if="!editable" class="muted">当前状态不能编辑题目。可前往“发布与收集”暂停收集，再返回修改。</p>
+apps/web/src/pages/EditorPage.vue:102: trailing whitespace.
++    <div v-if="checks.errors.length" class="error" role="alert"><strong>请先修复配置再保存题目</strong><ul><li v-for="item in checks.errors" :key="`${item.field}-${item.code}`">{{ item.message }}</li></ul></div>
+apps/web/src/pages/EditorPage.vue:103: trailing whitespace.
++    <div v-if="issues.length" class="definition-issues" aria-live="polite"><h3>草稿待完善</h3><p>以下问题允许保留在草稿中，发布前需要完善。</p><ul><li v-for="item in issues" :key="`${item.field}-${item.code}`">{{ item.message }}</li></ul></div>
+apps/web/src/pages/EditorPage.vue:104: trailing whitespace.
++    <SurveyQuestionSources v-if="libraryEnabled()" :survey="survey" :dirty="dirty" @changed="load" @sources="sources=$event" @locked="sourceLocked=$event"/><fieldset class="plain-fieldset" :disabled="busy || publicationLocked || sourceLocked || !editable">
+apps/web/src/pages/EditorPage.vue:105: trailing whitespace.
++      <QuestionCard :class="{'is-current':selectedQuestion===question.id}" @focusin="selectedQuestion=question.id" v-for="(question, index) in questions" :key="question.id" :question="question" :index="index" :questions="questions" :content-locked="libraryEnabled() && sources.some(s=>s.instanceId===question.id)" @move="move(index, $event)" @remove="questions.splice(index, 1)" />
+apps/web/src/pages/EditorPage.vue:106: trailing whitespace.
++      <div class="add-question-area"><h3>{{ questions.length ? "继续添加题目" : "添加第一道题" }}</h3><p class="muted">选择题型，添加后直接编辑题干。修改后请手动保存。</p><div class="editor-actions add-questions"><button v-for="item in (['single', 'multiple', 'text', 'number'] as const)" :key="item" type="button" class="secondary" :disabled="questions.length >= 100" @click="add(item)">添加{{ { single: '单选题', multiple: '多选题', text: '文本题', number: '数字题' }[item] }}</button></div></div>
+apps/web/src/pages/EditorPage.vue:107: trailing whitespace.
++    </fieldset>
+apps/web/src/pages/EditorPage.vue:108: trailing whitespace.
++
+apps/web/src/pages/EditorPage.vue:109: trailing whitespace.
++  </section></div><aside class="editor-side"><section class="save-panel"><div class="save-panel-heading"><UiIcon name="check" :size="18"/><h2>保存编辑</h2></div><p>基本信息和题目分别保存；保存草稿不会生成发布版本。</p>    <div class="editor-save-bar"><span class="muted">{{ questionsDirty ? '有未保存的题目修改' : '题目已保存' }} · 修订 {{ survey.revision }}</span><button class="primary" :disabled="busy || publicationLocked || sourceLocked || blocked || !editable || checks.errors.length > 0" @click="save('questions')">{{ busy ? '保存中…' : '保存题目' }}</button></div></section><PublicationPanel :survey="survey" :dirty="dirty" @changed="load" @published="openPublication" @locked="publicationLocked = $event" /></aside></div></template>
+apps/web/src/pages/EditorPage.vue:110: trailing whitespace.
++</section></template>
+apps/web/src/style.css:55: trailing whitespace.
++
+apps/web/src/style.css:56: trailing whitespace.
++/* P2 library screens reuse the existing form/list tokens. */
+apps/web/src/style.css:57: trailing whitespace.
++.library-page{max-width:1200px;margin:0 auto}.library-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}.library-layout>.panel{min-width:0}.library-rows{list-style:none;padding:0;margin:16px 0}.library-rows>li{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);overflow-wrap:anywhere}.library-create{margin:24px 0}.library-create button{margin-top:12px}.library-page select,.narrow select{font:inherit;width:100%;min-height:44px;padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:inherit}.library-page fieldset{min-width:0}.library-page .question-card{margin:0}.library-page .readonly-definition{overflow-wrap:anywhere}@media(max-width:800px){.library-layout{grid-template-columns:1fr}.library-page .editor-actions{flex-wrap:wrap}.library-page .panel{padding:20px}.library-rows>li{align-items:flex-start}}
+apps/web/src/style.css:58: trailing whitespace.
++
+apps/web/src/style.css:59: trailing whitespace.
++.library-page>.library-layout{margin-bottom:24px}.library-page .library-layout>section>fieldset{border:0;padding:0}.library-page .question-card{border:0;border-radius:0;padding:12px 0}.library-usage>.panel{margin-bottom:24px}@media(max-width:600px){.library-page .question-card fieldset{padding:12px}.library-page .question-advanced summary small{display:none}}
+package.json:1: trailing whitespace.
++{
+package.json:2: trailing whitespace.
++  "name": "project1-survey",
+package.json:3: trailing whitespace.
++  "private": true,
+package.json:4: trailing whitespace.
++  "version": "1.0.0",
+package.json:5: trailing whitespace.
++  "type": "module",
+package.json:6: trailing whitespace.
++  "engines": {
+package.json:7: trailing whitespace.
++    "node": ">=22.12.0 <23",
+package.json:8: trailing whitespace.
++    "npm": ">=10 <11"
+package.json:9: trailing whitespace.
++  },
+package.json:10: trailing whitespace.
++  "workspaces": [
+package.json:11: trailing whitespace.
++    "apps/*",
+package.json:12: trailing whitespace.
++    "packages/*"
+package.json:13: trailing whitespace.
++  ],
+package.json:14: trailing whitespace.
++  "scripts": {
+package.json:15: trailing whitespace.
++    "configure": "node scripts/configure.mjs",
+package.json:16: trailing whitespace.
++    "db:start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-mongo.ps1",
+package.json:17: trailing whitespace.
++    "db:init": "node --env-file=.env --import tsx scripts/init-db.ts",
+package.json:18: trailing whitespace.
++    "dev:api": "node --env-file=.env --import tsx --watch apps/api/src/main.ts",
+package.json:19: trailing whitespace.
++    "dev:web": "npm run dev -w @survey/web",
+package.json:20: trailing whitespace.
++    "typecheck": "npm run build -w @survey/shared && npm run typecheck -w @survey/api && npm run typecheck -w @survey/web",
+package.json:21: trailing whitespace.
++    "build": "npm run build -w @survey/shared && npm run build -w @survey/api && npm run build -w @survey/web",
+package.json:22: trailing whitespace.
++    "start": "node --env-file=.env apps/api/dist/main.js",
+package.json:23: trailing whitespace.
++    "test": "npm run test:integration",
+package.json:24: trailing whitespace.
++    "test:integration": "node --env-file=.env --import tsx --test --test-concurrency=1 tests/integration.test.ts",
+package.json:25: trailing whitespace.
++    "test:e2e": "node --env-file=.env --import tsx tests/browser.ts",
+package.json:26: trailing whitespace.
++    "test:editor": "node --env-file=.env --import tsx tests/editor.ts",
+package.json:27: trailing whitespace.
++    "test:phase1": "node scripts/run-check.mjs publish && node scripts/run-check.mjs flow && node scripts/run-check.mjs submit && node scripts/run-check.mjs statistics && node scripts/run-check.mjs edges && node scripts/run-check.mjs pagination && node scripts/run-check.mjs browser",
+package.json:28: trailing whitespace.
++    "test:regression": "node scripts/run-check.mjs regression",
+package.json:29: trailing whitespace.
++    "configure:phase2": "node scripts/configure-phase2.mjs",
+package.json:30: trailing whitespace.
++    "db:init:phase2": "node --env-file=.env.phase2 --import tsx scripts/init-phase2-app.ts",
+package.json:31: trailing whitespace.
++    "db:verify:phase2": "node --env-file=.env.phase2 --import tsx scripts/init-phase2-app.ts --verify",
+package.json:32: trailing whitespace.
++    "dev:api:phase2": "node --env-file=.env.phase2 --import tsx --watch apps/api/src/main-phase2.ts",
+package.json:33: trailing whitespace.
++    "dev:web:phase2": "npm run dev -w @survey/web -- --mode phase2",
+package.json:34: trailing whitespace.
++    "start:phase2": "node --env-file=.env.phase2 apps/api/dist/main-phase2.js"
+package.json:35: trailing whitespace.
++  },
+package.json:36: trailing whitespace.
++  "devDependencies": {
+package.json:37: trailing whitespace.
++    "typescript": "5.9.3",
+package.json:38: trailing whitespace.
++    "tsx": "4.23.15",
+package.json:39: trailing whitespace.
++    "@types/node": "22.20.5",
+package.json:40: trailing whitespace.
++    "@playwright/test": "1.64.1"
+package.json:41: trailing whitespace.
++  }
+package.json:42: trailing whitespace.
++}
+scripts/app-role.mongosh.js:1: trailing whitespace.
++// P2 W03/W04 provisioning TEMPLATE. Authentication has NOT been enabled or verified.
+scripts/app-role.mongosh.js:2: trailing whitespace.
++// Use a separate administrator, after reviewing diagnostics and migration identities.
+scripts/app-role.mongosh.js:3: trailing whitespace.
++if(!/^project2_(app_v2|test_[A-Za-z0-9_]+)$/.test(db.getName()))throw Error('Explicit P2 phase2 application target required');
+scripts/app-role.mongosh.js:4: trailing whitespace.
++const insertOnly=['users','question_versions','survey_versions','responses','operation_receipts'];
+scripts/app-role.mongosh.js:5: trailing whitespace.
++const mutable=['surveys','question_items','question_banks','question_grants'];
+scripts/app-role.mongosh.js:6: trailing whitespace.
++const relations=['question_bank_members','survey_question_bindings'];
+scripts/app-role.mongosh.js:7: trailing whitespace.
++const futureReadOnly=['survey_templates','template_grants'];
+scripts/app-role.mongosh.js:8: trailing whitespace.
++const role={role:'project2_application',privileges:[
+scripts/app-role.mongosh.js:9: trailing whitespace.
++ {resource:{db:db.getName(),collection:''},actions:['listCollections']},
+scripts/app-role.mongosh.js:10: trailing whitespace.
++ ...insertOnly.map(collection=>({resource:{db:db.getName(),collection},actions:['listIndexes','find','insert']})),
+scripts/app-role.mongosh.js:11: trailing whitespace.
++ ...mutable.map(collection=>({resource:{db:db.getName(),collection},actions:['listIndexes','find','insert','update']})),
+scripts/app-role.mongosh.js:12: trailing whitespace.
++ ...relations.map(collection=>({resource:{db:db.getName(),collection},actions:['listIndexes','find','insert','update','remove']})),
+scripts/app-role.mongosh.js:13: trailing whitespace.
++ ...futureReadOnly.map(collection=>({resource:{db:db.getName(),collection},actions:['listIndexes','find']})),
+scripts/app-role.mongosh.js:14: trailing whitespace.
++ // The existing local instance-identity gate needs these diagnostic commands on the cluster.
+scripts/app-role.mongosh.js:15: trailing whitespace.
++ {resource:{cluster:true},actions:['getCmdLineOpts','serverStatus','replSetGetConfig']},
+scripts/app-role.mongosh.js:16: trailing whitespace.
++],roles:[]};
+scripts/app-role.mongosh.js:17: trailing whitespace.
++if(db.getRole(role.role))throw Error('Role already exists: inspect instead of overwriting');
+scripts/app-role.mongosh.js:18: trailing whitespace.
++db.createRole(role);
+scripts/app-role.mongosh.js:19: trailing whitespace.
++print('P2 role template provisioned only; this does not enable authentication or prove enforcement. Binding publication rows remain insert/read-only at the application layer because roles cannot distinguish scope within a collection. Migration DDL requires another identity.');

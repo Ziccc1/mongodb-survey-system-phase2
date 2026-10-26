@@ -1,0 +1,61 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_versions_banks_1792814794056_81f91147
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_versions_banks_1792814794056_81f91147
+# Subtest: W03 actual HTTP draft/version/restore/fork/bank contracts, CAS, rollback and pagination
+    # Subtest: creation is draft only; all Content error categories and original no-op semantics
+    ok 1 - creation is draft only; all Content error categories and original no-op semantics
+      ---
+      duration_ms: 124.2901
+      type: 'test'
+      ...
+    # Subtest: explicit formal save and original successful key replay after draft changes
+    ok 2 - explicit formal save and original successful key replay after draft changes
+      ---
+      duration_ms: 85.3973
+      type: 'test'
+      ...
+    # Subtest: arbitrary old parent; restore allocates a new version preserving draft and all middle history
+    ok 3 - arbitrary old parent; restore allocates a new version preserving draft and all middle history
+      ---
+      duration_ms: 115.9594
+      type: 'test'
+      ...
+    # Subtest: different keys same revision one success/one CAS conflict; same key one immutable effect; rollback
+    ok 4 - different keys same revision one success/one CAS conflict; same key one immutable effect; rollback
+      ---
+      duration_ms: 131.2093
+      type: 'test'
+      ...
+    # Subtest: fork exact immutable source, future save/restore retains distribution obligations
+    ok 5 - fork exact immutable source, future save/restore retains distribution obligations
+      ---
+      duration_ms: 62.2915
+      type: 'test'
+      ...
+    # Subtest: multi-bank identity, renaming, member removal, deletion tombstone and real deletion/member race
+    ok 6 - multi-bank identity, renaming, member removal, deletion tombstone and real deletion/member race
+      ---
+      duration_ms: 172.4603
+      type: 'test'
+      ...
+    # Subtest: query/method/body security, signed cursors bind actor and resource
+    ok 7 - query/method/body security, signed cursors bind actor and resource
+      ---
+      duration_ms: 37.0047
+      type: 'test'
+      ...
+    1..7
+ok 1 - W03 actual HTTP draft/version/restore/fork/bank contracts, CAS, rollback and pagination
+  ---
+  duration_ms: 14786.3277
+  type: 'test'
+  ...
+1..1
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15576.2863

@@ -1,0 +1,10 @@
+P2 synthetic target localhost:27019 / project2_test_edges_1792766310013_8b2dcb68
+Independent retained database: project2_test_edges_1792766310013_8b2dcb68
+PASS concurrent first publication with same key creates exactly one immutable release
+PASS inclusive Unicode text and exact decimal lower/upper answer boundaries
+PASS four-type over/under/required/option rejection and anonymous-policy enforcement
+PASS fresh concurrent same-key submissions under allowRepeat=true share one receipt
+PASS backend cleans valid-shaped stale branches and validates only final-path content while still rejecting illegal options
+PASS actual submitted multi-rule overlap uses first matching rule and accepts numeric zero
+PASS snapshot repository exposes no mutation methods; DELETE rejected and optional copy remains disabled
+ADDITIONAL BOUNDARIES/CONCURRENCY PASSED

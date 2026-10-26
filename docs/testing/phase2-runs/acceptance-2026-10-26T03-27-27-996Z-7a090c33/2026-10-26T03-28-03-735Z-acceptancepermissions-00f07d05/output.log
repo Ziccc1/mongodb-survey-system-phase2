@@ -1,0 +1,49 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_accept_matrix_1792985284433_231240fb
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_accept_matrix_1792985284433_231240fb
+# Subtest: acceptance: named actor × retained-right state × operation permission matrix
+    # Subtest: owner
+    ok 1 - owner
+      ---
+      duration_ms: 118.1159
+      type: 'test'
+      ...
+    # Subtest: active-share
+    ok 2 - active-share
+      ---
+      duration_ms: 114.2854
+      type: 'test'
+      ...
+    # Subtest: revoked-retained
+    ok 3 - revoked-retained
+      ---
+      duration_ms: 115.7241
+      type: 'test'
+      ...
+    # Subtest: template-narrow
+    ok 4 - template-narrow
+      ---
+      duration_ms: 107.1811
+      type: 'test'
+      ...
+    # Subtest: unrelated
+    ok 5 - unrelated
+      ---
+      duration_ms: 75.0401
+      type: 'test'
+      ...
+    1..5
+ok 1 - acceptance: named actor × retained-right state × operation permission matrix
+  ---
+  duration_ms: 14210.5118
+  type: 'test'
+  ...
+1..1
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14893.1107

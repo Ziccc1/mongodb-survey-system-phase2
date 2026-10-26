@@ -1,0 +1,426 @@
+[
+  {
+    "actor": "owner",
+    "operation": "history",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "private-draft",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "save-version",
+    "expected": 201,
+    "actual": 201,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "new-reference",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "general-fork",
+    "expected": 201,
+    "actual": 201,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "fixed-statistics",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "fixed-statistics/answers",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "fixed-statistics/distribution",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "unacquired-version-statistics",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "other-owner-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "owner",
+    "operation": "source-management",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "active-share",
+    "operation": "history",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "active-share",
+    "operation": "private-draft",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "active-share",
+    "operation": "save-version",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "active-share",
+    "operation": "new-reference",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "active-share",
+    "operation": "general-fork",
+    "expected": 201,
+    "actual": 201,
+    "code": null
+  },
+  {
+    "actor": "active-share",
+    "operation": "fixed-statistics",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "active-share",
+    "operation": "fixed-statistics/answers",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "active-share",
+    "operation": "fixed-statistics/distribution",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "active-share",
+    "operation": "unacquired-version-statistics",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "active-share",
+    "operation": "other-owner-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "active-share",
+    "operation": "source-management",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "history",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "private-draft",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "save-version",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "new-reference",
+    "expected": 409,
+    "actual": 409,
+    "code": "SOURCE_ACCESS_REVOKED"
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "general-fork",
+    "expected": 409,
+    "actual": 409,
+    "code": "SOURCE_ACCESS_REVOKED"
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "fixed-statistics",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "fixed-statistics/answers",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "fixed-statistics/distribution",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "unacquired-version-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "other-owner-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "source-management",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "template-redistribution",
+    "expected": 403,
+    "actual": 403,
+    "code": "PUBLIC_DISTRIBUTION_REQUIRED"
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "history",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "private-draft",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "save-version",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "new-reference",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "general-fork",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "fixed-statistics",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "fixed-statistics/answers",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "fixed-statistics/distribution",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "unacquired-version-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "other-owner-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "source-management",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "template-redistribution",
+    "expected": 403,
+    "actual": 403,
+    "code": "PUBLIC_DISTRIBUTION_REQUIRED"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "history",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "private-draft",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "save-version",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "new-reference",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "general-fork",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "fixed-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "fixed-statistics/answers",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "fixed-statistics/distribution",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "unacquired-version-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "other-owner-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "source-management",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "unrelated",
+    "operation": "template-redistribution",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "revoked-retained",
+    "operation": "adopt-after-distribution-revocation",
+    "expected": 403,
+    "actual": 403
+  },
+  {
+    "actor": "template-narrow",
+    "operation": "adopt-after-distribution-revocation",
+    "expected": 403,
+    "actual": 403
+  },
+  {
+    "actor": "unrelated",
+    "operation": "adopt-after-distribution-revocation",
+    "expected": 403,
+    "actual": 403
+  }
+]

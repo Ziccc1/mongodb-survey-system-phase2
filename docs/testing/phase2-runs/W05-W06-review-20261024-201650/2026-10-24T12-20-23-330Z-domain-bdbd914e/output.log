@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: four types round trip; Vue proxy, IDs, options, config isolation and hashes
+ok 1 - four types round trip; Vue proxy, IDs, options, config isolation and hashes
+  ---
+  duration_ms: 14.4537
+  type: 'test'
+  ...
+# Subtest: strict shapes, semantic limits and soft draft validation reuse old path
+ok 2 - strict shapes, semantic limits and soft draft validation reuse old path
+  ---
+  duration_ms: 1.2519
+  type: 'test'
+  ...
+# Subtest: Decimal exact boundaries and BSON special objects stay intact
+ok 3 - Decimal exact boundaries and BSON special objects stay intact
+  ---
+  duration_ms: 1.4544
+  type: 'test'
+  ...
+# Subtest: receipt operation/status/unknown keys and actual BSON size; template node limit
+ok 4 - receipt operation/status/unknown keys and actual BSON size; template node limit
+  ---
+  duration_ms: 10.8705
+  type: 'test'
+  ...
+# Subtest: createQuestion: structural errors remain 400 INVALID_REQUEST
+ok 5 - createQuestion: structural errors remain 400 INVALID_REQUEST
+  ---
+  duration_ms: 1.4883
+  type: 'test'
+  ...
+# Subtest: createQuestion: semantic errors return 422 with Content fields and reasons
+ok 6 - createQuestion: semantic errors return 422 with Content fields and reasons
+  ---
+  duration_ms: 1.4797
+  type: 'test'
+  ...
+# Subtest: createQuestion: normalization and saveable draft issues remain accepted
+ok 7 - createQuestion: normalization and saveable draft issues remain accepted
+  ---
+  duration_ms: 8.9735
+  type: 'test'
+  ...
+# Subtest: createQuestion: unexpected errors are not disguised as invalid requests
+ok 8 - createQuestion: unexpected errors are not disguised as invalid requests
+  ---
+  duration_ms: 0.1377
+  type: 'test'
+  ...
+# Subtest: forkQuestion: structural errors remain 400 INVALID_REQUEST
+ok 9 - forkQuestion: structural errors remain 400 INVALID_REQUEST
+  ---
+  duration_ms: 0.1506
+  type: 'test'
+  ...
+# Subtest: forkQuestion: semantic errors return 422 with Content fields and reasons
+ok 10 - forkQuestion: semantic errors return 422 with Content fields and reasons
+  ---
+  duration_ms: 0.3398
+  type: 'test'
+  ...
+# Subtest: forkQuestion: normalization and saveable draft issues remain accepted
+ok 11 - forkQuestion: normalization and saveable draft issues remain accepted
+  ---
+  duration_ms: 0.6278
+  type: 'test'
+  ...
+# Subtest: forkQuestion: unexpected errors are not disguised as invalid requests
+ok 12 - forkQuestion: unexpected errors are not disguised as invalid requests
+  ---
+  duration_ms: 0.0732
+  type: 'test'
+  ...
+# Subtest: cold direct import src/questions
+ok 13 - cold direct import src/questions
+  ---
+  duration_ms: 196.866
+  type: 'test'
+  ...
+# Subtest: cold direct import src/answers
+ok 14 - cold direct import src/answers
+  ---
+  duration_ms: 182.0504
+  type: 'test'
+  ...
+# Subtest: cold direct import src/question-content
+ok 15 - cold direct import src/question-content
+  ---
+  duration_ms: 177.4383
+  type: 'test'
+  ...
+# Subtest: cold direct import src/index
+ok 16 - cold direct import src/index
+  ---
+  duration_ms: 172.5729
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/questions
+ok 17 - cold direct import dist/questions
+  ---
+  duration_ms: 65.8714
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/answers
+ok 18 - cold direct import dist/answers
+  ---
+  duration_ms: 65.6493
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/question-content
+ok 19 - cold direct import dist/question-content
+  ---
+  duration_ms: 73.685
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/index
+ok 20 - cold direct import dist/index
+  ---
+  duration_ms: 72.7243
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1181.1714

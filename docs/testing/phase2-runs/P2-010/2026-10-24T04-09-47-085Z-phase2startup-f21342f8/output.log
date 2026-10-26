@@ -1,0 +1,57 @@
+{
+  "started": "2026-10-24T04:09:49.443Z",
+  "finished": "2026-10-24T04:10:06.411Z",
+  "status": "passed",
+  "checks": [
+    "http://127.0.0.1:3200/",
+    "http://127.0.0.1:3200/api/v1/health/live",
+    "http://127.0.0.1:3200/api/v1/health/ready",
+    "http://127.0.0.1:3200/app-config.js whitelist",
+    "http://127.0.0.1:3200 rejects wrong Origin",
+    "http://localhost:5200/",
+    "http://localhost:5200/api/v1/health/live",
+    "http://localhost:5200/api/v1/health/ready",
+    "http://localhost:5200/app-config.js whitelist",
+    "http://localhost:5200 rejects wrong Origin"
+  ],
+  "apiUrl": "http://127.0.0.1:3200",
+  "webUrl": "http://localhost:5200",
+  "applicationDatabase": "project2_app_v2",
+  "schema": "phase2-thirteen-collections",
+  "processes": [
+    {
+      "name": "api",
+      "pid": 45152
+    },
+    {
+      "name": "vite",
+      "pid": 38680
+    }
+  ],
+  "listenerBeforeHTTP": [
+    {
+      "port": 5200,
+      "pid": 38680,
+      "address": "::1"
+    },
+    {
+      "port": 3200,
+      "pid": 45152,
+      "address": "127.0.0.1"
+    }
+  ],
+  "listenerAfterHTTP": [
+    {
+      "port": 5200,
+      "pid": 38680,
+      "address": "::1"
+    },
+    {
+      "port": 3200,
+      "pid": 45152,
+      "address": "127.0.0.1"
+    }
+  ],
+  "note": "Ports were vacant before launch; OS listener PIDs match live children before/after HTTP. All application children released in finally; no sample data inserted"
+}
+Dedicated API and Vite test processes released; owned P2 MongoDB retained.

@@ -1,0 +1,79 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_template_races_1792814958301_545a23cb
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_template_races_1792814958301_545a23cb
+# Subtest: W06 six controlled actual Mongo fence orders: adoption/unlisting/direct/deep revocation
+    # Subtest: unlisting / adopt-first
+    ok 1 - unlisting / adopt-first
+      ---
+      duration_ms: 247.0241
+      type: 'test'
+      ...
+    # Subtest: unlisting / stop-first
+    ok 2 - unlisting / stop-first
+      ---
+      duration_ms: 156.7262
+      type: 'test'
+      ...
+    # Subtest: direct / adopt-first
+    ok 3 - direct / adopt-first
+      ---
+      duration_ms: 279.3324
+      type: 'test'
+      ...
+    # Subtest: direct / stop-first
+    ok 4 - direct / stop-first
+      ---
+      duration_ms: 202.9544
+      type: 'test'
+      ...
+    # Subtest: deep / adopt-first
+    ok 5 - deep / adopt-first
+      ---
+      duration_ms: 296.2084
+      type: 'test'
+      ...
+    # Subtest: deep / stop-first
+    ok 6 - deep / stop-first
+      ---
+      duration_ms: 258.29
+      type: 'test'
+      ...
+    # Subtest: deep revoke versus createTemplate / adopt-first
+    ok 7 - deep revoke versus createTemplate / adopt-first
+      ---
+      duration_ms: 281.5378
+      type: 'test'
+      ...
+    # Subtest: deep revoke versus createTemplate / stop-first
+    ok 8 - deep revoke versus createTemplate / stop-first
+      ---
+      duration_ms: 189.3153
+      type: 'test'
+      ...
+    # Subtest: deep revoke versus listing / adopt-first
+    ok 9 - deep revoke versus listing / adopt-first
+      ---
+      duration_ms: 220.8648
+      type: 'test'
+      ...
+    # Subtest: deep revoke versus listing / stop-first
+    ok 10 - deep revoke versus listing / stop-first
+      ---
+      duration_ms: 219.3517
+      type: 'test'
+      ...
+    1..10
+ok 1 - W06 six controlled actual Mongo fence orders: adoption/unlisting/direct/deep revocation
+  ---
+  duration_ms: 15464.5477
+  type: 'test'
+  ...
+1..1
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16191.2128

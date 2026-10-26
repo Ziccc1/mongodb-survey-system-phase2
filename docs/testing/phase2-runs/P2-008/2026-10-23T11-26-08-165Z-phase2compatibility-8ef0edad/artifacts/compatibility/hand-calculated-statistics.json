@@ -1,0 +1,70 @@
+{
+  "surveyId": "6adb445f353d743dfa2ed1de",
+  "selectedVersion": 1,
+  "latestPublishedVersion": 1,
+  "cumulativeResponseCount": 3,
+  "currentVersionResponseCount": 3,
+  "selectedVersionResponseCount": 3,
+  "generatedAt": "2026-10-23T11:26:24.586Z",
+  "questionSummaries": [
+    {
+      "questionId": "s",
+      "type": "single",
+      "title": "单选",
+      "answeredCount": 3,
+      "optionCounts": [
+        {
+          "optionId": "yes",
+          "label": "是",
+          "count": 2
+        },
+        {
+          "optionId": "no",
+          "label": "否",
+          "count": 1
+        },
+        {
+          "optionId": "zero",
+          "label": "零次",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "questionId": "m",
+      "type": "multiple",
+      "title": "多选",
+      "answeredCount": 3,
+      "optionCounts": [
+        {
+          "optionId": "a",
+          "label": "A",
+          "count": 2
+        },
+        {
+          "optionId": "b",
+          "label": "B",
+          "count": 2
+        },
+        {
+          "optionId": "c",
+          "label": "C",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "questionId": "t",
+      "type": "text",
+      "title": "文字",
+      "answeredCount": 2
+    },
+    {
+      "questionId": "n",
+      "type": "number",
+      "title": "数字",
+      "answeredCount": 2,
+      "average": "5"
+    }
+  ]
+}

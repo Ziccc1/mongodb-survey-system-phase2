@@ -1,0 +1,478 @@
+{
+  "task": "P2-005 / P2-W01",
+  "result": "passed-with-preserved-failed-attempts-and-build-warnings",
+  "checkedAt": "2026-10-22T12:57:54.420156+00:00",
+  "runDirectory": "docs/testing/phase2-runs/P2-005-20261022T123358Z",
+  "commands": [
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/npm-ci-initial.result.json",
+      "name": "npm-ci-initial.result",
+      "command": "npm.cmd ci",
+      "start": "2026-10-22T12:34:00.0968554Z",
+      "finished": "2026-10-22T12:35:25.5169800Z",
+      "exitCode": 1
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/npm-ci.result.json",
+      "name": "npm-ci.result",
+      "command": "npm.cmd ci",
+      "start": "2026-10-22T12:37:04.5631951Z",
+      "finished": "2026-10-22T12:37:11.6642109Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-42-33-808Z-configure-ee35b3d9/result.json",
+      "name": "configure",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "scripts/configure.mjs"
+      ],
+      "start": "2026-10-22T12:42:33.810Z",
+      "finished": "2026-10-22T12:42:34.827Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-42-44-143Z-dbstart-0f5fe540/result.json",
+      "name": "dbstart",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "db:start"
+      ],
+      "start": "2026-10-22T12:42:44.145Z",
+      "finished": "2026-10-22T12:43:03.743Z",
+      "exitCode": 1
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-43-09-216Z-typecheck-73825ff2/result.json",
+      "name": "typecheck",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "start": "2026-10-22T12:43:09.218Z",
+      "finished": "2026-10-22T12:43:33.430Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-44-23-707Z-dbstart-232810db/result.json",
+      "name": "dbstart",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "db:start"
+      ],
+      "start": "2026-10-22T12:44:23.709Z",
+      "finished": "2026-10-22T12:44:29.228Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-44-30-428Z-isolation-bc91f319/result.json",
+      "name": "isolation",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/runtime-isolation.test.ts"
+      ],
+      "start": "2026-10-22T12:44:30.439Z",
+      "finished": "2026-10-22T12:44:38.851Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-44-38-906Z-build-342d1ef4/result.json",
+      "name": "build",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "start": "2026-10-22T12:44:38.908Z",
+      "finished": "2026-10-22T12:44:57.678Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-45-03-787Z-dbinit-b2e44f41/result.json",
+      "name": "dbinit",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "db:init"
+      ],
+      "start": "2026-10-22T12:45:03.789Z",
+      "finished": "2026-10-22T12:45:06.553Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-45-06-603Z-dbinit-52b3dadd/result.json",
+      "name": "dbinit",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "db:init"
+      ],
+      "start": "2026-10-22T12:45:06.605Z",
+      "finished": "2026-10-22T12:45:09.145Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-45-37-902Z-phase1-0057dd9d/result.json",
+      "name": "phase1",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "test:phase1"
+      ],
+      "start": "2026-10-22T12:45:37.904Z",
+      "finished": "2026-10-22T12:46:14.096Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-45-38-194Z-publish-1d5f6a02/result.json",
+      "name": "publish",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/publish.ts"
+      ],
+      "start": "2026-10-22T12:45:38.196Z",
+      "finished": "2026-10-22T12:45:45.815Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-45-45-861Z-flow-c9beca2b/result.json",
+      "name": "flow",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/flow.ts"
+      ],
+      "start": "2026-10-22T12:45:45.863Z",
+      "finished": "2026-10-22T12:45:46.032Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-45-46-074Z-submit-b4f04fe7/result.json",
+      "name": "submit",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/submit.ts"
+      ],
+      "start": "2026-10-22T12:45:46.085Z",
+      "finished": "2026-10-22T12:45:49.600Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-45-49-647Z-statistics-9d3762a4/result.json",
+      "name": "statistics",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/statistics.ts"
+      ],
+      "start": "2026-10-22T12:45:49.651Z",
+      "finished": "2026-10-22T12:45:53.007Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-45-53-127Z-edges-28b3ae1d/result.json",
+      "name": "edges",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/edges.ts"
+      ],
+      "start": "2026-10-22T12:45:53.131Z",
+      "finished": "2026-10-22T12:45:56.569Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-45-56-628Z-pagination-464e4b10/result.json",
+      "name": "pagination",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/pagination.ts"
+      ],
+      "start": "2026-10-22T12:45:56.630Z",
+      "finished": "2026-10-22T12:45:59.989Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-46-00-047Z-browser-94fe6679/result.json",
+      "name": "browser",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/browser.ts"
+      ],
+      "start": "2026-10-22T12:46:00.049Z",
+      "finished": "2026-10-22T12:46:14.079Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-46-14-146Z-existingregression-cb2c889f/result.json",
+      "name": "existingregression",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "test:regression"
+      ],
+      "start": "2026-10-22T12:46:14.148Z",
+      "finished": "2026-10-22T12:46:35.762Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-46-14-412Z-regression-09941de9/result.json",
+      "name": "regression",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase1/regression.ts"
+      ],
+      "start": "2026-10-22T12:46:14.415Z",
+      "finished": "2026-10-22T12:46:35.748Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-48-21-729Z-verifyruntime-c3fbf9cc/result.json",
+      "name": "verifyruntime",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "scripts/verify-runtime-baseline.ts"
+      ],
+      "start": "2026-10-22T12:48:21.731Z",
+      "finished": "2026-10-22T12:48:24.173Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-48-24-230Z-startup-3faa6fc7/result.json",
+      "name": "startup",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/runtime-startup.ts"
+      ],
+      "start": "2026-10-22T12:48:24.234Z",
+      "finished": "2026-10-22T12:48:28.500Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-50-22-034Z-configure-3da60550/result.json",
+      "name": "configure",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "scripts/configure.mjs"
+      ],
+      "start": "2026-10-22T12:50:22.044Z",
+      "finished": "2026-10-22T12:50:22.264Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/ownership-guards.result.json",
+      "name": "ownership-guards.result",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File tests/runtime-ownership.ps1",
+      "start": "2026-10-22T12:50:22.2747095Z",
+      "finished": "2026-10-22T12:50:23.5881898Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/mongo-stop.result.json",
+      "name": "mongo-stop.result",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/stop-mongo.ps1",
+      "start": "2026-10-22T12:51:03.6474000Z",
+      "finished": "2026-10-22T12:51:08.2992832Z",
+      "exitCode": 1
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-51-55-634Z-dbstart-1846981a/result.json",
+      "name": "dbstart",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "db:start"
+      ],
+      "start": "2026-10-22T12:51:55.636Z",
+      "finished": "2026-10-22T12:52:03.025Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/mongo-stop-confirmed.result.json",
+      "name": "mongo-stop-confirmed.result",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/stop-mongo.ps1",
+      "start": "2026-10-22T12:52:03.0468613Z",
+      "finished": "2026-10-22T12:52:05.4754002Z",
+      "exitCode": 1
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-53-11-992Z-dbstart-7dffecbb/result.json",
+      "name": "dbstart",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "db:start"
+      ],
+      "start": "2026-10-22T12:53:11.994Z",
+      "finished": "2026-10-22T12:53:19.580Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/mongo-stop-verified.result.json",
+      "name": "mongo-stop-verified.result",
+      "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/stop-mongo.ps1",
+      "start": "2026-10-22T12:53:19.5939789Z",
+      "finished": "2026-10-22T12:53:23.5299304Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-53-23-601Z-dbstart-fa882fb9/result.json",
+      "name": "dbstart",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "db:start"
+      ],
+      "start": "2026-10-22T12:53:23.603Z",
+      "finished": "2026-10-22T12:53:30.905Z",
+      "exitCode": 0
+    },
+    {
+      "file": "docs/testing/phase2-runs/P2-005-20261022T123358Z/2026-10-22T12-53-30-971Z-verifyruntime-fe555f23/result.json",
+      "name": "verifyruntime",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "scripts/verify-runtime-baseline.ts"
+      ],
+      "start": "2026-10-22T12:53:30.973Z",
+      "finished": "2026-10-22T12:53:33.183Z",
+      "exitCode": 0
+    }
+  ],
+  "failedAttemptsRetained": 4,
+  "runtime": {
+    "node": "22.17.0",
+    "npm": "10.9.2",
+    "mongodb": "8.3.11",
+    "mongosh": "2.11.1",
+    "edge": "155.0.4283.62"
+  },
+  "baseline": {
+    "schemaCollections": 4,
+    "originalSchemaUnchanged": true,
+    "applicationDatabase": "project2_app_v1",
+    "applicationDocuments": 0,
+    "syntheticTestDatabasesRetained": 12,
+    "configurationChecksPassed": 14,
+    "ownershipFileChecksPassed": 6,
+    "phase1Modules": [
+      "publish",
+      "flow",
+      "submit",
+      "statistics",
+      "edges",
+      "pagination",
+      "browser (redesign + same-host LAN probe)"
+    ],
+    "legacyRegressionChildren": [
+      {
+        "script": "tests/integration.test.ts",
+        "exitCode": 0,
+        "observation": "parent regression.ts checks each spawnSync.status and exits before the next child on failure; successful final marker proves all four exited 0; child start/finish timestamps were not separately recorded"
+      },
+      {
+        "script": "tests/editor.ts",
+        "exitCode": 0,
+        "observation": "parent regression.ts checks each spawnSync.status and exits before the next child on failure; successful final marker proves all four exited 0; child start/finish timestamps were not separately recorded"
+      },
+      {
+        "script": "tests/character-limits.ts",
+        "exitCode": 0,
+        "observation": "parent regression.ts checks each spawnSync.status and exits before the next child on failure; successful final marker proves all four exited 0; child start/finish timestamps were not separately recorded"
+      },
+      {
+        "script": "tests/browser.ts",
+        "exitCode": 0,
+        "observation": "parent regression.ts checks each spawnSync.status and exits before the next child on failure; successful final marker proves all four exited 0; child start/finish timestamps were not separately recorded"
+      }
+    ],
+    "startupHTTPChecks": 10
+  },
+  "finalServices": {
+    "applicationTestServicesReleased": true,
+    "ownedMongo": {
+      "dbPath": "D:\\大三\\数据库\\pj1_2\\.local\\mongodb-phase2-rs0",
+      "processId": 13860,
+      "marker": "D:\\大三\\数据库\\pj1_2\\.local\\mongodb-phase2-rs0\\project2-instance.json",
+      "projectRoot": "D:\\大三\\数据库\\pj1_2",
+      "replicaSet": "rs0",
+      "port": 27019,
+      "executable": "D:\\Programmer\\bin\\mongod.exe"
+    },
+    "note": "Live OS inventory, not archived PID files; no other process was stopped",
+    "listeners": [
+      {
+        "LocalAddress": "127.0.0.1",
+        "LocalPort": 27019,
+        "OwningProcess": 13860
+      }
+    ],
+    "capturedAt": "2026-10-22T12:55:21.8722918Z"
+  },
+  "notExecuted": [
+    "P2 13-collection schema or new business APIs",
+    "real old-data audit/import/migration/backup/restore",
+    "P2 T01-T50 full target acceptance",
+    "separate rendered chart or all-layout specialty suites",
+    "second physical device or public-network deployment",
+    "Git commit/push"
+  ],
+  "warnings": [
+    "Vite runtime /app-config.js classic script bundling notice",
+    "ChoiceChart bundle over 500 kB",
+    "Vite plugin timing diagnostic"
+  ],
+  "provisionalRulesUnchanged": [
+    "S04",
+    "S05",
+    "S06"
+  ]
+}

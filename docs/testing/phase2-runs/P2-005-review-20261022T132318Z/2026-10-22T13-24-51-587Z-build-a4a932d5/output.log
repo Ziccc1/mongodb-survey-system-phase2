@@ -1,0 +1,39 @@
+
+> project1-survey@1.0.0 build
+> npm run build -w @survey/shared && npm run build -w @survey/api && npm run build -w @survey/web
+
+
+> @survey/shared@1.0.0 build
+> tsc -p tsconfig.json
+
+
+> @survey/api@1.0.0 build
+> tsc -p tsconfig.json
+
+
+> @survey/web@1.0.0 build
+> vue-tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+<script src="/app-config.js"> in "/index.html" can't be bundled without type="module" attribute
+✓ 672 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                        0.39 kB │ gzip:   0.29 kB
+dist/assets/index-CJ69NhUo.css        43.44 kB │ gzip:   9.30 kB
+dist/assets/index-YKBdNw-f.js        221.87 kB │ gzip:  80.45 kB
+dist/assets/ChoiceChart-2CSb5DmB.js  517.06 kB │ gzip: 176.88 kB
+
+✓ built in 6.80s
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[33m[PLUGIN_TIMINGS] [0mJavaScript callbacks ran for 1.6s of this 6.8s build (24%).
+The slowest callbacks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
+  - plugin vite:vue transform (18%, 1.2s, 47 calls)
+Additional callback time came from callbacks under 1s.
+See https://rolldown.rs/reference/InputOptions.checks#bundlertimings for more details.
+

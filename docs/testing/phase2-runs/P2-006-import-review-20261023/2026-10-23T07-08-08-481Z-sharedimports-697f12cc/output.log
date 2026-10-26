@@ -1,0 +1,206 @@
+TAP version 13
+# Subtest: cold direct import src/questions
+not ok 1 - cold direct import src/questions
+  ---
+  duration_ms: 196.506
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\shared-imports.test.mjs:8:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    src/questions
+    D:\大三\数据库\pj1_2\packages\shared\src\question-content.ts:21
+    export const questionContentSchema = { oneOf: questionSchema.oneOf.map(branch => {
+                                                  ^
+    
+    
+    ReferenceError: Cannot access 'questionSchema' before initialization
+        at <anonymous> (D:\大三\数据库\pj1_2\packages\shared\src\question-content.ts:21:47)
+        at ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+        at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+        at async file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/[eval1]:4:7
+    
+    Node.js v22.17.0
+    
+    
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    <anonymous> (D:\大三\数据库\pj1_2\packages\shared\src\question-content.ts:21:47)
+    ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+    async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    async file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/[eval1]:4:7
+    TestContext.<anonymous> (file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/tests/shared-imports.test.mjs:38:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: cold direct import src/answers
+not ok 2 - cold direct import src/answers
+  ---
+  duration_ms: 192.3077
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\shared-imports.test.mjs:8:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    src/answers
+    D:\大三\数据库\pj1_2\packages\shared\src\question-content.ts:21
+    export const questionContentSchema = { oneOf: questionSchema.oneOf.map(branch => {
+                                                  ^
+    
+    
+    ReferenceError: Cannot access 'questionSchema' before initialization
+        at <anonymous> (D:\大三\数据库\pj1_2\packages\shared\src\question-content.ts:21:47)
+        at ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+        at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+        at async file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/[eval1]:4:7
+    
+    Node.js v22.17.0
+    
+    
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    <anonymous> (D:\大三\数据库\pj1_2\packages\shared\src\question-content.ts:21:47)
+    ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+    async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    async file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/[eval1]:4:7
+    TestContext.<anonymous> (file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/tests/shared-imports.test.mjs:38:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: cold direct import src/question-content
+ok 3 - cold direct import src/question-content
+  ---
+  duration_ms: 168.9366
+  type: 'test'
+  ...
+# Subtest: cold direct import src/index
+ok 4 - cold direct import src/index
+  ---
+  duration_ms: 168.0896
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/questions
+not ok 5 - cold direct import dist/questions
+  ---
+  duration_ms: 63.1062
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\shared-imports.test.mjs:8:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    dist/questions
+    file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/packages/shared/dist/question-content.js:3
+    export const questionContentSchema = { oneOf: questionSchema.oneOf.map(branch => {
+                                                  ^
+    
+    ReferenceError: Cannot access 'questionSchema' before initialization
+        at file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/packages/shared/dist/question-content.js:3:47
+        at ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+        at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+        at async file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/[eval1]:4:7
+    
+    Node.js v22.17.0
+    
+    
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/packages/shared/dist/question-content.js:3:47
+    ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+    async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    async file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/[eval1]:4:7
+    TestContext.<anonymous> (file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/tests/shared-imports.test.mjs:38:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: cold direct import dist/answers
+not ok 6 - cold direct import dist/answers
+  ---
+  duration_ms: 64.9677
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\shared-imports.test.mjs:8:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    dist/answers
+    file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/packages/shared/dist/question-content.js:3
+    export const questionContentSchema = { oneOf: questionSchema.oneOf.map(branch => {
+                                                  ^
+    
+    ReferenceError: Cannot access 'questionSchema' before initialization
+        at file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/packages/shared/dist/question-content.js:3:47
+        at ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+        at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+        at async file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/[eval1]:4:7
+    
+    Node.js v22.17.0
+    
+    
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/packages/shared/dist/question-content.js:3:47
+    ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+    async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    async file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/[eval1]:4:7
+    TestContext.<anonymous> (file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/tests/shared-imports.test.mjs:38:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: cold direct import dist/question-content
+ok 7 - cold direct import dist/question-content
+  ---
+  duration_ms: 65.0986
+  type: 'test'
+  ...
+# Subtest: cold direct import dist/index
+ok 8 - cold direct import dist/index
+  ---
+  duration_ms: 69.4577
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 4
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1053.2661

@@ -1,0 +1,493 @@
+{
+  "kind": "manual-plan-static-validation-only",
+  "manualExecution": "NOT_EXECUTED",
+  "businessDatabaseAccess": false,
+  "checks": "question definitions and prescribed answers checked against existing shared validator; counts and means recomputed",
+  "prescribedCounts": {
+    "W01": 4,
+    "W02": 2,
+    "W03": 2,
+    "W04": 1,
+    "W05": 3,
+    "W06": 2,
+    "W07": 0,
+    "W08": 3
+  },
+  "totalSuccessfulResponses": 17,
+  "checked": [
+    {
+      "name": "W01",
+      "questions": 5,
+      "answers": 4,
+      "evaluated": [
+        {
+          "path": [
+            "q1",
+            "q2",
+            "q4",
+            "q5"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o0"
+            },
+            {
+              "questionId": "q2",
+              "type": "multiple",
+              "optionIds": [
+                "o0",
+                "o1"
+              ]
+            },
+            {
+              "questionId": "q4",
+              "type": "number",
+              "number": "0"
+            },
+            {
+              "questionId": "q5",
+              "type": "number",
+              "number": "0"
+            }
+          ]
+        },
+        {
+          "path": [
+            "q1",
+            "q4",
+            "q5"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o1"
+            },
+            {
+              "questionId": "q4",
+              "type": "number",
+              "number": "20"
+            },
+            {
+              "questionId": "q5",
+              "type": "number",
+              "number": "0"
+            }
+          ]
+        },
+        {
+          "path": [
+            "q1",
+            "q2",
+            "q5"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o0"
+            },
+            {
+              "questionId": "q2",
+              "type": "multiple",
+              "optionIds": [
+                "o1"
+              ]
+            },
+            {
+              "questionId": "q5",
+              "type": "number",
+              "number": "2.5"
+            }
+          ]
+        },
+        {
+          "path": [
+            "q1",
+            "q2",
+            "q3",
+            "q4",
+            "q5"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o0"
+            },
+            {
+              "questionId": "q2",
+              "type": "multiple",
+              "optionIds": [
+                "o2"
+              ]
+            },
+            {
+              "questionId": "q3",
+              "type": "text",
+              "text": "😀汉"
+            },
+            {
+              "questionId": "q4",
+              "type": "number",
+              "number": "40"
+            },
+            {
+              "questionId": "q5",
+              "type": "number",
+              "number": "4.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "W02",
+      "questions": 2,
+      "answers": 2,
+      "evaluated": [
+        {
+          "path": [
+            "q1",
+            "q2"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "number",
+              "number": "10"
+            },
+            {
+              "questionId": "q2",
+              "type": "text",
+              "text": "甲场首份"
+            }
+          ]
+        },
+        {
+          "path": [
+            "q1",
+            "q2"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "number",
+              "number": "90"
+            },
+            {
+              "questionId": "q2",
+              "type": "text",
+              "text": "换版后填写"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "W03",
+      "questions": 2,
+      "answers": 2,
+      "evaluated": [
+        {
+          "path": [
+            "q1",
+            "q2"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "number",
+              "number": "30"
+            },
+            {
+              "questionId": "q2",
+              "type": "single",
+              "optionId": "o0"
+            }
+          ]
+        },
+        {
+          "path": [
+            "q1",
+            "q2"
+          ],
+          "answers": [
+            {
+              "questionId": "q2",
+              "type": "single",
+              "optionId": "o1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "W04",
+      "questions": 4,
+      "answers": 1,
+      "evaluated": [
+        {
+          "path": [
+            "q1",
+            "q2",
+            "q3",
+            "q4"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o0"
+            },
+            {
+              "questionId": "q2",
+              "type": "number",
+              "number": "7"
+            },
+            {
+              "questionId": "q3",
+              "type": "multiple",
+              "optionIds": [
+                "o0",
+                "o2"
+              ]
+            },
+            {
+              "questionId": "q4",
+              "type": "text",
+              "text": "源问卷答卷"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "W05",
+      "questions": 4,
+      "answers": 3,
+      "evaluated": [
+        {
+          "path": [
+            "q1",
+            "q2",
+            "q3",
+            "q4"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o0"
+            },
+            {
+              "questionId": "q2",
+              "type": "number",
+              "number": "2"
+            },
+            {
+              "questionId": "q3",
+              "type": "multiple",
+              "optionIds": [
+                "o0",
+                "o1"
+              ]
+            },
+            {
+              "questionId": "q4",
+              "type": "text",
+              "text": "希望周末"
+            }
+          ]
+        },
+        {
+          "path": [
+            "q1",
+            "q2",
+            "q3",
+            "q4"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o0"
+            },
+            {
+              "questionId": "q2",
+              "type": "number",
+              "number": "5"
+            },
+            {
+              "questionId": "q3",
+              "type": "multiple",
+              "optionIds": [
+                "o1"
+              ]
+            },
+            {
+              "questionId": "q4",
+              "type": "text",
+              "text": "线上参与"
+            }
+          ]
+        },
+        {
+          "path": [
+            "q1",
+            "q3",
+            "q4"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o1"
+            },
+            {
+              "questionId": "q3",
+              "type": "multiple",
+              "optionIds": [
+                "o2"
+              ]
+            },
+            {
+              "questionId": "q4",
+              "type": "text",
+              "text": "不参加线下"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "W06-before",
+      "questions": 4,
+      "answers": 1,
+      "evaluated": [
+        {
+          "path": [
+            "q1",
+            "q2",
+            "q3",
+            "q4"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o0"
+            },
+            {
+              "questionId": "q2",
+              "type": "number",
+              "number": "4"
+            },
+            {
+              "questionId": "q3",
+              "type": "multiple",
+              "optionIds": [
+                "o0"
+              ]
+            },
+            {
+              "questionId": "q4",
+              "type": "text",
+              "text": "派生前"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "W06-after",
+      "questions": 4,
+      "answers": 1,
+      "evaluated": [
+        {
+          "path": [
+            "q1",
+            "q2",
+            "q3",
+            "q4"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "single",
+              "optionId": "o0"
+            },
+            {
+              "questionId": "q2",
+              "type": "number",
+              "number": "6"
+            },
+            {
+              "questionId": "q3",
+              "type": "multiple",
+              "optionIds": [
+                "o2"
+              ]
+            },
+            {
+              "questionId": "q4",
+              "type": "text",
+              "text": "派生后"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "W07",
+      "questions": 2,
+      "answers": 0,
+      "evaluated": []
+    },
+    {
+      "name": "W08",
+      "questions": 1,
+      "answers": 3,
+      "evaluated": [
+        {
+          "path": [
+            "q1"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "number",
+              "number": "2"
+            }
+          ]
+        },
+        {
+          "path": [
+            "q1"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "number",
+              "number": "8"
+            }
+          ]
+        },
+        {
+          "path": [
+            "q1"
+          ],
+          "answers": [
+            {
+              "questionId": "q1",
+              "type": "number",
+              "number": "4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

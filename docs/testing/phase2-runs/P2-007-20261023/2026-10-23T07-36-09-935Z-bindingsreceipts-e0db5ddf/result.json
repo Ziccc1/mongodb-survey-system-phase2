@@ -1,0 +1,17 @@
+{
+  "name": "bindingsreceipts",
+  "start": "2026-10-23T07:36:09.938Z",
+  "finished": "2026-10-23T07:36:12.861Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "--test-concurrency=1",
+    "tests/bindings-receipts.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 1,
+  "status": "failed"
+}

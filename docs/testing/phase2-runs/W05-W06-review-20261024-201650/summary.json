@@ -1,0 +1,466 @@
+{
+  "scope": "W05/W06 read-only implementation review and authorized automated test rerun; no business fixes or W07 migration",
+  "date": "2026-10-24 Asia/Shanghai",
+  "completedAt": "2026-10-24T20:28:16.275818+08:00",
+  "reviewStatus": "needs-two-fixes",
+  "primaryChecks": [
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "start": "2026-10-24T12:18:14.403Z",
+      "finished": "2026-10-24T12:18:28.121Z",
+      "directory": "2026-10-24T12-18-14-401Z-typecheck-9e70c2b5",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "start": "2026-10-24T12:19:16.825Z",
+      "finished": "2026-10-24T12:19:35.418Z",
+      "directory": "2026-10-24T12-19-16-823Z-build-6bd86458",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "domain",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:23.332Z",
+      "finished": "2026-10-24T12:20:24.558Z",
+      "directory": "2026-10-24T12-20-23-330Z-domain-bdbd914e",
+      "tapTestsIncludingParents": 20
+    },
+    {
+      "name": "operationretry",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:24.613Z",
+      "finished": "2026-10-24T12:20:25.163Z",
+      "directory": "2026-10-24T12-20-24-611Z-operationretry-6b6eaa40",
+      "tapTestsIncludingParents": 2
+    },
+    {
+      "name": "crossstatistics",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:25.212Z",
+      "finished": "2026-10-24T12:20:44.095Z",
+      "directory": "2026-10-24T12-20-25-210Z-crossstatistics-69433f46",
+      "tapTestsIncludingParents": 5
+    },
+    {
+      "name": "crossboundaries",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:44.194Z",
+      "finished": "2026-10-24T12:21:00.209Z",
+      "directory": "2026-10-24T12-20-44-193Z-crossboundaries-9ca55a6f",
+      "tapTestsIncludingParents": 4
+    },
+    {
+      "name": "templates",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:16.502Z",
+      "finished": "2026-10-24T12:20:50.523Z",
+      "directory": "2026-10-24T12-20-16-500Z-templates-bd5ace78",
+      "tapTestsIncludingParents": 8
+    },
+    {
+      "name": "templateraces",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:50.578Z",
+      "finished": "2026-10-24T12:21:05.964Z",
+      "directory": "2026-10-24T12-20-50-577Z-templateraces-8a777cd2",
+      "tapTestsIncludingParents": 11
+    },
+    {
+      "name": "templatelineage",
+      "exitCode": 0,
+      "start": "2026-10-24T12:21:06.035Z",
+      "finished": "2026-10-24T12:21:51.129Z",
+      "directory": "2026-10-24T12-21-06-033Z-templatelineage-93ab8e0d",
+      "tapTestsIncludingParents": 7
+    },
+    {
+      "name": "versionsbanks",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:07.079Z",
+      "finished": "2026-10-24T12:22:22.068Z",
+      "directory": "2026-10-24T12-22-07-077Z-versionsbanks-913ab348",
+      "tapTestsIncludingParents": 8
+    },
+    {
+      "name": "surveyssharingusage",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:22.126Z",
+      "finished": "2026-10-24T12:22:38.973Z",
+      "directory": "2026-10-24T12-22-22-123Z-surveyssharingusage-1bed3b96",
+      "tapTestsIncludingParents": 13
+    },
+    {
+      "name": "phase2compatibility",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:39.028Z",
+      "finished": "2026-10-24T12:22:54.472Z",
+      "directory": "2026-10-24T12-22-39-026Z-phase2compatibility-7413e41d",
+      "tapTestsIncludingParents": 7
+    },
+    {
+      "name": "schemafoundation",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:54.521Z",
+      "finished": "2026-10-24T12:23:40.660Z",
+      "directory": "2026-10-24T12-22-54-519Z-schemafoundation-f0b98d11",
+      "tapTestsIncludingParents": 1
+    },
+    {
+      "name": "bindingsreceipts",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:40.710Z",
+      "finished": "2026-10-24T12:23:56.660Z",
+      "directory": "2026-10-24T12-23-40-708Z-bindingsreceipts-4ab87145",
+      "tapTestsIncludingParents": 14
+    },
+    {
+      "name": "httpreceipts",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:56.718Z",
+      "finished": "2026-10-24T12:24:13.410Z",
+      "directory": "2026-10-24T12-23-56-716Z-httpreceipts-c5d8f8c1",
+      "tapTestsIncludingParents": 1
+    },
+    {
+      "name": "integration",
+      "exitCode": 0,
+      "start": "2026-10-24T12:24:13.485Z",
+      "finished": "2026-10-24T12:24:23.194Z",
+      "directory": "2026-10-24T12-24-13-483Z-integration-1a840607",
+      "tapTestsIncludingParents": 14
+    },
+    {
+      "name": "crossbrowser",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:07.469Z",
+      "finished": "2026-10-24T12:22:48.977Z",
+      "directory": "2026-10-24T12-22-07-467Z-crossbrowser-41a6ab1c",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "templatebrowser",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:49.040Z",
+      "finished": "2026-10-24T12:23:12.714Z",
+      "directory": "2026-10-24T12-22-49-038Z-templatebrowser-8d3abc22",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "phase1",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:12.775Z",
+      "finished": "2026-10-24T12:24:07.156Z",
+      "directory": "2026-10-24T12-23-12-773Z-phase1-e3098a1c",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "verifyruntime",
+      "exitCode": 0,
+      "start": "2026-10-24T12:25:20.921Z",
+      "finished": "2026-10-24T12:25:23.773Z",
+      "directory": "2026-10-24T12-25-20-920Z-verifyruntime-667a6e2e",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "verifyphase2",
+      "exitCode": 0,
+      "start": "2026-10-24T12:25:23.828Z",
+      "finished": "2026-10-24T12:25:26.691Z",
+      "directory": "2026-10-24T12-25-23-825Z-verifyphase2-b77d1d7b",
+      "tapTestsIncludingParents": null
+    }
+  ],
+  "existingSuitesPassed": true,
+  "allRunRecords": [
+    {
+      "name": "typecheck",
+      "exitCode": 2,
+      "start": "2026-10-24T12:17:42.044Z",
+      "finished": "2026-10-24T12:17:50.173Z",
+      "directory": "2026-10-24T12-17-42-042Z-typecheck-21dd3fd6",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "start": "2026-10-24T12:18:14.403Z",
+      "finished": "2026-10-24T12:18:28.121Z",
+      "directory": "2026-10-24T12-18-14-401Z-typecheck-9e70c2b5",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "start": "2026-10-24T12:19:16.825Z",
+      "finished": "2026-10-24T12:19:35.418Z",
+      "directory": "2026-10-24T12-19-16-823Z-build-6bd86458",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "templates",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:16.502Z",
+      "finished": "2026-10-24T12:20:50.523Z",
+      "directory": "2026-10-24T12-20-16-500Z-templates-bd5ace78",
+      "tapTestsIncludingParents": 8
+    },
+    {
+      "name": "domain",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:23.332Z",
+      "finished": "2026-10-24T12:20:24.558Z",
+      "directory": "2026-10-24T12-20-23-330Z-domain-bdbd914e",
+      "tapTestsIncludingParents": 20
+    },
+    {
+      "name": "operationretry",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:24.613Z",
+      "finished": "2026-10-24T12:20:25.163Z",
+      "directory": "2026-10-24T12-20-24-611Z-operationretry-6b6eaa40",
+      "tapTestsIncludingParents": 2
+    },
+    {
+      "name": "crossstatistics",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:25.212Z",
+      "finished": "2026-10-24T12:20:44.095Z",
+      "directory": "2026-10-24T12-20-25-210Z-crossstatistics-69433f46",
+      "tapTestsIncludingParents": 5
+    },
+    {
+      "name": "crossboundaries",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:44.194Z",
+      "finished": "2026-10-24T12:21:00.209Z",
+      "directory": "2026-10-24T12-20-44-193Z-crossboundaries-9ca55a6f",
+      "tapTestsIncludingParents": 4
+    },
+    {
+      "name": "templateraces",
+      "exitCode": 0,
+      "start": "2026-10-24T12:20:50.578Z",
+      "finished": "2026-10-24T12:21:05.964Z",
+      "directory": "2026-10-24T12-20-50-577Z-templateraces-8a777cd2",
+      "tapTestsIncludingParents": 11
+    },
+    {
+      "name": "templatelineage",
+      "exitCode": 0,
+      "start": "2026-10-24T12:21:06.035Z",
+      "finished": "2026-10-24T12:21:51.129Z",
+      "directory": "2026-10-24T12-21-06-033Z-templatelineage-93ab8e0d",
+      "tapTestsIncludingParents": 7
+    },
+    {
+      "name": "versionsbanks",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:07.079Z",
+      "finished": "2026-10-24T12:22:22.068Z",
+      "directory": "2026-10-24T12-22-07-077Z-versionsbanks-913ab348",
+      "tapTestsIncludingParents": 8
+    },
+    {
+      "name": "crossbrowser",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:07.469Z",
+      "finished": "2026-10-24T12:22:48.977Z",
+      "directory": "2026-10-24T12-22-07-467Z-crossbrowser-41a6ab1c",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "surveyssharingusage",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:22.126Z",
+      "finished": "2026-10-24T12:22:38.973Z",
+      "directory": "2026-10-24T12-22-22-123Z-surveyssharingusage-1bed3b96",
+      "tapTestsIncludingParents": 13
+    },
+    {
+      "name": "phase2compatibility",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:39.028Z",
+      "finished": "2026-10-24T12:22:54.472Z",
+      "directory": "2026-10-24T12-22-39-026Z-phase2compatibility-7413e41d",
+      "tapTestsIncludingParents": 7
+    },
+    {
+      "name": "templatebrowser",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:49.040Z",
+      "finished": "2026-10-24T12:23:12.714Z",
+      "directory": "2026-10-24T12-22-49-038Z-templatebrowser-8d3abc22",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "schemafoundation",
+      "exitCode": 0,
+      "start": "2026-10-24T12:22:54.521Z",
+      "finished": "2026-10-24T12:23:40.660Z",
+      "directory": "2026-10-24T12-22-54-519Z-schemafoundation-f0b98d11",
+      "tapTestsIncludingParents": 1
+    },
+    {
+      "name": "phase1",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:12.775Z",
+      "finished": "2026-10-24T12:24:07.156Z",
+      "directory": "2026-10-24T12-23-12-773Z-phase1-e3098a1c",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "publish",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:13.078Z",
+      "finished": "2026-10-24T12:23:20.311Z",
+      "directory": "2026-10-24T12-23-13-076Z-publish-acb92e17",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "flow",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:20.366Z",
+      "finished": "2026-10-24T12:23:20.527Z",
+      "directory": "2026-10-24T12-23-20-364Z-flow-0ce4fcc7",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "submit",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:20.573Z",
+      "finished": "2026-10-24T12:23:27.508Z",
+      "directory": "2026-10-24T12-23-20-571Z-submit-9182f3f0",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "statistics",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:27.607Z",
+      "finished": "2026-10-24T12:23:33.631Z",
+      "directory": "2026-10-24T12-23-27-604Z-statistics-3149c1e7",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "edges",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:33.696Z",
+      "finished": "2026-10-24T12:23:40.823Z",
+      "directory": "2026-10-24T12-23-33-694Z-edges-e91a3e38",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "bindingsreceipts",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:40.710Z",
+      "finished": "2026-10-24T12:23:56.660Z",
+      "directory": "2026-10-24T12-23-40-708Z-bindingsreceipts-4ab87145",
+      "tapTestsIncludingParents": 14
+    },
+    {
+      "name": "pagination",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:40.879Z",
+      "finished": "2026-10-24T12:23:47.648Z",
+      "directory": "2026-10-24T12-23-40-877Z-pagination-78b9c0ad",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "browser",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:47.705Z",
+      "finished": "2026-10-24T12:24:07.138Z",
+      "directory": "2026-10-24T12-23-47-703Z-browser-31ad27a7",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "httpreceipts",
+      "exitCode": 0,
+      "start": "2026-10-24T12:23:56.718Z",
+      "finished": "2026-10-24T12:24:13.410Z",
+      "directory": "2026-10-24T12-23-56-716Z-httpreceipts-c5d8f8c1",
+      "tapTestsIncludingParents": 1
+    },
+    {
+      "name": "integration",
+      "exitCode": 0,
+      "start": "2026-10-24T12:24:13.485Z",
+      "finished": "2026-10-24T12:24:23.194Z",
+      "directory": "2026-10-24T12-24-13-483Z-integration-1a840607",
+      "tapTestsIncludingParents": 14
+    },
+    {
+      "name": "verifyruntime",
+      "exitCode": 0,
+      "start": "2026-10-24T12:25:20.921Z",
+      "finished": "2026-10-24T12:25:23.773Z",
+      "directory": "2026-10-24T12-25-20-920Z-verifyruntime-667a6e2e",
+      "tapTestsIncludingParents": null
+    },
+    {
+      "name": "verifyphase2",
+      "exitCode": 0,
+      "start": "2026-10-24T12:25:23.828Z",
+      "finished": "2026-10-24T12:25:26.691Z",
+      "directory": "2026-10-24T12-25-23-825Z-verifyphase2-b77d1d7b",
+      "tapTestsIncludingParents": null
+    }
+  ],
+  "retainedEnvironmentFailure": {
+    "command": "typecheck",
+    "firstExitCode": 2,
+    "reason": "Sandbox EPERM writing existing shared dist; approved retry passed. Initial OS listener read was also sandbox denied and approved read passed."
+  },
+  "protectedSourceFiles": 170,
+  "protectedSourceChanges": [],
+  "applicationFingerprintsUnchanged": true,
+  "applicationCounts": {
+    "project2_app_v1": {
+      "responses": 0,
+      "survey_versions": 0,
+      "surveys": 0,
+      "users": 0
+    },
+    "project2_app_v2": {
+      "operation_receipts": 0,
+      "question_bank_members": 0,
+      "question_banks": 0,
+      "question_grants": 0,
+      "question_items": 0,
+      "question_versions": 0,
+      "responses": 0,
+      "survey_question_bindings": 0,
+      "survey_templates": 0,
+      "survey_versions": 0,
+      "surveys": 0,
+      "template_grants": 0,
+      "users": 1
+    }
+  },
+  "reviewProbeStatus": "completed",
+  "findings": [
+    {
+      "id": "R1",
+      "priority": 2,
+      "file": "apps/api/src/core/cross-statistics.ts",
+      "line": 50,
+      "actual": "Unauthorized private single-question answers/distribution return 422 UNSUPPORTED_QUESTION_TYPE; expected uniform404",
+      "evidence": "review-probes.json#/unauthorizedStatistics"
+    },
+    {
+      "id": "R2",
+      "priority": 2,
+      "file": "apps/web/src/pages/CrossStatisticsPage.vue",
+      "line": 19,
+      "actual": "Retained numeric publication statistics API returns200 and bins but UI boundary-input count0; expected1",
+      "evidence": "review-probes.json#/retainedNumericControls"
+    }
+  ],
+  "testPortsAfter": [],
+  "fixesApplied": false,
+  "databasesRetained": true,
+  "manualTestingPerformed": false,
+  "realP1MigrationPerformed": false
+}

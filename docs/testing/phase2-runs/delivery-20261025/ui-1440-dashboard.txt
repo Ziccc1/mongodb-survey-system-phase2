@@ -1,0 +1,35 @@
+Browser tab: 4, Title: "问卷工作台", URL: "http://localhost:5200/dashboard".
+1 AXWebArea 问卷工作台, URL: localhost:5200/dashboard
+	2 container app
+		3 link Description: 跳到主要内容, Value: localhost:5200/dashboard#main
+		4 container
+			5 link Description: 问卷工作台, Value: localhost:5200/dashboard
+			6 container 主导航
+				7 link Description: 首页, Value: localhost:5200/dashboard
+				8 link Description: 我的问卷, Value: localhost:5200/surveys
+				9 link Description: 题目, Value: localhost:5200/questions
+				10 link Description: 题库, Value: localhost:5200/question-banks
+				11 link Description: 模板广场, Value: localhost:5200/templates
+				12 text p2_manual_1024_b
+				13 button 退出登录
+		14 container
+			15 text 我的工作空间
+			16 heading 你的问卷工作台, Value: 1
+				17 text 你的问卷工作台
+			18 text p2_manual_1024_b，欢迎回来。让新的调查从一个好问题开始。
+			19 link Description: 创建问卷 从空白草稿开始，把想问的问题整理好。 创建一份问卷, Value: localhost:5200/surveys/new
+			20 link Description: 我的问卷 继续编辑、管理收集，查看统计与历史答卷。 进入我的问卷, Value: localhost:5200/surveys
+			21 heading 最近创建, Value: 2
+				22 text 最近创建
+			23 text 继续处理最近的问卷，所有内容来自你的工作空间。
+			24 link Description: 查看全部, Value: localhost:5200/surveys
+			25 content list
+				26 link Description: P2-DELIVERY-20261025 到期状态复测 当前版本 v1 收集中 10/25 10:20 0 份 管理问卷, Value: localhost:5200/surveys/6add675ac62b15cb7bd796a1
+				27 link Description: P2-MAN-20261024-02 活动模板源 尚未发布 草稿 10/24 23:47 0 份 管理问卷, Value: localhost:5200/surveys/6adcd31fba826d37d9e2d275
+				28 link Description: P2-MAN-20261024-02 活动模板源 当前版本 v2 收集中 10/24 23:35 1 份 管理问卷, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259
+				29 link Description: P2-MAN-20261024-02 引用规则草稿 尚未发布 草稿 10/24 23:05 0 份 管理问卷, Value: localhost:5200/surveys/6adcc924ba826d37d9e2d24f
+			30 text 先保存，再发布
+			31 text 编辑内容需要手动保存。发布后可以分享；暂停收集后，可继续修改并发布新版本。
+		32 text 数据库课程项目 · 问卷工作台
+
+The focused UI element is 16 heading 你的问卷工作台, Value: 1

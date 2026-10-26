@@ -1,0 +1,201 @@
+Browser tab: 4, Title: "问卷工作台", URL: "http://localhost:5200/surveys/6adcd31fba826d37d9e2d275".
+1 AXWebArea 问卷工作台, URL: localhost:5200/surveys/6adcd31fba826d37d9e2d275
+	2 container app
+		3 link Description: 跳到主要内容, Value: localhost:5200/surveys/6adcd31fba826d37d9e2d275#main
+		4 container
+			5 link Description: 问卷工作台, Value: localhost:5200/dashboard
+			6 container 主导航
+				7 link Description: 首页, Value: localhost:5200/dashboard
+				8 link Description: 我的问卷, Value: localhost:5200/surveys
+				9 link Description: 题目, Value: localhost:5200/questions
+				10 link Description: 题库, Value: localhost:5200/question-banks
+				11 link Description: 模板广场, Value: localhost:5200/templates
+				12 text p2_manual_1024_b
+				13 button 退出登录
+		14 container
+			15 link Description: ← 返回我的问卷, Value: localhost:5200/surveys
+			16 heading P2-MAN-20261024-02 活动模板源, Value: 1
+				17 text P2-MAN-20261024-02 活动模板源
+			18 text 基本信息和题目分别保存，不会自动保存。 未发布草稿
+			19 button (collapsed) 基本信息与填写设置 展开修改标题、说明和填写策略 +, Secondary Actions: Expand
+				20 text 基本信息与填写设置
+				21 text 展开修改标题、说明和填写策略
+				22 text +
+			23 heading 题目 4 / 100, Value: 2
+				24 text 题目 4 / 100
+			25 container
+				26 heading 正式题目与引用, Value: 2
+					27 text 正式题目与引用
+				28 text 先保存普通编辑，再逐题明确保存正式版，或从我的题目、共享题及题库选用。发布只检查，不会自动生成题版本。
+				29 content list
+					30 container
+						31 text P2-MAN-20261024-02 是否参加下一期活动？ · 尚未正式保存
+						32 button 保存为正式题目
+					33 container
+						34 text P2-MAN-20261024-02 每周可参加几次活动？ · 尚未正式保存
+						35 button 保存为正式题目
+					36 container
+						37 text 偏好的活动形式？ · 尚未正式保存
+						38 button 保存为正式题目
+					39 container
+						40 text 活动安排建议 · 尚未正式保存
+						41 button 保存为正式题目
+				42 button 从题目或题库选用
+			43 container
+				44 heading 1 单选题, Value: 3, ID: heading-20722997-4b11-4e6c-a14f-abed50b98c93
+					45 text 1
+					46 text 单选题
+				47 button (disabled) 第1题上移
+				48 button 第1题下移
+				49 button 删除第1题
+				50 text 题干
+				51 text entry area (disabled) 题干, Value: P2-MAN-20261024-02 是否参加下一期活动？, ID: title-20722997-4b11-4e6c-a14f-abed50b98c93
+				52 text 29 / 500 个字符
+				53 checkbox (settable, integer) Description: 必答, Value: 1
+				54 container 选项
+					55 text 选项
+					56 text 选项 1
+					57 text field (disabled) 选项 1, Value: 参加, ID: option-0e8ef930-bbe0-4eb5-a90f-dbad89c95c28
+					58 text 2 / 200 个字符
+					59 button (disabled) 删除选项1
+					60 text 选项 2
+					61 text field (disabled) 选项 2, Value: 不参加, ID: option-daf8bc4e-5227-4d68-95c7-cae7f0bdd0ce
+					62 text 3 / 200 个字符
+					63 button (disabled) 删除选项2
+					64 button (disabled) 添加选项
+					65 text 需要2—100个选项；删除选项后，相关跳转条件会提示待完善。
+				66 container
+					67 button (expanded) 校验与跳转 1 条跳转规则 −, Secondary Actions: Collapse
+						68 text 校验与跳转
+						69 text 1 条跳转规则
+						70 text −
+					71 container 跳转规则
+						72 text 跳转规则
+						73 text 按从上到下的顺序匹配，首条满足时跳转；未命中时进入下一题。
+						74 text 规则 1
+						75 button (disabled) 规则1上移
+						76 button (disabled) 规则1下移
+						77 button 删除规则
+						78 text 答案等于
+						79 pop up button (collapsed, settable) 答案等于, Value: 不参加, ID: condition-531e6639-592a-4410-b76c-3c8ea5c8bd53, Secondary Actions: Expand
+							80 menu
+								81 参加
+								82 (selected) 不参加
+						83 text 跳转到
+						84 pop up button (collapsed, settable) 跳转到, Value: 第 3 题：偏好的活动形式？, ID: target-531e6639-592a-4410-b76c-3c8ea5c8bd53, Secondary Actions: Expand
+							85 menu
+								86 第 2 题：P2-MAN-20261024-02 每周可参加几次活动？
+								87 (selected) 第 3 题：偏好的活动形式？
+								88 第 4 题：活动安排建议
+						89 button 添加跳转规则
+				90 heading 2 数字题, Value: 3, ID: heading-89104efd-2517-4c84-8289-cbb5242c4199
+					91 text 2
+					92 text 数字题
+				93 button 第2题上移
+				94 button 第2题下移
+				95 button 删除第2题
+				96 text 题干
+				97 text entry area (disabled) 题干, Value: P2-MAN-20261024-02 每周可参加几次活动？, ID: title-89104efd-2517-4c84-8289-cbb5242c4199
+				98 text 29 / 500 个字符
+				99 checkbox (settable, integer) Description: 必答, Value: 1
+				100 container
+					101 button (expanded) 校验与跳转 按需配置 −, Secondary Actions: Collapse
+						102 text 校验与跳转
+						103 text 按需配置
+						104 text −
+					105 container 数字范围
+						106 text 数字范围
+						107 text 数字下限
+						108 text field (disabled) 数字下限, Value: 0, ID: min-89104efd-2517-4c84-8289-cbb5242c4199
+						109 text 数字上限
+						110 text field (disabled) 数字上限, Value: 7, ID: max-89104efd-2517-4c84-8289-cbb5242c4199
+						111 checkbox (disabled, settable, integer) Description: 只允许整数, Value: 1
+						112 text 留空表示不限制该边界；支持小数和科学计数法，保留十进制精度。
+					113 container 跳转规则
+						114 text 跳转规则
+						115 text 按从上到下的顺序匹配，首条满足时跳转；未命中时进入下一题。
+						116 button 添加跳转规则
+				117 heading 3 多选题, Value: 3, ID: heading-4a6c1bf4-d6ab-4bc1-9eea-f38d2dd3b8f8
+					118 text 3
+					119 text 多选题
+				120 button 第3题上移
+				121 button 第3题下移
+				122 button 删除第3题
+				123 text 题干
+				124 text entry area (disabled) 题干, Value: 偏好的活动形式？, ID: title-4a6c1bf4-d6ab-4bc1-9eea-f38d2dd3b8f8
+				125 text 8 / 500 个字符
+				126 checkbox (settable, integer) Description: 必答, Value: 1
+				127 container 选项
+					128 text 选项
+					129 text 选项 1
+					130 text field (disabled) 选项 1, Value: 线下讲座, ID: option-fa1a7c96-2984-4d5f-8b09-0d903e5ca20a
+					131 text 4 / 200 个字符
+					132 button (disabled) 删除选项1
+					133 text 选项 2
+					134 text field (disabled) 选项 2, Value: 线上直播, ID: option-1e310dd5-f45b-4040-b69f-539031915019
+					135 text 4 / 200 个字符
+					136 button (disabled) 删除选项2
+					137 text 选项 3
+					138 text field (disabled) 选项 3, Value: 小组讨论, ID: option-ed633cf9-c58d-451a-9e3b-82a4ff022ab1
+					139 text 4 / 200 个字符
+					140 button (disabled) 删除选项3
+					141 button (disabled) 添加选项
+					142 text 需要2—100个选项；删除选项后，相关跳转条件会提示待完善。
+				143 container
+					144 button (expanded) 校验与跳转 按需配置 −, Secondary Actions: Collapse
+						145 text 校验与跳转
+						146 text 按需配置
+						147 text −
+					148 container 选择数量
+						149 text 选择数量
+						150 text 最少选择
+						151 stepper (disabled, settable, integer) 最少选择, Value: 1, ID: minChoices-4a6c1bf4-d6ab-4bc1-9eea-f38d2dd3b8f8
+						152 text 最多选择
+						153 stepper (disabled, settable, integer) 最多选择, Value: 2, ID: maxChoices-4a6c1bf4-d6ab-4bc1-9eea-f38d2dd3b8f8
+						154 text 留空使用默认限制；两项填相同值表示恰好选择该数量。
+					155 container 跳转规则
+						156 text 跳转规则
+						157 text 按从上到下的顺序匹配，首条满足时跳转；未命中时进入下一题。
+						158 button 添加跳转规则
+				159 heading 4 文本题, Value: 3, ID: heading-ce500f96-1eed-460a-81f4-e430a30cb4e1
+					160 text 4
+					161 text 文本题
+				162 button 第4题上移
+				163 button (disabled) 第4题下移
+				164 button 删除第4题
+				165 text 题干
+				166 text entry area (disabled) 题干, Value: 活动安排建议, ID: title-ce500f96-1eed-460a-81f4-e430a30cb4e1
+				167 text 6 / 500 个字符
+				168 checkbox (settable, integer) Description: 必答, Value: 0
+				169 container
+					170 button (expanded) 校验与跳转 按需配置 −, Secondary Actions: Collapse
+						171 text 校验与跳转
+						172 text 按需配置
+						173 text −
+					174 container 文本长度
+						175 text 文本长度
+						176 text 最少字符
+						177 stepper (disabled, settable) 最少字符, ID: minLength-ce500f96-1eed-460a-81f4-e430a30cb4e1
+						178 text 最多字符
+						179 stepper (disabled, settable, integer) 最多字符, Value: 20, ID: maxLength-ce500f96-1eed-460a-81f4-e430a30cb4e1
+						180 text 按Unicode码点计数；留空分别使用0和10000。
+				181 heading 继续添加题目, Value: 3
+					182 text 继续添加题目
+				183 text 选择题型，添加后直接编辑题干。修改后请手动保存。
+				184 button 添加单选题
+				185 button 添加多选题
+				186 button 添加文本题
+				187 button 添加数字题
+			188 container
+				189 heading 保存编辑, Value: 2
+					190 text 保存编辑
+				191 text 基本信息和题目分别保存；保存草稿不会生成发布版本。 题目已保存 · 修订 0
+				192 button 保存题目
+			193 container
+				194 heading 发布与收集, Value: 2
+					195 text 发布与收集
+				196 button 发布问卷
+				197 link Description: 预览问卷, Value: localhost:5200/surveys/6adcd31fba826d37d9e2d275/preview
+		198 text 数据库课程项目 · 问卷工作台
+
+The focused UI element is 1 AXWebArea 问卷工作台, URL: localhost:5200/surveys/6adcd31fba826d37d9e2d275

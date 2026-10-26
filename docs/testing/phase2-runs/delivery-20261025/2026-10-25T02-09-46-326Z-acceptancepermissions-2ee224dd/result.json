@@ -1,0 +1,16 @@
+{
+  "name": "acceptancepermissions",
+  "start": "2026-10-25T02:09:46.328Z",
+  "finished": "2026-10-25T02:10:01.039Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/phase2/acceptance-permissions.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

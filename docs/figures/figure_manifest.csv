@@ -1,0 +1,4 @@
+﻿id,path,claim,source,generator
+fig2,fig2_mongodb_relations.svg,答卷通过问卷ID和发布号定位历史快照，嵌套内容随业务整体保存。,apps/api/src/database/schema.ts; apps/api/src/core/submission.ts; apps/api/src/core/versions.ts,generate_diagrams.py
+fig3,fig3_version_lifecycle.svg,问卷身份与链接不变，v1与v2分别保存定义、答卷和统计。,docs/testing/manual-execution-evidence.md M06/M08,generate_diagrams.py
+fig4,fig4_survey_branching.svg,跳转决定实际路径，必答校验和保存仅作用于有效路径。,docs/testing/manual-execution-evidence.md M03/M04/M05; packages/shared/src/answers.ts,generate_diagrams.py

@@ -1,0 +1,95 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/auth/me",
+    "who": 0,
+    "status": 200
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb44ebe19e43bd6236db5d",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb44ebe19e43bd6236db5d",
+        "publicId": "bk1tS7_nUi7it-iehhcnkQ",
+        "status": "published",
+        "draftDefinition": {
+          "title": "题库选用验证",
+          "description": "",
+          "questions": [
+            {
+              "id": "76c64a9a-6344-4143-ac0f-242a49c22879",
+              "type": "number",
+              "title": "常用年龄",
+              "required": false,
+              "jumpRules": [],
+              "validation": {
+                "integerOnly": true,
+                "min": "0",
+                "max": "120"
+              }
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": true,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 3,
+        "currentPublishedVersion": 1,
+        "hasUnpublishedChanges": false,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": "2026-10-23T11:28:44.308Z",
+        "createdAt": "2026-10-23T11:28:43.867Z",
+        "updatedAt": "2026-10-23T11:28:44.308Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb44ebe19e43bd6236db5d/statistics?version=1",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "surveyId": "6adb44ebe19e43bd6236db5d",
+        "selectedVersion": 1,
+        "latestPublishedVersion": 1,
+        "cumulativeResponseCount": 1,
+        "currentVersionResponseCount": 1,
+        "selectedVersionResponseCount": 1,
+        "generatedAt": "2026-10-23T11:28:44.550Z",
+        "questionSummaries": [
+          {
+            "questionId": "76c64a9a-6344-4143-ac0f-242a49c22879",
+            "type": "number",
+            "title": "常用年龄",
+            "answeredCount": 1,
+            "average": "0"
+          }
+        ]
+      }
+    }
+  }
+]

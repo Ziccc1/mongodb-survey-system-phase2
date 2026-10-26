@@ -1,0 +1,162 @@
+
+REGRESSION tests/integration.test.ts
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_api_1792673175228_d55affc7
+# Subtest: accounts, persistent drafts, isolation and four-collection initialization
+    # Subtest: four validators and all target indexes exist; initializer is repeatable
+    ok 1 - four validators and all target indexes exist; initializer is repeatable
+      ---
+      duration_ms: 3.6789
+      type: 'test'
+      ...
+    # Subtest: register creates accounts without logging in and exposes only User DTO
+    ok 2 - register creates accounts without logging in and exposes only User DTO
+      ---
+      duration_ms: 140.7115
+      type: 'test'
+      ...
+    # Subtest: duplicate normalized registration and bad credentials are rejected
+    ok 3 - duplicate normalized registration and bad credentials are rejected
+      ---
+      duration_ms: 145.3782
+      type: 'test'
+      ...
+    # Subtest: login sets HttpOnly cookie; current user is restored
+    ok 4 - login sets HttpOnly cookie; current user is restored
+      ---
+      duration_ms: 79.1879
+      type: 'test'
+      ...
+    # Subtest: CSRF, forged fields, duplicate JSON keys, duplicate query and method checks
+    ok 5 - CSRF, forged fields, duplicate JSON keys, duplicate query and method checks
+      ---
+      duration_ms: 6.7167
+      type: 'test'
+      ...
+    # Subtest: unauthenticated management and malformed cookies are rejected
+    ok 6 - unauthenticated management and malformed cookies are rejected
+      ---
+      duration_ms: 1.6929
+      type: 'test'
+      ...
+    # Subtest: create stores server-owned defaults and exact draft Editor DTO
+    ok 7 - create stores server-owned defaults and exact draft Editor DTO
+      ---
+      duration_ms: 17.6484
+      type: 'test'
+      ...
+    # Subtest: own list, stable signed pagination and detail
+    ok 8 - own list, stable signed pagination and detail
+      ---
+      duration_ms: 15.1027
+      type: 'test'
+      ...
+    # Subtest: cross-user reads, cursor reuse and modification are rejected
+    ok 9 - cross-user reads, cursor reuse and modification are rejected
+      ---
+      duration_ms: 8.0109
+      type: 'test'
+      ...
+    # Subtest: fresh backend connection still reads persisted draft; health is ready
+    ok 10 - fresh backend connection still reads persisted draft; health is ready
+      ---
+      duration_ms: 83.5921
+      type: 'test'
+      ...
+    # Subtest: rs0 supports transactions (aborted probe does not persist)
+    ok 11 - rs0 supports transactions (aborted probe does not persist)
+      ---
+      duration_ms: 3.2129
+      type: 'test'
+      ...
+    # Subtest: logout clears cookie; missing-cookie repeat logout remains successful
+    ok 12 - logout clears cookie; missing-cookie repeat logout remains successful
+      ---
+      duration_ms: 1.6377
+      type: 'test'
+      ...
+    # Subtest: initializer refuses unknown old database without changing it
+    ok 13 - initializer refuses unknown old database without changing it
+      ---
+      duration_ms: 21.9923
+      type: 'test'
+      ...
+# Retained test database: project2_test_api_1792673175228_d55affc7
+    1..13
+ok 1 - accounts, persistent drafts, isolation and four-collection initialization
+  ---
+  duration_ms: 2963.4742
+  type: 'test'
+  ...
+1..1
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3602.2266
+
+REGRESSION tests/editor.ts
+P2 synthetic target localhost:27019 / project2_test_editor_1792673179038_45d0800b
+PASS four types, all condition operators, Decimal128 persistence and stable IDs
+PASS semantic no-op keeps revision, definition revision and updatedAt
+PASS metadata changes, runtime-only deadline, Unicode limits and no-op
+PASS invalid ranges, duplicate IDs, malformed conditions and decimal precision rejected
+PASS unfinished target/option references and unsatisfiable publish constraints remain savable
+PASS cross-user PATCH/PUT and anonymous editing rejected
+PASS stale and racing revisions cannot overwrite another save
+PASS paused fixture with response stays editable; policy/state rules and snapshot comparison
+PASS browser adds all four types, edits metadata, options, constraints and rule priority
+PASS browser preserves local edits during real revision conflict and allows explicit resolution
+PASS browser deletion keeps unfinished references, supports save/reload and mobile layout
+{
+  "date": "2026-10-22T12:46:24.587Z",
+  "status": "passed",
+  "database": "project2_test_editor_1792673179038_45d0800b",
+  "checks": [
+    "four types, all condition operators, Decimal128 persistence and stable IDs",
+    "semantic no-op keeps revision, definition revision and updatedAt",
+    "metadata changes, runtime-only deadline, Unicode limits and no-op",
+    "invalid ranges, duplicate IDs, malformed conditions and decimal precision rejected",
+    "unfinished target/option references and unsatisfiable publish constraints remain savable",
+    "cross-user PATCH/PUT and anonymous editing rejected",
+    "stale and racing revisions cannot overwrite another save",
+    "paused fixture with response stays editable; policy/state rules and snapshot comparison",
+    "browser adds all four types, edits metadata, options, constraints and rule priority",
+    "browser preserves local edits during real revision conflict and allows explicit resolution",
+    "browser deletion keeps unfinished references, supports save/reload and mobile layout"
+  ],
+  "checkCount": 11,
+  "realBrowser": "Edge/Chromium via Playwright",
+  "publishedAndResponseFixtures": "DB fixtures only; publication/submission APIs not implemented",
+  "retainedTestData": true,
+  "noSchemaChange": true
+}
+
+REGRESSION tests/character-limits.ts
+P2 synthetic target localhost:27019 / project2_test_characters_1792673186202_8989a807
+{
+  "date": "2026-10-22T12:46:29.915Z",
+  "status": "passed",
+  "database": "project2_test_characters_1792673186202_8989a807",
+  "samples": [
+    "Chinese",
+    "single-code-point emoji",
+    "Chinese + newline + emoji"
+  ],
+  "validCodePoints": 2000,
+  "rejectedCodePoints": 2001,
+  "bypassUiRejectedByApi": true,
+  "overLimitInputPreserved": true,
+  "overLimitUiPosts": 0,
+  "correctedUiPosts": 1,
+  "consoleErrors": [],
+  "retainedTestData": true
+}
+
+REGRESSION tests/browser.ts
+P2 synthetic target localhost:27019 / project2_test_browser_1792673191170_d5bf31aa
+Browser workflow passed; retained database: project2_test_browser_1792673191170_d5bf31aa
+EXISTING ACCOUNT/EDITOR/CHARACTER/BROWSER REGRESSION PASSED

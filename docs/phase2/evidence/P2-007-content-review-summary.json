@@ -1,0 +1,68 @@
+{
+  "created": "2026-10-23T08:25:22.313439+00:00",
+  "scope": "createQuestion/forkQuestion Content validation error classification only; no database connections or service startup",
+  "commands": [
+    {
+      "name": "contenterrors",
+      "exitCode": 1,
+      "result": "docs/testing/phase2-runs/P2-007-content-review-20261023/2026-10-23T08-22-39-798Z-contenterrors-4efa46ee/result.json",
+      "log": "docs/testing/phase2-runs/P2-007-content-review-20261023/2026-10-23T08-22-39-798Z-contenterrors-4efa46ee/output.log"
+    },
+    {
+      "name": "typecheck",
+      "exitCode": 0,
+      "result": "docs/testing/phase2-runs/P2-007-content-review-20261023/2026-10-23T08-23-17-285Z-typecheck-a2adb963/result.json",
+      "log": "docs/testing/phase2-runs/P2-007-content-review-20261023/2026-10-23T08-23-17-285Z-typecheck-a2adb963/output.log"
+    },
+    {
+      "name": "build",
+      "exitCode": 0,
+      "result": "docs/testing/phase2-runs/P2-007-content-review-20261023/2026-10-23T08-23-35-731Z-build-2c990f17/result.json",
+      "log": "docs/testing/phase2-runs/P2-007-content-review-20261023/2026-10-23T08-23-35-731Z-build-2c990f17/output.log"
+    },
+    {
+      "name": "domain",
+      "exitCode": 0,
+      "result": "docs/testing/phase2-runs/P2-007-content-review-20261023/2026-10-23T08-23-48-940Z-domain-9cf74a34/result.json",
+      "log": "docs/testing/phase2-runs/P2-007-content-review-20261023/2026-10-23T08-23-48-940Z-domain-9cf74a34/output.log"
+    }
+  ],
+  "checks": [
+    {
+      "check": "package-lock.json unchanged",
+      "passed": true
+    },
+    {
+      "check": "apps/api/src/database/schema.ts unchanged",
+      "passed": true
+    },
+    {
+      "check": "AI log original byte prefix preserved",
+      "passed": true
+    },
+    {
+      "check": "before-fix reproduction failed as expected; subsequent verification passed",
+      "passed": true
+    },
+    {
+      "check": "domain TAP 20 passed / 0 failed",
+      "passed": true
+    },
+    {
+      "check": "new test is included in domain runner",
+      "passed": true
+    }
+  ],
+  "gitDiffCheckExitCode": 0,
+  "verification": {
+    "domainTests": 20,
+    "newContentErrorTests": 8,
+    "coldImportTests": 8,
+    "typecheck": "passed",
+    "build": "passed"
+  },
+  "limitations": [
+    "No database or browser business tests run for this pure request-boundary change",
+    "Existing Vite app-config and large chunk warnings remain"
+  ]
+}

@@ -1,0 +1,9 @@
+P2 synthetic target localhost:27019 / project2_test_publicationpage_1792815007763_5c5adb89
+Independent retained database: project2_test_publicationpage_1792815007763_5c5adb89
+PASS long editor publication navigates to success page at scroll top; share input and copy button fit the first 1280x800 viewport
+PASS refresh reads actual publication state and preserves link without creating a new version
+PASS pause updates actual status; returning to edit and republishing navigates to success with v2 and unchanged share URL
+PASS closed and refreshed page never shows stale publication success or active collection controls
+PASS lost publication receipt stays on editor; same-key retry redirects only after confirmation and creates exactly one version
+PASS unpublished direct access has no fake link; invalid publication remains on editor without success redirect
+Screenshots and result: docs/testing/screenshots/publication-page-1792815013176

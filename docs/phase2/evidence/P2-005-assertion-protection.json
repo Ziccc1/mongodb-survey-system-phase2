@@ -1,0 +1,35 @@
+{
+  "method": "TypeScript AST comparison of all assert calls, expect calls and complete matcher calls, including their original expected values; before HEAD equals captured pre-round code modulo newlines",
+  "records": [
+    {
+      "file": "tests/integration.test.ts",
+      "assertionAndMatcherCalls": 66,
+      "unchanged": true
+    },
+    {
+      "file": "tests/editor.ts",
+      "assertionAndMatcherCalls": 110,
+      "unchanged": true
+    },
+    {
+      "file": "tests/character-limits.ts",
+      "assertionAndMatcherCalls": 40,
+      "unchanged": true
+    },
+    {
+      "file": "tests/browser.ts",
+      "assertionAndMatcherCalls": 4,
+      "unchanged": true
+    },
+    {
+      "file": "tests/phase1/harness.ts",
+      "assertionAndMatcherCalls": 6,
+      "unchanged": true
+    },
+    {
+      "file": "tests/phase1/redesign.ts",
+      "assertionAndMatcherCalls": 96,
+      "unchanged": true
+    }
+  ]
+}

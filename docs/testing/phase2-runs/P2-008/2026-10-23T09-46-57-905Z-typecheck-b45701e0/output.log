@@ -1,0 +1,20 @@
+
+> project1-survey@1.0.0 typecheck
+> npm run build -w @survey/shared && npm run typecheck -w @survey/api && npm run typecheck -w @survey/web
+
+
+> @survey/shared@1.0.0 build
+> tsc -p tsconfig.json
+
+
+> @survey/api@1.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+src/database/phase2-migration.ts(27,57): error TS2554: Expected 0 arguments, but got 1.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path D:\大三\数据库\pj1_2\apps\api
+npm error workspace @survey/api@1.0.0
+npm error location D:\大三\数据库\pj1_2\apps\api
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsc -p tsconfig.json --noEmit

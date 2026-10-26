@@ -1,0 +1,61 @@
+P2 synthetic target localhost:27019 / project2_test_p2008_review_edges_1792844649922_1c0e6459
+P2-008 thirteen-collection synthetic app: project2_test_p2008_review_edges_1792844649922_1c0e6459
+{
+  "database": "project2_test_p2008_review_edges_1792844649922_1c0e6459",
+  "checks": [],
+  "unauthorizedStatistics": {
+    "checks": [
+      {
+        "suffix": "",
+        "expected": 404,
+        "actual": 404,
+        "code": "NOT_FOUND",
+        "passed": true
+      },
+      {
+        "suffix": "/answers",
+        "expected": 404,
+        "actual": 422,
+        "code": "UNSUPPORTED_QUESTION_TYPE",
+        "passed": false
+      },
+      {
+        "suffix": "/distribution",
+        "expected": 404,
+        "actual": 422,
+        "code": "UNSUPPORTED_QUESTION_TYPE",
+        "passed": false
+      }
+    ],
+    "absentStatus": 404
+  },
+  "retainedNumericControls": {
+    "backendStatisticsStatus": 200,
+    "backendAverage": "5",
+    "backendBins": [
+      {
+        "lower": null,
+        "upper": "0",
+        "upperInclusive": false,
+        "count": 0
+      },
+      {
+        "lower": "0",
+        "upper": "10",
+        "upperInclusive": true,
+        "count": 1
+      },
+      {
+        "lower": "10",
+        "upper": null,
+        "upperInclusive": false,
+        "count": 0
+      }
+    ],
+    "sourceVersionsStatus": 404,
+    "expectedBoundaryInputs": 1,
+    "actualBoundaryInputs": 0,
+    "passed": false
+  },
+  "status": "completed"
+}

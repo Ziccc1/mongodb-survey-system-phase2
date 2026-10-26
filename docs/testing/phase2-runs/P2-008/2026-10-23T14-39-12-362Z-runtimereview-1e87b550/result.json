@@ -1,0 +1,17 @@
+{
+  "name": "runtimereview",
+  "start": "2026-10-23T14:39:12.366Z",
+  "finished": "2026-10-23T14:39:47.894Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "--test-concurrency=1",
+    "tests/runtime-review.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

@@ -5,7 +5,20 @@ import type {UserDocument,SurveyDocument} from '../database/models.js';
 import {canonical} from '@survey/shared';
 import {ApiError,invalid} from '../errors.js';
 export type Auth=(request:{cookies:Record<string,string|undefined>})=>Promise<UserDocument>;
-export interface FaultHooks {afterSnapshotInsert?:()=>void;afterResponseInsert?:()=>void}
+export interface FaultHooks {
+ beforeTemplateFence?:(point:{action:string;templateId:string})=>void|Promise<void>;
+ afterTemplateFence?:(point:{action:string;templateId:string})=>void|Promise<void>;
+ afterTemplateInsert?:()=>void|Promise<void>;
+ afterTemplateSurveyInsert?:()=>void|Promise<void>;
+ afterTemplateBindingsInsert?:()=>void|Promise<void>;
+ afterReportSnapshot?:(point:{timestamp:{t:number;i:number}})=>void|Promise<void>;
+ reportCommand?:(point:{name:string;readConcern:unknown;transaction:boolean})=>void;
+ afterSnapshotInsert?:()=>void;afterResponseInsert?:()=>void;
+ afterQuestionVersionInsert?:()=>void|Promise<void>;
+ beforeAccessFence?:(point:{action:string;questionId:string})=>void|Promise<void>;
+ afterAccessFence?:(point:{action:string;questionId:string})=>void|Promise<void>;
+ afterBankRead?:(point:{action:string;bankId:string})=>void|Promise<void>;
+}
 export const hash=(value:unknown)=>createHash('sha256').update(canonical(value)).digest('hex');
 export function id(value:string){if(!/^[a-fA-F0-9]{24}$/.test(value))throw invalid();return new ObjectId(value);}
 export function positive(value:string){if(!/^[1-9]\d*$/.test(value)||!Number.isSafeInteger(Number(value)))throw invalid();return Number(value);}

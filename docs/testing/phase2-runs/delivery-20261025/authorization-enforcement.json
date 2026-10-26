@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "authorization": "enabled",
+  "mechanism": "SCRAM (driver-negotiated)",
+  "database": "project2_app_v2",
+  "bindIp": "localhost",
+  "checks": [
+    {
+      "name": "Unauthenticated application read refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "Application SCRAM login, thirteen collections and user read",
+      "pass": true
+    },
+    {
+      "name": "users update refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "users delete refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "question_versions update refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "question_versions delete refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "survey_versions update refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "survey_versions delete refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "responses update refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "responses delete refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "operation_receipts update refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "operation_receipts delete refused",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "Application cannot create collection",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "Application cannot change validator",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "Application cannot drop snapshots",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "Application cannot read baseline database",
+      "pass": true,
+      "code": 13
+    },
+    {
+      "name": "Application mutable update permitted in real aborted transaction",
+      "pass": true
+    },
+    {
+      "name": "Wrong password refused",
+      "pass": true,
+      "code": 18
+    },
+    {
+      "name": "Provisioned role matches reviewed privilege allowlist",
+      "pass": true
+    },
+    {
+      "name": "All application documents options and indexes unchanged",
+      "pass": true
+    }
+  ],
+  "passed": 20,
+  "total": 20,
+  "applicationFingerprint": "c16f039fcf0958644a0a2ddcf6dec0c0336ddafc924303bfe17c035baf02dc8f",
+  "at": "2026-10-25T02:42:04.144Z"
+}

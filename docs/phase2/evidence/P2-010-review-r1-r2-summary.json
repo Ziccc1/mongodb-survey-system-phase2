@@ -1,0 +1,425 @@
+{
+  "task": "P2-010 review R1/R2",
+  "status": "fixed-and-verified",
+  "at": "2026-10-24T12:59:02.590158+00:00",
+  "requiredChecks": [
+    {
+      "name": "crossaccessreview",
+      "start": "2026-10-24T12:49:00.240Z",
+      "finished": "2026-10-24T12:49:17.623Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/cross-access-review.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-49-00-238Z-crossaccessreview-102ad61f"
+    },
+    {
+      "name": "crossretainedbrowser",
+      "start": "2026-10-24T12:51:18.753Z",
+      "finished": "2026-10-24T12:51:38.804Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-retained-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-51-18-751Z-crossretainedbrowser-bf803c96"
+    },
+    {
+      "name": "crossstatistics",
+      "start": "2026-10-24T12:50:26.579Z",
+      "finished": "2026-10-24T12:50:41.251Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/cross-statistics.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-50-26-576Z-crossstatistics-12ebe3a5"
+    },
+    {
+      "name": "crossboundaries",
+      "start": "2026-10-24T12:50:41.311Z",
+      "finished": "2026-10-24T12:50:56.641Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/cross-boundaries.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-50-41-309Z-crossboundaries-e7a3a881"
+    },
+    {
+      "name": "crossbrowser",
+      "start": "2026-10-24T12:51:38.870Z",
+      "finished": "2026-10-24T12:52:18.755Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-51-38-868Z-crossbrowser-edc2888a"
+    },
+    {
+      "name": "templates",
+      "start": "2026-10-24T12:50:56.692Z",
+      "finished": "2026-10-24T12:51:15.566Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/templates.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-50-56-691Z-templates-eb4ccf07"
+    },
+    {
+      "name": "domain",
+      "start": "2026-10-24T12:51:15.620Z",
+      "finished": "2026-10-24T12:51:16.926Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/domain-foundation.test.ts",
+        "tests/operation-content-errors.test.ts",
+        "tests/shared-imports.test.mjs"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-51-15-617Z-domain-ace9c8e6"
+    },
+    {
+      "name": "typecheck",
+      "start": "2026-10-24T12:48:46.776Z",
+      "finished": "2026-10-24T12:48:53.034Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-48-46-774Z-typecheck-6d709f95"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-24T12:50:13.604Z",
+      "finished": "2026-10-24T12:50:21.381Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-50-13-602Z-build-81dca0bb"
+    }
+  ],
+  "allRuns": [
+    {
+      "name": "crossaccessreview",
+      "start": "2026-10-24T12:47:24.747Z",
+      "finished": "2026-10-24T12:47:41.950Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/cross-access-review.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-47-24-745Z-crossaccessreview-f1505239"
+    },
+    {
+      "name": "crossretainedbrowser",
+      "start": "2026-10-24T12:47:39.089Z",
+      "finished": "2026-10-24T12:48:01.535Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-retained-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-47-39-086Z-crossretainedbrowser-33ac54c0"
+    },
+    {
+      "name": "typecheck",
+      "start": "2026-10-24T12:48:46.776Z",
+      "finished": "2026-10-24T12:48:53.034Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "typecheck"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-48-46-774Z-typecheck-6d709f95"
+    },
+    {
+      "name": "crossaccessreview",
+      "start": "2026-10-24T12:49:00.240Z",
+      "finished": "2026-10-24T12:49:17.623Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/cross-access-review.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-49-00-238Z-crossaccessreview-102ad61f"
+    },
+    {
+      "name": "build",
+      "start": "2026-10-24T12:50:13.604Z",
+      "finished": "2026-10-24T12:50:21.381Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "build"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-50-13-602Z-build-81dca0bb"
+    },
+    {
+      "name": "crossstatistics",
+      "start": "2026-10-24T12:50:26.579Z",
+      "finished": "2026-10-24T12:50:41.251Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-concurrency=1",
+        "tests/phase2/cross-statistics.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-50-26-576Z-crossstatistics-12ebe3a5"
+    },
+    {
+      "name": "crossboundaries",
+      "start": "2026-10-24T12:50:41.311Z",
+      "finished": "2026-10-24T12:50:56.641Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/cross-boundaries.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-50-41-309Z-crossboundaries-e7a3a881"
+    },
+    {
+      "name": "templates",
+      "start": "2026-10-24T12:50:56.692Z",
+      "finished": "2026-10-24T12:51:15.566Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/templates.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-50-56-691Z-templates-eb4ccf07"
+    },
+    {
+      "name": "domain",
+      "start": "2026-10-24T12:51:15.620Z",
+      "finished": "2026-10-24T12:51:16.926Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/domain-foundation.test.ts",
+        "tests/operation-content-errors.test.ts",
+        "tests/shared-imports.test.mjs"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-51-15-617Z-domain-ace9c8e6"
+    },
+    {
+      "name": "crossretainedbrowser",
+      "start": "2026-10-24T12:51:18.753Z",
+      "finished": "2026-10-24T12:51:38.804Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-retained-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-51-18-751Z-crossretainedbrowser-bf803c96"
+    },
+    {
+      "name": "crossbrowser",
+      "start": "2026-10-24T12:51:38.870Z",
+      "finished": "2026-10-24T12:52:18.755Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 0,
+      "status": "passed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-51-38-868Z-crossbrowser-edc2888a"
+    }
+  ],
+  "preFixReproductionsRetained": [
+    {
+      "name": "crossaccessreview",
+      "start": "2026-10-24T12:47:24.747Z",
+      "finished": "2026-10-24T12:47:41.950Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/phase2/cross-access-review.test.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-47-24-745Z-crossaccessreview-f1505239"
+    },
+    {
+      "name": "crossretainedbrowser",
+      "start": "2026-10-24T12:47:39.089Z",
+      "finished": "2026-10-24T12:48:01.535Z",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--env-file=.env",
+        "--import",
+        "tsx",
+        "tests/phase2/cross-retained-browser.ts"
+      ],
+      "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+      "exitCode": 1,
+      "status": "failed",
+      "directory": "docs/testing/phase2-runs/P2-010-review-r1-r2/2026-10-24T12-47-39-086Z-crossretainedbrowser-33ac54c0"
+    }
+  ],
+  "R1": {
+    "realHttp": true,
+    "unauthorizedTypeResourceEndpointBoundaryCases": 40,
+    "unrelatedHistoryOrPrivateVersionCorruptionCases": 15,
+    "deniedStatus": 404,
+    "deniedCode": "NOT_FOUND",
+    "authorizationSources": [
+      "question owner",
+      "active share from current owner",
+      "owned exact-version publication acquisition fact"
+    ],
+    "retainedNumberSummary": "5",
+    "retainedBins": [
+      0,
+      1,
+      0
+    ],
+    "retainedAnswersAndDistribution": 200,
+    "futureHistoryNotReopened": true,
+    "authorizedIntegrityErrorsRemain503": true
+  },
+  "R2": {
+    "browser": "actual headless Edge",
+    "cases": [
+      "revoked share publication",
+      "template narrow publication"
+    ],
+    "numericControlsPerCase": 1,
+    "typeEvidence": "successful authorized summary has average field, scoped to exact question/version",
+    "invalidBoundaryRecovery": true,
+    "reload": true,
+    "widths": [
+      320,
+      768,
+      1024,
+      1440
+    ],
+    "historyAndFuture404": true,
+    "pageErrors": 0
+  },
+  "applicationsUnchanged": {
+    "project2_app_v1Collections": 4,
+    "project2_app_v2Collections": 13,
+    "project2_app_v2Users": 1,
+    "metadataIndexesCountsBsonEqual": true
+  },
+  "runtimeEvidence": "P2-010-review-r1-r2-runtime.json",
+  "scope": "only R1/R2; preserve W01/W02-W06, no W07, no migration/install/commit/push"
+}

@@ -1,0 +1,81 @@
+Warning: Could not access fileat C:\Users\37905\AppData\Local\mongodb\mongosh\6adcd25f6a66f532886111e5_log: EPERM: operation not permitted, open 'C:\Users\37905\AppData\Local\mongodb\mongosh\6adcd25f6a66f532886111e5_log'
+SURVEYS
+[
+  {
+    _id: ObjectId('6adcc4e5ba826d37d9e2d201'),
+    title: '11',
+    status: 'draft',
+    currentPublishedVersion: null,
+    owner: 'p2_manual_1024_b',
+    questionCount: 1
+  },
+  {
+    _id: ObjectId('6adcc529ba826d37d9e2d205'),
+    title: 'P2-MAN-20261024-02 四型与跳转',
+    status: 'published',
+    currentPublishedVersion: 1,
+    owner: 'p2_manual_1024_a',
+    questionCount: 5
+  },
+  {
+    _id: ObjectId('6adcc6e9ba826d37d9e2d229'),
+    title: 'P2-MAN-20261024-02 满意度甲场',
+    status: 'published',
+    currentPublishedVersion: 1,
+    owner: 'p2_manual_1024_b',
+    questionCount: 2
+  },
+  {
+    _id: ObjectId('6adcc770ba826d37d9e2d236'),
+    title: 'P2-MAN-20261024-02 满意度乙场',
+    status: 'published',
+    currentPublishedVersion: 2,
+    owner: 'p2_manual_1024_b',
+    questionCount: 2
+  },
+  {
+    _id: ObjectId('6adcc924ba826d37d9e2d24f'),
+    title: 'P2-MAN-20261024-02 引用规则草稿',
+    status: 'draft',
+    currentPublishedVersion: null,
+    owner: 'p2_manual_1024_b',
+    questionCount: 2
+  },
+  {
+    _id: ObjectId('6adcd02bba826d37d9e2d259'),
+    title: 'P2-MAN-20261024-02 活动模板源',
+    status: 'published',
+    currentPublishedVersion: 1,
+    owner: 'p2_manual_1024_b',
+    questionCount: 4
+  }
+]
+PUBLIC_GRANTS
+[
+  {
+    _id: ObjectId('6adcd1ffba826d37d9e2d270'),
+    updatedAt: ISODate('2026-10-24T15:42:55.490Z'),
+    questionId: ObjectId('6adcc3d7ba826d37d9e2d1ec'),
+    questionVersionId: ObjectId('6adcc3e4ba826d37d9e2d1ee'),
+    state: 'active',
+    revision: 0,
+    version: 1,
+    title: 'P2-MAN-20261024-02 是否参加下一期活动？',
+    publisher: 'p2_manual_1024_b',
+    author: 'p2_manual_1024_a'
+  },
+  {
+    _id: ObjectId('6adcd20aba826d37d9e2d271'),
+    updatedAt: ISODate('2026-10-24T15:43:06.268Z'),
+    questionId: ObjectId('6adcc3f3ba826d37d9e2d1f0'),
+    questionVersionId: ObjectId('6adcc8c6ba826d37d9e2d24d'),
+    state: 'active',
+    revision: 0,
+    version: 3,
+    title: 'P2-MAN-20261024-02 每周可参加几次活动？',
+    publisher: 'p2_manual_1024_b',
+    author: 'p2_manual_1024_a'
+  }
+]
+TEMPLATES
+[]

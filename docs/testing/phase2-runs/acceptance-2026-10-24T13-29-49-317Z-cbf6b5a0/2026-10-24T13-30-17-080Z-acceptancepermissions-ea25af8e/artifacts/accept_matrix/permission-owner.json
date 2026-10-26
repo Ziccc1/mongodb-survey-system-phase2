@@ -1,0 +1,79 @@
+[
+  {
+    "actor": "owner",
+    "operation": "history",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "private-draft",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "save-version",
+    "expected": 201,
+    "actual": 201,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "new-reference",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "general-fork",
+    "expected": 201,
+    "actual": 201,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "fixed-statistics",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "fixed-statistics/answers",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "fixed-statistics/distribution",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "unacquired-version-statistics",
+    "expected": 200,
+    "actual": 200,
+    "code": null
+  },
+  {
+    "actor": "owner",
+    "operation": "other-owner-statistics",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  },
+  {
+    "actor": "owner",
+    "operation": "source-management",
+    "expected": 404,
+    "actual": 404,
+    "code": "NOT_FOUND"
+  }
+]

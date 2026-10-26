@@ -4,11 +4,13 @@ import { useRoute } from 'vue-router';
 import type { Editor } from '@survey/shared';
 import { api } from '../api';
 import PublicationPanel from '../components/PublicationPanel.vue';
+import TemplatePublisher from '../components/TemplatePublisher.vue';
+import {libraryEnabled} from '../public-config';
 import UiIcon from '../components/UiIcon.vue';
 
 const route = useRoute();
 const survey = ref<Editor | null>(null);
-const loading = ref(true), error = ref(''), locked = ref(false);
+const loading = ref(true), error = ref(''), locked = ref(false), templateLocked = ref(false);
 const expired = computed(() => !!survey.value?.settings.expiresAt && new Date(survey.value.settings.expiresAt).getTime() <= Date.now());
 const collecting = computed(() => survey.value?.status === 'published' && !expired.value);
 const heading = computed(() => {
@@ -57,7 +59,7 @@ onMounted(() => { window.scrollTo({ top: 0, behavior: 'instant' }); load(); });
         <span class="badge">{{ status }}</span>
       </div>
       <div class="publication-content">
-        <PublicationPanel v-if="survey.currentPublishedVersion !== null" :survey="survey" :dirty="false" @changed="load" @published="load" @locked="locked = $event" />
+        <PublicationPanel v-if="survey.currentPublishedVersion !== null" :survey="survey" :dirty="false" :disabled="templateLocked" @changed="load" @published="load" @locked="locked = $event" />
         <div v-else class="panel"><h2>完成配置后即可发布</h2><p class="muted">此问卷还没有正式发布版本，暂时不能分发填写链接。</p><RouterLink class="button primary" :to="`/surveys/${survey.id}`">返回编辑问卷</RouterLink></div>
         <aside class="panel publication-summary" aria-labelledby="publication-summary-heading">
           <h2 id="publication-summary-heading">问卷概况</h2>
@@ -73,6 +75,7 @@ onMounted(() => { window.scrollTo({ top: 0, behavior: 'instant' }); load(); });
           <p class="publication-hint">{{ locked ? '正在确认操作结果，请保持当前页面。' : '需要修改题目时，先暂停收集，再返回编辑页。重新发布后链接保持不变。' }}</p>
         </aside>
       </div>
+      <TemplatePublisher v-if="libraryEnabled()&&survey.currentPublishedVersion!==null" :survey-id="survey.id" :disabled="locked" @locked="templateLocked=$event"/>
     </template>
   </section>
 </template>

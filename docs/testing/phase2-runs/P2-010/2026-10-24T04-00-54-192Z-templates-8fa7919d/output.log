@@ -1,0 +1,55 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_templates_1792814454963_80914f2c
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_templates_1792814454963_80914f2c
+# Subtest: W06 exact grants, fixed publications, adoption, retained rights, historical receipts and HTTP guards
+    # Subtest: private share is insufficient; grant is exact version and exact publisher; original self is implicit
+    ok 1 - private share is insufficient; grant is exact version and exact publisher; original self is implicit
+      ---
+      duration_ms: 413.2106
+      type: 'test'
+      ...
+    # Subtest: new independent instances/defaults; same key concurrent one effect and management revision unchanged
+    ok 2 - new independent instances/defaults; same key concurrent one effect and management revision unchanged
+      ---
+      duration_ms: 169.67
+      type: 'test'
+      ...
+    # Subtest: config preserves identity; narrow right cannot expose history or attach/copy/general fork
+    ok 3 - config preserves identity; narrow right cannot expose history or attach/copy/general fork
+      ---
+      duration_ms: 68.8149
+      type: 'test'
+      ...
+    # Subtest: revoke/unlist stop future use; retained draft publishes, answers and forks; regrant same ID restores eligibility
+    ok 4 - revoke/unlist stop future use; retained draft publishes, answers and forks; regrant same ID restores eligibility
+      ---
+      duration_ms: 272.2012
+      type: 'test'
+      ...
+    # Subtest: both remaining full receipts replay with zero resource reads after state/content changes; mismatched body conflicts
+    ok 5 - both remaining full receipts replay with zero resource reads after state/content changes; mismatched body conflicts
+      ---
+      duration_ms: 50.3727
+      type: 'test'
+      ...
+    # Subtest: strict HTTP/query/405/auth/CSRF and transactional rollback on intermediate faults
+    ok 6 - strict HTTP/query/405/auth/CSRF and transactional rollback on intermediate faults
+      ---
+      duration_ms: 161.3927
+      type: 'test'
+      ...
+    1..6
+ok 1 - W06 exact grants, fixed publications, adoption, retained rights, historical receipts and HTTP guards
+  ---
+  duration_ms: 12706.88
+  type: 'test'
+  ...
+1..1
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13450.3973

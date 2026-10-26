@@ -1,0 +1,60 @@
+TAP version 13
+# Subtest: W02-C nonempty BSON backup / actual restore / fixed plan / interrupted apply and DB-fact recovery
+not ok 1 - W02-C nonempty BSON backup / actual restore / fixed plan / interrupted apply and DB-fact recovery
+  ---
+  duration_ms: 4612.5102
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2-migration.test.ts:1:1420'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + [
+    +   '6adb36b09f89f4b918d7115d:DEFINITION_HASH_OR_CONTENT',
+    +   '6adb36b09f89f4b918d7115f:DEFINITION_HASH_OR_CONTENT',
+    +   '6adb36b09f89f4b918d71161:DEFINITION_HASH_OR_CONTENT',
+    +   '6adb36b09f89f4b918d71164:DEFINITION_HASH_OR_CONTENT',
+    +   '6adb36b09f89f4b918d71166:DEFINITION_HASH_OR_CONTENT',
+    +   '6adb36b09f89f4b918d71168:DEFINITION_HASH_OR_CONTENT',
+    +   '6adb36b09f89f4b918d7115e:RESPONSE_HASH_OR_ANSWERS',
+    +   '6adb36b09f89f4b918d71160:RESPONSE_HASH_OR_ANSWERS',
+    +   '6adb36b09f89f4b918d71162:RESPONSE_HASH_OR_ANSWERS',
+    +   '6adb36b09f89f4b918d71165:RESPONSE_HASH_OR_ANSWERS',
+    +   '6adb36b09f89f4b918d71167:RESPONSE_HASH_OR_ANSWERS',
+    +   '6adb36b09f89f4b918d71169:RESPONSE_HASH_OR_ANSWERS'
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0: '6adb36b09f89f4b918d7115d:DEFINITION_HASH_OR_CONTENT'
+    1: '6adb36b09f89f4b918d7115f:DEFINITION_HASH_OR_CONTENT'
+    2: '6adb36b09f89f4b918d71161:DEFINITION_HASH_OR_CONTENT'
+    3: '6adb36b09f89f4b918d71164:DEFINITION_HASH_OR_CONTENT'
+    4: '6adb36b09f89f4b918d71166:DEFINITION_HASH_OR_CONTENT'
+    5: '6adb36b09f89f4b918d71168:DEFINITION_HASH_OR_CONTENT'
+    6: '6adb36b09f89f4b918d7115e:RESPONSE_HASH_OR_ANSWERS'
+    7: '6adb36b09f89f4b918d71160:RESPONSE_HASH_OR_ANSWERS'
+    8: '6adb36b09f89f4b918d71162:RESPONSE_HASH_OR_ANSWERS'
+    9: '6adb36b09f89f4b918d71165:RESPONSE_HASH_OR_ANSWERS'
+    10: '6adb36b09f89f4b918d71167:RESPONSE_HASH_OR_ANSWERS'
+    11: '6adb36b09f89f4b918d71169:RESPONSE_HASH_OR_ANSWERS'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2-migration.test.ts:50:47)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5167.2029

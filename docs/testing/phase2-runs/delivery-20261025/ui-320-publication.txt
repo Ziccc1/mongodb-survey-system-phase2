@@ -1,0 +1,72 @@
+Browser tab: 4, Title: "问卷工作台", URL: "http://localhost:5200/surveys/6adcd02bba826d37d9e2d259/publication".
+1 AXWebArea 问卷工作台, URL: localhost:5200/surveys/6adcd02bba826d37d9e2d259/publication
+	2 container app
+		3 link Description: 跳到主要内容, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/publication#main
+		4 container
+			5 link Description: 问卷工作台, Value: localhost:5200/dashboard
+			6 container 主导航
+				7 link Description: 首页, Value: localhost:5200/dashboard
+				8 link Description: 我的问卷, Value: localhost:5200/surveys
+				9 link Description: 题目, Value: localhost:5200/questions
+				10 link Description: 题库, Value: localhost:5200/question-banks
+				11 link Description: 模板广场, Value: localhost:5200/templates
+				12 text p2_manual_1024_b
+				13 button 退出登录
+		14 container
+			15 link Description: ← 返回编辑页, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259
+			16 link Description: 我的问卷, Value: localhost:5200/surveys
+			17 text 问卷发布与收集
+			18 heading 发布成功, Value: 1, ID: publication-heading
+				19 text 发布成功
+			20 text 问卷已准备就绪，复制下方链接即可分享。填写者需要登录后作答。 收集中
+			21 heading 发布与收集, Value: 2
+				22 text 发布与收集
+			23 button 暂停收集
+			24 button 关闭问卷
+			25 link Description: 预览问卷, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/preview
+			26 text 当前发布 v2 · 累计 1 份 · 当前版本 0 份
+			27 text 分享链接
+			28 text field 分享链接, Value: http://localhost:5200/survey/bfo_SyXHqsrpbNOuukumTg, ID: share-6adcd02bba826d37d9e2d259
+			29 button 复制链接
+			30 text 此链接仅限本机使用，尚不能从其他设备或公网访问。
+			31 link Description: 打开填写页, Value: localhost:5200/survey/bfo_SyXHqsrpbNOuukumTg
+			32 link Description: 历史版本, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/versions
+			33 link Description: 查看统计, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/statistics
+			34 link Description: 历史答卷, Value: localhost:5200/surveys/6adcd02bba826d37d9e2d259/responses
+			35 container 问卷概况
+				36 heading 问卷概况, Value: 2, ID: publication-summary-heading
+					37 text 问卷概况
+				38 text P2-MAN-20261024-02 活动模板源
+				39 definition list
+					40 container 当前发布版本
+						41 text 当前发布版本
+					42 text v2
+					43 container 累计答卷
+						44 text 累计答卷
+					45 text 1 份
+					46 container 当前版本答卷
+						47 text 当前版本答卷
+					48 text 0 份
+					49 container 截止时间
+						50 text 截止时间
+					51 text 未设置
+					52 container 匿名填写
+						53 text 匿名填写
+					54 text 允许
+					55 container 重复填写
+						56 text 重复填写
+					57 text 不允许
+				58 text 需要修改题目时，先暂停收集，再返回编辑页。重新发布后链接保持不变。
+			59 heading 发布为公开结构模板, Value: 2
+				60 text 发布为公开结构模板
+			61 text 明确选择已有发布版，模板固定其结构。仅有私人共享不足以公开；每位上游作者需给当前发布者具体版本的公开授权。
+			62 container
+				63 text 源问卷发布版
+				64 pop up button (collapsed, settable) 源问卷发布版, Value: 发布 v2, ID: template-release, Secondary Actions: Expand
+					65 menu
+						66 (selected) 发布 v2
+						67 发布 v1
+			68 button 创建固定公开模板
+		69 text 数据库课程项目 · 问卷工作台
+
+The focused UI element is 18 heading 发布成功, Value: 1, ID: publication-heading

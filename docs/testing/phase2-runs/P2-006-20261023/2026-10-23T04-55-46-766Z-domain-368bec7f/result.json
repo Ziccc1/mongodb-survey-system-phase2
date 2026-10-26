@@ -1,0 +1,16 @@
+{
+  "name": "domain",
+  "start": "2026-10-23T04:55:46.768Z",
+  "finished": "2026-10-23T04:55:55.385Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/domain-foundation.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 1,
+  "status": "failed"
+}

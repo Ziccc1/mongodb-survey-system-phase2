@@ -9,14 +9,15 @@ import {ApiError} from '../errors.js';
 import {fromBson,toBson} from '../question-codec.js';
 import {hash,own,key,pageParams,positive,readCursor,signCursor,publishSchema,revisionSchema} from './common.js';
 import type {Auth,FaultHooks} from './common.js';
-import {versionRepository,requireVersion,versionDto} from './versions.js';
+import {versionRepository,requireVersion,versionDto,validateStoredVersion} from './versions.js';
 import type {VersionDocument} from './versions.js';
 export const transactionOptions={readConcern:{level:'snapshot' as const},writeConcern:{w:'majority' as const},readPreference:'primary' as const};
-export function registerPublication(app:FastifyInstance,db:Db,client:MongoClient,auth:Auth,config:Config,faults:FaultHooks={}){
+export function registerPublication(app:FastifyInstance,db:Db,client:MongoClient,auth:Auth,config:Config,faults:FaultHooks={},phase2Publish?:(actorId:SurveyDocument['ownerId'],surveyId:string,body:PublishCommand,key:string)=>Promise<{httpStatus:200|201;data:PublishReceipt}>){
   const surveys=db.collection<SurveyDocument>('surveys'),versions=versionRepository(db);
   function receipt(s:SurveyDocument,v:VersionDocument,body:PublishCommand,replayed:boolean):PublishReceipt{return {surveyId:s._id.toHexString(),publishedVersion:v.version,status:'published',revision:body.expectedRevision+1,publishedAt:v.publishedAt.toISOString(),firstPublishedAt:(s.firstPublishedAt??v.publishedAt).toISOString(),shareUrl:`${config.publicAppUrl ?? config.origin}/survey/${s.publicId}`,replayed};}
   app.post<{Params:{surveyId:string};Body:PublishCommand}>('/api/v1/surveys/:surveyId/publish',{schema:{body:publishSchema}},async(request,reply)=>{
     const user=await auth(request),operationKey=key(request.headers['publication-key']),body=request.body,requestHash=hash(body);
+    if(phase2Publish){const result=await phase2Publish(user._id,request.params.surveyId,body,operationKey);return reply.code(result.httpStatus).send({data:result.data});}
     let replayed=false;
     const perform=async(session?:ClientSession)=>{
       const s=await own(db,request.params.surveyId,user._id,session);
@@ -57,6 +58,7 @@ export function registerPublication(app:FastifyInstance,db:Db,client:MongoClient
     const after=p.cursor?readCursor(p.cursor,scope,config.cursorSecret):undefined;
     if(after!==undefined&&(typeof after!=='number'||!Number.isSafeInteger(after)||after<1))throw new ApiError(400,'INVALID_CURSOR','版本游标无效');
     const rows=await versions.list(s._id,after as number|undefined,p.limit+1),items=rows.slice(0,p.limit);
+    for(const v of items)await validateStoredVersion(db,v);
     return {data:{surveyId:s._id.toHexString(),latestPublishedVersion:s.currentPublishedVersion,items:items.map(v=>({publishedVersion:v.version,title:versionDto(v).definition.title,publishedAt:v.publishedAt.toISOString(),legacy:false})),nextCursor:rows.length>p.limit?signCursor(scope,items.at(-1)!.version,config.cursorSecret):null}};
   });
   app.get<{Params:{surveyId:string;version:string}}>('/api/v1/surveys/:surveyId/versions/:version',async request=>{const user=await auth(request),s=await own(db,request.params.surveyId,user._id);return {data:versionDto(await requireVersion(db,s._id,positive(request.params.version)))};});

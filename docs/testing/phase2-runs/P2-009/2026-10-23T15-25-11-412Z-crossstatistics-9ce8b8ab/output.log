@@ -1,0 +1,43 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_cross_statistics_1792769112114_6b0a5384
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_cross_statistics_1792769112114_6b0a5384
+# Subtest: W05 real four-type cross statistics, retained permissions, exact snapshot pages and zero-write reads
+    # Subtest: T20 hand oracle, four types, exact bins/zero options and old per-release coexist
+    ok 1 - T20 hand oracle, four types, exact bins/zero options and old per-release coexist
+      ---
+      duration_ms: 614.9805
+      type: 'test'
+      ...
+    # Subtest: real atClusterTime pages exclude writes accepted earlier but committed after page1; numeric order and scope
+    ok 2 - real atClusterTime pages exclude writes accepted earlier but committed after page1; numeric order and scope
+      ---
+      duration_ms: 697.3123
+      type: 'test'
+      ...
+    # Subtest: unanswered, actual repeats vs key replay, no data and exact Decimal numeric frequency 0/2/10
+    ok 3 - unanswered, actual repeats vs key replay, no data and exact Decimal numeric frequency 0/2/10
+      ---
+      duration_ms: 1662.1124
+      type: 'test'
+      ...
+    # Subtest: owner-only scope; share revocation retains own published statistics; unrelated corruption excluded; relevant mappings fail
+    ok 4 - owner-only scope; share revocation retains own published statistics; unrelated corruption excluded; relevant mappings fail
+      ---
+      duration_ms: 612.1064
+      type: 'test'
+      ...
+    1..4
+ok 1 - W05 real four-type cross statistics, retained permissions, exact snapshot pages and zero-write reads
+  ---
+  duration_ms: 19750.7406
+  type: 'test'
+  ...
+1..1
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20485.0227

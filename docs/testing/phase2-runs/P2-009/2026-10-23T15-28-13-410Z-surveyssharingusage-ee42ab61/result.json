@@ -1,0 +1,17 @@
+{
+  "name": "surveyssharingusage",
+  "start": "2026-10-23T15:28:13.412Z",
+  "finished": "2026-10-23T15:28:36.143Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "--test-concurrency=1",
+    "tests/phase2/surveys-sharing-usage.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 1,
+  "status": "failed"
+}

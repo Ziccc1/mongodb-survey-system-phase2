@@ -1,0 +1,270 @@
+{
+  "task": "P2-006-import-review",
+  "status": "failed",
+  "passed": 51,
+  "total": 52,
+  "checks": [
+    {
+      "name": "unchanged package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "unchanged package.json",
+      "passed": true
+    },
+    {
+      "name": "unchanged packages/shared/package.json",
+      "passed": true
+    },
+    {
+      "name": "unchanged packages/shared/src/question-content.ts",
+      "passed": true
+    },
+    {
+      "name": "AI byte prefix preserved",
+      "passed": true
+    },
+    {
+      "name": "questions code identical except imports",
+      "passed": true
+    },
+    {
+      "name": "questions no barrel back import",
+      "passed": true
+    },
+    {
+      "name": "answers code identical except imports",
+      "passed": true
+    },
+    {
+      "name": "answers no barrel back import",
+      "passed": true
+    },
+    {
+      "name": "leaf has no imports",
+      "passed": true
+    },
+    {
+      "name": "Unicode primitive unchanged",
+      "passed": true
+    },
+    {
+      "name": "DefinitionIssue shape unchanged",
+      "passed": true
+    },
+    {
+      "name": "compiled shared runtime graph acyclic",
+      "passed": true,
+      "detail": {
+        "answers.js": [
+          "questions.js",
+          "validation-common.js"
+        ],
+        "core-types.js": [],
+        "index.js": [
+          "answers.js",
+          "core-types.js",
+          "question-content.js",
+          "validation-common.js",
+          "validation-common.js",
+          "questions.js"
+        ],
+        "question-content.js": [
+          "questions.js"
+        ],
+        "questions.js": [
+          "validation-common.js"
+        ],
+        "validation-common.js": []
+      }
+    },
+    {
+      "name": "actual exit sharedimports",
+      "passed": true
+    },
+    {
+      "name": "actual exit typecheck",
+      "passed": true
+    },
+    {
+      "name": "actual exit build",
+      "passed": true
+    },
+    {
+      "name": "actual exit domain",
+      "passed": true
+    },
+    {
+      "name": "actual exit flow",
+      "passed": true
+    },
+    {
+      "name": "normal domain includes cold imports",
+      "passed": true
+    },
+    {
+      "name": "local link 原始 P2-006 Prompt",
+      "passed": true,
+      "detail": "prompts/P2-006-domain-schema-foundation.md"
+    },
+    {
+      "name": "local link question-content.ts",
+      "passed": true,
+      "detail": "../../packages/shared/src/question-content.ts"
+    },
+    {
+      "name": "local link content-codec.ts",
+      "passed": true,
+      "detail": "../../apps/api/src/content-codec.ts"
+    },
+    {
+      "name": "local link question-codec.ts",
+      "passed": true,
+      "detail": "../../apps/api/src/question-codec.ts"
+    },
+    {
+      "name": "local link phase2-models.ts",
+      "passed": true,
+      "detail": "../../apps/api/src/database/phase2-models.ts"
+    },
+    {
+      "name": "local link phase2-schema.ts",
+      "passed": true,
+      "detail": "../../apps/api/src/database/phase2-schema.ts"
+    },
+    {
+      "name": "local link schema-registry.ts",
+      "passed": true,
+      "detail": "../../apps/api/src/database/schema-registry.ts"
+    },
+    {
+      "name": "local link initialize.ts",
+      "passed": true,
+      "detail": "../../apps/api/src/database/initialize.ts"
+    },
+    {
+      "name": "local link phase2-initialize.ts",
+      "passed": true,
+      "detail": "../../apps/api/src/database/phase2-initialize.ts"
+    },
+    {
+      "name": "local link document-guards.ts",
+      "passed": true,
+      "detail": "../../apps/api/src/database/document-guards.ts"
+    },
+    {
+      "name": "local link 领域测试",
+      "passed": true,
+      "detail": "../../tests/domain-foundation.test.ts"
+    },
+    {
+      "name": "local link Schema测试",
+      "passed": true,
+      "detail": "../../tests/schema-foundation.test.ts"
+    },
+    {
+      "name": "local link P2-006-summary.json",
+      "passed": true,
+      "detail": "evidence/P2-006-summary.json"
+    },
+    {
+      "name": "local link matrix.json",
+      "passed": true,
+      "detail": "../../docs/testing/phase2-runs/P2-006-20261023/2026-10-23T05-08-42-135Z-schemafoundation-02263d5d/artifacts/schema-foundation/matrix.json"
+    },
+    {
+      "name": "local link 运行目录",
+      "passed": true,
+      "detail": "../testing/phase2-runs/P2-006-20261023/README.md"
+    },
+    {
+      "name": "local link validation-common.ts",
+      "passed": true,
+      "detail": "../../packages/shared/src/validation-common.ts"
+    },
+    {
+      "name": "local link shared-imports.test.mjs",
+      "passed": true,
+      "detail": "../../tests/shared-imports.test.mjs"
+    },
+    {
+      "name": "local link 本轮日志",
+      "passed": true,
+      "detail": "../testing/phase2-runs/P2-006-import-review-20261023/README.md"
+    },
+    {
+      "name": "local link 汇总",
+      "passed": true,
+      "detail": "evidence/P2-006-import-review-summary.json"
+    },
+    {
+      "name": "local link 保护核对",
+      "passed": false,
+      "detail": "evidence/P2-006-import-review-static-check.json"
+    },
+    {
+      "name": "local link 问题及修复说明",
+      "passed": true,
+      "detail": "../../../phase2/schema-foundation.md#shared-import-review"
+    },
+    {
+      "name": "local link 机器汇总",
+      "passed": true,
+      "detail": "../../../phase2/evidence/P2-006-import-review-summary.json"
+    },
+    {
+      "name": "local link result",
+      "passed": true,
+      "detail": "2026-10-23T07-08-08-481Z-sharedimports-697f12cc/result.json"
+    },
+    {
+      "name": "local link output",
+      "passed": true,
+      "detail": "2026-10-23T07-08-08-481Z-sharedimports-697f12cc/output.log"
+    },
+    {
+      "name": "local link result",
+      "passed": true,
+      "detail": "2026-10-23T07-08-47-256Z-typecheck-1ffc088f/result.json"
+    },
+    {
+      "name": "local link output",
+      "passed": true,
+      "detail": "2026-10-23T07-08-47-256Z-typecheck-1ffc088f/output.log"
+    },
+    {
+      "name": "local link result",
+      "passed": true,
+      "detail": "2026-10-23T07-08-52-724Z-build-cf3593ed/result.json"
+    },
+    {
+      "name": "local link output",
+      "passed": true,
+      "detail": "2026-10-23T07-08-52-724Z-build-cf3593ed/output.log"
+    },
+    {
+      "name": "local link result",
+      "passed": true,
+      "detail": "2026-10-23T07-08-59-084Z-domain-2d37753a/result.json"
+    },
+    {
+      "name": "local link output",
+      "passed": true,
+      "detail": "2026-10-23T07-08-59-084Z-domain-2d37753a/output.log"
+    },
+    {
+      "name": "local link result",
+      "passed": true,
+      "detail": "2026-10-23T07-09-00-387Z-flow-673dd855/result.json"
+    },
+    {
+      "name": "local link output",
+      "passed": true,
+      "detail": "2026-10-23T07-09-00-387Z-flow-673dd855/output.log"
+    },
+    {
+      "name": "git diff whitespace",
+      "passed": true
+    }
+  ]
+}

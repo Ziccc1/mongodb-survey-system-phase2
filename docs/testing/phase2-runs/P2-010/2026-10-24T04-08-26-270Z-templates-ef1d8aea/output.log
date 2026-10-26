@@ -1,0 +1,61 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_templates_1792814907040_fc79d38a
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_templates_1792814907040_fc79d38a
+# Subtest: W06 exact grants, fixed publications, adoption, retained rights, historical receipts and HTTP guards
+    # Subtest: private share is insufficient; grant is exact version and exact publisher; original self is implicit
+    ok 1 - private share is insufficient; grant is exact version and exact publisher; original self is implicit
+      ---
+      duration_ms: 409.3876
+      type: 'test'
+      ...
+    # Subtest: new independent instances/defaults; same key concurrent one effect and management revision unchanged
+    ok 2 - new independent instances/defaults; same key concurrent one effect and management revision unchanged
+      ---
+      duration_ms: 211.5251
+      type: 'test'
+      ...
+    # Subtest: config preserves identity; narrow right cannot expose history or attach/copy/general fork
+    ok 3 - config preserves identity; narrow right cannot expose history or attach/copy/general fork
+      ---
+      duration_ms: 62.2465
+      type: 'test'
+      ...
+    # Subtest: both real template operations confirm labelled unknown commit from immutable receipts without repeating business
+    ok 4 - both real template operations confirm labelled unknown commit from immutable receipts without repeating business
+      ---
+      duration_ms: 6935.8457
+      type: 'test'
+      ...
+    # Subtest: revoke/unlist stop future use; retained draft publishes, answers and forks; regrant same ID restores eligibility
+    ok 5 - revoke/unlist stop future use; retained draft publishes, answers and forks; regrant same ID restores eligibility
+      ---
+      duration_ms: 249.7616
+      type: 'test'
+      ...
+    # Subtest: both remaining full receipts replay with zero resource reads after state/content changes; mismatched body conflicts
+    ok 6 - both remaining full receipts replay with zero resource reads after state/content changes; mismatched body conflicts
+      ---
+      duration_ms: 45.5542
+      type: 'test'
+      ...
+    # Subtest: strict HTTP/query/405/auth/CSRF and transactional rollback on intermediate faults
+    ok 7 - strict HTTP/query/405/auth/CSRF and transactional rollback on intermediate faults
+      ---
+      duration_ms: 157.0495
+      type: 'test'
+      ...
+    1..7
+ok 1 - W06 exact grants, fixed publications, adoption, retained rights, historical receipts and HTTP guards
+  ---
+  duration_ms: 20500.3512
+  type: 'test'
+  ...
+1..1
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 21246.885

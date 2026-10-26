@@ -1,0 +1,19 @@
+{
+  "fig2": {
+    "title": "图2  MongoDB集合关联关系",
+    "claim": "答卷通过问卷ID和发布号定位历史快照，嵌套内容随业务整体保存。",
+    "source": "apps/api/src/database/schema.ts; apps/api/src/core/submission.ts; apps/api/src/core/versions.ts"
+  },
+  "fig3": {
+    "title": "图3  同链接重新发布与历史答卷保留",
+    "claim": "问卷身份与链接不变，v1与v2分别保存定义、答卷和统计。",
+    "source": "docs/testing/manual-execution-evidence.md M06/M08",
+    "v1_count": 2,
+    "v2_count": 1
+  },
+  "fig4": {
+    "title": "图4  运动问卷的条件跳转与改答处理",
+    "claim": "跳转决定实际路径，必答校验和保存仅作用于有效路径。",
+    "source": "docs/testing/manual-execution-evidence.md M03/M04/M05; packages/shared/src/answers.ts"
+  }
+}

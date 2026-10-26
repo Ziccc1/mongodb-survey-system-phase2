@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "scripts/verify-runtime-baseline.ts",
+    "--expect-empty"
+  ],
+  "started": "2026-10-23T14:39:44.883Z",
+  "finished": "2026-10-23T14:39:47.860Z",
+  "exitCode": 1,
+  "signal": null,
+  "timedOut": false
+}

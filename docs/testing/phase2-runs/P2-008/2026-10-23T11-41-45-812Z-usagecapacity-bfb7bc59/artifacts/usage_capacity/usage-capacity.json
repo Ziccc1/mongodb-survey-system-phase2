@@ -1,0 +1,45 @@
+{
+  "fixture": "explicit synthetic storage fixture, not 1001 claimed UI operations",
+  "versions": 1001,
+  "overflow": {
+    "status": 422,
+    "response": {
+      "error": {
+        "code": "USAGE_SCOPE_TOO_LARGE",
+        "message": "请限定正式版本后查询",
+        "details": [],
+        "traceId": "1adf8060-6298-4d6f-a4ea-1d95bd602e1a"
+      }
+    }
+  },
+  "limited": {
+    "status": 200,
+    "response": {
+      "data": {
+        "items": [
+          {
+            "surveyNumber": "hHesxby9e03tX6u_lt91_NKY",
+            "versions": [
+              {
+                "versionId": "6adb480517b4041f857885ae",
+                "version": 1,
+                "isDraft": false,
+                "isCurrent": false,
+                "hasHistorical": true
+              }
+            ],
+            "isDraft": false,
+            "isCurrent": false,
+            "onlyHistorical": true,
+            "surveyId": "6adb480517b4041f857885b0",
+            "title": "容量边界问卷",
+            "managePath": "/surveys/6adb480517b4041f857885b0"
+          }
+        ],
+        "nextCursor": null
+      }
+    }
+  },
+  "fingerprintBefore": "45dffefa933dda0e5414186937f8c5644ae46c81d4aaa7626ed81afb20ccfb29",
+  "fingerprintAfter": "45dffefa933dda0e5414186937f8c5644ae46c81d4aaa7626ed81afb20ccfb29"
+}

@@ -14,22 +14,49 @@ import { MongoClient, ObjectId, MongoServerError } from 'mongodb';
 import { codePointLength, normalizeUsername, credentialsSchema, createSurveySchema, surveyTextIssues } from '@survey/shared';
 import type { Credentials, CreateSurvey } from '@survey/shared';
 import type { Config } from './config.js';
+import { validateDatabaseTarget,validatePhase2ApplicationTarget } from './config.js';
+import {verifyPhase2Database} from './database/phase2-initialize.js';
+import {openPhase2ApplicationContext} from './database/phase2-context.js';
+import {registerLibraryRoutes,libraryEndpoints} from './core/library-routes.js';
+import {registerCrossStatistics,crossEndpoints} from './core/cross-statistics-routes.js';
+import {registerTemplateRoutes,templateEndpoints} from './core/template-routes.js';
 import type { UserDocument, SurveyDocument } from './database/models.js';
 import { verifySchema } from './database/initialize.js';
+import { assertOwnedDatabaseInstance, verifyConnectedDatabaseInstance } from './database/instance-ownership.js';
 import { userDto, editorDto, summaryDto } from './dto.js';
+import {databaseClientOptions} from './database/credentials.js';
 import { ApiError, invalid } from './errors.js';
 import { hashPassword, verifyPassword, signAuth, readAuth, encodeCursor, decodeCursor, parseUniqueJson } from './security.js';
 
 export async function buildApp(config: Config, options: { logger?: boolean; faults?: FaultHooks } = {}) {
+  return buildRuntime(config,options,false);
+}
+export async function buildPhase2App(config:Config,options:{logger?:boolean;faults?:FaultHooks}={}) {
+  return buildRuntime(config,options,true);
+}
+async function buildRuntime(config:Config,options:{logger?:boolean;faults?:FaultHooks},phase2:boolean) {
+  if(phase2)validatePhase2ApplicationTarget(config.uri,config.dbName);else validateDatabaseTarget(config.uri, config.dbName);
+  const ownedInstance = assertOwnedDatabaseInstance();
   const app = Fastify({ logger: options.logger ?? true, bodyLimit: 2097152, genReqId: () => randomUUID(), ajv: { customOptions: { removeAdditional: false, coerceTypes: false, useDefaults: false } } });
-  const client = new MongoClient(config.uri, { serverSelectionTimeoutMS: 3000 });
-  await client.connect(); const db = client.db(config.dbName); await verifySchema(db);
+  const client = new MongoClient(config.uri, { ...databaseClientOptions(config.databaseAuth),serverSelectionTimeoutMS: 3000,monitorCommands:!!options.faults?.reportCommand });
+  if(options.faults?.reportCommand)client.on('commandStarted',e=>options.faults!.reportCommand!({name:e.commandName,readConcern:e.command.readConcern,transaction:e.command.autocommit===false}));
+  try {
+    await client.connect();
+    await verifyConnectedDatabaseInstance(client, ownedInstance);
+    if(phase2)await verifyPhase2Database(client.db(config.dbName));else await verifySchema(client.db(config.dbName));
+  } catch (error) {
+    await client.close();
+    await app.close();
+    throw error;
+  }
+  const db = client.db(config.dbName);
+  const phase2Context=phase2?await openPhase2ApplicationContext({uri:config.uri,dbName:config.dbName,databaseAuth:config.databaseAuth},options.faults):null;
   const users = db.collection<UserDocument>('users'), surveys = db.collection<SurveyDocument>('surveys');
   const dummyHash = await hashPassword(randomBytes(32).toString('hex'));
-  app.addHook('onClose', async () => { await client.close(); });
+  app.addHook('onClose', async () => { await phase2Context?.close();await client.close(); });
   app.get('/app-config.js', async (_request, reply) => {
     reply.type('application/javascript').header('Cache-Control','no-store');
-    return `window.__SURVEY_CONFIG__=${JSON.stringify({publicAppUrl:config.publicAppUrl ?? config.origin}).replaceAll('<','\\u003c')};`;
+    return `window.__SURVEY_CONFIG__=${JSON.stringify({publicAppUrl:config.publicAppUrl ?? config.origin,...(phase2?{libraryEnabled:true}:{})}).replaceAll('<','\\u003c')};`;
   });
   await app.register(cookie);
   await app.register(rateLimit, { max: 180, timeWindow: '1 minute', errorResponseBuilder: () => ({ statusCode: 429, code: 'RATE_LIMITED', error: 'Too Many Requests', message: '请求过于频繁，请稍后重试' }) });
@@ -48,7 +75,8 @@ export async function buildApp(config: Config, options: { logger?: boolean; faul
     const paged = pathname === "/api/v1/surveys" || /^\/api\/v1\/surveys\/[^/]+\/versions$/.test(pathname);
     const versionPaged = /^\/api\/v1\/surveys\/[^/]+\/(responses|questions\/[^/]+\/answers)$/.test(pathname);
     const statistics = /^\/api\/v1\/surveys\/[^/]+\/(statistics|questions\/[^/]+\/statistics)$/.test(pathname);
-    const allowedQuery = request.method !== "GET" ? [] : paged ? ["limit","cursor"] : versionPaged ? ["version","limit","cursor"] : statistics ? ["version"] : [];
+    const extension=phase2?[...libraryEndpoints,...crossEndpoints,...templateEndpoints].find(([pattern])=>pattern.test(pathname)):undefined;
+    const allowedQuery = request.method !== "GET" ? [] : extension?extension[2]:paged ? ["limit","cursor"] : versionPaged ? ["version","limit","cursor"] : statistics ? ["version"] : [];
     if (keys.some(key => !allowedQuery.includes(key))) throw invalid();
     if (['GET', 'HEAD'].includes(request.method) && (Number(request.headers['content-length'] ?? 0) > 0 || request.headers['transfer-encoding'])) throw invalid();
     if (request.url.split('?')[0] === '/api/v1/auth/logout' && (Number(request.headers['content-length'] ?? 0) > 0 || request.headers['transfer-encoding'])) throw invalid();
@@ -108,7 +136,7 @@ export async function buildApp(config: Config, options: { logger?: boolean; faul
       if (month < 1 || month > 12 || day < 1 || day > new Date(Date.UTC(year, month, 0)).getUTCDate()) throw invalid();
       expiresAt = new Date(iso);
     }
-    const survey: SurveyDocument = { _id: new ObjectId(), schemaVersion: 2, ownerId: user._id, publicId: randomBytes(16).toString('base64url'), title, description: input.description ?? '', status: 'draft', allowAnonymous: input.allowAnonymous ?? false, allowRepeat: input.allowRepeat ?? false, expiresAt, definitionVersion: 1, revision: 0, currentPublishedVersion: null, currentVersionSubmissionCount: 0, submissionCount: 0, structureLocked: false, questions: [], copiedFromId: null, firstPublishedAt: null, createdAt: now, updatedAt: now };
+    const survey: SurveyDocument = { _id: new ObjectId(), schemaVersion: phase2?3:2,...(phase2?{usageNumber:randomBytes(18).toString('base64url'),originTemplate:null}:{}), ownerId: user._id, publicId: randomBytes(16).toString('base64url'), title, description: input.description ?? '', status: 'draft', allowAnonymous: input.allowAnonymous ?? false, allowRepeat: input.allowRepeat ?? false, expiresAt, definitionVersion: 1, revision: 0, currentPublishedVersion: null, currentVersionSubmissionCount: 0, submissionCount: 0, structureLocked: false, questions: [], copiedFromId: null, firstPublishedAt: null, createdAt: now, updatedAt: now };
     await surveys.insertOne(survey); return reply.code(201).send({ data: editorDto(survey) });
   });
   app.get('/api/v1/surveys', async request => {
@@ -134,13 +162,16 @@ export async function buildApp(config: Config, options: { logger?: boolean; faul
     if (!survey) throw new ApiError(404, 'NOT_FOUND', '资源不存在或不可访问');
     return { data: await loadEditor(db, survey) };
   });
-  registerEditingRoutes(app, db, surveys, auth);
-  registerPublication(app, db, client, auth, config, options.faults);
+  registerEditingRoutes(app, db, surveys, auth,phase2Context?async(actorId,id,expected,questions)=>{const a=phase2Context.forActor(actorId);return a.transaction(s=>a.surveys.saveQuestions(id,expected,questions,s));}:undefined);
+  if(phase2Context)registerLibraryRoutes(app,phase2Context,auth,config);
+  if(phase2Context)registerCrossStatistics(app,db,client,auth,config.cursorSecret,options.faults);
+  if(phase2Context)registerTemplateRoutes(app,phase2Context,auth,config.cursorSecret);
+  registerPublication(app, db, client, auth, config, options.faults,phase2Context?async(actorId,id,body,key)=>{const a=phase2Context.forActor(actorId);return a.transaction(s=>a.surveys.publish(id,body,key,config,s));}:undefined);
   registerSubmission(app, db, client, auth, options.faults);
   registerReporting(app, db, client, auth, config);
   app.get('/api/v1/health/live', async () => ({ data: { status: 'live' } }));
   app.get('/api/v1/health/ready', async () => {
-    try { const hello = await db.admin().command({ hello: 1 }); if (!hello.isWritablePrimary || hello.setName !== 'rs0') throw new Error('Not ready'); await verifySchema(db); }
+    try { const hello = await db.admin().command({ hello: 1 }); if (!hello.isWritablePrimary || hello.setName !== 'rs0') throw new Error('Not ready'); if(phase2)await verifyPhase2Database(db);else await verifySchema(db); }
     catch { throw new ApiError(503, 'NOT_READY', '服务尚未就绪'); }
     return { data: { status: 'ready' } };
   });
@@ -159,7 +190,7 @@ export async function buildApp(config: Config, options: { logger?: boolean; faul
         [/^\/api\/v1\/public\/surveys\/[^/]+$/,['GET']],
         [/^\/api\/v1\/public\/surveys\/[^/]+\/responses$/,['POST']],
       ];
-      const allowed = methods[path] ?? coreMethods.find(([pattern])=>pattern.test(path))?.[1];
+      const allowed = methods[path] ?? (phase2?[...libraryEndpoints,...crossEndpoints,...templateEndpoints].find(([pattern])=>pattern.test(path))?.[1]:undefined) ?? coreMethods.find(([pattern])=>pattern.test(path))?.[1];
       if (allowed && !allowed.includes(request.method)) { reply.header('Allow', allowed.join(', ')); throw new ApiError(405, 'METHOD_NOT_ALLOWED', '该接口不支持此方法'); }
       throw new ApiError(404, 'NOT_FOUND', '资源不存在或不可访问');
     }

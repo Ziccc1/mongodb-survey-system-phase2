@@ -1,0 +1,14 @@
+file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/.local/runtime-review-missing-marker-1c354905-204b-40fe-a906-979d2fb7601e/apps/api/dist/database/instance-ownership.js:21
+        throw new Error('P2_INSTANCE_OWNERSHIP_REQUIRED: marker, data directory and listening process must belong to this project');
+              ^
+
+Error: P2_INSTANCE_OWNERSHIP_REQUIRED: marker, data directory and listening process must belong to this project
+    at assertOwnedDatabaseInstance (file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/.local/runtime-review-missing-marker-1c354905-204b-40fe-a906-979d2fb7601e/apps/api/dist/database/instance-ownership.js:21:15)
+    at buildRuntime (file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/.local/runtime-review-missing-marker-1c354905-204b-40fe-a906-979d2fb7601e/apps/api/dist/app.js:34:27)
+    at buildApp (file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/.local/runtime-review-missing-marker-1c354905-204b-40fe-a906-979d2fb7601e/apps/api/dist/app.js:24:12)
+    at file:///D:/%E5%A4%A7%E4%B8%89/%E6%95%B0%E6%8D%AE%E5%BA%93/pj1_2/.local/runtime-review-missing-marker-1c354905-204b-40fe-a906-979d2fb7601e/apps/api/dist/main.js:4:19
+    at ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.17.0

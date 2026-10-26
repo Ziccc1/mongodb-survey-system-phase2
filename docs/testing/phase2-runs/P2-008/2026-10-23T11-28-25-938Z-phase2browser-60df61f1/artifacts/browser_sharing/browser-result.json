@@ -1,0 +1,19 @@
+{
+  "chain": "A share -> B select v1/publish/fill -> A v2 -> B pause/replace/republish -> A revoke -> B config/republish -> A fill retained v2; new attach/fork denied",
+  "database": "project2_test_p2008_browser_sharing_1792754926847_a06bb62d",
+  "questionId": "6adb44fde19e43bd6236db69",
+  "surveyId": "6adb44fde19e43bd6236db6e",
+  "publishedVersions": 3,
+  "oldAverage": "10",
+  "currentAverage": "20",
+  "deniedNewAttach": 409,
+  "deniedFork": 409,
+  "listener": [
+    {
+      "port": 3218,
+      "pid": 13696,
+      "address": "127.0.0.1"
+    }
+  ],
+  "pageErrors": []
+}

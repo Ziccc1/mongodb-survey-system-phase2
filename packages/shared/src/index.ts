@@ -1,15 +1,21 @@
 export * from "./answers.js";
 export * from './core-types.js';
+export * from './question-content.js';
+export * from './library-types.js';
+export * from './cross-statistics-types.js';
+import { codePointLength } from './validation-common.js';
+import type { DefinitionIssue } from './validation-common.js';
+export { codePointLength } from './validation-common.js';
+export type { DefinitionIssue } from './validation-common.js';
 import type { Question } from './questions.js';
 export * from './questions.js';
 export interface User { id: string; username: string; createdAt: string }
 export interface Credentials { username: string; password: string }
 export interface CreateSurvey { title: string; description?: string; allowAnonymous?: boolean; allowRepeat?: boolean; expiresAt?: string | null }
-export interface DefinitionIssue { code: string; field: string; questionId: string | null; message: string }
 export interface SurveySummary {
   id: string; publicId: string; title: string; status: 'draft' | 'published' | 'paused' | 'closed';
   revision: number; currentPublishedVersion: number | null; cumulativeResponseCount: number;
-  currentVersionResponseCount: number; createdAt: string; updatedAt: string;
+  currentVersionResponseCount: number; expiresAt?: string | null; createdAt: string; updatedAt: string;
 }
 export interface Editor {
   id: string; publicId: string; status: SurveySummary['status'];
@@ -37,7 +43,6 @@ export const createSurveySchema = {
     expiresAt: { anyOf: [{ type: 'string' }, { type: 'null' }] },
   },
 } as const;
-export const codePointLength = (text: string) => [...text].length;
 export const normalizeUsername = (text: string) => text.normalize('NFKC').trim();
 
 // API text limits use Unicode code points, never UTF-16 input.maxLength units.
@@ -53,3 +58,5 @@ export function surveyTextIssues(input: Pick<CreateSurvey, 'title' | 'descriptio
 }
 
 export const patchSurveySchema = { ...createSurveySchema, required: ['expectedRevision'], minProperties: 2, properties: { ...createSurveySchema.properties, expectedRevision: { type: 'integer', minimum: 0, maximum: Number.MAX_SAFE_INTEGER } } } as const;
+
+export * from './template-types.js';

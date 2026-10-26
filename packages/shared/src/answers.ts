@@ -1,7 +1,7 @@
 import type {Answer,SubmitCommand} from './core-types.js';
 import type {Question} from './questions.js';
 import {decimalValue} from './questions.js';
-import {codePointLength} from './index.js';
+import {codePointLength} from './validation-common.js';
 export interface AnswerIssue {questionId:string;field:string;reason:string;message:string}
 const stableId={type:'string',minLength:1,maxLength:128,pattern:'^[A-Za-z0-9_-]+$'};
 const object=(properties:Record<string,unknown>)=>({type:'object',additionalProperties:false,required:Object.keys(properties),properties});

@@ -1,0 +1,26 @@
+TAP version 13
+# Subtest: unknown operation preserves exact key/body and rejects another action or request before sending
+not ok 1 - unknown operation preserves exact key/body and rejects another action or request before sending
+  ---
+  duration_ms: 1.1028
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\operation-retry.test.ts:1:183'
+  failureType: 'testCodeFailure'
+  error: '#<Object> could not be cloned.'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: definitive client errors release pending; 503 retains it
+ok 2 - definitive client errors release pending; 503 retains it
+  ---
+  duration_ms: 0.3421
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 1
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 282.2662

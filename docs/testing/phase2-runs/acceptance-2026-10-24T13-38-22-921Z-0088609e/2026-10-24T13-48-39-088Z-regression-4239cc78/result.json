@@ -1,0 +1,15 @@
+{
+  "name": "regression",
+  "start": "2026-10-24T13:48:39.090Z",
+  "finished": "2026-10-24T13:49:16.945Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "tests/phase1/regression.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

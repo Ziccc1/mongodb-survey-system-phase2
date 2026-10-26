@@ -1,0 +1,312 @@
+{
+  "manifest": {
+    "format": 1,
+    "task": "P2-008",
+    "runId": "1792849404670_24467fa6",
+    "source": "project2_test_p2008_source_1792849404670_24467fa6",
+    "restore": "project2_restore_1792849404670_24467fa6",
+    "applicationTest": "project2_test_p2008_migrated_1792849404670_24467fa6",
+    "instanceHash": "78c85bd7b51009309de95e9e041fb079586682dd8ee7a36dbe60d61035e17c51"
+  },
+  "planId": "1a076a7f-be8a-42ef-8cfe-e145177787b8",
+  "sourceHash": "2648afcc4ce39aac5259ca51573c2ec96ceb682841800f1e5a96057228a15e89",
+  "fingerprintBefore": "cc2d15703f6d02440b95d15d47432ac2d6e49705198229b5c95b87f8743e5667",
+  "fingerprintAfter": "cc2d15703f6d02440b95d15d47432ac2d6e49705198229b5c95b87f8743e5667",
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/surveys/6adcb5f15a6631326b251394/versions/1",
+      "status": 200,
+      "response": {
+        "data": {
+          "surveyId": "6adcb5f15a6631326b251394",
+          "publishedVersion": 1,
+          "sourceDraftDefinitionRevision": 1,
+          "definition": {
+            "title": "历史卷0",
+            "description": "有历史、答卷及未正式草稿",
+            "questions": [
+              {
+                "id": "age",
+                "type": "number",
+                "title": "年龄😀",
+                "validation": {
+                  "min": "-10",
+                  "max": "120",
+                  "integerOnly": false
+                },
+                "required": true,
+                "jumpRules": []
+              },
+              {
+                "id": "single",
+                "type": "single",
+                "title": "选择",
+                "options": [
+                  {
+                    "id": "a",
+                    "label": "是"
+                  },
+                  {
+                    "id": "b",
+                    "label": "否"
+                  }
+                ],
+                "required": false,
+                "jumpRules": []
+              },
+              {
+                "id": "multi",
+                "type": "multiple",
+                "title": "多选",
+                "options": [
+                  {
+                    "id": "a",
+                    "label": "甲"
+                  },
+                  {
+                    "id": "b",
+                    "label": "乙"
+                  }
+                ],
+                "validation": {
+                  "minChoices": 0,
+                  "maxChoices": 2
+                },
+                "required": false,
+                "jumpRules": []
+              },
+              {
+                "id": "text",
+                "type": "text",
+                "title": "备注",
+                "validation": {
+                  "maxLength": 100
+                },
+                "required": false,
+                "jumpRules": []
+              },
+              {
+                "id": "text_copy",
+                "type": "text",
+                "title": "备注",
+                "validation": {
+                  "maxLength": 100
+                },
+                "required": false,
+                "jumpRules": []
+              }
+            ]
+          },
+          "policy": {
+            "allowAnonymous": true,
+            "allowRepeat": true
+          },
+          "publishedAt": "2026-10-24T13:43:13.120Z",
+          "legacy": false
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/surveys/6adcb5f15a6631326b251394/responses/6adcb5f15a6631326b251396",
+      "status": 200,
+      "response": {
+        "data": {
+          "surveyId": "6adcb5f15a6631326b251394",
+          "responseId": "6adcb5f15a6631326b251396",
+          "publishedVersion": 1,
+          "anonymous": true,
+          "submittedAt": "2026-10-24T13:43:13.120Z",
+          "definition": {
+            "title": "历史卷0",
+            "description": "有历史、答卷及未正式草稿",
+            "questions": [
+              {
+                "id": "age",
+                "type": "number",
+                "title": "年龄😀",
+                "validation": {
+                  "min": "-10",
+                  "max": "120",
+                  "integerOnly": false
+                },
+                "required": true,
+                "jumpRules": []
+              },
+              {
+                "id": "single",
+                "type": "single",
+                "title": "选择",
+                "options": [
+                  {
+                    "id": "a",
+                    "label": "是"
+                  },
+                  {
+                    "id": "b",
+                    "label": "否"
+                  }
+                ],
+                "required": false,
+                "jumpRules": []
+              },
+              {
+                "id": "multi",
+                "type": "multiple",
+                "title": "多选",
+                "options": [
+                  {
+                    "id": "a",
+                    "label": "甲"
+                  },
+                  {
+                    "id": "b",
+                    "label": "乙"
+                  }
+                ],
+                "validation": {
+                  "minChoices": 0,
+                  "maxChoices": 2
+                },
+                "required": false,
+                "jumpRules": []
+              },
+              {
+                "id": "text",
+                "type": "text",
+                "title": "备注",
+                "validation": {
+                  "maxLength": 100
+                },
+                "required": false,
+                "jumpRules": []
+              },
+              {
+                "id": "text_copy",
+                "type": "text",
+                "title": "备注",
+                "validation": {
+                  "maxLength": 100
+                },
+                "required": false,
+                "jumpRules": []
+              }
+            ]
+          },
+          "answers": [
+            {
+              "questionId": "age",
+              "type": "number",
+              "number": "0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/surveys/6adcb5f15a6631326b251394/statistics?version=1",
+      "status": 200,
+      "response": {
+        "data": {
+          "surveyId": "6adcb5f15a6631326b251394",
+          "selectedVersion": 1,
+          "latestPublishedVersion": 3,
+          "cumulativeResponseCount": 3,
+          "currentVersionResponseCount": 1,
+          "selectedVersionResponseCount": 1,
+          "generatedAt": "2026-10-24T13:43:36.228Z",
+          "questionSummaries": [
+            {
+              "questionId": "age",
+              "type": "number",
+              "title": "年龄😀",
+              "answeredCount": 1,
+              "average": "0"
+            },
+            {
+              "questionId": "single",
+              "type": "single",
+              "title": "选择",
+              "answeredCount": 0,
+              "optionCounts": [
+                {
+                  "optionId": "a",
+                  "label": "是",
+                  "count": 0
+                },
+                {
+                  "optionId": "b",
+                  "label": "否",
+                  "count": 0
+                }
+              ]
+            },
+            {
+              "questionId": "multi",
+              "type": "multiple",
+              "title": "多选",
+              "answeredCount": 0,
+              "optionCounts": [
+                {
+                  "optionId": "a",
+                  "label": "甲",
+                  "count": 0
+                },
+                {
+                  "optionId": "b",
+                  "label": "乙",
+                  "count": 0
+                }
+              ]
+            },
+            {
+              "questionId": "text",
+              "type": "text",
+              "title": "备注",
+              "answeredCount": 0
+            },
+            {
+              "questionId": "text_copy",
+              "type": "text",
+              "title": "备注",
+              "answeredCount": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/surveys/6adcb5f15a6631326b251394/publish",
+      "status": 200,
+      "response": {
+        "data": {
+          "surveyId": "6adcb5f15a6631326b251394",
+          "publishedVersion": 1,
+          "status": "published",
+          "revision": 2,
+          "publishedAt": "2026-10-24T13:43:13.120Z",
+          "firstPublishedAt": "2026-10-24T13:43:13.120Z",
+          "shareUrl": "http://localhost:5200/survey/f363dd70-3837-4c5f-a806-d1c9643f2ce3",
+          "replayed": true
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/public/surveys/f363dd70-3837-4c5f-a806-d1c9643f2ce3/responses",
+      "status": 200,
+      "response": {
+        "data": {
+          "receiptId": "6adcb5f15a6631326b251396",
+          "submittedAt": "2026-10-24T13:43:13.120Z",
+          "publishedVersion": 1,
+          "replayed": true
+        }
+      }
+    }
+  ],
+  "note": "JWT cookies supplied only by the test via the existing trusted signer; never logged. The application uses normal Cookie auth and actual migrated MongoDB data."
+}

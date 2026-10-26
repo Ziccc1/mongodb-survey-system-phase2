@@ -1,0 +1,66 @@
+[
+  {
+    "review": 3,
+    "decision": "P2-D-G1",
+    "technicalRecommendation": "immutable exact-version distributionSource / multi-hop distributionProof / all-upstream fences",
+    "apis": [
+      "P2-L08",
+      "P2-A01",
+      "P2-A02",
+      "P2-A03",
+      "P2-M01",
+      "P2-M02",
+      "P2-M03",
+      "P2-M04",
+      "P2-M05",
+      "P2-M06"
+    ],
+    "tests": [
+      "P2-T37",
+      "P2-T38",
+      "P2-T39",
+      "P2-T40",
+      "P2-T41",
+      "P2-T42",
+      "P2-T43",
+      "P2-T44",
+      "P2-T45"
+    ],
+    "provisionalBusinessRules": [
+      "P2-S05",
+      "P2-S06"
+    ],
+    "state": "not-executed"
+  },
+  {
+    "review": 4,
+    "decision": "P2-D-E",
+    "technicalRecommendation": "filter first, group per version then survey; current pointer differs from history",
+    "apis": [
+      "P2-U01"
+    ],
+    "tests": [
+      "P2-T46",
+      "P2-T47",
+      "P2-T48",
+      "P2-T49",
+      "P2-T50"
+    ],
+    "provisionalBusinessRulesUnchanged": [
+      "P2-S04"
+    ],
+    "state": "not-executed"
+  },
+  {
+    "preservedReview": [
+      1,
+      2
+    ],
+    "apisWithReceipts": 10,
+    "tests": [
+      "P2-T35",
+      "P2-T36"
+    ],
+    "state": "not-executed"
+  }
+]

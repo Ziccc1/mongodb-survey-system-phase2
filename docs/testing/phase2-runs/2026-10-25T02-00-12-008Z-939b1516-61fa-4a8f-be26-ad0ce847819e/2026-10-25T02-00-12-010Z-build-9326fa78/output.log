@@ -1,0 +1,17 @@
+
+> project1-survey@1.0.0 build
+> npm run build -w @survey/shared && npm run build -w @survey/api && npm run build -w @survey/web
+
+
+> @survey/shared@1.0.0 build
+> tsc -p tsconfig.json
+
+error TS5033: Could not write file 'D:/大三/数据库/pj1_2/packages/shared/dist/question-content.d.ts': EPERM: operation not permitted, open 'D:\大三\数据库\pj1_2\packages\shared\dist\question-content.d.ts'.
+error TS5033: Could not write file 'D:/大三/数据库/pj1_2/packages/shared/dist/question-content.js': EPERM: operation not permitted, open 'D:\大三\数据库\pj1_2\packages\shared\dist\question-content.js'.
+npm error Lifecycle script `build` failed with error:
+npm error code 2
+npm error path D:\大三\数据库\pj1_2\packages\shared
+npm error workspace @survey/shared@1.0.0
+npm error location D:\大三\数据库\pj1_2\packages\shared
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsc -p tsconfig.json

@@ -1,0 +1,16 @@
+{
+  "name": "migratedapi",
+  "start": "2026-10-23T14:39:01.038Z",
+  "finished": "2026-10-23T14:39:13.837Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "tests/phase2/migrated-api.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

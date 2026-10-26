@@ -1,0 +1,7 @@
+mongosh.exe : MongoNetworkError: read ECONNRESET
+At D:\大三\数据库\pj1_2\scripts\stop-mongo.ps1:6 char:19
++ ... ownOutput = & mongosh.exe 'mongodb://localhost:27019/admin?directConn ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (MongoNetworkError: read ECONNRESET:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

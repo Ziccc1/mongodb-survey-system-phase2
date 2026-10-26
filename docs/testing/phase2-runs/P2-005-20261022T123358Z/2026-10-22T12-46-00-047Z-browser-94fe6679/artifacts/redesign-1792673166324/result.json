@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "database": "project2_test_redesign_1792673163419_d1604f39",
+  "passed": [
+    "register/login defaults to dashboard; both real entries work; 11 bottom additions focus title and preserve stable IDs/content after save/refresh",
+    "11-question browse without answers; simulation page validation focuses original Q4; 10+1 pagination and back navigation retain answers; no preview writes",
+    "configured runtime/publication share origin; public asset whitelist; real paged submit plus dropped response/same-key retry yields one exact Decimal128 response",
+    "republish retains old answer and per-version counts/history; successful key replay still works after close",
+    "same-page jump produces exact 10-question single page; multi first-match and continued checking never advance; branch cleanup retains valid values; cross-page skip removes required errors and preserves original numbering",
+    "page reduction after back/change clamps to nonempty first page",
+    "chart has no palette/itemStyle color overrides and pie labels use shared percentage data (rendered chart tests run separately)"
+  ],
+  "pageErrors": []
+}

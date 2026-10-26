@@ -1,0 +1,17 @@
+{
+  "name": "integration",
+  "start": "2026-10-23T14:39:02.350Z",
+  "finished": "2026-10-23T14:39:11.492Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--env-file=.env",
+    "--import",
+    "tsx",
+    "--test",
+    "--test-concurrency=1",
+    "tests/integration.test.ts"
+  ],
+  "databaseScope": "local 27019/rs0, project2_test_* synthetic data only for test commands",
+  "exitCode": 0,
+  "status": "passed"
+}

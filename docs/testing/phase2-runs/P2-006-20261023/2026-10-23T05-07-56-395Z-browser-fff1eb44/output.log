@@ -1,0 +1,13 @@
+P2 synthetic target localhost:27019 / project2_test_redesign_1792732079705_9efdd8db
+Independent retained database: project2_test_redesign_1792732079705_9efdd8db
+PASS register/login defaults to dashboard; both real entries work; 11 bottom additions focus title and preserve stable IDs/content after save/refresh
+PASS 11-question browse without answers; simulation page validation focuses original Q4; 10+1 pagination and back navigation retain answers; no preview writes
+PASS configured runtime/publication share origin; public asset whitelist; real paged submit plus dropped response/same-key retry yields one exact Decimal128 response
+PASS republish retains old answer and per-version counts/history; successful key replay still works after close
+PASS same-page jump produces exact 10-question single page; multi first-match and continued checking never advance; branch cleanup retains valid values; cross-page skip removes required errors and preserves original numbering
+PASS page reduction after back/change clamps to nonempty first page
+PASS chart has no palette/itemStyle color overrides and pie labels use shared percentage data (rendered chart tests run separately)
+Screenshots and result: D:\大三\数据库\pj1_2\docs\testing\phase2-runs\P2-006-20261023\2026-10-23T05-07-56-395Z-browser-fff1eb44\artifacts\redesign-1792732086780
+P2 synthetic target localhost:27019 / project2_test_redesignlan_1792732096753_75f094a5
+Independent retained database: project2_test_redesignlan_1792732096753_75f094a5
+PASS LAN interface HTTP and configured share base http://192.168.80.1:3110; wrong Origin rejected. Second device/firewall route NOT verified.

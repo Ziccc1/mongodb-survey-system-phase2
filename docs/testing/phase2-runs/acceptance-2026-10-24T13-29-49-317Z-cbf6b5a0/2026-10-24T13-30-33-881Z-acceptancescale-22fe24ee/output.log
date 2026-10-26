@@ -1,0 +1,38 @@
+TAP version 13
+# P2 synthetic target localhost:27019 / project2_test_p2008_accept_scale_1792848634618_afcfc6d7
+# P2-008 thirteen-collection synthetic app: project2_test_p2008_accept_scale_1792848634618_afcfc6d7
+# Scale setup: 36 surveys created/attached/published through normal APIs; starting 2160 real HTTP submissions, concurrency 12.
+# Subtest: acceptance: 36 API-created surveys, 2160 real HTTP submissions, 12 workers and independent four-type oracles
+not ok 1 - acceptance: 36 API-created surveys, 2160 real HTTP submissions, 12 workers and independent four-type oracles
+  ---
+  duration_ms: 97151.1116
+  type: 'test'
+  location: 'D:\\大三\\数据库\\pj1_2\\tests\\phase2\\acceptance-scale.test.ts:1:454'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"survey":"6adcb30e46ce1cda5a7f53d5","i":0,"status":429,"json":{"error":{"code":"RATE_LIMITED","message":"请求过于频繁，请稍后重试","details":[],"traceId":"c411d380-ed6b-4a15-94b3-344da1054333"}}}
+    
+    429 !== 201
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 201
+  actual: 429
+  operator: 'strictEqual'
+  stack: |-
+    <anonymous> (D:\大三\数据库\pj1_2\tests\phase2\acceptance-scale.test.ts:24:648)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async Promise.all (index 9)
+    async TestContext.<anonymous> (D:\大三\数据库\pj1_2\tests\phase2\acceptance-scale.test.ts:24:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 97862.5521

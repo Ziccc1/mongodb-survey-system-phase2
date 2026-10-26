@@ -1,0 +1,64 @@
+Browser tab: 4, Title: "问卷工作台", URL: "http://localhost:5200/templates/6adcd317ba826d37d9e2d273".
+1 AXWebArea 问卷工作台, URL: localhost:5200/templates/6adcd317ba826d37d9e2d273
+	2 container app
+		3 link Description: 跳到主要内容, Value: localhost:5200/templates/6adcd317ba826d37d9e2d273#main
+		4 container
+			5 link Description: 问卷工作台, Value: localhost:5200/dashboard
+			6 container 主导航
+				7 link Description: 首页, Value: localhost:5200/dashboard
+				8 link Description: 我的问卷, Value: localhost:5200/surveys
+				9 link Description: 题目, Value: localhost:5200/questions
+				10 link Description: 题库, Value: localhost:5200/question-banks
+				11 link Description: 模板广场, Value: localhost:5200/templates
+				12 text p2_manual_1024_b
+				13 button 退出登录
+		14 container
+			15 link Description: ← 返回模板广场, Value: localhost:5200/templates
+			16 heading 固定模板预览, Value: 1
+				17 text 固定模板预览
+			18 text 选用只包含此结构中的具体版本，不授予源题其他版本或他人问卷权限。选用后的匿名、重复和截止设置从默认值开始。
+			19 heading P2-MAN-20261024-02 活动模板源, Value: 2
+				20 text P2-MAN-20261024-02 活动模板源
+			21 text P2-MAN-20261024-02 活动模板源
+			22 heading 1. P2-MAN-20261024-02 是否参加下一期活动？, Value: 3
+				23 text 1. P2-MAN-20261024-02 是否参加下一期活动？
+			24 text 单选题 · 必答
+			25 content list
+				26 container
+					27 AXListMarker • 
+					28 text 参加
+				29 container
+					30 AXListMarker • 
+					31 text 不参加
+			32 text 规则 1：等于 不参加 → 第 3 题
+			33 heading 2. P2-MAN-20261024-02 每周可参加几次活动？, Value: 3
+				34 text 2. P2-MAN-20261024-02 每周可参加几次活动？
+			35 text 数字题 · 必答
+			36 text 数字范围：0 至 7；整数
+			37 heading 3. 偏好的活动形式？, Value: 3
+				38 text 3. 偏好的活动形式？
+			39 text 多选题 · 必答
+			40 content list
+				41 container
+					42 AXListMarker • 
+					43 text 线下讲座
+				44 container
+					45 AXListMarker • 
+					46 text 线上直播
+				47 container
+					48 AXListMarker • 
+					49 text 小组讨论
+			50 text 选择数量：1 至 2
+			51 heading 4. 活动安排建议, Value: 3
+				52 text 4. 活动安排建议
+			53 text 文本题 · 可选
+			54 text 文本长度：0 至 20
+			55 heading 生成我的新问卷, Value: 2
+				56 text 生成我的新问卷
+			57 text 新问卷标题
+			58 text field (settable) 新问卷标题, Value: P2-MAN-20261024-02 活动模板源, ID: adoption-title
+			59 button 选用并生成我的草稿
+			60 link Description: 管理我的模板上下架 →, Value: localhost:5200/templates?scope=mine
+		61 text 数据库课程项目 · 问卷工作台
+
+The focused UI element is 16 heading 固定模板预览, Value: 1

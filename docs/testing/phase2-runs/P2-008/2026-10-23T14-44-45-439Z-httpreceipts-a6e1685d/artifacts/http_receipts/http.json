@@ -1,0 +1,606 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/register",
+    "who": -1,
+    "status": 201
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "who": -1,
+    "status": 200
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c10f",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adb72e99c406c974ec2c10f/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb72e99c406c974ec2c10f",
+        "revision": 0,
+        "latestVersionId": null,
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "历史回执数字",
+            "validation": {
+              "integerOnly": false
+            }
+          },
+          "baseVersionId": null,
+          "revision": 0
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adb72e99c406c974ec2c10f/versions",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c10f",
+        "versionId": "6adb72e99c406c974ec2c111",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/questions/6adb72e99c406c974ec2c10f/draft",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb72e99c406c974ec2c10f",
+        "revision": 1,
+        "latestVersionId": "6adb72e99c406c974ec2c111",
+        "draft": {
+          "content": {
+            "type": "number",
+            "title": "历史回执数字",
+            "validation": {
+              "integerOnly": false
+            }
+          },
+          "baseVersionId": "6adb72e99c406c974ec2c111",
+          "revision": 1
+        },
+        "origin": null
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adb72e99c406c974ec2c10f/restorations",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c10f",
+        "versionId": "6adb72e99c406c974ec2c113",
+        "revision": 2,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adb72e99c406c974ec2c111/forks",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c115",
+        "versionId": "6adb72e99c406c974ec2c116",
+        "revision": 1,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-banks",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c118",
+        "versionId": null,
+        "revision": 0,
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-banks/6adb72e99c406c974ec2c118/deletion",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb72e99c406c974ec2c118",
+        "revision": 1,
+        "state": "deleted"
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys",
+    "who": 0,
+    "status": 201,
+    "response": {
+      "data": {
+        "id": "6adb72e99c406c974ec2c11a",
+        "publicId": "AQKj-crwQYILsWIsJGM85Q",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "回执历史问卷",
+          "description": "",
+          "questions": []
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 1,
+        "revision": 0,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T14:44:57.707Z",
+        "updatedAt": "2026-10-23T14:44:57.707Z",
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/surveys/6adb72e99c406c974ec2c11a/questions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 1,
+        "draftDefinitionRevision": 2,
+        "validationIssues": [],
+        "hasUnpublishedChanges": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb72e99c406c974ec2c11a/questions/local/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "local",
+        "questionVersionId": "6adb72e99c406c974ec2c11c",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb72e99c406c974ec2c11a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb72e99c406c974ec2c11a",
+        "publicId": "AQKj-crwQYILsWIsJGM85Q",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "回执历史问卷",
+          "description": "",
+          "questions": [
+            {
+              "id": "local",
+              "type": "text",
+              "title": "本地正式化",
+              "validation": {},
+              "required": false,
+              "jumpRules": []
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 3,
+        "revision": 2,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T14:44:57.707Z",
+        "updatedAt": "2026-10-23T14:44:57.734Z",
+        "validationIssues": [],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb72e99c406c974ec2c11a/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 3,
+        "draftDefinitionRevision": 4,
+        "validationIssues": [
+          {
+            "code": "TARGET_MISSING",
+            "field": "/questions/1/jumpRules/0/targetQuestionId",
+            "questionId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+            "message": "第2题：跳转目标尚未选择或已删除，可保存草稿"
+          }
+        ],
+        "instanceId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+        "questionVersionId": "6adb72e99c406c974ec2c111",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb72e99c406c974ec2c11a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb72e99c406c974ec2c11a",
+        "publicId": "AQKj-crwQYILsWIsJGM85Q",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "回执历史问卷",
+          "description": "",
+          "questions": [
+            {
+              "id": "local",
+              "type": "text",
+              "title": "本地正式化",
+              "validation": {},
+              "required": false,
+              "jumpRules": []
+            },
+            {
+              "id": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+              "type": "number",
+              "title": "历史回执数字",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "warning",
+                  "condition": {
+                    "op": "gte",
+                    "number": "0"
+                  },
+                  "targetQuestionId": "missing"
+                }
+              ],
+              "validation": {
+                "integerOnly": false
+              }
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 4,
+        "revision": 3,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T14:44:57.707Z",
+        "updatedAt": "2026-10-23T14:44:57.756Z",
+        "validationIssues": [
+          {
+            "code": "TARGET_MISSING",
+            "field": "/questions/1/jumpRules/0/targetQuestionId",
+            "questionId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+            "message": "第2题：跳转目标尚未选择或已删除，可保存草稿"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb72e99c406c974ec2c11a/questions/76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad/replacement",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 5,
+        "validationIssues": [
+          {
+            "code": "TARGET_MISSING",
+            "field": "/questions/1/jumpRules/0/targetQuestionId",
+            "questionId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+            "message": "第2题：跳转目标尚未选择或已删除，可保存草稿"
+          }
+        ],
+        "instanceId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+        "questionVersionId": "6adb72e99c406c974ec2c113",
+        "replayed": false
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/surveys/6adb72e99c406c974ec2c11a",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "id": "6adb72e99c406c974ec2c11a",
+        "publicId": "AQKj-crwQYILsWIsJGM85Q",
+        "status": "draft",
+        "draftDefinition": {
+          "title": "回执历史问卷",
+          "description": "",
+          "questions": [
+            {
+              "id": "local",
+              "type": "text",
+              "title": "本地正式化",
+              "validation": {},
+              "required": false,
+              "jumpRules": []
+            },
+            {
+              "id": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+              "type": "number",
+              "title": "历史回执数字",
+              "required": false,
+              "jumpRules": [
+                {
+                  "id": "warning",
+                  "condition": {
+                    "op": "gte",
+                    "number": "0"
+                  },
+                  "targetQuestionId": "missing"
+                }
+              ],
+              "validation": {
+                "integerOnly": false
+              }
+            }
+          ]
+        },
+        "settings": {
+          "allowAnonymous": false,
+          "allowRepeat": false,
+          "expiresAt": null
+        },
+        "draftDefinitionRevision": 5,
+        "revision": 4,
+        "currentPublishedVersion": null,
+        "hasUnpublishedChanges": true,
+        "cumulativeResponseCount": 0,
+        "currentVersionResponseCount": 0,
+        "firstPublishedAt": null,
+        "createdAt": "2026-10-23T14:44:57.707Z",
+        "updatedAt": "2026-10-23T14:44:57.776Z",
+        "validationIssues": [
+          {
+            "code": "TARGET_MISSING",
+            "field": "/questions/1/jumpRules/0/targetQuestionId",
+            "questionId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+            "message": "第2题：跳转目标尚未选择或已删除，可保存草稿"
+          }
+        ],
+        "capabilities": {
+          "copySurvey": false
+        }
+      }
+    }
+  },
+  {
+    "method": "PUT",
+    "path": "/surveys/6adb72e99c406c974ec2c11a/questions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 5,
+        "draftDefinitionRevision": 6,
+        "validationIssues": [
+          {
+            "code": "NO_QUESTIONS",
+            "field": "/questions",
+            "questionId": null,
+            "message": "至少需要一道题才能发布"
+          }
+        ],
+        "hasUnpublishedChanges": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c10f",
+        "versionId": null,
+        "revision": 0,
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adb72e99c406c974ec2c10f/versions",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c10f",
+        "versionId": "6adb72e99c406c974ec2c111",
+        "revision": 1,
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/questions/6adb72e99c406c974ec2c10f/restorations",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c10f",
+        "versionId": "6adb72e99c406c974ec2c113",
+        "revision": 2,
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-versions/6adb72e99c406c974ec2c111/forks",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c115",
+        "versionId": "6adb72e99c406c974ec2c116",
+        "revision": 1,
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/question-banks",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "resourceId": "6adb72e99c406c974ec2c118",
+        "versionId": null,
+        "revision": 0,
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb72e99c406c974ec2c11a/questions/local/formalization",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 2,
+        "draftDefinitionRevision": 3,
+        "validationIssues": [],
+        "instanceId": "local",
+        "questionVersionId": "6adb72e99c406c974ec2c11c",
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb72e99c406c974ec2c11a/question-references",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 3,
+        "draftDefinitionRevision": 4,
+        "validationIssues": [
+          {
+            "code": "TARGET_MISSING",
+            "field": "/questions/1/jumpRules/0/targetQuestionId",
+            "questionId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+            "message": "第2题：跳转目标尚未选择或已删除，可保存草稿"
+          }
+        ],
+        "instanceId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+        "questionVersionId": "6adb72e99c406c974ec2c111",
+        "replayed": true
+      }
+    }
+  },
+  {
+    "method": "POST",
+    "path": "/surveys/6adb72e99c406c974ec2c11a/questions/76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad/replacement",
+    "who": 0,
+    "status": 200,
+    "response": {
+      "data": {
+        "revision": 4,
+        "draftDefinitionRevision": 5,
+        "validationIssues": [
+          {
+            "code": "TARGET_MISSING",
+            "field": "/questions/1/jumpRules/0/targetQuestionId",
+            "questionId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+            "message": "第2题：跳转目标尚未选择或已删除，可保存草稿"
+          }
+        ],
+        "instanceId": "76c0d58c-8fcb-4ee3-96d4-ca44e915f0ad",
+        "questionVersionId": "6adb72e99c406c974ec2c113",
+        "replayed": true
+      }
+    }
+  }
+]

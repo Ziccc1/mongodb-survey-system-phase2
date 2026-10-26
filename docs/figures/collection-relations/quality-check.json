@@ -1,0 +1,42 @@
+{
+  "figure": "mongodb_collection_relations",
+  "textLines": 23,
+  "textWithinCanvas": true,
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "width": 4200,
+  "height": 3030,
+  "dpi": 300,
+  "textOverlaps": [],
+  "collectionCount": 4,
+  "embeddedBoxCount": 3,
+  "relationCount": 5,
+  "textEditableInSVG": true,
+  "sourceFilesSha256": {
+    "apps/api/src/database/models.ts": "73f3fd2c4d1aa9d0c861d3371455e39d1305f48dc260fd7b8316447d3769d9a5",
+    "apps/api/src/database/schema.ts": "644395f8729615b7ccfb1308763fd022729196cf143d99b0d58e87428ae68681",
+    "apps/api/src/core/versions.ts": "e9379c029de513e5f0fc374e51b470ff1186b49f2b78988c3c4460a5cc24d2c9",
+    "apps/api/src/core/submission.ts": "b88890b471da95ed11934dcb902f6e8ee8d009f3d4746ee24c31f067c1f5cdf2"
+  },
+  "skillGate": "Not run: installed skill has no scripts/critique.py or preset. Text bounds/overlap/vector structure checks actually executed instead.",
+  "judgment": {
+    "mechanism": "Composite version reference and containment are drawn explicitly.",
+    "composition": "Four parent collections, three embedded subdocuments; relation labels do not rely on color.",
+    "faithfulness": "Matches current code; anonymous association is internal, not public disclosure.",
+    "clarity": "White background, restrained four-color nodes, consistent CJK and edge labels."
+  },
+  "statistics": "Conceptual schema diagram; N denotes many, not sample size. CI/units not applicable.",
+  "pdfTextExtractable": true,
+  "pngDimensionsVerified": [
+    4200,
+    3030
+  ],
+  "pngDpiVerified": [
+    299.9994,
+    299.9994
+  ],
+  "visualInspection": "PNG reviewed at readable size: no text overlap/clipping; arrows and embedded boxes match current schema. PDF preview generated for separate inspection."
+}
