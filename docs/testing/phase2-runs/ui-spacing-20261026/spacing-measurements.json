@@ -1,0 +1,765 @@
+{
+  "before": {
+    "controlGaps": [
+      {
+        "gap": 0,
+        "id": "share-username",
+        "next": "授予共享"
+      },
+      {
+        "gap": 0,
+        "id": "distribution-publisher",
+        "next": "授予所选版本公开权"
+      }
+    ],
+    "pageOverflow": false,
+    "panels": [
+      {
+        "class": "panel",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "rect": {
+          "bottom": 1086.0625,
+          "height": 829.171875,
+          "width": 583,
+          "x": 40,
+          "y": 256.890625
+        },
+        "title": "编辑草稿"
+      },
+      {
+        "class": "question-card panel",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "rect": {
+          "bottom": 961.8671875,
+          "height": 518.78125,
+          "width": 525,
+          "x": 69,
+          "y": 443.0859375
+        },
+        "title": "1数字题"
+      },
+      {
+        "class": "panel",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "rect": {
+          "bottom": 963.2734375,
+          "height": 706.3828125,
+          "width": 583,
+          "x": 647,
+          "y": 256.890625
+        },
+        "title": "正式版本历史"
+      },
+      {
+        "class": "panel",
+        "marginBottom": "20px",
+        "marginTop": "0px",
+        "rect": {
+          "bottom": 830.2734375,
+          "height": 157.9921875,
+          "width": 525,
+          "x": 676,
+          "y": 672.28125
+        },
+        "title": "1. P2-MAN-20261024-02 每周可参加几次活动？"
+      },
+      {
+        "class": "panel",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "rect": {
+          "bottom": 1469.0546875,
+          "height": 358.9921875,
+          "width": 1190,
+          "x": 40,
+          "y": 1110.0625
+        },
+        "title": "指定用户共享"
+      },
+      {
+        "class": "panel",
+        "marginBottom": "0px",
+        "marginTop": "0px",
+        "rect": {
+          "bottom": 1897.046875,
+          "height": 427.9921875,
+          "width": 1190,
+          "x": 40,
+          "y": 1469.0546875
+        },
+        "title": "具体版本公开分发授权"
+      }
+    ],
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  "questionPanelsAfter": {
+    "controlGaps": [
+      {
+        "gap": 12,
+        "id": "share-username"
+      },
+      {
+        "gap": 12,
+        "id": "distribution-publisher"
+      }
+    ],
+    "overflow": false,
+    "panelGap": 24,
+    "width": 1440
+  },
+  "checks": [
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "panel cross-controls",
+          "gap": 24,
+          "to": "count-strip panel"
+        },
+        {
+          "from": "panel",
+          "gap": 24,
+          "to": "数值汇总"
+        },
+        {
+          "from": "数值汇总",
+          "gap": 24,
+          "to": "原始有效回答"
+        }
+      ],
+      "templateList": null,
+      "width": 1440,
+      "page": "cross-statistics"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "panel cross-controls",
+          "gap": 24,
+          "to": "count-strip panel"
+        },
+        {
+          "from": "panel",
+          "gap": 24,
+          "to": "数值汇总"
+        },
+        {
+          "from": "数值汇总",
+          "gap": 24,
+          "to": "原始有效回答"
+        }
+      ],
+      "templateList": null,
+      "width": 768,
+      "page": "cross-statistics"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "panel cross-controls",
+          "gap": 24,
+          "to": "count-strip panel"
+        },
+        {
+          "from": "panel",
+          "gap": 24,
+          "to": "数值汇总"
+        },
+        {
+          "from": "数值汇总",
+          "gap": 24,
+          "to": "原始有效回答"
+        }
+      ],
+      "templateList": null,
+      "width": 320,
+      "page": "cross-statistics"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "new-bank-name"
+        },
+        {
+          "gap": 12,
+          "id": "rename-bank"
+        },
+        {
+          "gap": 12,
+          "id": "bank-question"
+        }
+      ],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "题库目录",
+          "gap": -184.1953125,
+          "to": "P2-MAN-20261024-02 通用题库"
+        }
+      ],
+      "templateList": null,
+      "width": 1440,
+      "page": "question-banks"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "new-bank-name"
+        },
+        {
+          "gap": 12,
+          "id": "rename-bank"
+        },
+        {
+          "gap": 12,
+          "id": "bank-question"
+        }
+      ],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "题库目录",
+          "gap": 24,
+          "to": "P2-MAN-20261024-02 通用题库"
+        }
+      ],
+      "templateList": null,
+      "width": 768,
+      "page": "question-banks"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "new-bank-name"
+        },
+        {
+          "gap": 12,
+          "id": "rename-bank"
+        },
+        {
+          "gap": 12,
+          "id": "bank-question"
+        }
+      ],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "题库目录",
+          "gap": 24,
+          "to": "P2-MAN-20261024-02 通用题库"
+        }
+      ],
+      "templateList": null,
+      "width": 320,
+      "page": "question-banks"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "panelGaps": [],
+      "templateList": {
+        "gap": "24px",
+        "items": 1
+      },
+      "width": 1440,
+      "page": "template-square"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "panelGaps": [],
+      "templateList": {
+        "gap": "24px",
+        "items": 1
+      },
+      "width": 768,
+      "page": "template-square"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "panelGaps": [],
+      "templateList": {
+        "gap": "24px",
+        "items": 1
+      },
+      "width": 320,
+      "page": "template-square"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 16,
+          "id": "adoption-title"
+        }
+      ],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "1. P2-MAN-20261024-02 是否参加下一期活动？",
+          "gap": 20,
+          "to": "2. P2-MAN-20261024-02 每周可参加几次活动？"
+        },
+        {
+          "from": "2. P2-MAN-20261024-02 每周可参加几次活动？",
+          "gap": 20,
+          "to": "3. 偏好的活动形式？"
+        },
+        {
+          "from": "3. 偏好的活动形式？",
+          "gap": 20,
+          "to": "4. 活动安排建议"
+        }
+      ],
+      "templateList": null,
+      "width": 1440,
+      "page": "template-preview"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 16,
+          "id": "adoption-title"
+        }
+      ],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "1. P2-MAN-20261024-02 是否参加下一期活动？",
+          "gap": 20,
+          "to": "2. P2-MAN-20261024-02 每周可参加几次活动？"
+        },
+        {
+          "from": "2. P2-MAN-20261024-02 每周可参加几次活动？",
+          "gap": 20,
+          "to": "3. 偏好的活动形式？"
+        },
+        {
+          "from": "3. 偏好的活动形式？",
+          "gap": 20,
+          "to": "4. 活动安排建议"
+        }
+      ],
+      "templateList": null,
+      "width": 768,
+      "page": "template-preview"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 16,
+          "id": "adoption-title"
+        }
+      ],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "1. P2-MAN-20261024-02 是否参加下一期活动？",
+          "gap": 20,
+          "to": "2. P2-MAN-20261024-02 每周可参加几次活动？"
+        },
+        {
+          "from": "2. P2-MAN-20261024-02 每周可参加几次活动？",
+          "gap": 20,
+          "to": "3. 偏好的活动形式？"
+        },
+        {
+          "from": "3. 偏好的活动形式？",
+          "gap": 20,
+          "to": "4. 活动安排建议"
+        }
+      ],
+      "templateList": null,
+      "width": 320,
+      "page": "template-preview"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "share-6adcc529ba826d37d9e2d205"
+        }
+      ],
+      "overflow": false,
+      "panelGaps": [
+        {
+          "from": "1单选题",
+          "gap": 20,
+          "to": "2多选题"
+        },
+        {
+          "from": "2多选题",
+          "gap": 20,
+          "to": "3文本题"
+        },
+        {
+          "from": "3文本题",
+          "gap": 20,
+          "to": "4数字题"
+        },
+        {
+          "from": "4数字题",
+          "gap": 20,
+          "to": "5数字题"
+        }
+      ],
+      "templateList": null,
+      "width": 1440,
+      "page": "survey-editor"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "share-6adcc529ba826d37d9e2d205"
+        }
+      ],
+      "overflow": false,
+      "pageHeight": 6952,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "1单选题",
+          "gap": 20,
+          "to": "2多选题"
+        },
+        {
+          "axis": "vertical",
+          "from": "2多选题",
+          "gap": 20,
+          "to": "3文本题"
+        },
+        {
+          "axis": "vertical",
+          "from": "3文本题",
+          "gap": 20,
+          "to": "4数字题"
+        },
+        {
+          "axis": "vertical",
+          "from": "4数字题",
+          "gap": 20,
+          "to": "5数字题"
+        }
+      ],
+      "sourceToFirstQuestion": 24,
+      "templateList": null,
+      "width": 1440,
+      "page": "survey-editor"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "share-6adcc529ba826d37d9e2d205"
+        }
+      ],
+      "overflow": false,
+      "pageHeight": 8284,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "1单选题",
+          "gap": 28,
+          "to": "2多选题"
+        },
+        {
+          "axis": "vertical",
+          "from": "2多选题",
+          "gap": 28,
+          "to": "3文本题"
+        },
+        {
+          "axis": "vertical",
+          "from": "3文本题",
+          "gap": 28,
+          "to": "4数字题"
+        },
+        {
+          "axis": "vertical",
+          "from": "4数字题",
+          "gap": 28,
+          "to": "5数字题"
+        }
+      ],
+      "sourceToFirstQuestion": 24,
+      "templateList": null,
+      "width": 768,
+      "page": "survey-editor"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "share-6adcc529ba826d37d9e2d205"
+        }
+      ],
+      "overflow": false,
+      "pageHeight": 10434,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "1单选题",
+          "gap": 28,
+          "to": "2多选题"
+        },
+        {
+          "axis": "vertical",
+          "from": "2多选题",
+          "gap": 28,
+          "to": "3文本题"
+        },
+        {
+          "axis": "vertical",
+          "from": "3文本题",
+          "gap": 28,
+          "to": "4数字题"
+        },
+        {
+          "axis": "vertical",
+          "from": "4数字题",
+          "gap": 28,
+          "to": "5数字题"
+        }
+      ],
+      "sourceToFirstQuestion": 24,
+      "templateList": null,
+      "width": 320,
+      "page": "survey-editor"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "share-6adcc529ba826d37d9e2d205"
+        }
+      ],
+      "overflow": false,
+      "pageHeight": 1187,
+      "panelGaps": [
+        {
+          "axis": "horizontal",
+          "from": "发布与收集",
+          "gap": 24,
+          "to": "问卷概况"
+        }
+      ],
+      "sourceToFirstQuestion": null,
+      "templateList": null,
+      "width": 1440,
+      "page": "publication"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "share-6adcc529ba826d37d9e2d205"
+        }
+      ],
+      "overflow": false,
+      "pageHeight": 1702,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "发布与收集",
+          "gap": 24,
+          "to": "问卷概况"
+        }
+      ],
+      "sourceToFirstQuestion": null,
+      "templateList": null,
+      "width": 768,
+      "page": "publication"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "share-6adcc529ba826d37d9e2d205"
+        }
+      ],
+      "overflow": false,
+      "pageHeight": 2163,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "发布与收集",
+          "gap": 24,
+          "to": "问卷概况"
+        }
+      ],
+      "sourceToFirstQuestion": null,
+      "templateList": null,
+      "width": 320,
+      "page": "publication"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "pageHeight": 3292,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "1数字题",
+          "gap": 20,
+          "to": "2数字题"
+        }
+      ],
+      "sourceToFirstQuestion": 24,
+      "templateList": null,
+      "width": 1440,
+      "page": "question-picker"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "pageHeight": 3925,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "1数字题",
+          "gap": 28,
+          "to": "2数字题"
+        }
+      ],
+      "sourceToFirstQuestion": 24,
+      "templateList": null,
+      "width": 768,
+      "page": "question-picker"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "pageHeight": 4876,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "1数字题",
+          "gap": 28,
+          "to": "2数字题"
+        }
+      ],
+      "sourceToFirstQuestion": 24,
+      "templateList": null,
+      "width": 320,
+      "page": "question-picker"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "pageHeight": 1605,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "数值汇总",
+          "gap": 24,
+          "to": "原始有效回答"
+        }
+      ],
+      "sourceToFirstQuestion": null,
+      "templateList": null,
+      "width": 1440,
+      "page": "cross-statistics-populated"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "pageHeight": 1753,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "panel cross-controls",
+          "gap": 24,
+          "to": "count-strip panel"
+        },
+        {
+          "axis": "vertical",
+          "from": "数值汇总",
+          "gap": 24,
+          "to": "原始有效回答"
+        }
+      ],
+      "sourceToFirstQuestion": null,
+      "templateList": null,
+      "width": 768,
+      "page": "cross-statistics-populated"
+    },
+    {
+      "controlGaps": [],
+      "overflow": false,
+      "pageHeight": 1983,
+      "panelGaps": [
+        {
+          "axis": "vertical",
+          "from": "panel cross-controls",
+          "gap": 24,
+          "to": "count-strip panel"
+        },
+        {
+          "axis": "vertical",
+          "from": "数值汇总",
+          "gap": 24,
+          "to": "原始有效回答"
+        }
+      ],
+      "sourceToFirstQuestion": null,
+      "templateList": null,
+      "width": 320,
+      "page": "cross-statistics-populated"
+    },
+    {
+      "controlGaps": [
+        {
+          "gap": 12,
+          "id": "share-6adcd02bba826d37d9e2d259"
+        }
+      ],
+      "overflow": false,
+      "pageHeight": 1211,
+      "panelGaps": [
+        {
+          "axis": "horizontal",
+          "from": "发布与收集",
+          "gap": 24,
+          "to": "问卷概况"
+        }
+      ],
+      "sourceToFirstQuestion": null,
+      "templateList": null,
+      "width": 1440,
+      "page": "publication-final"
+    }
+  ],
+  "publicationFinal": [
+    {
+      "overflow": false,
+      "templateGap": 24,
+      "width": 1440
+    },
+    {
+      "overflow": false,
+      "templateGap": 24,
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "templateGap": 24,
+      "width": 320
+    }
+  ],
+  "screenshotNote": "部分完整页面截图未能捕获；布局结论依据已保存截图及只读 DOM 尺寸检查。"
+}

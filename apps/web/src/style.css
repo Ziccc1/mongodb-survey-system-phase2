@@ -60,3 +60,64 @@ h1{font-size:34px;font-weight:700;letter-spacing:-.025em}h2{font-weight:650}h3{f
 
 .cross-controls > fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
 .cross-number-summary { overflow-wrap: anywhere; }
+
+/* Keep independent P2 panels and form actions visibly separated. */
+:root {
+  --panel-gap: 24px;
+  --control-gap: 12px;
+}
+
+:where(.library-page, .report-page, .narrow) > .panel + .panel {
+  margin-block-start: var(--panel-gap);
+}
+
+.survey-sources,
+.report-page > .panel {
+  margin-block-end: var(--panel-gap);
+}
+
+.survey-sources > .panel {
+  margin-block: 16px;
+}
+
+.publication-content + .panel {
+  margin-block-start: var(--panel-gap);
+}
+
+:where(.library-page, .survey-sources, .cross-controls) :is(input, select, textarea) + :is(button, .editor-actions) {
+  margin-block-start: var(--control-gap);
+}
+
+.cross-controls > fieldset > .primary {
+  margin-block-start: 16px;
+}
+
+.question-picker fieldset > label:not(.check),
+.library-layout > .panel > label {
+  display: block;
+  margin: 16px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.question-picker fieldset > label:first-child {
+  margin-block-start: 0;
+}
+
+.template-list {
+  display: grid;
+  gap: var(--panel-gap);
+  list-style: none;
+  padding: 0;
+  margin: var(--panel-gap) 0 0;
+}
+
+.template-list > .panel {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.template-list:empty {
+  display: none;
+}
